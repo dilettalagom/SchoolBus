@@ -27,6 +27,6 @@ echo "filename: "$filename;
 echo "speedfactor: "$speedfactor;
 
 start_ingestion() {
-  java -cp PulsarClient-1.0-SNAPSHOT.jar Main $filename $speedfactor
+  java -cp DatasetSender-1.0-SNAPSHOT.jar Main $filename $speedfactor
 }
 start_ingestion
