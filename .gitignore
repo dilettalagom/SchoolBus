@@ -1,6 +1,10 @@
 .idea
 .settings
+/target
 SchoolBus.iml
 .classpath
 .project
-/target
+./DatasetSender/dependency-reduced-pom.xml
+./DatasetSender/target
+./DatasetSender/DatasetSender.iml
+./FlinkAnalyzer/FlinkAnalyzer.iml

@@ -1,0 +1,110 @@
+version: "2.1"
+
+networks:
+  app_network:
+    driver: bridge
+
+services:
+
+  master:
+    build:
+      context: ../docker-images/hdfs
+    image: digi/hdfs
+    container_name: master
+    hostname: master
+    networks:
+      - app_network
+    ports:
+      - "9870:9870"  # hdfs ui
+      - "54310:54310"  # hdfs
+    volumes:
+      - ./hdfs-results:/target/results
+    stdin_open: true
+    tty: true
+
+
+  worker1:
+    image: digi/hdfs
+    container_name: worker1
+    hostname: worker1
+    networks:
+      - app_network
+    ports:
+      - "9861:9861"
+    volumes:
+      - ./hdfs-results:/target/results
+    depends_on:
+      - master
+    stdin_open: true
+    tty: true
+
+
+
+  flink-jobmanager:
+    build:
+      context: ../docker-images/flink
+    image: digi/flink
+    hostname: flink-jobmanager
+    container_name: flink-jobmanager
+    expose:
+      - "6123"
+    networks:
+      - app_network
+    ports:
+      - "8081:8081"
+    command: jobmanager
+    environment:
+      - JOB_MANAGER_RPC_ADDRESS=flink-jobmanager
+      - HADOOP_CONF_DIR=/usr/local/hadoop/etc/hadoop
+
+
+  flink-taskmanager:
+    image: digi/flink
+    hostname: flink-taskmanager1
+    container_name: flink-taskmanager1
+    networks:
+      - app_network
+    expose:
+      - "6121"
+      - "6122"
+    depends_on:
+      - flink-jobmanager
+    links:
+      - "flink-jobmanager:flink-jobmanager"
+    command: taskmanager
+    environment:
+      - JOB_MANAGER_RPC_ADDRESS=flink-jobmanager
+      - HADOOP_CONF_DIR=/usr/local/hadoop/etc/hadoop
+
+
+  pulsar-node:
+    image: apachepulsar/pulsar:2.5.2
+    hostname: pulsar-node
+    container_name: pulsar-node
+    networks:
+      - app_network
+    expose:
+      - 8080
+      - 6650
+    environment:
+      - PULSAR_MEM=" -Xms512m -Xmx512m -XX:MaxDirectMemorySize=1g"
+    volumes:
+      - ./pulsar-jar:/pulsar/data
+    command: /bin/bash -c "bin/apply-config-from-env.py conf/standalone.conf && bin/pulsar standalone"
+
+
+  pulsar-dashboard:
+    image: apachepulsar/pulsar-dashboard
+    hostname: pulsar-dashboard
+    container_name: pulsar-dashboard
+    networks:
+      - app_network
+    depends_on:
+      - pulsar-node
+    ports:
+      - "80:80"
+    environment:
+      - SERVICE_URL=http://standalone:8080
+
+
+
