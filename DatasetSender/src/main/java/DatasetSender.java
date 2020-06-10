@@ -1,13 +1,14 @@
 import org.apache.pulsar.client.api.Producer;
 import org.apache.pulsar.client.api.PulsarClient;
-
 import org.apache.pulsar.client.api.PulsarClientException;
 import org.apache.pulsar.client.api.Schema;
-
+import org.apache.pulsar.client.impl.*;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.time.Instant;
+import java.time.format.DateTimeParseException;
 
 public class DatasetSender {
 
@@ -21,15 +22,15 @@ public class DatasetSender {
 
 
     public DatasetSender(String aCsvFilePath, float aServingSpeed) {
-        csvFilePath = aCsvFilePath;
-        servingSpeed = aServingSpeed;
-        initiCSVReader();
+        this.csvFilePath = aCsvFilePath;
+        this.servingSpeed = aServingSpeed;
+        initCSVReader();
         initPulsarClient();
     }
 
-    private void initiCSVReader() {
+    private void initCSVReader() {
         try {
-            bufferedReader = new BufferedReader(new FileReader(csvFilePath));
+            this.bufferedReader = new BufferedReader(new FileReader(csvFilePath));
         } catch (FileNotFoundException e) {
             System.err.println(e.getMessage());
             System.exit(1);
@@ -39,8 +40,8 @@ public class DatasetSender {
 
     private void initPulsarClient() {
         try {
-            pulsarClient = PulsarClient.builder()
-                    .serviceUrl(pulsarUrl)
+            this.pulsarClient = PulsarClient.builder()
+                    .serviceUrl(this.pulsarUrl)
                     .build();
         } catch (PulsarClientException e) {
             e.printStackTrace();
@@ -51,8 +52,8 @@ public class DatasetSender {
     private void sendToTopic(String value){
 
         try {producer = pulsarClient.newProducer(Schema.STRING)
-                    .topic(topicName)
-                    .create();
+                .topic(topicName)
+                .create();
             producer.send(value);
         } catch (PulsarClientException e) {
             e.printStackTrace();
@@ -62,9 +63,12 @@ public class DatasetSender {
 
     public void startSendingData(){
 
+        String header = readLineFromCSV();
+        sendToTopic(header);
+        System.out.println(header);
+
         String firstLine = readLineFromCSV();
         long firstTimestamp = extractTimeStamp(firstLine);
-        sendToTopic(firstLine);
         String line;
 
         while ((line = readLineFromCSV())!=null) {
@@ -80,8 +84,17 @@ public class DatasetSender {
             firstTimestamp = curTimestamp;
         }
 
+        System.out.println("poisonedTuple");
         String poisonedTuple = "1546300799,ffffffffffffffffffffffff,9999,9999,comment,1546300799,1,False,0,,0,Unknown,Unknown,9999,\"-\",,,,,,,,,,,,,,,,,,,";
         sendToTopic(poisonedTuple);
+
+        try {
+
+            producer.close();
+            pulsarClient.close();
+        } catch (PulsarClientException e) {
+            e.printStackTrace();
+        }
 
     }
 
@@ -93,8 +106,17 @@ public class DatasetSender {
         }
     }
 
+    private long convertToEpochMilli(String timestamp ){
+        try {
+            return  Instant.parse(timestamp+'Z').toEpochMilli();
+        } catch (DateTimeParseException e) {
+            return 0L;
+        }
+    }
+
     private long computeDelta(long firstTimestamp, long curTimestamp) {
-        long milliSecsDelta = (curTimestamp - firstTimestamp) * 1000L; // delta in millisecs
+        long milliSecsDelta = (curTimestamp - firstTimestamp); // delta in millisecs
+        System.out.println(milliSecsDelta);
         return (long) (milliSecsDelta / servingSpeed);
     }
 
@@ -110,12 +132,11 @@ public class DatasetSender {
     }
 
     private long extractTimeStamp(String line) {
-        try {
-            String[] tokens = line.split(",",-1);
-            return Long.parseLong(tokens[5]);
 
-        } catch (NumberFormatException e) {
-            return 0L;
-        }
+        String[] tokens = line.split(";",-1);
+        System.out.println(tokens[7]);
+
+        return convertToEpochMilli(tokens[7]);
+
     }
 }

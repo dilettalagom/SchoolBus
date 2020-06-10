@@ -8,3 +8,6 @@ SchoolBus.iml
 ./DatasetSender/target
 ./DatasetSender/DatasetSender.iml
 ./FlinkAnalyzer/FlinkAnalyzer.iml
+
+/docker-compose/pulsar-jar/bookkeeper
+/docker-compose/pulsar-jar/standalone
