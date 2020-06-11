@@ -2,7 +2,6 @@ import org.apache.pulsar.client.api.Producer;
 import org.apache.pulsar.client.api.PulsarClient;
 import org.apache.pulsar.client.api.PulsarClientException;
 import org.apache.pulsar.client.api.Schema;
-import org.apache.pulsar.client.impl.*;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -19,11 +18,13 @@ public class DatasetSender {
     private PulsarClient pulsarClient;
     private Producer<String> producer;
     private float servingSpeed;
+    private DelayFormatter delayFormatter;
 
 
-    public DatasetSender(String aCsvFilePath, float aServingSpeed) {
-        this.csvFilePath = aCsvFilePath;
-        this.servingSpeed = aServingSpeed;
+    public DatasetSender(String csvFilePath, float servingSpeed) {
+        this.csvFilePath = csvFilePath;
+        this.servingSpeed = servingSpeed;
+        this.delayFormatter = new DelayFormatter();
         initCSVReader();
         initPulsarClient();
     }
@@ -73,15 +74,26 @@ public class DatasetSender {
 
         while ((line = readLineFromCSV())!=null) {
 
-            long curTimestamp = extractTimeStamp(line);
-            long deltaTimeStamp = computeDelta(firstTimestamp,curTimestamp);
+            String[] tokens = line.split(";",-1);
 
-            if (deltaTimeStamp > 0)
-                addDelay(deltaTimeStamp);
+            //ckeck if is a valid line
+            String valedatedDelay = delayFormatter.createDelayFormat(tokens[11]);
 
-            sendToTopic(line);
+            //publishing on topic only if is a valid line
+            if(valedatedDelay != null) {
 
-            firstTimestamp = curTimestamp;
+                tokens[11] = valedatedDelay;
+
+                long curTimestamp = extractTimeStamp(tokens[7]);
+                long deltaTimeStamp = computeDelta(firstTimestamp, curTimestamp);
+
+                if (deltaTimeStamp > 0)
+                    addDelay(deltaTimeStamp);
+
+                sendToTopic( String.join(",", tokens) ); //TODO: vogliamo "," o ";" ?
+
+                firstTimestamp = curTimestamp;
+            }
         }
 
         System.out.println("poisonedTuple");
@@ -131,12 +143,9 @@ public class DatasetSender {
         return line;
     }
 
-    private long extractTimeStamp(String line) {
+    private long extractTimeStamp(String timestampString) {
 
-        String[] tokens = line.split(";",-1);
-        System.out.println(tokens[7]);
-
-        return convertToEpochMilli(tokens[7]);
+        return convertToEpochMilli(timestampString);
 
     }
 }
