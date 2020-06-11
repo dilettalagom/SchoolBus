@@ -76,8 +76,8 @@ public class DatasetSender {
 
             String[] tokens = line.split(";",-1);
 
-            //ckeck if is a valid line
-            String valedatedDelay = delayFormatter.createDelayFormat(tokens[11]);
+            //ckeck if is a valid line  --> total row: 379412
+            String valedatedDelay = delayFormatter.createDelayFormat(tokens[11].toLowerCase());
 
             //publishing on topic only if is a valid line
             if(valedatedDelay != null) {
