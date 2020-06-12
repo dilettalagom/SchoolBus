@@ -16,5 +16,10 @@ public class BoroDelayPojo {
         this.timestamp = timestamp;
     }
 
-
+    @Override
+    public String toString() {
+        return "boro = '" + boro + '\'' +
+                ", delay=" + delay +
+                ", timestamp='" + timestamp;
+    }
 }

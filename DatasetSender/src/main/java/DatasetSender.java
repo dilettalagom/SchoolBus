@@ -54,7 +54,7 @@ public class DatasetSender {
     public void startSendingData(){
 
         String header = readLineFromCSV();
-        sendToTopic(header.split(";",-1));
+        //sendToTopic(header.split(";",-1));
 
         long firstTimestamp=0;
         int i=1;
