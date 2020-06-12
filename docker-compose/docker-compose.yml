@@ -46,10 +46,10 @@ services:
     image: digi/flink
     hostname: flink-jobmanager
     container_name: flink-jobmanager
-    expose:
-      - "6123"
     networks:
       - app_network
+    expose:
+      - "6123"
     ports:
       - "8081:8081"
     command: jobmanager

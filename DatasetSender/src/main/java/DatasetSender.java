@@ -15,6 +15,7 @@ public class DatasetSender {
     private String csvFilePath;
     private BufferedReader bufferedReader;
     private static final String pulsarUrl = "pulsar://localhost:6650";
+    private static final String topicHeader = "persistent://public/default/";
     private static final String[] topicNames = new String[]{"dataQuery1", "dataQuery2", "dataQuery3"};
     private PulsarClient pulsarClient;
     private Producer<String> producer1, producer2, producer3;
@@ -124,7 +125,7 @@ public class DatasetSender {
 
         try {
             producer1 = pulsarClient.newProducer(Schema.STRING)
-                    .topic(topicNames[0])
+                    .topic(topicHeader+topicNames[0])
                     .create();
             //System.out.println(dataToSend.get(0));
             producer1.send(dataToSend.get(0));
@@ -133,7 +134,7 @@ public class DatasetSender {
         }
         try {
             producer2 = pulsarClient.newProducer(Schema.STRING)
-                    .topic(topicNames[1])
+                    .topic(topicHeader+topicNames[1])
                     .create();
             //System.out.println(dataToSend.get(1));
             producer2.send(dataToSend.get(1));
@@ -142,7 +143,7 @@ public class DatasetSender {
         }
         try {
             producer3 = pulsarClient.newProducer(Schema.STRING)
-                    .topic(topicNames[2])
+                    .topic(topicHeader+topicNames[2])
                     .create();
             //System.out.println(dataToSend.get(2));
             producer3.send(dataToSend.get(2));
