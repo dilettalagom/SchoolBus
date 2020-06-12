@@ -13,6 +13,7 @@ ENV HADOOP_MAPRED_HOME /usr/local/hadoop
 ENV HADOOP_YARN_HOME /usr/local/hadoop
 ENV HADOOP_CONF_DIR /usr/local/hadoop/etc/hadoop
 ENV PATH $PATH:$HADOOP_HOME/bin
+ENV FLINK_HOME /opt/flink
 ENV HDFS_NAMENODE_USER "root"
 ENV HDFS_DATANODE_USER "root"
 ENV HDFS_SECONDARYNAMENODE_USER "root"
@@ -25,6 +26,10 @@ RUN chmod 777 $HADOOP_CONF_DIR/hdfs-site.xml
 
 COPY conf/docker-entrypoint.sh /
 RUN chmod +x /docker-entrypoint.sh
+
+RUN mkdir $FLINK_HOME/flink-jar
+VOLUME $FLINK_HOME/flink-jar
+WORKDIR $FLINK_HOME/flink-jar
 
 #COPY external_jar_lib/*.jar $FLINK_HOME/lib/
 

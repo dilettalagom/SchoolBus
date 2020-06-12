@@ -6,38 +6,38 @@ networks:
 
 services:
 
-  master:
-    build:
-      context: ../docker-images/hdfs
-    image: digi/hdfs
-    container_name: master
-    hostname: master
-    networks:
-      - app_network
-    ports:
-      - "9870:9870"  # hdfs ui
-      - "54310:54310"  # hdfs
-    volumes:
-      - ./hdfs-results:/target/results
-    stdin_open: true
-    tty: true
-
-
-  worker1:
-    image: digi/hdfs
-    container_name: worker1
-    hostname: worker1
-    networks:
-      - app_network
-    ports:
-      - "9861:9861"
-    volumes:
-      - ./hdfs-results:/target/results
-    depends_on:
-      - master
-    stdin_open: true
-    tty: true
-
+#  master:
+#    build:
+#      context: ../docker-images/hdfs
+#    image: digi/hdfs
+#    container_name: master
+#    hostname: master
+#    networks:
+#      - app_network
+#    ports:
+#      - "9870:9870"  # hdfs ui
+#      - "54310:54310"  # hdfs
+#    volumes:
+#      - ./hdfs-results:/target/results
+#    stdin_open: true
+#    tty: true
+#
+#
+#  worker1:
+#    image: digi/hdfs
+#    container_name: worker1
+#    hostname: worker1
+#    networks:
+#      - app_network
+#    ports:
+#      - "9861:9861"
+#    volumes:
+#      - ./hdfs-results:/target/results
+#    depends_on:
+#      - master
+#    stdin_open: true
+#    tty: true
+#
 
 
   flink-jobmanager:
@@ -53,6 +53,8 @@ services:
     ports:
       - "8081:8081"
     command: jobmanager
+    volumes:
+      - ./flink-jar:/opt/flink/flink-jar
     environment:
       - JOB_MANAGER_RPC_ADDRESS=flink-jobmanager
       - HADOOP_CONF_DIR=/usr/local/hadoop/etc/hadoop
@@ -72,6 +74,8 @@ services:
     links:
       - "flink-jobmanager:flink-jobmanager"
     command: taskmanager
+    volumes:
+    - ./flink-jar:/opt/flink/flink-jar
     environment:
       - JOB_MANAGER_RPC_ADDRESS=flink-jobmanager
       - HADOOP_CONF_DIR=/usr/local/hadoop/etc/hadoop
