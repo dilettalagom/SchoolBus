@@ -8,15 +8,16 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.time.Instant;
 import java.time.format.DateTimeParseException;
+import java.util.ArrayList;
 
 public class DatasetSender {
 
     private String csvFilePath;
     private BufferedReader bufferedReader;
     private static final String pulsarUrl = "pulsar://localhost:6650";
-    private static final String topicName = "query";
+    private static final String[] topicNames = new String[]{"dataQuery1", "dataQuery2", "dataQuery3"};
     private PulsarClient pulsarClient;
-    private Producer<String> producer;
+    private Producer<String> producer1, producer2, producer3;
     private float servingSpeed;
     private DelayFormatter delayFormatter;
 
@@ -41,74 +42,118 @@ public class DatasetSender {
 
     private void initPulsarClient() {
         try {
-            this.pulsarClient = PulsarClient.builder()
-                    .serviceUrl(this.pulsarUrl)
+            pulsarClient = PulsarClient.builder()
+                    .serviceUrl(pulsarUrl)
                     .build();
         } catch (PulsarClientException e) {
             e.printStackTrace();
         }
     }
 
-
-    private void sendToTopic(String value){
-
-        try {producer = pulsarClient.newProducer(Schema.STRING)
-                .topic(topicName)
-                .create();
-            producer.send(value);
-        } catch (PulsarClientException e) {
-            e.printStackTrace();
-        }
-
-    }
-
     public void startSendingData(){
 
         String header = readLineFromCSV();
-        sendToTopic(header);
-        System.out.println(header);
+        sendToTopic(header.split(";",-1));
 
-        String firstLine = readLineFromCSV();
-        long firstTimestamp = extractTimeStamp(firstLine);
+        long firstTimestamp=0;
+        int i=1;
+        //Validating first line
+        String[] firstLine = (readLineFromCSV()).split(";",-1);
+        firstLine[11] = delayFormatter.createDelayFormat(firstLine[11].toLowerCase());
+        if(firstLine[11]!= null) {
+            firstTimestamp = extractTimeStamp(firstLine[7]);
+            sendToTopic(firstLine);
+            i++;
+        }
+
         String line;
-
         while ((line = readLineFromCSV())!=null) {
 
             String[] tokens = line.split(";",-1);
 
-            //ckeck if is a valid line  --> total row: 379412
-            String valedatedDelay = delayFormatter.createDelayFormat(tokens[11].toLowerCase());
+            //ckeck if is a valid line  --> total row: 379412, validated row: 332571
+            String validatedDelay = delayFormatter.createDelayFormat(tokens[11].toLowerCase());
 
             //publishing on topic only if is a valid line
-            if(valedatedDelay != null) {
-
-                tokens[11] = valedatedDelay;
+            if(validatedDelay != null) {
+                i++;
+                tokens[11] = validatedDelay;
 
                 long curTimestamp = extractTimeStamp(tokens[7]);
                 long deltaTimeStamp = computeDelta(firstTimestamp, curTimestamp);
 
-                if (deltaTimeStamp > 0)
+                if (deltaTimeStamp > 0) {
+
                     addDelay(deltaTimeStamp);
+                    firstTimestamp = curTimestamp;
+                }
 
-                sendToTopic( String.join(",", tokens) ); //TODO: vogliamo "," o ";" ?
-
-                firstTimestamp = curTimestamp;
+                sendToTopic( tokens );
             }
         }
 
-        System.out.println("poisonedTuple");
-        String poisonedTuple = "1546300799,ffffffffffffffffffffffff,9999,9999,comment,1546300799,1,False,0,,0,Unknown,Unknown,9999,\"-\",,,,,,,,,,,,,,,,,,,";
-        sendToTopic(poisonedTuple);
+        System.out.println("poisonedTuple" + "total: " + i);
+        String poisonedTuple = "2015-2016;1212751;Special Ed AM Run;201;W685;Poison;75420;3020-09-30T07:42:00.000;2015-09-03T08:06:00.000;Unknown;Unknown;??min??hr,ins;2;Yes;Yes;No;2015-09-03T08:06:00.000;;2015-09-03T08:06:11.000;Running Late;School-Age\n";
+        sendToTopic(poisonedTuple.split(";",-1));
 
         try {
 
-            producer.close();
+            producer1.close();
+            producer2.close();
+            producer3.close();
             pulsarClient.close();
         } catch (PulsarClientException e) {
             e.printStackTrace();
         }
 
     }
+
+    private ArrayList<String> prepareStringToPublish(String[] value){
+        ArrayList<String> dataToSend = new ArrayList<>();
+
+        dataToSend.add(String.join(";", value[7],value[9],value[11]));
+        dataToSend.add(String.join(";", value[5],value[7]));
+        dataToSend.add(String.join(";", value[5],value[10]));
+
+        return dataToSend;
+    }
+
+    private void sendToTopic(String[] value){
+
+        ArrayList<String> dataToSend = prepareStringToPublish(value);
+
+        try {
+            producer1 = pulsarClient.newProducer(Schema.STRING)
+                    .topic(topicNames[0])
+                    .create();
+            //System.out.println(dataToSend.get(0));
+            producer1.send(dataToSend.get(0));
+        } catch (PulsarClientException e) {
+            e.printStackTrace();
+        }
+        try {
+            producer2 = pulsarClient.newProducer(Schema.STRING)
+                    .topic(topicNames[1])
+                    .create();
+            //System.out.println(dataToSend.get(1));
+            producer2.send(dataToSend.get(1));
+        } catch (PulsarClientException e) {
+            e.printStackTrace();
+        }
+        try {
+            producer3 = pulsarClient.newProducer(Schema.STRING)
+                    .topic(topicNames[2])
+                    .create();
+            //System.out.println(dataToSend.get(2));
+            producer3.send(dataToSend.get(2));
+        } catch (PulsarClientException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+
+
 
     private void addDelay(long deltaTimeStamp) {
         try {
@@ -128,10 +173,13 @@ public class DatasetSender {
 
     private long computeDelta(long firstTimestamp, long curTimestamp) {
         long milliSecsDelta = (curTimestamp - firstTimestamp); // delta in millisecs
-        System.out.println(milliSecsDelta);
         return (long) (milliSecsDelta / servingSpeed);
     }
 
+    private long extractTimeStamp(String timestampString) {
+
+        return convertToEpochMilli(timestampString);
+    }
 
     private String readLineFromCSV() {
         String line = "";
@@ -143,9 +191,5 @@ public class DatasetSender {
         return line;
     }
 
-    private long extractTimeStamp(String timestampString) {
 
-        return convertToEpochMilli(timestampString);
-
-    }
 }

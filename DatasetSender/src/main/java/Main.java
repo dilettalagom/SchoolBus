@@ -1,3 +1,4 @@
+import org.apache.log4j.BasicConfigurator;
 import org.apache.log4j.Logger;
 import org.apache.pulsar.client.impl.*;
 
@@ -9,7 +10,6 @@ public class Main {
     public static void main(String[] args) {
 
         //BasicConfigurator.configure();
-
 
         final String filePath = args[0];
         final float speed = Float.parseFloat(args[1]);
