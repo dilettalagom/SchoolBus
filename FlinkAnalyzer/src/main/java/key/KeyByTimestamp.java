@@ -3,7 +3,7 @@ package key;
 import org.apache.flink.api.java.functions.KeySelector;
 import scala.Tuple3;
 
-public class KeyByWindowStart implements KeySelector<Tuple3<Long,String,Double>,Long> {
+public class KeyByTimestamp implements KeySelector<Tuple3<Long,String,Double>,Long> {
 
     @Override
     public Long getKey(Tuple3<Long, String, Double> t3) throws Exception {

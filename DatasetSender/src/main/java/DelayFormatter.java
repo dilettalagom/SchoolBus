@@ -28,7 +28,7 @@ public class DelayFormatter {
                 //contiene solo m  (es: "30 min", "30min", "20-30min")
             }else if(stringTime.contains("m")){
 
-                String[] dataArray = (getNumericSubstring(stringTime, "m")).split("[-,./+a-zA-Z:?* ]");
+                String[] dataArray = (getNumericSubstring(stringTime, "m")).split("[-,.!/+a-zA-Z:?* ]");
                 if(dataArray.length == 2 && !dataArray[0].equals("") && !dataArray[1].equals("")){
 
                     return computeMean(dataArray[0],dataArray[1]);

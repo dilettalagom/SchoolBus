@@ -6,7 +6,8 @@ import org.apache.flink.api.java.tuple.Tuple2;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class AverageDelay implements AggregateFunction <BoroDelayPojo, Tuple2<Long, Long>, Double> {
+
+public class AverageDelay implements AggregateFunction<BoroDelayPojo, Tuple2<Long, Long>, Double> {
 
     private Logger log = LoggerFactory.getLogger(AverageDelay.class);
 

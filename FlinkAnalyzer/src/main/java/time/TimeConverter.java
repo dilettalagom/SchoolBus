@@ -26,8 +26,6 @@ public class TimeConverter {
     public long convertToEpochMilli(String timestampString){
         try {
             long epochToMilli = Instant.parse(timestampString+'Z').toEpochMilli();
-            //log.info("epoch :" + String.valueOf(epochToMilli));
-
             return  epochToMilli;
         } catch (DateTimeParseException e) {
             return 0L;
