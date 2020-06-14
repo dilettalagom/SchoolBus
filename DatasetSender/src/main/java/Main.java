@@ -1,12 +1,8 @@
-import org.apache.log4j.BasicConfigurator;
-import org.apache.log4j.Logger;
-import org.apache.pulsar.client.impl.*;
-
+import java.io.*;
 
 
 public class Main {
 
-    static Logger log = Logger.getLogger(Main.class.getName());
     public static void main(String[] args) {
 
         //BasicConfigurator.configure();
@@ -16,6 +12,18 @@ public class Main {
 
         DatasetSender datasetSender = new DatasetSender(filePath,speed);
         datasetSender.startSendingData();
+        readerLocal();
+
+    }
+
+
+
+    public static void readerLocal(){
+        String path = "./docker-compose/pulsar-jar/bus-breakdown-and-delays.csv";
+
+        DatasetSender data = new DatasetSender(path, 100000000000L);
+        data.startSendingData();
+
 
     }
 

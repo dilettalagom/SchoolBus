@@ -61,6 +61,8 @@ services:
 
 
   flink-taskmanager:
+    build:
+      context: ../docker-images/flink
     image: digi/flink
     hostname: flink-taskmanager1
     container_name: flink-taskmanager1

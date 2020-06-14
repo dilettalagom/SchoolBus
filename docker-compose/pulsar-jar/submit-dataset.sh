@@ -27,6 +27,6 @@ echo "filename: "$filename;
 echo "speedfactor: "$speedfactor;
 
 start_ingestion() {
-  java -cp DatasetSender-1.0-SNAPSHOT.jar Main $filename $speedfactor
+  java -cp DatasetSender-1.0-SNAPSHOT.jar Main $filename $speedfactor 1>&1
 }
 start_ingestion

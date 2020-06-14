@@ -2,10 +2,8 @@ import org.apache.pulsar.client.api.Producer;
 import org.apache.pulsar.client.api.PulsarClient;
 import org.apache.pulsar.client.api.PulsarClientException;
 import org.apache.pulsar.client.api.Schema;
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+
+import java.io.*;
 import java.time.Instant;
 import java.time.format.DateTimeParseException;
 import java.util.ArrayList;
@@ -22,6 +20,8 @@ public class DatasetSender {
     private float servingSpeed;
     private DelayFormatter delayFormatter;
 
+    BufferedWriter out;
+
 
     public DatasetSender(String csvFilePath, float servingSpeed) {
         this.csvFilePath = csvFilePath;
@@ -29,6 +29,12 @@ public class DatasetSender {
         this.delayFormatter = new DelayFormatter();
         initCSVReader();
         initPulsarClient();
+
+        try {
+            out = new BufferedWriter(new FileWriter("dataQ1.txt", true));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     private void initCSVReader() {
@@ -54,10 +60,9 @@ public class DatasetSender {
     public void startSendingData(){
 
         String header = readLineFromCSV();
-        //sendToTopic(header.split(";",-1));
-
         long firstTimestamp=0;
         int i=1;
+
         //Validating first line
         String[] firstLine = (readLineFromCSV()).split(";",-1);
         firstLine[11] = delayFormatter.createDelayFormat(firstLine[11].toLowerCase());
@@ -98,6 +103,12 @@ public class DatasetSender {
         sendToTopic(poisonedTuple.split(";",-1));
 
         try {
+            out.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        try {
 
             producer1.close();
             producer2.close();
@@ -112,9 +123,9 @@ public class DatasetSender {
     private ArrayList<String> prepareStringToPublish(String[] value){
         ArrayList<String> dataToSend = new ArrayList<>();
 
-        dataToSend.add(String.join(";", value[7],value[9],value[11]));
-        dataToSend.add(String.join(";", value[5],value[7]));
-        dataToSend.add(String.join(";", value[5],value[10]));
+        dataToSend.add(String.join(";", value[7],value[9],value[11], "\n"));
+        dataToSend.add(String.join(";", value[5],value[7], "\n"));
+        dataToSend.add(String.join(";", value[5],value[10], "\n"));
 
         return dataToSend;
     }
@@ -124,10 +135,15 @@ public class DatasetSender {
         ArrayList<String> dataToSend = prepareStringToPublish(value);
 
         try {
+            out.write(dataToSend.get(0));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        try {
             producer1 = pulsarClient.newProducer(Schema.STRING)
                     .topic(topicHeader+topicNames[0])
                     .create();
-            //System.out.println(dataToSend.get(0));
             producer1.send(dataToSend.get(0));
         } catch (PulsarClientException e) {
             e.printStackTrace();
@@ -136,7 +152,6 @@ public class DatasetSender {
             producer2 = pulsarClient.newProducer(Schema.STRING)
                     .topic(topicHeader+topicNames[1])
                     .create();
-            //System.out.println(dataToSend.get(1));
             producer2.send(dataToSend.get(1));
         } catch (PulsarClientException e) {
             e.printStackTrace();
@@ -145,7 +160,6 @@ public class DatasetSender {
             producer3 = pulsarClient.newProducer(Schema.STRING)
                     .topic(topicHeader+topicNames[2])
                     .create();
-            //System.out.println(dataToSend.get(2));
             producer3.send(dataToSend.get(2));
         } catch (PulsarClientException e) {
             e.printStackTrace();

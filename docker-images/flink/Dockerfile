@@ -28,6 +28,8 @@ COPY conf/docker-entrypoint.sh /
 RUN chmod +x /docker-entrypoint.sh
 
 RUN mkdir $FLINK_HOME/flink-jar
+RUN mkdir $FLINK_HOME/flink-jar/results
+RUN chmod 777 $FLINK_HOME/flink-jar/results
 VOLUME $FLINK_HOME/flink-jar
 WORKDIR $FLINK_HOME/flink-jar
 
