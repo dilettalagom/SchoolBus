@@ -11,3 +11,6 @@ SchoolBus.iml
 
 /docker-compose/pulsar-jar/bookkeeper
 /docker-compose/pulsar-jar/standalone
+*.txt
+*.jar
+*.xml
