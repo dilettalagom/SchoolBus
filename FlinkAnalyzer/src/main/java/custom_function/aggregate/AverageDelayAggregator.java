@@ -1,4 +1,4 @@
-package aggregate;
+package custom_function.aggregate;
 
 import model.BoroDelayPojo;
 import org.apache.flink.api.common.functions.AggregateFunction;
@@ -7,9 +7,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 
-public class AverageDelay implements AggregateFunction<BoroDelayPojo, Tuple2<Long, Long>, Double> {
+public class AverageDelayAggregator implements AggregateFunction<BoroDelayPojo, Tuple2<Long, Long>, Double> {
 
-    private Logger log = LoggerFactory.getLogger(AverageDelay.class);
+    private Logger log = LoggerFactory.getLogger(AverageDelayAggregator.class);
 
     @Override
     public Tuple2<Long, Long> createAccumulator() {

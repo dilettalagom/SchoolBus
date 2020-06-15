@@ -1,4 +1,4 @@
-package key;
+package custom_function.key;
 
 import org.apache.flink.api.java.functions.KeySelector;
 import scala.Tuple3;

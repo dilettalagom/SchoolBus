@@ -1,4 +1,4 @@
-package aggregate;
+package custom_function.process;
 
 import scala.Tuple2;
 import org.apache.flink.streaming.api.functions.windowing.ProcessWindowFunction;

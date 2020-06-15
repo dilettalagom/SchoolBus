@@ -1,26 +1,23 @@
 package query;
 
-import aggregate.AverageDelay;
-import aggregate.DelayProcessWindowFunction;
-import aggregate.TimestampAggregator;
-import aggregate.TimestampWindowFunction;
-import key.KeyByBoro;
-import key.KeyByTimestamp;
+import custom_function.aggregate.AverageDelayAggregator;
+import custom_function.process.DelayProcessWindowFunction;
+import custom_function.aggregate.TimestampAggregator;
+import custom_function.process.TimestampWindowFunction;
+import custom_function.key.KeyByBoro;
+import custom_function.key.KeyByTimestamp;
 import model.BoroDelayPojo;
-import org.apache.flink.api.common.serialization.SimpleStringSchema;
 import org.apache.flink.core.fs.FileSystem;
 import org.apache.flink.streaming.api.TimeCharacteristic;
 import org.apache.flink.streaming.api.datastream.*;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
 import org.apache.flink.streaming.api.functions.source.SourceFunction;
 import org.apache.flink.streaming.api.windowing.time.Time;
-import org.apache.flink.streaming.connectors.pulsar.PulsarSourceBuilder;
 import scala.Tuple2;
 import time.DateTimeAscendingAssignerQuery1;
 import time.MonthWindow;
 import util.PulsarConnection;
-import util.Subscription;
-import validator.BoroDelayPojoValidator;
+import custom_function.validator.BoroDelayPojoValidator;
 import java.util.ArrayList;
 
 
@@ -37,13 +34,6 @@ public class FirstQuery {
         see.setStreamTimeCharacteristic(TimeCharacteristic.EventTime);
         //see.setParallelism(3);
         //see.enableCheckpointing(10);
-      /*  PulsarSourceBuilder<String> builder = PulsarSourceBuilder
-                .builder(new SimpleStringSchema())
-                .serviceUrl(pulsarUrl)
-                .topic("persistent://public/default/dataQuery1")
-                .subscriptionName((new Subscription()).generateNewSubScription());
-        SourceFunction<String> src = builder.build();*/
-
         PulsarConnection conn = new PulsarConnection(pulsarUrl, topic);
         SourceFunction<String> src = conn.createPulsarConnection();
         assert src!=null;
@@ -62,7 +52,7 @@ public class FirstQuery {
         //day
         SingleOutputStreamOperator<Tuple2<Long, ArrayList<Tuple2<String, Double>>>> prova = inputStream
                 .timeWindow(Time.days(1))
-                .aggregate(new AverageDelay(), new DelayProcessWindowFunction())
+                .aggregate(new AverageDelayAggregator(), new DelayProcessWindowFunction())
                 .keyBy(new KeyByTimestamp())
                 .timeWindow(Time.days(1))
                 .aggregate(new TimestampAggregator(), new TimestampWindowFunction());
@@ -70,7 +60,7 @@ public class FirstQuery {
         //week
         SingleOutputStreamOperator<Tuple2<Long, ArrayList<Tuple2<String, Double>>>> weekResult = inputStream
                 .timeWindow(Time.days(7))
-                .aggregate(new AverageDelay(), new DelayProcessWindowFunction())
+                .aggregate(new AverageDelayAggregator(), new DelayProcessWindowFunction())
                 .keyBy(new KeyByTimestamp())
                 .timeWindow(Time.hours(7))
                 .aggregate(new TimestampAggregator(), new TimestampWindowFunction());
@@ -78,7 +68,7 @@ public class FirstQuery {
         //month
         SingleOutputStreamOperator<Tuple2<Long, ArrayList<Tuple2<String, Double>>>> monthResult = inputStream
                 .window(new MonthWindow())
-                .aggregate(new AverageDelay(), new DelayProcessWindowFunction())
+                .aggregate(new AverageDelayAggregator(), new DelayProcessWindowFunction())
                 .keyBy(new KeyByTimestamp())
                 .window(new MonthWindow())
                 .aggregate(new TimestampAggregator(), new TimestampWindowFunction());

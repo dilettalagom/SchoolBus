@@ -1,4 +1,4 @@
-package validator;
+package custom_function.validator;
 
 import model.BoroDelayPojo;
 import org.apache.flink.api.common.functions.FilterFunction;

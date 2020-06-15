@@ -1,4 +1,4 @@
-package aggregate;
+package custom_function.aggregate;
 
 import org.apache.flink.api.common.functions.AggregateFunction;
 import scala.Tuple2;

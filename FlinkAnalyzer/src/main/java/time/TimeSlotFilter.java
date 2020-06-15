@@ -24,20 +24,21 @@ public class TimeSlotFilter {
     public boolean ckeckAM(ReasonDelayPojo pojo){
 
         LocalTime target = LocalTime.parse(pojo.getTimestamp().split("T", -1)[1]);
-        boolean isAM = target.isAfter(slotAMstart) && target.isBefore(slotAMend);
-        if(isAM)
-            pojo.setTimeSlot("AM");
-        return isAM;
+        return target.isAfter(slotAMstart) && target.isBefore(slotAMend);
+//        boolean isAM = target.isAfter(slotAMstart) && target.isBefore(slotAMend);
+//        if(isAM)
+//            pojo.setTimeSlot("AM");
+//        return isAM;
     }
 
     public boolean ckeckPM(ReasonDelayPojo pojo){
 
         LocalTime target = LocalTime.parse(pojo.getTimestamp().split("T", -1)[1]);
-
-        boolean isPM = target.isAfter(slotPMstart) && target.isBefore(slotPMend);
-        if(isPM)
-            pojo.setTimeSlot("PM");
-        return isPM;
+        return target.isAfter(slotPMstart) && target.isBefore(slotPMend);
+//        boolean isPM = target.isAfter(slotPMstart) && target.isBefore(slotPMend);
+//        if(isPM)
+//            pojo.setTimeSlot("PM");
+//        return isPM;
     }
 
 }

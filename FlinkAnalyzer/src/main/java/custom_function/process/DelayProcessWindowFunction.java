@@ -1,4 +1,4 @@
-package aggregate;
+package custom_function.process;
 
 import org.apache.flink.streaming.api.functions.windowing.ProcessWindowFunction;
 import org.apache.flink.streaming.api.windowing.windows.TimeWindow;

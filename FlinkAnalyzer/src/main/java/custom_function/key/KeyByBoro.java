@@ -1,4 +1,4 @@
-package key;
+package custom_function.key;
 
 import model.BoroDelayPojo;
 import org.apache.flink.api.java.functions.KeySelector;
