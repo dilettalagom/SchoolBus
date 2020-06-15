@@ -26,7 +26,7 @@ public class DatasetSender {
     public DatasetSender(String csvFilePath, float servingSpeed) {
         this.csvFilePath = csvFilePath;
         this.servingSpeed = servingSpeed;
-        this.delayFormatter = new DelayFormatter();
+        this.delayFormatter = DelayFormatter.getInstance();
         initCSVReader();
         initPulsarClient();
 

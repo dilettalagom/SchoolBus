@@ -18,7 +18,7 @@ public class BoroDelayPojo {
 
     @Override
     public String toString() {
-        return "boro = " + boro +
+        return "boro=" + boro +
                 ", delay=" + delay +
                 ", timestamp=" + timestamp;
     }

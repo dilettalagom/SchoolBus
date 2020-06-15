@@ -18,6 +18,7 @@ import org.apache.flink.streaming.connectors.pulsar.PulsarSourceBuilder;
 import scala.Tuple2;
 import time.DateTimeAscendingAssignerQuery1;
 import time.MonthWindow;
+import util.PulsarConnection;
 import util.Subscription;
 import validator.BoroDelayPojoValidator;
 import java.util.ArrayList;
@@ -26,6 +27,7 @@ import java.util.ArrayList;
 public class FirstQuery {
 
     private static final String pulsarUrl = "pulsar://pulsar-node:6650";
+    private static final String topic = "persistent://public/default/dataQuery1";
 
 
     public static void main(String[] args) throws Exception{
@@ -35,13 +37,16 @@ public class FirstQuery {
         see.setStreamTimeCharacteristic(TimeCharacteristic.EventTime);
         //see.setParallelism(3);
         //see.enableCheckpointing(10);
-        PulsarSourceBuilder<String> builder = PulsarSourceBuilder
+      /*  PulsarSourceBuilder<String> builder = PulsarSourceBuilder
                 .builder(new SimpleStringSchema())
                 .serviceUrl(pulsarUrl)
                 .topic("persistent://public/default/dataQuery1")
                 .subscriptionName((new Subscription()).generateNewSubScription());
-        SourceFunction<String> src = builder.build();
+        SourceFunction<String> src = builder.build();*/
 
+        PulsarConnection conn = new PulsarConnection(pulsarUrl, topic);
+        SourceFunction<String> src = conn.createPulsarConnection();
+        assert src!=null;
 
         KeyedStream<BoroDelayPojo, String> inputStream = see.addSource(src)
                 .map(x -> {

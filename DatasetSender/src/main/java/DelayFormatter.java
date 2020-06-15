@@ -2,7 +2,14 @@ import org.apache.commons.lang.StringUtils;
 
 public class DelayFormatter {
 
-    public DelayFormatter(){}
+    private static DelayFormatter instance = null;
+    private DelayFormatter(){}
+    public static DelayFormatter getInstance(){
+        if (instance == null){
+            instance = new DelayFormatter();
+        }
+        return instance;
+    }
 
     public String createDelayFormat(String stringTime){
 
