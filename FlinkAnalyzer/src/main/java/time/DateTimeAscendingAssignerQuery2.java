@@ -1,6 +1,5 @@
 package time;
 
-import model.BoroDelayPojo;
 import model.ReasonDelayPojo;
 import org.apache.flink.streaming.api.functions.timestamps.AscendingTimestampExtractor;
 

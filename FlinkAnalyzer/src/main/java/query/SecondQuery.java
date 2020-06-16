@@ -20,6 +20,7 @@ import time.DateTimeAscendingAssignerQuery2;
 import util.PulsarConnection;
 import custom_function.validator.TimeSlotValidator;
 
+import java.util.Map;
 import java.util.TreeMap;
 
 public class SecondQuery {
@@ -35,7 +36,7 @@ public class SecondQuery {
 
         PulsarConnection conn = new PulsarConnection(pulsarUrl, topic);
         SourceFunction<String> src = conn.createPulsarConnection();
-        assert src!=null;
+        //assert src!=null;
 
         SplitStream<ReasonDelayPojo> inputStream = see.addSource(src)
                 .map(x -> {
@@ -44,18 +45,22 @@ public class SecondQuery {
                 })
                 .filter(new TimeSlotValidator())
                 .assignTimestampsAndWatermarks(new DateTimeAscendingAssignerQuery2())
-                .split(new TimeSlotSplitter());
+                .split(new TimeSlotSplitter())
+                ;
 
         //AM - 24h
         SingleOutputStreamOperator<Tuple2<Long, Tuple2<String, Long>>> count = inputStream
                 .select("AM")
                 .keyBy(new KeyByReasonDelay())
                 .timeWindow(Time.days(1))
-                .aggregate(new ReasonAggregator(), new ReasonProcessWindowFunction());
+                .aggregate(new ReasonAggregator(), new ReasonProcessWindowFunction())
+                ;
 
-        SingleOutputStreamOperator<Tuple2<Long, TreeMap<String, Long>>> rank = count.keyBy(new KeyByTimestampReason())
+        SingleOutputStreamOperator<Tuple2<Long, Map<String, Long>>> rank = count
+                .keyBy(new KeyByTimestampReason())
                 .timeWindow(Time.days(1))
-                .aggregate(new TimestampReasonAggregator(), new RankingReasonProcessWindowFunction());
+                .aggregate(new TimestampReasonAggregator(), new RankingReasonProcessWindowFunction())
+                ;
 
         count.writeAsText("/opt/flink/flink-jar/results/query2/countAM24.txt", FileSystem.WriteMode.OVERWRITE).setParallelism(1);
         rank.writeAsText("/opt/flink/flink-jar/results/query2/rankAM24.txt", FileSystem.WriteMode.OVERWRITE).setParallelism(1);
