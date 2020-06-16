@@ -12,10 +12,10 @@ public class TimeSlotSplitter implements OutputSelector<ReasonDelayPojo> {
     public Iterable<String> select(ReasonDelayPojo pojo) {
         List<String> output = new ArrayList<>();
         if (TimeSlotFilter.getInstance().ckeckAM(pojo)) {
-            pojo.setTimeSlot("AM");
+            pojo.setTimeSlot("AM : 5:00-11:59");
             output.add("AM");
         } else {
-            pojo.setTimeSlot("PM");
+            pojo.setTimeSlot("PM : 12:00-19:00");
             output.add("PM");
         }
         return output;

@@ -13,7 +13,7 @@ public class Main {
 
         DatasetSender datasetSender = new DatasetSender(filePath,speed);
         datasetSender.startSendingData();
-        readerLocal();
+        //readerLocal();
 
         //HeapPriorityQueue
 

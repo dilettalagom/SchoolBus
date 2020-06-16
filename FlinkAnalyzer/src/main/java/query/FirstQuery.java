@@ -14,7 +14,7 @@ import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
 import org.apache.flink.streaming.api.functions.source.SourceFunction;
 import org.apache.flink.streaming.api.windowing.time.Time;
 import scala.Tuple2;
-import time.DateTimeAscendingAssignerQuery1;
+import time.watermark.DateTimeAscendingAssignerQuery1;
 import time.MonthWindow;
 import util.PulsarConnection;
 import custom_function.validator.BoroDelayPojoValidator;

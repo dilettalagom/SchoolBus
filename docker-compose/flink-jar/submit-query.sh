@@ -89,15 +89,5 @@ while getopts "q:t:h:" o;do
 done
 shift "$((OPTIND - 1))"
 
-kmeans_type=""
-if [ $q -eq 3 ] && [ -n $t ]
-then
-    case $t in
-        ("naive") kmeans_type="naive";;
-        ("mllib") kmeans_type="mllib";;
-        ("ml") kmeans_type="ml";;
-        (*) wrong_query_name
-    esac
-fi
 
-execute_query $q $kmeans_type
+execute_query $q

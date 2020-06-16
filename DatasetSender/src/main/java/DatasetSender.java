@@ -125,7 +125,7 @@ public class DatasetSender {
 
         dataToSend.add(String.join(";", value[7],value[9],value[11], "\n"));
         dataToSend.add(String.join(";", value[5],value[7], "\n"));
-        dataToSend.add(String.join(";", value[5],value[10], "\n"));
+        dataToSend.add(String.join(";", value[5],value[7], value[10], value[11],"\n"));
 
         return dataToSend;
     }
