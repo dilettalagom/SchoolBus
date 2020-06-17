@@ -13,10 +13,10 @@ import java.util.TreeMap;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-public class RankingReasonProcessWindowFunction extends ProcessWindowFunction<Tuple2<String,Map<String, Long>>, Tuple3<Long,String,Tuple2<String, Long>>, Long, TimeWindow> {
+public class RankingReasonProcessWindowFunction extends ProcessWindowFunction<Tuple2<String,Map<String, Long>>, Tuple3<Long,String, Map<String, Long> >, Long, TimeWindow> {
 
     @Override
-    public void process(Long aLong, Context context, Iterable<Tuple2<String,Map<String, Long>>> map, Collector<Tuple3<Long,String,Tuple2<String, Long>>> out) throws Exception {
+    public void process(Long aLong, Context context, Iterable<Tuple2<String,Map<String, Long>>> map, Collector<Tuple3<Long,String, Map<String, Long>> > out) throws Exception {
 
         Tuple2<String,Map<String, Long>> res = map.iterator().next();
         Stream<Map.Entry<String, Long>> myNewMap = res._2().entrySet().stream()
@@ -35,6 +35,7 @@ public class RankingReasonProcessWindowFunction extends ProcessWindowFunction<Tu
 
                 //.collect(TreeMap::new, (m, e) -> m.put(e.getKey(), e.getValue()), Map::putAll).;
 
-        out.collect(new Tuple3(aLong,res._1(),remappered));
+        //out.collect(new Tuple3(aLong, res._1(),remappered));
+        out.collect(new Tuple3(aLong, res._1(), remappered) );
     }
 }

@@ -30,19 +30,17 @@ public class DatasetSender {
         initCSVReader();
         initPulsarClient();
 
-        try {
-            out = new BufferedWriter(new FileWriter("dataQ1.txt", true));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
     }
 
     private void initCSVReader() {
         try {
+            this.out = new BufferedWriter(new FileWriter("dataQ1.txt", true));
             this.bufferedReader = new BufferedReader(new FileReader(csvFilePath));
         } catch (FileNotFoundException e) {
             System.err.println(e.getMessage());
             System.exit(1);
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 
@@ -54,6 +52,8 @@ public class DatasetSender {
                     .build();
         } catch (PulsarClientException e) {
             e.printStackTrace();
+            System.exit(1);
+
         }
     }
 
@@ -99,23 +99,28 @@ public class DatasetSender {
         }
 
         System.out.println("poisonedTuple" + "total: " + i);
-        String poisonedTuple = "2015-2016;1212751;Special Ed AM Run;201;W685;Poison;75420;3020-09-30T07:42:00.000;2015-09-03T08:06:00.000;Unknown;Unknown;??min??hr,ins;2;Yes;Yes;No;2015-09-03T08:06:00.000;;2015-09-03T08:06:11.000;Running Late;School-Age\n";
+        String poisonedTuple = "2015-2016;1212751;Special Ed AM Run;201;W685;Poison;75420;3020-09-30T07:42:00.000;2015-09-03T08:06:00.000;Unknown;Unknown;30 min,ins;2;Yes;Yes;No;2015-09-03T08:06:00.000;;2015-09-03T08:06:11.000;Running Late;School-Age\n";
         sendToTopic(poisonedTuple.split(";",-1));
 
         try {
+            bufferedReader.close();
             out.close();
         } catch (IOException e) {
             e.printStackTrace();
+            System.exit(1);
+
         }
 
         try {
-
             producer1.close();
             producer2.close();
             producer3.close();
             pulsarClient.close();
+            System.exit(0);
         } catch (PulsarClientException e) {
             e.printStackTrace();
+            System.exit(1);
+
         }
 
     }
@@ -166,8 +171,6 @@ public class DatasetSender {
         }
 
     }
-
-
 
 
     private void addDelay(long deltaTimeStamp) {
