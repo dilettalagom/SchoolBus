@@ -15,7 +15,6 @@ import org.apache.flink.streaming.api.datastream.SingleOutputStreamOperator;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
 import org.apache.flink.streaming.api.functions.source.SourceFunction;
 import org.apache.flink.streaming.api.functions.windowing.ProcessWindowFunction;
-import org.apache.flink.streaming.api.functions.windowing.WindowFunction;
 import org.apache.flink.streaming.api.windowing.assigners.TumblingEventTimeWindows;
 import org.apache.flink.streaming.api.windowing.time.Time;
 import org.apache.flink.streaming.api.windowing.windows.TimeWindow;
@@ -34,6 +33,7 @@ public class ThirdQuery {
 
         StreamExecutionEnvironment see = StreamExecutionEnvironment.getExecutionEnvironment();
         see.setStreamTimeCharacteristic(TimeCharacteristic.EventTime);
+        //see.setParallelism(3);
         PulsarConnection conn = new PulsarConnection(pulsarUrl, topic);
         SourceFunction<String> src = conn.createPulsarConnection();
 
@@ -129,26 +129,6 @@ public class ThirdQuery {
         });
 
         apply.writeAsText("/opt/flink/flink-jar/results/query2/prova.txt", FileSystem.WriteMode.OVERWRITE).setParallelism(1);
-
-        /*
-            TS1 C1 M 50 //24 h
-            TS2 C1 M 60 //24 h
-
-            TS C1 M  50 H 30 O 20
-
-            50 * 0.3
-         */
-
-        /*CoGroupedStreams<VendorsDelayPojo, VendorsDelayPojo>.Where<String>.EqualTo mech_heav =
-                mechanical_problem
-                .coGroup(heavy_traffic)
-                        .where((KeySelector<VendorsDelayPojo, String>) elem1 -> elem1.getVendor())
-                        .equalTo((KeySelector<VendorsDelayPojo, String>) elem2 -> elem2.getVendor())
-                .apply();
-        CoGroupedStreams<VendorsDelayPojo, VendorsDelayPojo>.Where<String>.EqualTo cogrouped = other_reason.coGroup(mech_heav).where((KeySelector<VendorsDelayPojo, String>) elem -> elem.getVendor()).equalTo((KeySelector<VendorsDelayPojo, String>) elem -> elem.getVendor());
-
-        cogrouped.writeAsText("/opt/flink/flink-jar/results/query2/prova.txt", FileSystem.WriteMode.OVERWRITE).setParallelism(1);*/
-                //count_mech.writeAsText("/opt/flink/flink-jar/results/query2/prova.txt", FileSystem.WriteMode.OVERWRITE).setParallelism(1);
 
         try {
             see.execute("FlinkQuery3");

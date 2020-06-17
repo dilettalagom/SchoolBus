@@ -4,9 +4,8 @@ import custom_function.aggregate.AverageDelayAggregator;
 import custom_function.process.DelayProcessWindowFunction;
 import custom_function.aggregate.TimestampAggregator;
 import custom_function.process.TimestampWindowFunction;
-import custom_function.key.KeyByBoro;
-import custom_function.key.KeyByTimestamp;
 import model.BoroDelayPojo;
+import org.apache.flink.api.java.functions.KeySelector;
 import org.apache.flink.core.fs.FileSystem;
 import org.apache.flink.streaming.api.TimeCharacteristic;
 import org.apache.flink.streaming.api.datastream.*;
@@ -14,6 +13,7 @@ import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
 import org.apache.flink.streaming.api.functions.source.SourceFunction;
 import org.apache.flink.streaming.api.windowing.time.Time;
 import scala.Tuple2;
+import scala.Tuple3;
 import time.watermark.DateTimeAscendingAssignerQuery1;
 import time.MonthWindow;
 import util.PulsarConnection;
@@ -45,7 +45,7 @@ public class FirstQuery {
                 })
                 .filter(new BoroDelayPojoValidator())
                 .assignTimestampsAndWatermarks(new DateTimeAscendingAssignerQuery1())
-                .keyBy(new KeyByBoro());
+                .keyBy((KeySelector<BoroDelayPojo, String>) pojo -> pojo.getBoro());
 
         inputStream.writeAsText("/opt/flink/flink-jar/results/query1/inputFromPulsar.txt", FileSystem.WriteMode.OVERWRITE).setParallelism(1);
 
@@ -53,7 +53,7 @@ public class FirstQuery {
         SingleOutputStreamOperator<Tuple2<Long, ArrayList<Tuple2<String, Double>>>> prova = inputStream
                 .timeWindow(Time.days(1))
                 .aggregate(new AverageDelayAggregator(), new DelayProcessWindowFunction())
-                .keyBy(new KeyByTimestamp())
+                .keyBy((KeySelector<Tuple3<Long, String, Double>, Long>) t -> t._1())
                 .timeWindow(Time.days(1))
                 .aggregate(new TimestampAggregator(), new TimestampWindowFunction());
 
@@ -61,7 +61,7 @@ public class FirstQuery {
         SingleOutputStreamOperator<Tuple2<Long, ArrayList<Tuple2<String, Double>>>> weekResult = inputStream
                 .timeWindow(Time.days(7))
                 .aggregate(new AverageDelayAggregator(), new DelayProcessWindowFunction())
-                .keyBy(new KeyByTimestamp())
+                .keyBy((KeySelector<Tuple3<Long, String, Double>, Long>) t -> t._1())
                 .timeWindow(Time.hours(7))
                 .aggregate(new TimestampAggregator(), new TimestampWindowFunction());
 
@@ -69,11 +69,11 @@ public class FirstQuery {
         SingleOutputStreamOperator<Tuple2<Long, ArrayList<Tuple2<String, Double>>>> monthResult = inputStream
                 .window(new MonthWindow())
                 .aggregate(new AverageDelayAggregator(), new DelayProcessWindowFunction())
-                .keyBy(new KeyByTimestamp())
+                .keyBy((KeySelector<Tuple3<Long, String, Double>, Long>) t -> t._1())
                 .window(new MonthWindow())
                 .aggregate(new TimestampAggregator(), new TimestampWindowFunction());
 
-        //write results on textfile
+        //save results on textfile
         prova.writeAsText("/opt/flink/flink-jar/results/query1/dayResult.txt", FileSystem.WriteMode.OVERWRITE).setParallelism(1);
         weekResult.writeAsText("/opt/flink/flink-jar/results/query1/weekResult.txt", FileSystem.WriteMode.OVERWRITE).setParallelism(1);
         monthResult.writeAsText("/opt/flink/flink-jar/results/query1/monthResult.txt", FileSystem.WriteMode.OVERWRITE).setParallelism(1);

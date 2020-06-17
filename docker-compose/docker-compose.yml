@@ -60,7 +60,7 @@ services:
       - HADOOP_CONF_DIR=/usr/local/hadoop/etc/hadoop
 
 
-  flink-taskmanager:
+  flink-taskmanager1:
     build:
       context: ../docker-images/flink
     image: digi/flink
@@ -81,6 +81,50 @@ services:
     environment:
       - JOB_MANAGER_RPC_ADDRESS=flink-jobmanager
       - HADOOP_CONF_DIR=/usr/local/hadoop/etc/hadoop
+
+#  flink-taskmanager2:
+#    build:
+#      context: ../docker-images/flink
+#    image: digi/flink
+#    hostname: flink-taskmanager2
+#    container_name: flink-taskmanager2
+#    networks:
+#      - app_network
+#    expose:
+#      - "6123"
+#      - "6124"
+#    depends_on:
+#      - flink-jobmanager
+#    links:
+#      - "flink-jobmanager:flink-jobmanager"
+#    command: taskmanager
+#    volumes:
+#      - ./flink-jar:/opt/flink/flink-jar
+#    environment:
+#      - JOB_MANAGER_RPC_ADDRESS=flink-jobmanager
+#      - HADOOP_CONF_DIR=/usr/local/hadoop/etc/hadoop
+#
+#  flink-taskmanager3:
+#    build:
+#      context: ../docker-images/flink
+#    image: digi/flink
+#    hostname: flink-taskmanager3
+#    container_name: flink-taskmanager3
+#    networks:
+#      - app_network
+#    expose:
+#      - "6125"
+#      - "6126"
+#    depends_on:
+#      - flink-jobmanager
+#    links:
+#      - "flink-jobmanager:flink-jobmanager"
+#    command: taskmanager
+#    volumes:
+#      - ./flink-jar:/opt/flink/flink-jar
+#    environment:
+#      - JOB_MANAGER_RPC_ADDRESS=flink-jobmanager
+#      - HADOOP_CONF_DIR=/usr/local/hadoop/etc/hadoop
 
 
   pulsar-node:
