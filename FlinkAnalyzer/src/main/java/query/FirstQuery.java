@@ -45,39 +45,38 @@ public class FirstQuery {
                 })
                 .filter(new BoroDelayPojoValidator())
                 .assignTimestampsAndWatermarks(new DateTimeAscendingAssignerQuery1())
-                .keyBy((KeySelector<BoroDelayPojo, String>) pojo -> pojo.getBoro());
+                .keyBy((KeySelector<BoroDelayPojo, String>) BoroDelayPojo::getBoro);
 
         inputStream.writeAsText("/opt/flink/flink-jar/results/query1/inputFromPulsar.txt", FileSystem.WriteMode.OVERWRITE).setParallelism(1);
 
-        //day
-        SingleOutputStreamOperator<Tuple2<Long, ArrayList<Tuple2<String, Double>>>> prova = inputStream
+        /* day */
+        SingleOutputStreamOperator<Tuple2<String, ArrayList<Tuple2<String, Double>>>> prova = inputStream
                 .timeWindow(Time.days(1))
                 .aggregate(new AverageDelayAggregator(), new DelayProcessWindowFunction())
                 .keyBy((KeySelector<Tuple3<Long, String, Double>, Long>) t -> t._1())
                 .timeWindow(Time.days(1))
                 .aggregate(new TimestampAggregator(), new TimestampWindowFunction());
 
-        //week
-        SingleOutputStreamOperator<Tuple2<Long, ArrayList<Tuple2<String, Double>>>> weekResult = inputStream
+        /* week */
+        SingleOutputStreamOperator<Tuple2<String, ArrayList<Tuple2<String, Double>>>> weekResult = inputStream
                 .timeWindow(Time.days(7))
                 .aggregate(new AverageDelayAggregator(), new DelayProcessWindowFunction())
                 .keyBy((KeySelector<Tuple3<Long, String, Double>, Long>) t -> t._1())
                 .timeWindow(Time.hours(7))
                 .aggregate(new TimestampAggregator(), new TimestampWindowFunction());
 
-        //month
-        SingleOutputStreamOperator<Tuple2<Long, ArrayList<Tuple2<String, Double>>>> monthResult = inputStream
+        /* month */
+        SingleOutputStreamOperator<Tuple2<String, ArrayList<Tuple2<String, Double>>>> monthResult = inputStream
                 .window(new MonthWindow())
                 .aggregate(new AverageDelayAggregator(), new DelayProcessWindowFunction())
                 .keyBy((KeySelector<Tuple3<Long, String, Double>, Long>) t -> t._1())
                 .window(new MonthWindow())
                 .aggregate(new TimestampAggregator(), new TimestampWindowFunction());
 
-        //save results on textfile
+        /* save results on textfile */
         prova.writeAsText("/opt/flink/flink-jar/results/query1/dayResult.txt", FileSystem.WriteMode.OVERWRITE).setParallelism(1);
         weekResult.writeAsText("/opt/flink/flink-jar/results/query1/weekResult.txt", FileSystem.WriteMode.OVERWRITE).setParallelism(1);
         monthResult.writeAsText("/opt/flink/flink-jar/results/query1/monthResult.txt", FileSystem.WriteMode.OVERWRITE).setParallelism(1);
-
 
         try {
             see.execute("FlinkQuery1");
