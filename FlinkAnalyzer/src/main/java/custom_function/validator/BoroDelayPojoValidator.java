@@ -7,6 +7,6 @@ public class BoroDelayPojoValidator implements FilterFunction<BoroDelayPojo> {
 
     @Override
     public boolean filter(BoroDelayPojo boroDelayPojo) throws Exception {
-        return boroDelayPojo != null && !boroDelayPojo.getBoro().equals("");
+        return boroDelayPojo != null && !boroDelayPojo.getBoro().equals("") && !boroDelayPojo.getDelay().toString().equals("");
     }
 }
