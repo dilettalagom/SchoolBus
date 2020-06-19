@@ -24,12 +24,24 @@ public class PulsarConnection {
                 .builder(new SimpleStringSchema())
                 .serviceUrl(this.pulsarURL)
                 .topic(this.topic)
-                .subscriptionName((new Subscription()).generateNewSubScription());
+                .subscriptionName(generateNewSubScription());
         try {
             src = builder.build();
         } catch (PulsarClientException e) {
             e.printStackTrace();
         }
         return src;
+    }
+
+
+    public String generateNewSubScription(){
+        String ALPHA_NUMERIC_STRING = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+        StringBuilder builder = new StringBuilder();
+        int count = 10;
+        while (count-- != 0) {
+            int character = (int)(Math.random()*ALPHA_NUMERIC_STRING.length());
+            builder.append(ALPHA_NUMERIC_STRING.charAt(character));
+        }
+        return builder.toString();
     }
 }

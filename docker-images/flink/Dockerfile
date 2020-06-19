@@ -33,7 +33,7 @@ ENV FLINK_HOME /opt/flink
 COPY conf/docker-entrypoint.sh /
 RUN chmod +x /docker-entrypoint.sh
 
-#ADD conf/flink-conf.yaml $FLINK_HOME/conf/flink-conf.yaml
+ADD conf/flink-conf.yaml $FLINK_HOME/conf/flink-conf.yaml
 
 RUN mkdir $FLINK_HOME/flink-jar
 RUN mkdir $FLINK_HOME/flink-jar/results
