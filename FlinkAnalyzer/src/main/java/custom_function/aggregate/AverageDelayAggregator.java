@@ -2,40 +2,48 @@ package custom_function.aggregate;
 
 import model.BoroDelayPojo;
 import org.apache.flink.api.common.functions.AggregateFunction;
-import org.apache.flink.api.java.tuple.Tuple2;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import scala.Tuple2;
+import scala.Tuple3;
+import time.TimeConverter;
 
-
-public class AverageDelayAggregator implements AggregateFunction<BoroDelayPojo, Tuple2<Long, Long>, Double> {
+//Tuple3<sum, count, eventTime>
+public class AverageDelayAggregator implements AggregateFunction<BoroDelayPojo, Tuple3<Long, Long, Long>, Tuple2<Long,Double>> {
 
     private Logger log = LoggerFactory.getLogger(AverageDelayAggregator.class);
 
     @Override
-    public Tuple2<Long, Long> createAccumulator() {
-        return new Tuple2<>(0L, 0L);
+    public Tuple3<Long, Long, Long> createAccumulator() {
+        return new Tuple3<>(0L, 0L, 0L);
     }
 
     @Override
-    public Tuple2<Long, Long> add(BoroDelayPojo pojo, Tuple2<Long, Long> accumulator) {
+    public Tuple3<Long, Long, Long> add(BoroDelayPojo pojo, Tuple3<Long, Long, Long> accumulator) {
 
-        return new Tuple2<>(accumulator.f0 + (long) pojo.getDelay(), accumulator.f1 + 1L);
+        long actual = TimeConverter.currentClock();
+
+        log.info("actual: {} POJO_T: {}",actual, pojo.getCurrentEventTime());
+        return new Tuple3<>(accumulator._1() + (long) pojo.getDelay(), accumulator._2() + 1L,
+                Math.max(actual, accumulator._3()) );
     }
 
     @Override
-    public Tuple2<Long, Long> merge(Tuple2<Long, Long> a, Tuple2<Long, Long> b) {
-        long sum = a.f0 + b.f0;
-        long count = a.f1 + b.f1;
+    public Tuple3<Long, Long, Long> merge(Tuple3<Long, Long, Long> a, Tuple3<Long, Long, Long> b) {
 
-        log.debug("sum : {} counter: {}", sum, count);
-        return new Tuple2<>(a.f0 + b.f0, a.f1 + b.f1);
+        long sum = a._1() + b._1();
+        long count = a._2()+ b._2();
+        long eventTime = Math.max(a._3(), b._3());
+
+        return new Tuple3<>(sum, count, eventTime);
     }
 
     @Override
-    public Double getResult(Tuple2<Long, Long> accumulator) {
+    public Tuple2<Long,Double> getResult(Tuple3<Long, Long, Long> accumulator) {
 
-        Double mean = ((double) accumulator.f0) / accumulator.f1;
-        return mean;
+        Double mean = ((double) accumulator._1()) / accumulator._2();
+        long actual = TimeConverter.currentClock() - accumulator._3();
+        return new Tuple2<>(actual, mean);
     }
 
 

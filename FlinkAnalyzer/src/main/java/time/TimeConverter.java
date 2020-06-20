@@ -34,15 +34,16 @@ public class TimeConverter {
         }
     }
 
-    public String convertFromEpochToDate(Long epochMilli)
-    {
+    public String convertFromEpochToDate(Long epochMilli){
         Date date = new Date(epochMilli);
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
         return simpleDateFormat.format(date);
     }
 
 
-
+    public static Long currentClock(){
+        return System.nanoTime();
+    }
 
 
 }

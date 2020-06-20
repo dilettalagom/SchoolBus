@@ -6,9 +6,6 @@ import time.TimeConverter;
 
 public class DateTimeAscendingAssignerQuery1 extends AscendingTimestampExtractor<BoroDelayPojo> {
 
-    public DateTimeAscendingAssignerQuery1() {
-    }
-
     @Override
     public long extractAscendingTimestamp(BoroDelayPojo boroDelayPojo) {
         // use createdate timestamp in millis as event time
