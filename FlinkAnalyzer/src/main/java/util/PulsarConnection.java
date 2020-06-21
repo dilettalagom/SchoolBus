@@ -24,7 +24,8 @@ public class PulsarConnection {
                 .builder(new SimpleStringSchema())
                 .serviceUrl(this.pulsarURL)
                 .topic(this.topic)
-                .subscriptionName(generateNewSubScription());
+                .subscriptionName(generateNewSubScription())
+                .acknowledgementBatchSize(1L);
         try {
             src = builder.build();
         } catch (PulsarClientException e) {

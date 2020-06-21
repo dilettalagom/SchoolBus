@@ -112,8 +112,8 @@ public class DatasetSender {
 
         try {
             producer1.close();
-            producer2.close();
-            producer3.close();
+            //producer2.close();
+            //producer3.close();
             pulsarClient.close();
             System.exit(0);
         } catch (PulsarClientException e) {
@@ -137,7 +137,7 @@ public class DatasetSender {
 
     private void sendToTopic(String[] value){
 
-        ArrayList<String> dataToSend = prepareStringToPublish(value);
+        //ArrayList<String> dataToSend = prepareStringToPublish(value);
 
 //        try {
 //            out.write(dataToSend.get(0));
@@ -150,11 +150,11 @@ public class DatasetSender {
                     //.topic(topicHeader+topicNames[0])
                     .topic(topicNames[0])
                     .create();
-            producer1.send(dataToSend.get(0));
+            producer1.send(String.join(";",value));
         } catch (PulsarClientException e) {
             e.printStackTrace();
         }
-        try {
+        /*try {
             producer2 = pulsarClient.newProducer(Schema.STRING)
                     .topic(topicNames[1])
                     .create();
@@ -169,7 +169,7 @@ public class DatasetSender {
             producer3.send(dataToSend.get(2));
         } catch (PulsarClientException e) {
             e.printStackTrace();
-        }
+        }*/
 
     }
 
