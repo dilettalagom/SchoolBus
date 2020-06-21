@@ -2,49 +2,33 @@ package custom_function.aggregate;
 
 import model.ReasonDelayPojo;
 import org.apache.flink.api.common.functions.AggregateFunction;
-import scala.Tuple2;
+import scala.Tuple3;
 
+//OUT: reason, count, latency
+public class ReasonAggregator implements AggregateFunction<ReasonDelayPojo, Tuple3<String,Long,Long>, Tuple3<String,Long,Long>> {
 
-public class ReasonAggregator implements AggregateFunction<ReasonDelayPojo, Tuple2<String,Long>, Tuple2<String,Long>> {
     @Override
-    public Tuple2<String, Long> createAccumulator() {
-        return new Tuple2<>("",0L);
+    public Tuple3<String,Long,Long> createAccumulator() {
+        return new Tuple3<>("",0L,0L);
     }
 
     @Override
-    public Tuple2<String, Long> add(ReasonDelayPojo pojo, Tuple2<String, Long> acc) {
-        return new Tuple2<>(pojo.getTimeSlot(),acc._2() + 1L);
+    public Tuple3<String,Long,Long> add(ReasonDelayPojo pojo, Tuple3<String,Long,Long> acc) {
+
+        long actualTime = Math.max(pojo.getCurrentEventTime(),acc._3());
+        return new Tuple3<>(pojo.getTimeSlot(),acc._2() + 1L,actualTime);
+        //return new Tuple3<>(pojo.getReason(),acc._2() + 1L,actualTime);
     }
 
     @Override
-    public Tuple2<String, Long> getResult(Tuple2<String, Long> acc) {
+    public Tuple3<String,Long,Long> getResult(Tuple3<String,Long,Long> acc) {
         return acc;
     }
 
     @Override
-    public Tuple2<String, Long> merge(Tuple2<String, Long> acc1, Tuple2<String, Long> acc2) {
-        return new Tuple2<>(acc1._1(),acc2._2());
+    public Tuple3<String,Long,Long> merge(Tuple3<String,Long,Long> acc1, Tuple3<String,Long,Long> acc2) {
+        long actualTime = Math.max(acc1._3(),acc2._3());
+        return new Tuple3<>(acc1._1(),acc1._2() + acc2._2(),actualTime);
     }
 
-
-
-    /*@Override
-    public Long createAccumulator() {
-        return 0L;
-    }
-
-    @Override
-    public Long add(ReasonDelayPojo pojo, Long acc) {
-       return acc + 1L;
-    }
-
-    @Override
-    public Long getResult(Long acc) {
-        return acc;
-    }
-
-    @Override
-    public Long merge(Long acc1, Long acc2) {
-        return acc1 + acc2;
-    }*/
 }

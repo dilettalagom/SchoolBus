@@ -9,8 +9,8 @@ public class BoroDelayPojoValidator implements FilterFunction<BoroDelayPojo> {
     @Override
     public boolean filter(BoroDelayPojo boroDelayPojo) throws Exception {
 
-        long actual = TimeConverter.getInstance().currentClock();
-        boroDelayPojo.setCurrentEventTime(actual - boroDelayPojo.getCurrentEventTime());
-        return boroDelayPojo != null && !boroDelayPojo.getBoro().equals("") && !boroDelayPojo.getDelay().toString().equals("");
+        //long actual = TimeConverter.getInstance().currentClock();
+        //boroDelayPojo.setCurrentEventTime(actual - boroDelayPojo.getCurrentEventTime());
+        return boroDelayPojo != null && !boroDelayPojo.getBoro().equals("") && boroDelayPojo.getDelay() > 0;
     }
 }

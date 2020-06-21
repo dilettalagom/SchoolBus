@@ -1,5 +1,5 @@
 #FROM flink:1.8-scala_2.11
-FROM flink:1.10.1-scala_2.11
+FROM flink:1.10.0-scala_2.11
 
 USER root
 

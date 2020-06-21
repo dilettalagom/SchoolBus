@@ -47,7 +47,7 @@ jobmanager.heap.size: 1024m
 taskmanager.heap.size: 1280m
 
 
-taskmanager.memory.jvm-metaspace.size: 512m
+taskmanager.memory.jvm-metaspace.size: 1024m
 
 
 # The number of task slots that each TaskManager offers. Each slot runs one parallel pipeline.
@@ -259,6 +259,6 @@ fs.hdfs.hadoopconf: /usr/local/hadoop/etc/hadoop
 blob.server.port: 6124
 query.server.port: 6125
 
-metrics.reporters: log
-metrics.reporter.log.class: org.apache.flink.metrics.LogReporter
-metrics.reporter.log.interval: 5 SECONDS
+#metrics.reporters: log
+#metrics.reporter.log.class: org.apache.flink.metrics.LogReporter
+#metrics.reporter.log.interval: 5 SECONDS

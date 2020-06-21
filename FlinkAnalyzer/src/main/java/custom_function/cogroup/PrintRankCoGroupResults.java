@@ -4,19 +4,22 @@ import model.ResultSlotRankPojo;
 import org.apache.flink.api.common.functions.CoGroupFunction;
 import org.apache.flink.util.Collector;
 import scala.Tuple2;
-import scala.Tuple3;
+import scala.Tuple4;
+import time.TimeConverter;
 import java.util.ArrayList;
 import java.util.Map;
 import java.util.NoSuchElementException;
 
-public class PrintRankResults implements CoGroupFunction<Tuple3<Long, String, Map<String, Long>>, Tuple3<Long, String, Map<String, Long>>, ResultSlotRankPojo> {
+public class PrintRankCoGroupResults implements CoGroupFunction<Tuple4<Long, String, Map<String, Long>,Long>, Tuple4<Long, String, Map<String, Long>,Long>, ResultSlotRankPojo> {
     @Override
-    public void coGroup(Iterable<Tuple3<Long, String, Map<String, Long>>> rankAM, Iterable<Tuple3<Long, String, Map<String, Long>>> rankPM, Collector<ResultSlotRankPojo> out) throws Exception {
+    public void coGroup(Iterable<Tuple4<Long, String, Map<String, Long>,Long>> rankAM, Iterable<Tuple4<Long, String, Map<String, Long>,Long>> rankPM, Collector<ResultSlotRankPojo> out) throws Exception {
 
         ArrayList<Tuple2<String,Map<String, Long>>> temp = new ArrayList<>();
 
-        Tuple3<Long, String, Map<String, Long>> elemAM;
-        Tuple3<Long, String, Map<String, Long>> elemPM;
+        Tuple4<Long, String, Map<String, Long>,Long> elemAM;
+        Tuple4<Long, String, Map<String, Long>,Long> elemPM;
+        long actualEventTimeAM = 0L;
+        long actualEventTimePM = 0L;
 
         try{
             elemAM = rankAM.iterator().next();
@@ -34,14 +37,17 @@ public class PrintRankResults implements CoGroupFunction<Tuple3<Long, String, Ma
         if( elemAM != null) {
             timestamp = elemAM._1();
             temp.add(new Tuple2<>(elemAM._2(), elemAM._3()));
+            actualEventTimeAM = elemAM._4();
         }
 
         if (elemPM != null){
             timestamp = elemPM._1();
             temp.add(new Tuple2<>(elemPM._2(), elemPM._3()));
+            actualEventTimePM = elemPM._4();
         }
 
-        ResultSlotRankPojo pojo = new ResultSlotRankPojo(timestamp, temp);
+        long end = TimeConverter.currentClock() - Math.max(actualEventTimeAM,actualEventTimePM);
+        ResultSlotRankPojo pojo = new ResultSlotRankPojo(timestamp, temp, end);
         out.collect(pojo);
     }
 }

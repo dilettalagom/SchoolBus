@@ -5,24 +5,27 @@ import org.apache.flink.streaming.api.functions.windowing.WindowFunction;
 import org.apache.flink.streaming.api.windowing.windows.TimeWindow;
 import org.apache.flink.util.Collector;
 import scala.Tuple3;
+import scala.Tuple4;
 
-public class ComputeVendorsPartialScore implements WindowFunction<VendorsDelayPojo, Tuple3<Long, String, Tuple3<Long, Long, Long>>, String, TimeWindow> {
+public class ComputeVendorsPartialScore implements WindowFunction<VendorsDelayPojo, Tuple4<Long, String, Tuple3<Long, Long, Long>,Long>, String, TimeWindow> {
 
 
     @Override
     public void apply(String key,
                       TimeWindow timeWindow,
                       Iterable<VendorsDelayPojo> iterable,
-                      Collector<Tuple3<Long, String, Tuple3<Long, Long, Long>>> out) throws Exception {
+                      Collector<Tuple4<Long, String, Tuple3<Long, Long, Long>,Long>> out) throws Exception {
 
         Tuple3<Long, Long, Long> actualValue = new Tuple3<>(0L, 0L, 0L);
+        long maxEventTime = 0L;
 
         for(VendorsDelayPojo v : iterable){
             Long valueToAdd = checkDelay(v.getDelay());
             actualValue = updatScoreValues(actualValue, v, valueToAdd);
-    }
+            maxEventTime = Math.max(v.getCurrentEventTime(),maxEventTime);
+        }
 
-    out.collect(new Tuple3<>(timeWindow.getStart(), key, actualValue));
+        out.collect(new Tuple4<>(timeWindow.getStart(), key, actualValue, maxEventTime));
 
     }
 

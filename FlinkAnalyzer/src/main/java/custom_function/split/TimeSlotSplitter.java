@@ -3,7 +3,6 @@ package custom_function.split;
 import model.ReasonDelayPojo;
 import org.apache.flink.streaming.api.collector.selector.OutputSelector;
 import time.TimeSlotFilter;
-
 import java.util.ArrayList;
 import java.util.List;
 

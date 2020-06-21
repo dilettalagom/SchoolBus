@@ -1,6 +1,7 @@
 package model;
 
 import lombok.Data;
+import time.TimeConverter;
 
 @Data
 public class VendorsDelayPojo {
@@ -9,12 +10,14 @@ public class VendorsDelayPojo {
     private String timestamp;
     private String vendor;
     private Integer delay;
+    private Long currentEventTime;
 
     public VendorsDelayPojo(String reason, String timestamp, String vendor, Integer delay) {
         this.reason = setReason(reason);
         this.timestamp = timestamp;
         this.vendor = vendor;
         this.delay = delay;
+        this.currentEventTime = setStartTime();
     }
 
     private String setReason(String reason){
@@ -24,8 +27,14 @@ public class VendorsDelayPojo {
             return "Other Reason";
         else
             return "";
-        }
-
     }
+
+    private Long setStartTime(){
+        return TimeConverter.currentClock();
+    }
+
+
+}
+
 
 

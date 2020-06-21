@@ -3,7 +3,6 @@ package time;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import query.FirstQuery;
-
 import java.text.SimpleDateFormat;
 import java.time.Instant;
 import java.time.format.DateTimeParseException;

@@ -3,7 +3,6 @@ package time;
 import org.apache.flink.streaming.api.windowing.assigners.TumblingEventTimeWindows;
 import org.apache.flink.streaming.api.windowing.time.Time;
 import org.apache.flink.streaming.api.windowing.windows.TimeWindow;
-
 import java.time.LocalDateTime;
 import java.time.ZoneOffset;
 import java.util.Collection;

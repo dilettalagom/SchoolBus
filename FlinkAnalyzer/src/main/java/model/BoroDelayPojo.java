@@ -3,8 +3,6 @@ package model;
 import lombok.Data;
 import time.TimeConverter;
 
-import java.time.Instant;
-import java.util.Date;
 
 @Data
 public class BoroDelayPojo {
@@ -15,12 +13,27 @@ public class BoroDelayPojo {
     private Long currentEventTime;
 
 
-    public BoroDelayPojo(String timestamp, String boro, String delay, Long eventTime) {
+    public BoroDelayPojo(String timestamp, String boro, String delay) {
         this.boro = boro;
-        this.delay = Integer.parseInt(delay);
+        this.delay = parseInteger(delay);
         this.timestamp = timestamp;
-        this.currentEventTime = eventTime;
+        this.currentEventTime = setStartTime();
     }
+
+    private Long setStartTime(){
+        return TimeConverter.currentClock();
+    }
+
+
+    private int parseInteger( String delay)
+    {
+        try{
+            return Integer.parseInt(delay);
+        }catch (NumberFormatException e){
+            return -1;
+        }
+    }
+
 
     @Override
     public String toString() {

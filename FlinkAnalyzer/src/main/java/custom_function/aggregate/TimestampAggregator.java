@@ -4,8 +4,6 @@ import org.apache.flink.api.common.functions.AggregateFunction;
 import scala.Tuple3;
 import scala.Tuple4;
 import time.TimeConverter;
-
-
 import java.util.ArrayList;
 
 public class TimestampAggregator implements AggregateFunction<
@@ -18,7 +16,9 @@ public class TimestampAggregator implements AggregateFunction<
     @Override
     public ArrayList<Tuple3<String, Double, Long>> createAccumulator() {
 
-        return new ArrayList<Tuple3<String, Double, Long>>();
+        ArrayList<Tuple3<String, Double, Long>> acc = new ArrayList<>();
+        acc.add(new Tuple3<>("",0.0,0L));
+        return acc;
     }
 
     @Override
