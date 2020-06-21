@@ -58,11 +58,11 @@ public class SecondQueryAggregate {
 
         /* day */
         SingleOutputStreamOperator<Tuple3<Long, ArrayList<Tuple2<String, Tuple2<String, Long>>>, Long>> dayStream = computeStreamByWindow(inputStream, 1);
-        dayStream.writeAsText("/opt/flink/flink-jar/results/query2/noCoGroup.txt", FileSystem.WriteMode.OVERWRITE).setParallelism(1);
+        dayStream.writeAsText("/opt/flink/flink-jar/results/query2/dayStreamAggregate.txt", FileSystem.WriteMode.OVERWRITE).setParallelism(1);
 
         /* week */
         SingleOutputStreamOperator<Tuple3<Long, ArrayList<Tuple2<String, Tuple2<String, Long>>>, Long>> weekStream = computeStreamByWindow(inputStream, 7);
-        weekStream.writeAsText("/opt/flink/flink-jar/results/query2/noCoGroup.txt", FileSystem.WriteMode.OVERWRITE).setParallelism(1);
+        weekStream.writeAsText("/opt/flink/flink-jar/results/query2/weekStreamAggregate.txt", FileSystem.WriteMode.OVERWRITE).setParallelism(1);
 
         try {
             see.execute("FlinkQuery2Aggr");
