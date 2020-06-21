@@ -33,7 +33,7 @@ import java.util.ArrayList;
 import java.util.Map;
 
 
-public class SecondQuery {
+public class SecondQuerySplit {
 
     private static final String pulsarUrl = "pulsar://pulsar-node:6650";
     //private static final String topic = "persistent://public/default/dataQuery2";
@@ -48,8 +48,8 @@ public class SecondQuery {
         SourceFunction<String> src = conn.createPulsarConnection();
         assert src!=null;
 
-        DataStreamSource<String> input = see.addSource(src);
-        SplitStream<ReasonDelayPojo> inputStream = input
+
+        SplitStream<ReasonDelayPojo> inputStream = see.addSource(src)
                 .map(x -> {
                     String[] tokens = x.split(";", -1);
                     return new ReasonDelayPojo(tokens[0], tokens[1]);
@@ -58,7 +58,6 @@ public class SecondQuery {
                 .assignTimestampsAndWatermarks(new DateTimeAscendingAssignerQuery2())
                 .split(new TimeSlotSplitter());
 
-        inputStream.writeAsText("/opt/flink/flink-jar/results/query2/input.txt", FileSystem.WriteMode.OVERWRITE).setParallelism(1);
 
         /* AM - 24h */
         SingleOutputStreamOperator<Tuple4<Long, String, Map<String, Long>,Long>> rankAMday = computeRankBySlot(inputStream, "AM",1);
@@ -69,36 +68,15 @@ public class SecondQuery {
         resultDay.writeAsText("/opt/flink/flink-jar/results/query2/dayResult.txt", FileSystem.WriteMode.OVERWRITE).setParallelism(1);
 
         /* AM - 1week */
-        //SingleOutputStreamOperator<Tuple4<Long, String, Map<String, Long>, Long>> rankAMweek = computeRankBySlot(inputStream, "AM", 7);
+        SingleOutputStreamOperator<Tuple4<Long, String, Map<String, Long>, Long>> rankAMweek = computeRankBySlot(inputStream, "AM", 7);
         /* PM - 1week */
         SingleOutputStreamOperator<Tuple4<Long, String, Map<String, Long>, Long>> rankPMweek = computeRankBySlot(inputStream, "PM",7);
         /* save 1week results */
-        //DataStream<ResultSlotRankPojo> resultWeek = joinSlotResults(rankAMweek, rankPMweek);
-        //resultWeek.writeAsText("/opt/flink/flink-jar/results/query2/weekResult.txt", FileSystem.WriteMode.OVERWRITE).setParallelism(1);
-
-
-        /*TODO:CODICE PROVA*/
-        /*SingleOutputStreamOperator<Tuple3<Long, ArrayList<Tuple2<String, Tuple2<String, Long>>>, Long>> prova = input
-                .map(x -> {
-                    String[] tokens = x.split(";", -1);
-                    return new ReasonDelayPojo(tokens[0], tokens[1]);
-                })
-                .filter(new TimeSlotValidator())
-                .assignTimestampsAndWatermarks(new DateTimeAscendingAssignerQuery2())
-                .keyBy(new KeyBySlotAndReason())
-                .timeWindow(Time.days(1))
-                .aggregate(new Aggregatore1(), new Process1())
-                .keyBy(new keyByTimeAndSlot())
-                .timeWindow(Time.days(1))
-                .aggregate(new TimestampReasonAggregator(), new Process2())
-                .keyBy(new KeyByTimestamp())
-                .timeWindow(Time.days(1))
-                .aggregate(new Aggregatore3(), new Process3());
-
-        prova.writeAsText("/opt/flink/flink-jar/results/query2/noCoGroup.txt", FileSystem.WriteMode.OVERWRITE).setParallelism(1);*/
+        DataStream<ResultSlotRankPojo> resultWeek = joinSlotResults(rankAMweek, rankPMweek);
+        resultWeek.writeAsText("/opt/flink/flink-jar/results/query2/weekResult.txt", FileSystem.WriteMode.OVERWRITE).setParallelism(1);
 
         try {
-            see.execute("FlinkQuery2");
+            see.execute("FlinkQuery2Split");
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -106,15 +84,13 @@ public class SecondQuery {
     }
 
 
-    private static SingleOutputStreamOperator<Tuple4<Long, String, Map<String, Long>,Long>> computeRankBySlot(SplitStream<ReasonDelayPojo> inputStream, String am, Integer window) {
-        SingleOutputStreamOperator<Tuple4<Long, String, Tuple2<String, Long>, Long>> firstAgg = inputStream
-                .select(am)
+    private static SingleOutputStreamOperator<Tuple4<Long, String, Map<String, Long>,Long>> computeRankBySlot(SplitStream<ReasonDelayPojo> inputStream, String type, Integer window) {
+        return inputStream
+                .select(type)
                 .keyBy(new KeyByReasonAndDelay())
                 .timeWindow(Time.days(window))
-                .aggregate(new ReasonAggregator(), new ReasonProcessWindowFunction());
-
-        firstAgg.writeAsText("/opt/flink/flink-jar/results/query2/firstAgg.txt", FileSystem.WriteMode.OVERWRITE).setParallelism(1);
-        return  firstAgg.keyBy(new KeyByTimestampAndReason())
+                .aggregate(new ReasonAggregator(), new ReasonProcessWindowFunction())
+                .keyBy(new KeyByTimestampAndReason())
                 .timeWindow(Time.days(window))
                 .aggregate(new TimestampReasonAggregator(), new RankingReasonProcessWindowFunction());
     }
@@ -123,11 +99,11 @@ public class SecondQuery {
     private static DataStream<ResultSlotRankPojo> joinSlotResults(SingleOutputStreamOperator<Tuple4<Long, String, Map<String, Long>,Long>> rankAM,
                                                                   SingleOutputStreamOperator<Tuple4<Long, String, Map<String, Long>,Long>> rankPM) {
         return rankAM
-                    .coGroup(rankPM)
-                    .where((KeySelector<Tuple4<Long, String, Map<String, Long>,Long>, Long>) row -> row._1())
-                    .equalTo((KeySelector<Tuple4<Long, String, Map<String, Long>,Long>, Long>) row -> row._1())
-                    .window(TumblingEventTimeWindows.of(Time.days(1)))
-                    .apply(new PrintRankCoGroupResults());
+                .coGroup(rankPM)
+                .where((KeySelector<Tuple4<Long, String, Map<String, Long>,Long>, Long>) row -> row._1())
+                .equalTo((KeySelector<Tuple4<Long, String, Map<String, Long>,Long>, Long>) row -> row._1())
+                .window(TumblingEventTimeWindows.of(Time.days(1)))
+                .apply(new PrintRankCoGroupResults());
     }
 
 }

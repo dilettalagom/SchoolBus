@@ -1,5 +1,6 @@
 package time;
 
+
 import model.ReasonDelayPojo;
 import java.time.LocalTime;
 
@@ -23,13 +24,21 @@ public class TimeSlotFilter {
     public boolean ckeckAM(ReasonDelayPojo pojo){
 
         LocalTime target = LocalTime.parse(pojo.getTimestamp().split("T", -1)[1]);
-        return target.isAfter(slotAMstart) && target.isBefore(slotAMend);
+        if (target.isAfter(slotAMstart) && target.isBefore(slotAMend)){
+            pojo.setTimeSlot("AM : 5:00-11:59");
+            return true;
+        }
+        return false;
     }
 
     public boolean ckeckPM(ReasonDelayPojo pojo){
 
         LocalTime target = LocalTime.parse(pojo.getTimestamp().split("T", -1)[1]);
-        return target.isAfter(slotPMstart) && target.isBefore(slotPMend);
+        if(target.isAfter(slotPMstart) && target.isBefore(slotPMend)){
+            pojo.setTimeSlot("PM : 12:00-19:00");
+            return true;
+        }
+        return false;
     }
 
 }

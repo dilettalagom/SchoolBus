@@ -259,6 +259,3 @@ fs.hdfs.hadoopconf: /usr/local/hadoop/etc/hadoop
 blob.server.port: 6124
 query.server.port: 6125
 
-#metrics.reporters: log
-#metrics.reporter.log.class: org.apache.flink.metrics.LogReporter
-#metrics.reporter.log.interval: 5 SECONDS

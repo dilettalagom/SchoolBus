@@ -9,8 +9,8 @@ public class DateTimeAscendingAssignerQuery1 extends AscendingTimestampExtractor
     @Override
     public long extractAscendingTimestamp(BoroDelayPojo boroDelayPojo) {
         // use createdate timestamp in millis as event time
-        return Long.parseLong(boroDelayPojo.getTimestamp());
-        //return TimeConverter.getInstance().convertToEpochMilli(boroDelayPojo.getTimestamp());
+        //return Long.parseLong(boroDelayPojo.getTimestamp());
+        return TimeConverter.getInstance().convertToEpochMilli(boroDelayPojo.getTimestamp());
     }
 
 }

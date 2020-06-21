@@ -9,7 +9,7 @@ usage() {
 
     Options:
       -q num_query          Execute the specific querys number (1,2,3)
-      -t kmeans_type        Specify which k-means implementation will be used (naive, mllib, ml)
+      -v version            Specify which implementation will be used in query2 (split, aggregate)
       -h help               Print all the COVID19sabd informations
 EOF
   exit 1
@@ -41,25 +41,28 @@ execute_query() {
     -c query.FirstQuery \
     $FLINK_HOME/flink-jar/FlinkAnalyzer-1.0-SNAPSHOT.jar
 
-    #show results in hdfs
-    #hdfs dfs -ls /results/firstQuery
-
-
 
 
   elif [ $q = 2 ]
   then
     echo "\n--------------------< submitting QUERY 2 >--------------------"
 
-    #query submit
-    $FLINK_HOME/bin/flink run\
-    -c query.SecondQuery \
-    $FLINK_HOME/flink-jar/FlinkAnalyzer-1.0-SNAPSHOT.jar
+    if [ $version = 1 ]
+    then
+        echo "version with split and coGroup"
+        #query submit
+        $FLINK_HOME/bin/flink run\
+        -c query.SecondQuerySplit \
+        $FLINK_HOME/flink-jar/FlinkAnalyzer-1.0-SNAPSHOT.jar
 
-    #show results in hdfs
-    #hdfs dfs -ls /results/secondQuery
-
-
+    elif [ $version = 2 ]
+    then
+        echo "version only with aggregate"
+        #query submit
+        $FLINK_HOME/bin/flink run\
+        -c query.SecondQueryAggregate \
+        $FLINK_HOME/flink-jar/FlinkAnalyzer-1.0-SNAPSHOT.jar
+    fi
 
 
 
@@ -71,7 +74,6 @@ execute_query() {
     -c query.ThirdQuery \
     $FLINK_HOME/flink-jar/FlinkAnalyzer-1.0-SNAPSHOT.jar
 
-    #hdfs dfs -ls /results/thirdQuery
 
   else
     wrong_query_name
@@ -80,14 +82,25 @@ execute_query() {
 }
 
 
-while getopts "q:t:h:" o;do
+while getopts "q:t:h:v:" o;do
 	case $o in
 	  q) q=$OPTARG;;
 	  t) t=$OPTARG;;
+	  v) v=$OPTARG;;
 	  h) usage
 	esac
 done
 shift "$((OPTIND - 1))"
 
+version=0
+if [ $q -eq 2 ] && [ -n $v ]
+then
+    case $v in
+        ("split") version=1;;
+        ("aggregate") version=2;;
+        (*) wrong_query_name
+    esac
+fi
 
-execute_query $q
+
+execute_query $q $version

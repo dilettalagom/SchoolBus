@@ -128,9 +128,9 @@ public class DatasetSender {
         ArrayList<String> dataToSend = new ArrayList<>();
 
         //value[7] = String.valueOf(extractTimeStamp(value[7]));
-        dataToSend.add(String.join(";", value[7],value[9],value[11], "\n"));
-        dataToSend.add(String.join(";", value[5],value[7], "\n"));
-        dataToSend.add(String.join(";", value[5],value[7], value[10], value[11],"\n"));
+        dataToSend.add(String.join(";", value[7],value[9],value[11]));
+        dataToSend.add(String.join(";", value[5],value[7]));
+        dataToSend.add(String.join(";", value[5],value[7], value[10], value[11]));
 
         return dataToSend;
     }
