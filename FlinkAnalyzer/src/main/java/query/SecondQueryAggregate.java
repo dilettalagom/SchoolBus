@@ -1,54 +1,41 @@
 package query;
 
-import custom_function.aggregate.ReasonAggregator;
 import custom_function.aggregate.TimestampReasonAggregator;
-import custom_function.cogroup.PrintRankCoGroupResults;
-import custom_function.key.KeyByReasonAndDelay;
-import custom_function.key.KeyByTimestampAndReason;
-import custom_function.process.RankingReasonProcessWindowFunction;
-import custom_function.process.ReasonProcessWindowFunction;
 import custom_function.prova.*;
-import custom_function.split.TimeSlotSplitter;
 import custom_function.validator.TimeSlotValidator;
 import model.ReasonDelayPojo;
-import model.ResultSlotRankPojo;
-import org.apache.flink.api.java.functions.KeySelector;
+import org.apache.flink.api.java.utils.ParameterTool;
 import org.apache.flink.core.fs.FileSystem;
 import org.apache.flink.streaming.api.TimeCharacteristic;
-import org.apache.flink.streaming.api.datastream.DataStream;
 import org.apache.flink.streaming.api.datastream.DataStreamSource;
 import org.apache.flink.streaming.api.datastream.SingleOutputStreamOperator;
-import org.apache.flink.streaming.api.datastream.SplitStream;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
-import org.apache.flink.streaming.api.functions.source.SourceFunction;
-import org.apache.flink.streaming.api.windowing.assigners.TumblingEventTimeWindows;
 import org.apache.flink.streaming.api.windowing.time.Time;
 import scala.Tuple2;
 import scala.Tuple3;
-import scala.Tuple4;
 import time.watermark.DateTimeAscendingAssignerQuery2;
-import util.PulsarConnection;
+import util.Consumer;
 
 import java.util.ArrayList;
-import java.util.Map;
 
 
 public class SecondQueryAggregate {
 
-    private static final String pulsarUrl = "pulsar://pulsar-node:6650";
     //private static final String topic = "persistent://public/default/dataQuery2";
     private static final String topic = "dataQuery2";
 
 
     public static void main(String[] args) {
 
+        ParameterTool parameter = ParameterTool.fromArgs(args);
         StreamExecutionEnvironment see = StreamExecutionEnvironment.getExecutionEnvironment();
         see.setStreamTimeCharacteristic(TimeCharacteristic.EventTime);
-        PulsarConnection conn = new PulsarConnection(pulsarUrl, topic);
-        SourceFunction<String> src = conn.createPulsarConnection();
-        assert src!=null;
 
-        SingleOutputStreamOperator<ReasonDelayPojo> inputStream = see.addSource(src)
+        DataStreamSource<String> input = (new Consumer()).initConsumer(parameter.get("con"), see, topic);
+        assert input!=null;
+
+
+        SingleOutputStreamOperator<ReasonDelayPojo> inputStream = input
                 .map(x -> {
                     String[] tokens = x.split(";", -1);
                     return new ReasonDelayPojo(tokens[0], tokens[1]);
@@ -84,7 +71,6 @@ public class SecondQueryAggregate {
                 .timeWindow(Time.days(window))
                 .aggregate(new Aggregatore3(), new Process3());
     }
-
 
 
 }

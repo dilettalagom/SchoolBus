@@ -6,8 +6,9 @@ import java.util.Properties;
 
 public class KafkaConsumer extends FlinkKafkaConsumer<String> {
 
-    public KafkaConsumer() {
-        super("dataQuery1", new SimpleStringSchema(), initProperties());
+    public KafkaConsumer(String topic) {
+
+        super(topic, new SimpleStringSchema(), initProperties());
     }
 
     private static Properties initProperties() {

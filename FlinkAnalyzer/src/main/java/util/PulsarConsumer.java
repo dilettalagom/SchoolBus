@@ -7,27 +7,26 @@ import org.apache.pulsar.client.api.PulsarClientException;
 
 import java.util.Properties;
 
-public class PulsarConnection{
+public class PulsarConsumer {
 
-    private String pulsarURL;
+    private static final String pulsarURL = "pulsar://pulsar-node:6650";
     private String topic;
 
-    public PulsarConnection(String pulsarURL, String topic) {
-        this.pulsarURL = pulsarURL;
+    public PulsarConsumer(String topic) {
         this.topic = topic;
     }
 
 
-    public SourceFunction<String> createPulsarConnection() {
+    public SourceFunction<String> initPulsarConnection() {
 
         SourceFunction<String> src = null;
 
         PulsarSourceBuilder<String> builder = PulsarSourceBuilder
                 .builder(new SimpleStringSchema())
-                .serviceUrl(this.pulsarURL)
+                .serviceUrl(pulsarURL)
                 .topic(this.topic)
                 .subscriptionName(generateNewSubScription())
-                .acknowledgementBatchSize(1L);
+                .acknowledgementBatchSize(1000L);
         try {
             src = builder.build();
         } catch (PulsarClientException e) {
@@ -47,6 +46,5 @@ public class PulsarConnection{
         }
         return builder.toString();
     }
-
 
 }

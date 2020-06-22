@@ -5,45 +5,40 @@ import custom_function.apply.ComputeBoroDelayResult;
 import custom_function.process.DelayProcessWindowFunction;
 import model.BoroDelayPojo;
 import org.apache.flink.api.java.functions.KeySelector;
+import org.apache.flink.api.java.utils.ParameterTool;
 import org.apache.flink.core.fs.FileSystem;
 import org.apache.flink.streaming.api.TimeCharacteristic;
 import org.apache.flink.streaming.api.datastream.*;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
-import org.apache.flink.streaming.api.functions.source.SourceFunction;
 import org.apache.flink.streaming.api.windowing.time.Time;
-import org.apache.flink.streaming.connectors.pulsar.FlinkPulsarProducer;
 import scala.Tuple3;
 import scala.Tuple4;
 import time.MonthWindow;
 import time.watermark.DateTimeAscendingAssignerQuery1;
-import util.KafkaConsumer;
-import util.PulsarConnection;
 import custom_function.validator.BoroDelayPojoValidator;
+import util.Consumer;
+
 import java.util.ArrayList;
 
 
-public class FirstQuery {
+public class FirstQuery{
 
-    private static final String pulsarUrl = "pulsar://pulsar-node:6650";
     //private static final String topic = "persistent://public/default/dataQuery1";
     private static final String topic = "dataQuery1";
 
 
     public static void main(String[] args) throws Exception{
 
-        String connector = args[0];
-        //Logger log = LoggerFactory.getLogger(FirstQuery.class);
+        ParameterTool parameter = ParameterTool.fromArgs(args);
         StreamExecutionEnvironment see = StreamExecutionEnvironment.getExecutionEnvironment();
         see.setStreamTimeCharacteristic(TimeCharacteristic.EventTime);
         see.enableCheckpointing(100*1000);
 
-        //PulsarConnection conn = new PulsarConnection(pulsarUrl, topic);
-        //SourceFunction<String> src = conn.createPulsarConnection();
-        //assert src!=null;
+        DataStreamSource<String> input = (new Consumer()).initConsumer(parameter.get("con"), see, topic);
+        assert input!=null;
 
-
-        KeyedStream<BoroDelayPojo, String> inputStream = see
-                .addSource(new KafkaConsumer()).map(x -> {
+        KeyedStream<BoroDelayPojo, String> inputStream = input
+                .map(x -> {
                     String[] tokens = x.split(";", -1);
                     return new BoroDelayPojo(tokens[7], tokens[9], tokens[11]);
                 })

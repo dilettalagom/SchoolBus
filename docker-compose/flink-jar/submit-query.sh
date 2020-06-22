@@ -8,10 +8,13 @@ usage() {
       execute-query
 
     Options:
-      -q num_query          Execute the specific querys number (1,2,3)
+      -q num_query          Execute the specific queries number (1,2,3)
       -v version            Specify which implementation will be used in query2 (split, aggregate)
-      -c connector          Specify which publish-subscribe system will be used
-      -h help               Print all the COVID19sabd informations
+      -c connector          Specify which publish-subscribe system will be used (kafka, pulsar)
+      -h help               Print all the SchoolBus informations
+
+    Example:
+    sh submit-query.sh -c pulsar -q 2 -v split
 EOF
   exit 1
 }
@@ -40,8 +43,8 @@ execute_query() {
 
     #query submit
     $FLINK_HOME/bin/flink run\
-    -c query.FirstQuery connector\
-    $FLINK_HOME/flink-jar/FlinkAnalyzer-1.0-SNAPSHOT.jar
+    -c query.FirstQuery \
+    $FLINK_HOME/flink-jar/FlinkAnalyzer-1.0-SNAPSHOT.jar --con $connector
 
 
 
@@ -54,16 +57,16 @@ execute_query() {
         echo "version with split and coGroup"
         #query submit
         $FLINK_HOME/bin/flink run\
-        -c query.SecondQuerySplit connector\
-        $FLINK_HOME/flink-jar/FlinkAnalyzer-1.0-SNAPSHOT.jar
+        -c query.SecondQuerySplit \
+        $FLINK_HOME/flink-jar/FlinkAnalyzer-1.0-SNAPSHOT.jar --con $connector
 
     elif [ $version = 2 ]
     then
         echo "version only with aggregate"
         #query submit
         $FLINK_HOME/bin/flink run\
-        -c query.SecondQueryAggregate connector\
-        $FLINK_HOME/flink-jar/FlinkAnalyzer-1.0-SNAPSHOT.jar
+        -c query.SecondQueryAggregate \
+        $FLINK_HOME/flink-jar/FlinkAnalyzer-1.0-SNAPSHOT.jar --con $connector
     fi
 
 
@@ -73,8 +76,8 @@ execute_query() {
     echo "\n--------------------< submitting QUERY 3 >--------------------"
 
     $FLINK_HOME/bin/flink run\
-    -c query.ThirdQuery connector\
-    $FLINK_HOME/flink-jar/FlinkAnalyzer-1.0-SNAPSHOT.jar
+    -c query.ThirdQuery \
+    $FLINK_HOME/flink-jar/FlinkAnalyzer-1.0-SNAPSHOT.jar --con $connector
 
 
   else

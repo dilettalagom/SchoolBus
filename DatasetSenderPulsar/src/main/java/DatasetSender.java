@@ -10,7 +10,7 @@ public class DatasetSender {
     private String csvFilePath;
     private BufferedReader bufferedReader;
     private static final String pulsarUrl = "pulsar://localhost:6650";
-    //private static final String topicHeader = "persistent://public/default/";
+    private static final String topicHeader = "non-persistent://public/default/";
     private static final String[] topicNames = new String[]{"dataQuery1", "dataQuery2", "dataQuery3"};
     private PulsarClient pulsarClient;
     private Producer<String> producer1, producer2, producer3;
