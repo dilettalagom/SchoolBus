@@ -4,6 +4,7 @@ import org.apache.flink.api.common.serialization.SimpleStringSchema;
 import org.apache.flink.streaming.api.functions.source.SourceFunction;
 import org.apache.flink.streaming.connectors.pulsar.PulsarSourceBuilder;
 import org.apache.pulsar.client.api.PulsarClientException;
+import org.apache.pulsar.client.impl.conf.ConsumerConfigurationData;
 
 import java.util.Properties;
 
@@ -24,9 +25,9 @@ public class PulsarConsumer {
         PulsarSourceBuilder<String> builder = PulsarSourceBuilder
                 .builder(new SimpleStringSchema())
                 .serviceUrl(pulsarURL)
-                .topic(this.topic)
-                .subscriptionName(generateNewSubScription())
-                .acknowledgementBatchSize(1000L);
+                .subscriptionName("Flink-Query1")
+                .topic(this.topic);
+                //.acknowledgementBatchSize(100L);
         try {
             src = builder.build();
         } catch (PulsarClientException e) {
@@ -46,5 +47,6 @@ public class PulsarConsumer {
         }
         return builder.toString();
     }
+
 
 }

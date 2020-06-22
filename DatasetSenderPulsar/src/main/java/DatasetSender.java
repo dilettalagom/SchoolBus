@@ -9,8 +9,9 @@ public class DatasetSender {
 
     private String csvFilePath;
     private BufferedReader bufferedReader;
-    private static final String pulsarUrl = "pulsar://localhost:6650";
-    private static final String topicHeader = "non-persistent://public/default/";
+    private static final String pulsarUrl = "pulsar://pulsar-node:6650";
+    //private static final String topicHeader = "non-persistent://public/default/";
+    private static final String topicHeader = "";
     private static final String[] topicNames = new String[]{"dataQuery1", "dataQuery2", "dataQuery3"};
     private PulsarClient pulsarClient;
     private Producer<String> producer1, producer2, producer3;
@@ -26,7 +27,7 @@ public class DatasetSender {
         this.delayFormatter = DelayFormatter.getInstance();
         initCSVReader();
         initPulsarClient();
-
+        initPulsarProducer();
     }
 
     private void initCSVReader() {
@@ -54,6 +55,15 @@ public class DatasetSender {
         }
     }
 
+    private void initPulsarProducer(){
+        try {
+            producer1 = pulsarClient.newProducer(Schema.STRING)
+                    .topic(topicHeader + topicNames[0])
+                    .create();
+        } catch (PulsarClientException e) {
+            e.printStackTrace();
+        }
+    }
     public void startSendingData(){
 
         String header = readLineFromCSV();
@@ -73,7 +83,6 @@ public class DatasetSender {
         while ((line = readLineFromCSV())!=null) {
 
             String[] tokens = line.split(";",-1);
-
             //ckeck if is a valid line  --> total row: 379412, validated row: 332571
             String validatedDelay = delayFormatter.createDelayFormat(tokens[11].toLowerCase());
 
@@ -81,16 +90,12 @@ public class DatasetSender {
             if(validatedDelay != null) {
                 i++;
                 tokens[11] = validatedDelay;
-
                 long curTimestamp = extractTimeStamp(tokens[7]);
                 long deltaTimeStamp = computeDelta(firstTimestamp, curTimestamp);
-
                 if (deltaTimeStamp > 0) {
-
                     addDelay(deltaTimeStamp);
                     firstTimestamp = curTimestamp;
                 }
-
                 sendToTopic( tokens );
             }
         }
@@ -105,9 +110,7 @@ public class DatasetSender {
         } catch (IOException e) {
             e.printStackTrace();
             System.exit(1);
-
         }
-
         try {
             producer1.close();
             //producer2.close();
@@ -117,7 +120,6 @@ public class DatasetSender {
         } catch (PulsarClientException e) {
             e.printStackTrace();
             System.exit(1);
-
         }
 
     }
@@ -145,11 +147,6 @@ public class DatasetSender {
 //        }
 
         try {
-            producer1 = pulsarClient.newProducer(Schema.STRING)
-                    //.topic(topicHeader+topicNames[0])
-                    .topic(topicNames[0])
-                    .enableBatching(true)
-                    .create();
             producer1.send(String.join(";",value));
         } catch (PulsarClientException e) {
             e.printStackTrace();

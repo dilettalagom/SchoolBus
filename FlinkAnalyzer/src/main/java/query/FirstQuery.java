@@ -16,16 +16,15 @@ import scala.Tuple4;
 import time.MonthWindow;
 import time.watermark.DateTimeAscendingAssignerQuery1;
 import custom_function.validator.BoroDelayPojoValidator;
-import util.Consumer;
-
+import util.PulsarSource;
 import java.util.ArrayList;
 
 
 public class FirstQuery{
 
-    //private static final String topic = "persistent://public/default/dataQuery1";
+    //private static final String topic = "non-persistent://public/default/dataQuery1";
     private static final String topic = "dataQuery1";
-
+    private static final String pulsarUrl = "pulsar://pulsar-node:6650";
 
     public static void main(String[] args) throws Exception{
 
@@ -34,7 +33,9 @@ public class FirstQuery{
         see.setStreamTimeCharacteristic(TimeCharacteristic.EventTime);
         see.enableCheckpointing(100*1000);
 
-        DataStreamSource<String> input = (new Consumer()).initConsumer(parameter.get("con"), see, topic);
+        //DataStreamSource<String> input = (new Consumer()).initConsumer(parameter.get("con"), see, topic);
+        //PulsarClient client = initPulsarClient();
+        DataStreamSource<String> input = see.addSource(new PulsarSource());
         assert input!=null;
 
         KeyedStream<BoroDelayPojo, String> inputStream = input
@@ -95,6 +96,18 @@ public class FirstQuery{
         }
 
     }
+
+    /*public static PulsarClient initPulsarClient() {
+        try {
+            return PulsarClient.builder()
+                    .serviceUrl(pulsarUrl)
+                    .build();
+        } catch (PulsarClientException e) {
+            e.printStackTrace();
+            System.exit(1);
+            return null;
+        }
+    }*/
 
 }
 
