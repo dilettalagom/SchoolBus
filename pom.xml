@@ -9,8 +9,9 @@
     <version>1.0-SNAPSHOT</version>
 
     <modules>
-        <module>DatasetSender</module>
+        <module>DatasetSenderPulsar</module>
         <module>FlinkAnalyzer</module>
+        <module>DatasetSenderKafka</module>
     </modules>
 
 </project>

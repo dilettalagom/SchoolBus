@@ -10,6 +10,7 @@ usage() {
     Options:
       -q num_query          Execute the specific querys number (1,2,3)
       -v version            Specify which implementation will be used in query2 (split, aggregate)
+      -c connector          Specify which publish-subscribe system will be used
       -h help               Print all the COVID19sabd informations
 EOF
   exit 1
@@ -36,9 +37,10 @@ execute_query() {
   then
     echo "\n--------------------< submitting QUERY 1 >--------------------"
 
+
     #query submit
     $FLINK_HOME/bin/flink run\
-    -c query.FirstQuery \
+    -c query.FirstQuery connector\
     $FLINK_HOME/flink-jar/FlinkAnalyzer-1.0-SNAPSHOT.jar
 
 
@@ -52,7 +54,7 @@ execute_query() {
         echo "version with split and coGroup"
         #query submit
         $FLINK_HOME/bin/flink run\
-        -c query.SecondQuerySplit \
+        -c query.SecondQuerySplit connector\
         $FLINK_HOME/flink-jar/FlinkAnalyzer-1.0-SNAPSHOT.jar
 
     elif [ $version = 2 ]
@@ -60,7 +62,7 @@ execute_query() {
         echo "version only with aggregate"
         #query submit
         $FLINK_HOME/bin/flink run\
-        -c query.SecondQueryAggregate \
+        -c query.SecondQueryAggregate connector\
         $FLINK_HOME/flink-jar/FlinkAnalyzer-1.0-SNAPSHOT.jar
     fi
 
@@ -71,7 +73,7 @@ execute_query() {
     echo "\n--------------------< submitting QUERY 3 >--------------------"
 
     $FLINK_HOME/bin/flink run\
-    -c query.ThirdQuery \
+    -c query.ThirdQuery connector\
     $FLINK_HOME/flink-jar/FlinkAnalyzer-1.0-SNAPSHOT.jar
 
 
@@ -82,8 +84,9 @@ execute_query() {
 }
 
 
-while getopts "q:t:h:v:" o;do
+while getopts "c:q:t:h:v:" o;do
 	case $o in
+	  c) c=$OPTARG;;
 	  q) q=$OPTARG;;
 	  t) t=$OPTARG;;
 	  v) v=$OPTARG;;
@@ -93,6 +96,17 @@ done
 shift "$((OPTIND - 1))"
 
 version=0
+connector=""
+
+if [ -n $c ]
+then
+    case $c in
+        ("kafka") connector="kafka";;
+        ("pulsar") connector="pulsar";;
+        (*) wrong_query_name
+    esac
+fi
+
 if [ $q -eq 2 ] && [ -n $v ]
 then
     case $v in
@@ -103,4 +117,4 @@ then
 fi
 
 
-execute_query $q $version
+execute_query $connector $q $version

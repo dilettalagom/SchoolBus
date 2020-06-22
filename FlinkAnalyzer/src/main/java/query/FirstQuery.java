@@ -11,10 +11,12 @@ import org.apache.flink.streaming.api.datastream.*;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
 import org.apache.flink.streaming.api.functions.source.SourceFunction;
 import org.apache.flink.streaming.api.windowing.time.Time;
+import org.apache.flink.streaming.connectors.pulsar.FlinkPulsarProducer;
 import scala.Tuple3;
 import scala.Tuple4;
 import time.MonthWindow;
 import time.watermark.DateTimeAscendingAssignerQuery1;
+import util.KafkaConsumer;
 import util.PulsarConnection;
 import custom_function.validator.BoroDelayPojoValidator;
 import java.util.ArrayList;
@@ -29,17 +31,19 @@ public class FirstQuery {
 
     public static void main(String[] args) throws Exception{
 
+        String connector = args[0];
         //Logger log = LoggerFactory.getLogger(FirstQuery.class);
         StreamExecutionEnvironment see = StreamExecutionEnvironment.getExecutionEnvironment();
         see.setStreamTimeCharacteristic(TimeCharacteristic.EventTime);
         see.enableCheckpointing(100*1000);
 
-        PulsarConnection conn = new PulsarConnection(pulsarUrl, topic);
-        SourceFunction<String> src = conn.createPulsarConnection();
-        assert src!=null;
+        //PulsarConnection conn = new PulsarConnection(pulsarUrl, topic);
+        //SourceFunction<String> src = conn.createPulsarConnection();
+        //assert src!=null;
+
 
         KeyedStream<BoroDelayPojo, String> inputStream = see
-                .addSource(src).map(x -> {
+                .addSource(new KafkaConsumer()).map(x -> {
                     String[] tokens = x.split(";", -1);
                     return new BoroDelayPojo(tokens[7], tokens[9], tokens[11]);
                 })

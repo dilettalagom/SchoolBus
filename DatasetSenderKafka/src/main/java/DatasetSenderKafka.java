@@ -1,33 +1,35 @@
-import org.apache.pulsar.client.api.Producer;
-import org.apache.pulsar.client.api.PulsarClient;
-import org.apache.pulsar.client.api.PulsarClientException;
-import org.apache.pulsar.client.api.Schema;
-import java.io.*;
+import org.apache.kafka.clients.producer.KafkaProducer;
+import org.apache.kafka.clients.producer.ProducerRecord;
+import org.apache.kafka.common.serialization.StringSerializer;
+
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.time.Instant;
 import java.time.format.DateTimeParseException;
 import java.util.ArrayList;
+import java.util.Properties;
 
-public class DatasetSender {
+public class DatasetSenderKafka {
 
     private String csvFilePath;
     private BufferedReader bufferedReader;
-    private static final String pulsarUrl = "pulsar://localhost:6650";
-    //private static final String topicHeader = "persistent://public/default/";
     private static final String[] topicNames = new String[]{"dataQuery1", "dataQuery2", "dataQuery3"};
-    private PulsarClient pulsarClient;
-    private Producer<String> producer1, producer2, producer3;
+    private static final String KafkaUri = "kafka:9092";
+    private KafkaProducer producer;
     private float servingSpeed;
     private DelayFormatter delayFormatter;
 
     //BufferedWriter out;
 
 
-    public DatasetSender(String csvFilePath, float servingSpeed) {
+    public DatasetSenderKafka(String csvFilePath, float servingSpeed) {
         this.csvFilePath = csvFilePath;
         this.servingSpeed = servingSpeed;
         this.delayFormatter = DelayFormatter.getInstance();
         initCSVReader();
-        initPulsarClient();
+        initKafkaProducer();
 
     }
 
@@ -44,16 +46,13 @@ public class DatasetSender {
     }
 
 
-    private void initPulsarClient() {
-        try {
-            pulsarClient = PulsarClient.builder()
-                    .serviceUrl(pulsarUrl)
-                    .build();
-        } catch (PulsarClientException e) {
-            e.printStackTrace();
-            System.exit(1);
-
-        }
+    private void initKafkaProducer() {
+        Properties props = new Properties();
+        props.put("bootstrap.servers", KafkaUri);
+        props.put("group.id", "test");
+        props.put("key.serializer", StringSerializer.class);
+        props.put("value.serializer", StringSerializer.class);
+        producer = new KafkaProducer(props);
     }
 
     public void startSendingData(){
@@ -109,18 +108,7 @@ public class DatasetSender {
             System.exit(1);
 
         }
-
-        try {
-            producer1.close();
-            //producer2.close();
-            //producer3.close();
-            pulsarClient.close();
-            System.exit(0);
-        } catch (PulsarClientException e) {
-            e.printStackTrace();
-            System.exit(1);
-
-        }
+        //producer.close();
 
     }
 
@@ -135,41 +123,12 @@ public class DatasetSender {
         return dataToSend;
     }
 
+
     private void sendToTopic(String[] value){
 
-        //ArrayList<String> dataToSend = prepareStringToPublish(value);
-
-//        try {
-//            out.write(dataToSend.get(0));
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-
-        try {
-            producer1 = pulsarClient.newProducer(Schema.STRING)
-                    //.topic(topicHeader+topicNames[0])
-                    .topic(topicNames[0])
-                    .create();
-            producer1.send(String.join(";",value));
-        } catch (PulsarClientException e) {
-            e.printStackTrace();
-        }
-        /*try {
-            producer2 = pulsarClient.newProducer(Schema.STRING)
-                    .topic(topicNames[1])
-                    .create();
-            producer2.send(dataToSend.get(1));
-        } catch (PulsarClientException e) {
-            e.printStackTrace();
-        }
-        try {
-            producer3 = pulsarClient.newProducer(Schema.STRING)
-                    .topic(topicNames[2])
-                    .create();
-            producer3.send(dataToSend.get(2));
-        } catch (PulsarClientException e) {
-            e.printStackTrace();
-        }*/
+        String s = String.join(";",value);
+        ProducerRecord dataToSend = new ProducerRecord(topicNames[0],null,s);
+        producer.send(dataToSend);
 
     }
 
@@ -209,6 +168,5 @@ public class DatasetSender {
         }
         return line;
     }
-
 
 }
