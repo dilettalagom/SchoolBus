@@ -4,8 +4,7 @@ USER root
 RUN apt-get update;
 RUN apt-get install -y sudo wget openjdk-8-jre vim;
 
-
-# install SPARK LIB in spark_hdfs_container
+# install SPARK LIB
 RUN wget https://downloads.apache.org/spark/spark-2.4.5/spark-2.4.5-bin-hadoop2.7.tgz
 RUN tar -zxf spark-2.4.5-bin-hadoop2.7.tgz -C /usr/local/ ; rm spark-2.4.5-bin-hadoop2.7.tgz
 RUN cd /usr/local && ln -s ./spark-2.4.5-bin-hadoop2.7 spark
@@ -22,6 +21,7 @@ ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64
 #create main directory
 RUN mkdir /target
 RUN mkdir /tmp/spark-events
+
 #external linking
 VOLUME /target
 WORKDIR /target

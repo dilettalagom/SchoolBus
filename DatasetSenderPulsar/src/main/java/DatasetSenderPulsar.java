@@ -5,25 +5,25 @@ import java.time.Instant;
 import java.time.format.DateTimeParseException;
 import java.util.ArrayList;
 
-public class DatasetSender {
+public class DatasetSenderPulsar {
 
     private String csvFilePath;
     private BufferedReader bufferedReader;
     private static final String pulsarUrl = "pulsar://pulsar-node:6650";
     //private static final String topicHeader = "non-persistent://public/default/";
     private static final String topicHeader = "";
-    private static final String[] topicNames = new String[]{"dataQuery1", "dataQuery2", "dataQuery3"};
+    //private static final String[] topicNames = new String[]{"dataQuery1", "dataQuery2", "dataQuery3"};
+    private String topic;
     private PulsarClient pulsarClient;
-    private Producer<String> producer1, producer2, producer3;
+    private Producer<String> producer, producer2, producer3;
     private float servingSpeed;
     private DelayFormatter delayFormatter;
 
-    //BufferedWriter out;
 
-
-    public DatasetSender(String csvFilePath, float servingSpeed) {
+    public DatasetSenderPulsar(String csvFilePath, float servingSpeed, String topic) {
         this.csvFilePath = csvFilePath;
         this.servingSpeed = servingSpeed;
+        this.topic = topic;
         this.delayFormatter = DelayFormatter.getInstance();
         initCSVReader();
         initPulsarClient();
@@ -32,13 +32,10 @@ public class DatasetSender {
 
     private void initCSVReader() {
         try {
-            //this.out = new BufferedWriter(new FileWriter("dataQ1.txt", true));
             this.bufferedReader = new BufferedReader(new FileReader(csvFilePath));
         } catch (FileNotFoundException e) {
             System.err.println(e.getMessage());
             System.exit(1);
-        } catch (IOException e) {
-            e.printStackTrace();
         }
     }
 
@@ -57,8 +54,8 @@ public class DatasetSender {
 
     private void initPulsarProducer(){
         try {
-            producer1 = pulsarClient.newProducer(Schema.STRING)
-                    .topic(topicHeader + topicNames[0])
+            producer = pulsarClient.newProducer(Schema.STRING)
+                    .topic(topicHeader + topic)
                     .create();
         } catch (PulsarClientException e) {
             e.printStackTrace();
@@ -106,15 +103,12 @@ public class DatasetSender {
 
         try {
             bufferedReader.close();
-            //out.close();
         } catch (IOException e) {
             e.printStackTrace();
             System.exit(1);
         }
         try {
-            producer1.close();
-            //producer2.close();
-            //producer3.close();
+            producer.close();
             pulsarClient.close();
             System.exit(0);
         } catch (PulsarClientException e) {
@@ -124,13 +118,18 @@ public class DatasetSender {
 
     }
 
-    private ArrayList<String> prepareStringToPublish(String[] value){
-        ArrayList<String> dataToSend = new ArrayList<>();
+    private String prepareStringToPublish(String[] value, String topic){
 
-        //value[7] = String.valueOf(extractTimeStamp(value[7]));
-        dataToSend.add(String.join(";", value[7],value[9],value[11]));
-        dataToSend.add(String.join(";", value[5],value[7]));
-        dataToSend.add(String.join(";", value[5],value[7], value[10], value[11]));
+        String dataToSend= "";
+
+        switch (topic){
+            case "dataQuery1":
+                return String.join(";", value[7],value[9],value[11]);
+            case "dataQuery2":
+                return String.join(";", value[5],value[7]);
+            case "dataQuery3":
+                return String.join(";", value[5],value[7], value[10], value[11]);
+        }
 
         return dataToSend;
     }
@@ -138,36 +137,13 @@ public class DatasetSender {
 
     private void sendToTopic(String[] value){
 
-        //ArrayList<String> dataToSend = prepareStringToPublish(value);
-
-//        try {
-//            out.write(dataToSend.get(0));
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
+        String dataToSend = prepareStringToPublish(value, topic);
 
         try {
-            producer1.send(String.join(";",value));
+            producer.send(dataToSend);
         } catch (PulsarClientException e) {
             e.printStackTrace();
         }
-        /*try {
-            producer2 = pulsarClient.newProducer(Schema.STRING)
-                    .topic(topicNames[1])
-                    .create();
-            producer2.send(dataToSend.get(1));
-        } catch (PulsarClientException e) {
-            e.printStackTrace();
-        }
-        try {
-            producer3 = pulsarClient.newProducer(Schema.STRING)
-                    .topic(topicNames[2])
-                    .create();
-            producer3.send(dataToSend.get(2));
-        } catch (PulsarClientException e) {
-            e.printStackTrace();
-        }*/
-
     }
 
 

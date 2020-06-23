@@ -32,7 +32,10 @@ services:
       - KAFKA_ZOOKEEPER_CONNECT=zookeeper:2181
       - KAFKA_LOG_RETENTION_HOURS=1
       - KAFKA_MESSAGE_MAX_BYTES=2000000000
-      - KAFKA_CREATE_TOPICS=query1:1:1
+      - KAFKA_CREATE_TOPICS=dataQuery1:1:1
+      - KAFKA_CREATE_TOPICS=dataQuery2:1:1
+      - KAFKA_CREATE_TOPICS=dataQuery3:1:1
+
 
   kafka-producer:
     image: wurstmeister/kafka

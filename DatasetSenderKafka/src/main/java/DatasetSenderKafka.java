@@ -15,18 +15,18 @@ public class DatasetSenderKafka {
 
     private String csvFilePath;
     private BufferedReader bufferedReader;
-    private static final String[] topicNames = new String[]{"dataQuery1", "dataQuery2", "dataQuery3"};
+    //private static final String[] topicNames = new String[]{"dataQuery1", "dataQuery2", "dataQuery3"};
+    private String topic;
     private static final String KafkaUri = "kafka:9092";
     private KafkaProducer producer;
     private float servingSpeed;
     private DelayFormatter delayFormatter;
 
-    //BufferedWriter out;
 
-
-    public DatasetSenderKafka(String csvFilePath, float servingSpeed) {
+    public DatasetSenderKafka(String csvFilePath, float servingSpeed, String topic) {
         this.csvFilePath = csvFilePath;
         this.servingSpeed = servingSpeed;
+        this.topic = topic;
         this.delayFormatter = DelayFormatter.getInstance();
         initCSVReader();
         initKafkaProducer();
@@ -35,13 +35,10 @@ public class DatasetSenderKafka {
 
     private void initCSVReader() {
         try {
-            //this.out = new BufferedWriter(new FileWriter("dataQ1.txt", true));
             this.bufferedReader = new BufferedReader(new FileReader(csvFilePath));
         } catch (FileNotFoundException e) {
             System.err.println(e.getMessage());
             System.exit(1);
-        } catch (IOException e) {
-            e.printStackTrace();
         }
     }
 
@@ -49,7 +46,7 @@ public class DatasetSenderKafka {
     private void initKafkaProducer() {
         Properties props = new Properties();
         props.put("bootstrap.servers", KafkaUri);
-        props.put("group.id", "test");
+        props.put("group.id", "SchoolBus");
         props.put("key.serializer", StringSerializer.class);
         props.put("value.serializer", StringSerializer.class);
         producer = new KafkaProducer(props);
@@ -102,23 +99,25 @@ public class DatasetSenderKafka {
 
         try {
             bufferedReader.close();
-            //out.close();
         } catch (IOException e) {
             e.printStackTrace();
             System.exit(1);
 
         }
-        //producer.close();
-
     }
 
-    private ArrayList<String> prepareStringToPublish(String[] value){
-        ArrayList<String> dataToSend = new ArrayList<>();
+    private String prepareStringToPublish(String[] value, String topic){
 
-        //value[7] = String.valueOf(extractTimeStamp(value[7]));
-        dataToSend.add(String.join(";", value[7],value[9],value[11]));
-        dataToSend.add(String.join(";", value[5],value[7]));
-        dataToSend.add(String.join(";", value[5],value[7], value[10], value[11]));
+        String dataToSend = "";
+
+        switch (topic){
+            case "dataQuery1":
+                return String.join(";", value[7],value[9],value[11]);
+            case "dataQuery2":
+                return String.join(";", value[5],value[7]);
+            case "dataQuery3":
+                return String.join(";", value[5],value[7], value[10], value[11]);
+        }
 
         return dataToSend;
     }
@@ -126,12 +125,11 @@ public class DatasetSenderKafka {
 
     private void sendToTopic(String[] value){
 
-        String s = String.join(";",value);
-        ProducerRecord dataToSend = new ProducerRecord(topicNames[0],null,s);
-        producer.send(dataToSend);
+        String dataToSend = prepareStringToPublish(value, topic);
+        ProducerRecord record = new ProducerRecord(topic,null, dataToSend);
+        producer.send(record);
 
     }
-
 
     private void addDelay(long deltaTimeStamp) {
         try {

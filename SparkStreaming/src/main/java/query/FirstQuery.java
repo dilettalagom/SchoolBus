@@ -10,22 +10,19 @@ import org.apache.spark.streaming.api.java.JavaStreamingContext;
 import org.apache.spark.streaming.kafka010.ConsumerStrategies;
 import org.apache.spark.streaming.kafka010.KafkaUtils;
 import org.apache.spark.streaming.kafka010.LocationStrategies;
-import scala.Tuple2;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.regex.Pattern;
 
-import static org.apache.commons.net.ftp.FTPCommand.PORT;
 
 public class FirstQuery {
 
-    private static final String  LOCAL_DIR = "$SPARK_HOME/target/results/query1";
+    private static final String  LOCAL_DIR = "./results/query1";
     private static final String  LOCAL_CHECKPOINT_DIR = "tmp/checkpoint/query1/";
     private static final int WINDOW_TIME_UNIT_SECS = 1;
-    private static final int PORT = 54310;
-    private static final String HOSTNAME = "localhost";
+    private static final String KARKAURI = "kafka:9092";
     private static final Pattern SPACE = Pattern.compile(";");
 
 
@@ -40,11 +37,11 @@ public class FirstQuery {
         ssc.sparkContext().setLogLevel("ERROR");
 
         Map<String, Object> kafkaParams = new HashMap<>();
-        kafkaParams.put("bootstrap.servers", "localhost:9092");
+        kafkaParams.put("bootstrap.servers", KARKAURI);
         //kafkaParams.put("zookeeper.connect", "zookeeper:2181");
         kafkaParams.put("key.deserializer", StringDeserializer.class);
         kafkaParams.put("value.deserializer", StringDeserializer.class);
-        kafkaParams.put("group.id", "query1");
+        kafkaParams.put("group.id", "SchoolBus");
         kafkaParams.put("auto.offset.reset", "latest");
         kafkaParams.put("enable.auto.commit", false);
         Collection<String> topics = Arrays.asList("dataQuery1");

@@ -41,7 +41,8 @@ public class FirstQuery{
         KeyedStream<BoroDelayPojo, String> inputStream = input
                 .map(x -> {
                     String[] tokens = x.split(";", -1);
-                    return new BoroDelayPojo(tokens[7], tokens[9], tokens[11]);
+                   // return new BoroDelayPojo(tokens[7], tokens[9], tokens[11]);
+                    return new BoroDelayPojo(tokens[0], tokens[1], tokens[2]);
                 })
                 .filter(new BoroDelayPojoValidator())
                 .assignTimestampsAndWatermarks(new DateTimeAscendingAssignerQuery1())

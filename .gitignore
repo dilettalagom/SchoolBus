@@ -7,11 +7,11 @@ SchoolBus.iml
 
 ./DatasetSenderPulsar/dependency-reduced-pom.xml
 ./DatasetSenderPulsar/target
-./DatasetSenderPulsar/DatasetSender.iml
+./DatasetSenderPulsar/DatasetSenderPulsar.iml
 
 ./DatasetSenderKafka/dependency-reduced-pom.xml
 ./DatasetSenderKafka/target
-./DatasetSenderKafka/DatasetSender.iml
+./DatasetSenderKafka/DatasetSenderPulsar.iml
 
 ./FlinkAnalyzer/dependency-reduced-pom.xml
 ./FlinkAnalyzer/target

@@ -1,5 +1,3 @@
-//import org.apache.flink.runtime.state.heap.HeapPriorityQueue;
-
 
 
 public class Main {
@@ -10,8 +8,9 @@ public class Main {
 
         final String filePath = args[0];
         final float speed = Float.parseFloat(args[1]);
+        final String topic = args[2];
 
-        DatasetSender datasetSender = new DatasetSender(filePath,speed);
+        DatasetSenderPulsar datasetSender = new DatasetSenderPulsar(filePath,speed, topic);
         datasetSender.startSendingData();
         //readerLocal();
 
@@ -22,7 +21,7 @@ public class Main {
     public static void readerLocal(){
         String path = "./docker-compose/pulsar-jar/bus-breakdown-and-delays_cp.csv";
 
-        DatasetSender data = new DatasetSender(path, 100000000000L);
+        DatasetSenderPulsar data = new DatasetSenderPulsar(path, 100000000000L, "dataQuery1");
         data.startSendingData();
 
 
