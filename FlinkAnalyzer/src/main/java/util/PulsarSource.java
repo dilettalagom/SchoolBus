@@ -15,7 +15,7 @@ public class PulsarSource implements SourceFunction<String>,Serializable{
     private volatile boolean isRunning = true;
 
 
-    private CustomPulsarClient client;
+    private PulsarClient client;
     private Consumer consumer;
 
 
@@ -49,7 +49,7 @@ public class PulsarSource implements SourceFunction<String>,Serializable{
 
     public static PulsarClient initPulsarClient() {
         try {
-            return CustomPulsarClient.builder()
+            return PulsarClient.builder()
                     .serviceUrl(pulsarUrl)
                     .build();
         } catch (PulsarClientException e) {

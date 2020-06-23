@@ -4,13 +4,22 @@
 SchoolBus.iml
 .classpath
 .project
+
 ./DatasetSenderPulsar/dependency-reduced-pom.xml
 ./DatasetSenderPulsar/target
 ./DatasetSenderPulsar/DatasetSender.iml
+
 ./DatasetSenderKafka/dependency-reduced-pom.xml
 ./DatasetSenderKafka/target
 ./DatasetSenderKafka/DatasetSender.iml
+
+./FlinkAnalyzer/dependency-reduced-pom.xml
+./FlinkAnalyzer/target
 ./FlinkAnalyzer/FlinkAnalyzer.iml
+
+./SparkStreaming/dependency-reduced-pom.xml
+./SparkStreaming/target
+./SparkStreaming/SparkStreaming.iml
 
 /docker-compose/pulsar-jar/bookkeeper
 /docker-compose/pulsar-jar/standalone
