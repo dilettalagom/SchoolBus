@@ -39,7 +39,8 @@ execute_query() {
     $SPARK_HOME/bin/spark-submit \
     --class query.FirstQuery \
     --master "local" \
-    /target/SparkStreaming-1.0-SNAPSHOT.jar
+    /target/SparkStreaming-1.0-SNAPSHOT.jar\
+    --spark.streaming.receiver.writeAheadLog.enable=true
 
 
   elif [ $q = 2 ]
@@ -50,7 +51,8 @@ execute_query() {
     $SPARK_HOME/bin/spark-submit \
     --class query.SecondQuery \
     --master "local" \
-    /target/SparkStreaming-1.0-SNAPSHOT.jar
+    /target/SparkStreaming-1.0-SNAPSHOT.jar\
+    --spark.streaming.receiver.writeAheadLog.enable=true
 
 
   else

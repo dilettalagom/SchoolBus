@@ -2,6 +2,7 @@ FROM ubuntu
 USER root
 
 RUN apt-get update;
+RUN apt-get install -y sudo wget openjdk-8-jre vim;
 
 
 # install SPARK LIB in spark_hdfs_container
@@ -16,15 +17,15 @@ ADD spark-configuration/spark-env.sh $SPARK_HOME/conf
 ADD spark-configuration/workers $SPARK_HOME/conf
 
 ENV PATH $PATH:$SPARK_HOME
+ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64
 
 #create main directory
 RUN mkdir /target
+RUN mkdir /tmp/spark-events
 #external linking
 VOLUME /target
 WORKDIR /target
 
-# HDFS ports
-EXPOSE 9861 9862 9863 9870
 # SSH port
 EXPOSE 22
 # Spark remote debugging for intellij
