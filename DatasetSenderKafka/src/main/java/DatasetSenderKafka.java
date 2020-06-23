@@ -17,16 +17,18 @@ public class DatasetSenderKafka {
     private BufferedReader bufferedReader;
     //private static final String[] topicNames = new String[]{"dataQuery1", "dataQuery2", "dataQuery3"};
     private String topic;
+    private String consumerType;
     private static final String KafkaUri = "kafka:9092";
     private KafkaProducer producer;
     private float servingSpeed;
     private DelayFormatter delayFormatter;
 
 
-    public DatasetSenderKafka(String csvFilePath, float servingSpeed, String topic) {
+    public DatasetSenderKafka(String csvFilePath, float servingSpeed, String topic, String consumerType) {
         this.csvFilePath = csvFilePath;
         this.servingSpeed = servingSpeed;
         this.topic = topic;
+        this.consumerType = consumerType;
         this.delayFormatter = DelayFormatter.getInstance();
         initCSVReader();
         initKafkaProducer();
@@ -63,7 +65,7 @@ public class DatasetSenderKafka {
         firstLine[11] = delayFormatter.createDelayFormat(firstLine[11].toLowerCase());
         if(firstLine[11]!= null) {
             firstTimestamp = extractTimeStamp(firstLine[7]);
-            sendToTopic(firstLine);
+            sendToTopic(firstLine, consumerType);
             i++;
         }
 
@@ -89,13 +91,13 @@ public class DatasetSenderKafka {
                     firstTimestamp = curTimestamp;
                 }
 
-                sendToTopic( tokens );
+                sendToTopic(tokens, consumerType);
             }
         }
 
         System.out.println("poisonedTuple" + "total: " + i);
         String poisonedTuple = "2015-2016;1212751;Special Ed AM Run;201;W685;Poison;75420;3020-09-30T07:42:00.000;2015-09-03T08:06:00.000;Unknown;Unknown;30;2;Yes;Yes;No;2015-09-03T08:06:00.000;;2015-09-03T08:06:11.000;Running Late;School-Age\n";
-        sendToTopic(poisonedTuple.split(";",-1));
+        sendToTopic(poisonedTuple.split(";",-1), consumerType);
 
         try {
             bufferedReader.close();
@@ -123,10 +125,17 @@ public class DatasetSenderKafka {
     }
 
 
-    private void sendToTopic(String[] value){
+
+    private void sendToTopic(String[] value, String consumerType){
 
         String dataToSend = prepareStringToPublish(value, topic);
-        ProducerRecord record = new ProducerRecord(topic,null, dataToSend);
+        ProducerRecord record=null;
+        if (consumerType.equals("spark")) {
+            record = new ProducerRecord(topic, 0, extractTimeStamp(value[7]), topic, dataToSend);
+
+        }else if(consumerType.equals("flink")){
+            record = new ProducerRecord(topic, null, dataToSend);
+        }
         producer.send(record);
 
     }

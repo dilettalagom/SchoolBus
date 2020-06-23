@@ -1,22 +1,25 @@
 package model;
 
 import lombok.Data;
+
+import java.io.Serializable;
+import java.security.Timestamp;
 import java.time.Instant;
 import java.time.format.DateTimeParseException;
 
 
 @Data
-public class BoroDelayPojo {
+public class BoroDelayPojo implements Serializable {
 
     private Integer delay;
     private String boro;
-    private Timestamp timestamp;
+    private String timestamp;
 
 
-    public BoroDelayPojo(String timestamp, String boro, String delay) {
+    public BoroDelayPojo(String timestamp, String boro, String delay)  {
+        this.timestamp = timestamp;
         this.boro = boro;
         this.delay = parseInteger(delay);
-        this.timestamp = ;
     }
 
 
