@@ -12,6 +12,7 @@
         <module>DatasetSenderPulsar</module>
         <module>FlinkAnalyzer</module>
         <module>DatasetSenderKafka</module>
+        <module>SparkStreaming</module>
     </modules>
 
 </project>

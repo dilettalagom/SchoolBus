@@ -1,0 +1,85 @@
+version: "2"
+
+networks:
+  app_network:
+    driver: bridge
+
+services:
+
+  master:
+    build:
+      context: ../docker-images/spark
+    image: digi/spark-hdfs-node
+    container_name: master
+    hostname: master
+    networks:
+      - app_network
+    ports:
+      - "9870:9870" # hdfs ui
+      - "54310:54310" # hdfs
+      - "43211:43211" #remote intellij debugging
+      - "18080:18080" #spark history ui
+    volumes:
+      - ./target:/target
+    stdin_open: true
+    tty: true
+    command: bash -c "sh start-services.sh"
+
+
+  worker1:
+    image: digi/spark
+    container_name: worker1
+    hostname: worker1
+    networks:
+      - app_network
+    ports:
+      - "9861:9861"
+    depends_on:
+      - master
+    volumes:
+      - ./target:/target
+    stdin_open: true
+    tty: true
+    command: bash -c "sh start-services.sh"
+
+
+  flink-jobmanager:
+    build:
+      context: ../docker-images/flink
+    image: digi/flink
+    hostname: flink-jobmanager
+    container_name: flink-jobmanager
+    networks:
+      - app_network
+    expose:
+      - "6123"
+    ports:
+      - "8081:8081"
+    command: jobmanager
+    volumes:
+      - ./flink-jar:/opt/flink/flink-jar
+    environment:
+      - JOB_MANAGER_RPC_ADDRESS=flink-jobmanager
+      - HADOOP_CONF_DIR=/usr/local/hadoop/etc/hadoop
+
+  flink-taskmanager1:
+    build:
+      context: ../docker-images/flink
+    image: digi/flink
+    hostname: flink-taskmanager1
+    container_name: flink-taskmanager1
+    networks:
+      - app_network
+    expose:
+      - "6121"
+      - "6122"
+    depends_on:
+      - flink-jobmanager
+    links:
+      - "flink-jobmanager:jobmanager"
+    command: taskmanager
+    volumes:
+      - ./flink-jar:/opt/flink/flink-jar
+    environment:
+      - JOB_MANAGER_RPC_ADDRESS=flink-jobmanager
+      - HADOOP_CONF_DIR=/usr/local/hadoop/etc/hadoop
