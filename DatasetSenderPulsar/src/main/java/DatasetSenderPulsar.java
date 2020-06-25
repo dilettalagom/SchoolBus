@@ -68,7 +68,7 @@ public class DatasetSenderPulsar {
         int i=1;
 
         //Validating first line
-        String[] firstLine = (readLineFromCSV()).split(";",-1);
+        String[] firstLine = splitter(readLineFromCSV());
         firstLine[11] = delayFormatter.createDelayFormat(firstLine[11].toLowerCase());
         if(firstLine[11]!= null) {
             firstTimestamp = extractTimeStamp(firstLine[7]);
@@ -79,7 +79,7 @@ public class DatasetSenderPulsar {
         String line;
         while ((line = readLineFromCSV())!=null) {
 
-            String[] tokens = line.split(";",-1);
+            String[] tokens = splitter(line);
             //ckeck if is a valid line  --> total row: 379412, validated row: 332571
             String validatedDelay = delayFormatter.createDelayFormat(tokens[11].toLowerCase());
 
@@ -99,7 +99,7 @@ public class DatasetSenderPulsar {
 
         System.out.println("poisonedTuple" + "total: " + i);
         String poisonedTuple = "2015-2016;1212751;Special Ed AM Run;201;W685;Poison;75420;3020-09-30T07:42:00.000;2015-09-03T08:06:00.000;Unknown;Unknown;30;2;Yes;Yes;No;2015-09-03T08:06:00.000;;2015-09-03T08:06:11.000;Running Late;School-Age\n";
-        sendToTopic(poisonedTuple.split(";",-1));
+        sendToTopic(splitter(poisonedTuple));
 
         try {
             bufferedReader.close();
@@ -183,5 +183,12 @@ public class DatasetSenderPulsar {
         return line;
     }
 
+    private static String[] splitter(String str) {
+        String pattern = "(\")([^\";]+);([^\"]+)(\")";
+        str = str.replaceAll(pattern, "\"$2 $3\"");
+        str = str.replaceAll(pattern, "\"$2 $3\"");
+
+        return str.split(";", -1);
+    }
 
 }
