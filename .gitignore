@@ -21,6 +21,10 @@ SchoolBus.iml
 ./SparkStreaming/target
 ./SparkStreaming/SparkStreaming.iml
 
+./KafkaStreams/dependency-reduced-pom.xml
+./KafkaStreams/target
+./KafkaStreams/KafkaStreams.iml
+
 /docker-compose/pulsar-jar/bookkeeper
 /docker-compose/pulsar-jar/standalone
 *.txt

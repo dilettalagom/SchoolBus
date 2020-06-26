@@ -10,7 +10,7 @@ Usage: $PROGNAME -f <filename> -s <speedfactor> -t <topicName>
      10:  10 times faster
      100: 100 times faster
 -t : topic name (dataQuery1, dataQuery2, dataQuery3)
--c : specify the choosen consumer type (flink, spark)
+-c : specify the choosen consumer type (flink, spark, kafkaS)
 
 EX: sh submit-dataset.sh -f bus-breakdown-and-delays.csv -s 10000 -t dataQuery1 -c spark
 
