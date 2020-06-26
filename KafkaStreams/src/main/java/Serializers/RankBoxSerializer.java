@@ -1,14 +1,11 @@
 package Serializers;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import model.ResultPojo;
-import model.SnappyTuple3;
+import model.RankBox;
 import org.apache.kafka.common.serialization.Serializer;
-
 import java.util.Map;
-import java.util.PriorityQueue;
 
-public class QueueSerializer implements Serializer<PriorityQueue<ResultPojo>> {
+public class RankBoxSerializer implements Serializer<RankBox> {
 
     @Override
     public void configure(Map<String, ?> configs, boolean isKey) {
@@ -16,12 +13,12 @@ public class QueueSerializer implements Serializer<PriorityQueue<ResultPojo>> {
     }
 
     @Override
-    public byte[] serialize(String s, PriorityQueue<ResultPojo> queue) {
+    public byte[] serialize(String s, RankBox pojo) {
 
         byte[] pojoByte = null;
         ObjectMapper objectMapper = new ObjectMapper();
         try {
-            pojoByte = objectMapper.writeValueAsString(queue).getBytes();
+            pojoByte = objectMapper.writeValueAsString(pojo).getBytes();
         } catch (Exception e) {
             e.printStackTrace();
         }

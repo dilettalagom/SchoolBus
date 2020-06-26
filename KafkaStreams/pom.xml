@@ -41,9 +41,14 @@
             <scope>runtime</scope>
         </dependency>
 
-        <dependency>
+        <!--dependency>
             <groupId>org.apache.kafka</groupId>
             <artifactId>kafka-streams-scala_2.12</artifactId>
+            <version>${kafkaStream.version}</version>
+        </dependency-->
+        <dependency>
+            <groupId>org.apache.kafka</groupId>
+            <artifactId>kafka-streams</artifactId>
             <version>${kafkaStream.version}</version>
         </dependency>
         <dependency>

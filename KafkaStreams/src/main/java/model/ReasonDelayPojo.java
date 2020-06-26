@@ -48,7 +48,8 @@ public class ReasonDelayPojo implements Serializable {
         return
                 "timestamp=" + timestamp +
                 ", timeslot=" + timeslot +
-                ", reason=" + reason ;}
+                ", reason=" + reason + " ";
+    }
 
 
 }

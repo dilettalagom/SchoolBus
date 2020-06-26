@@ -1,30 +1,30 @@
 package Serializers;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import model.ResultPojo;
-import model.SnappyTuple3;
+import model.RankBox;
 import org.apache.kafka.common.serialization.Deserializer;
-import java.util.Map;
-import java.util.PriorityQueue;
 
-public class QueueDeserializer implements Deserializer<PriorityQueue<ResultPojo>> {
+import java.util.Map;
+
+public class RankBoxDeserializer implements Deserializer<RankBox> {
     @Override
     public void configure(Map<String, ?> configs, boolean isKey) {
 
     }
 
     @Override
-    public PriorityQueue<ResultPojo> deserialize(String s, byte[] bytes) {
+    public RankBox deserialize(String s, byte[] bytes) {
         ObjectMapper mapper = new ObjectMapper();
-        PriorityQueue<ResultPojo> queue = null;
+        RankBox pojo = null;
         try {
-            queue = mapper.readValue(bytes, PriorityQueue.class);
+            pojo = mapper.readValue(bytes, RankBox.class);
         } catch (Exception e) {
 
             e.printStackTrace();
         }
-        return queue;
+        return pojo;
     }
+
 
     @Override
     public void close() {

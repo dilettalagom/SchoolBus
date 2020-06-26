@@ -5,6 +5,9 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import custom_function.CustomHeapSort;
 import custom_function.TimeSlotFilter;
 import model.*;
+import org.apache.kafka.common.network.Send;
+import org.apache.kafka.common.protocol.types.Field;
+import org.apache.kafka.common.serialization.Serde;
 import org.apache.kafka.common.serialization.Serdes;
 import org.apache.kafka.common.utils.Bytes;
 import org.apache.kafka.streams.KafkaStreams;
@@ -14,12 +17,14 @@ import org.apache.kafka.streams.StreamsConfig;
 import org.apache.kafka.streams.kstream.*;
 import org.apache.kafka.streams.processor.Processor;
 import org.apache.kafka.streams.processor.ProcessorSupplier;
+import org.apache.kafka.streams.state.KeyValueStore;
 import org.apache.kafka.streams.state.WindowStore;
 
 import java.io.*;
 import java.time.Duration;
 import java.util.*;
 import java.util.concurrent.CountDownLatch;
+import java.util.stream.Stream;
 
 import static java.time.Duration.ofMinutes;
 
@@ -69,89 +74,31 @@ public class SecondQuery {
                 .branch((key, value) -> value.getTimeslot().equals("AM : 5:00-11:59"),
                         (key, value) -> value.getTimeslot().equals("PM : 12:00-19:00"));
 
-        branches[0].foreach((key, tuple) -> System.out.println(key + "," + tuple.toString()));
+        branches[0].foreach((key, tuple) -> System.out.println(key + "," + tuple.toString())); //TODO: test
 
-        //Windowed<Reason, Tuple3<Timestamp, Timeslot, Int>
+
         /* day */
+        //Windowed<Reason, Tuple3<Timestamp, Timeslot, CountxDay>
         KStream<Windowed<String>, SnappyTuple3<String, String, Integer>> scoresAMDay = computeScores(branches[0], 1L, "accumulator-AM-day");
-        System.out.flush();
+        scoresAMDay.foreach( (key, tuple) -> System.out.println(key.key() + "," + tuple.toString())); //TODO: test
+        KStream<Windowed<String>, SnappyTuple3<String, String, Integer>> scoresPMDay = computeScores(branches[1], 1L,"accumulator-PM-day");
 
-        scoresAMDay.foreach( (key, tuple) -> System.out.println(key.key() + "," + tuple.toString()));
+        KStream<Windowed<String>, RankBox> rankedAMDay = computeRankStream(scoresAMDay, 1L, "ranker-AM-day");
+        KStream<Windowed<String>, RankBox> rankedPMDay = computeRankStream(scoresPMDay, 1L, "ranker-PM-day");
 
-        //        KStream<Windowed<String>, SnappyTuple3<String, String, Integer>> scoresPMDay = computeScores(branches[1], 1L,"accumulator-PM-day");
-//
-//        /* week */
-//        KStream<Windowed<String>, SnappyTuple3<String, String, Integer>> scoresAMWeek = computeScores(branches[0], 7L,"accumulator-AM-week");
-//        KStream<Windowed<String>, SnappyTuple3<String, String, Integer>> scoresPMWeek = computeScores(branches[1], 7L,"accumulator-PM-week");
+        /* week */
+        //Windowed<Reason, Tuple3<Timestamp, Timeslot, CountxWeek>
+        KStream<Windowed<String>, SnappyTuple3<String, String, Integer>> scoresAMWeek = computeScores(branches[0], 7L,"accumulator-AM-week");
+        KStream<Windowed<String>, SnappyTuple3<String, String, Integer>> scoresPMWeek = computeScores(branches[1], 7L,"accumulator-PM-week");
 
-
-        KStream<Windowed<String>, ArrayList<ResultPojo>> remappered = scoresAMDay
-                .map((key, value) -> {
-
-                    String newKey = value.k1;
-                    SnappyTuple3<String, String, Integer> newValue = new SnappyTuple3<String, String, Integer>(value.k2, key.key(), value.k3);
-
-                    return KeyValue.pair(newKey, newValue);
-                })
-                .groupByKey(Serialized.with(Serdes.String(), Serdes.serdeFrom(new Tuple3Serializer(), new Tuple3Deserializer())))
-                .windowedBy(TimeWindows.of(Duration.ofDays(1)).until(86460000L * 1).grace(ofMinutes(1)))
-                .aggregate(
-                        new Initializer<ArrayList<ResultPojo>>() {
-                            @Override
-                            public ArrayList<ResultPojo> apply() {
-                                //Comparator<SnappyTuple3<String, String, Integer>> comp = Comparator.comparing(t -> t.k3);
-
-                                return new ArrayList<ResultPojo>();
-                            }
-                        },
-                        new Aggregator<String, SnappyTuple3<String, String, Integer>, ArrayList<ResultPojo>>() {
-                            @Override
-                            public ArrayList<ResultPojo> apply(String key, SnappyTuple3<String, String, Integer> tuple,
-                                                               ArrayList<ResultPojo> list) {
-//                              if (list.size() < 3 || list.get(2).k3 < tuple.k3) {
-//                                    if (list.size() == 3)
-//                                        list.remove(3);
-//                                    list.add(tuple);
-//                                }
-                                list.add(new ResultPojo(tuple.k1,tuple.k2,tuple.k3));
-
-                                return list;
-                            }
-                        },
-                        Materialized.<String, ArrayList<ResultPojo>, WindowStore<Bytes, byte[]>>as("prova")
-                                .withValueSerde(Serdes.serdeFrom(new LinkedSerializer(), new LinkedDeserializer()))
-
-                ).toStream();
+        KStream<Windowed<String>, RankBox> rankedAMWeek = computeRankStream(scoresAMWeek, 7L, "ranker-AM-week");
+        KStream<Windowed<String>, RankBox> rankedPMWeek = computeRankStream(scoresPMWeek, 7L, "ranker-PM-week");
 
 
-        KStream<Windowed<String>, PriorityQueue<ResultPojo>> queueStream = remappered.map((key, value) -> {
-
-            Comparator<ResultPojo> comp = Comparator.comparing(ResultPojo::getCount);
-            PriorityQueue<ResultPojo> queue = new PriorityQueue<>(3, comp);
-
-            for (ResultPojo p : value) {
-                queue.add(p);
-            }
-            //queue.addAll(value);
-
-            return KeyValue.pair(key, queue);
+        //TODO: test
+        rankedPMWeek.foreach((win, rankBox) -> {
+            System.out.println(win.key() + "," + rankBox.getPos1().toString() + rankBox.getPos2().toString() + rankBox.getPos3().toString());//list.toString());
         });
-
-
-        System.out.flush();
-        queueStream.foreach((key, list) -> {
-
-           /* CustomHeapSort sorted = new CustomHeapSort(list);
-            sorted.sort();*/
-            System.out.println(key.key() + "," + list.toString());
-
-        });
-
-
-        // printOnFile("queue.txt", remappered);
-
-
-
 
 
 
@@ -186,6 +133,68 @@ public class SecondQuery {
 
     }
 
+    private static KStream<Windowed<String>, RankBox> computeRankStream(KStream<Windowed<String>, SnappyTuple3<String, String, Integer>> scoresAMDay, Long window, String accName) {
+        return scoresAMDay
+                .map((key, value) -> {
+
+                    String newKey = value.k1;
+                    SnappyTuple3<String, String, Integer> newValue = new SnappyTuple3<String, String, Integer>(value.k2, key.key(), value.k3);
+
+                    return KeyValue.pair(newKey, newValue);
+                })
+                .groupByKey(Serialized.with(Serdes.String(), Serdes.serdeFrom(new Tuple3Serializer(), new Tuple3Deserializer())))
+                .windowedBy(TimeWindows.of(Duration.ofDays(1)).until(86460000L * window).grace(ofMinutes(1)))
+                .aggregate(
+                        new Initializer<RankBox>() {
+                            @Override
+                            public RankBox apply() {
+                                //Comparator<SnappyTuple3<String, String, Integer>> comp = Comparator.comparing(t -> t.k3);
+                                return new RankBox(new ResultPojo("","",0),
+                                        new ResultPojo("","",0),
+                                        new ResultPojo("","",0)
+                                );
+                            }
+                        },
+                        new Aggregator<String, SnappyTuple3<String, String, Integer>, RankBox>() {
+                            @Override
+                            public RankBox apply(String key, SnappyTuple3<String, String, Integer> tuple,
+                                                 RankBox rankBox) {
+
+                                ResultPojo pojo = new ResultPojo(tuple.k1,tuple.k2,tuple.k3);
+
+                                return checkIfMustAdd(pojo, rankBox);
+                            }
+                        },
+                        Materialized.<String, RankBox, WindowStore<Bytes, byte[]>>as(accName)
+                                .withValueSerde(Serdes.serdeFrom(new RankBoxSerializer(), new RankBoxDeserializer()))
+
+                ).toStream();
+    }
+
+
+    private static RankBox checkIfMustAdd(ResultPojo p, RankBox rankB){
+        int actualValue = p.getCount();
+
+        if ( actualValue > rankB.getPos3().getCount()) {
+
+            if (actualValue >= rankB.getPos1().getCount()) {
+                rankB.setPos3(rankB.getPos2());
+                rankB.setPos2(rankB.getPos1());
+                rankB.setPos1(p);
+
+
+            } else if (actualValue >= rankB.getPos2().getCount()) {
+                rankB.setPos3(rankB.getPos2());
+                rankB.setPos2(p);
+
+            } else {
+                rankB.setPos3(p);
+
+            }
+        }
+        return rankB;
+    }
+
     private static KStream<Windowed<String>, SnappyTuple3<String, String, Integer>> computeScores(KStream<String, ReasonDelayPojo> branch, Long window, String accName) {
         return branch
                 .groupByKey(Serialized.with(Serdes.String(), Serdes.serdeFrom(new ReasonPojoSerializer(), new ReasonPojoDeserializer())))
@@ -211,6 +220,7 @@ public class SecondQuery {
                 ).toStream();
     }
 
+
     private static void printOnFile(String filename,
                                     KStream<Windowed<String>, PriorityQueue<SnappyTuple3<String, String, Integer>>> stream) throws FileNotFoundException {
 
@@ -219,31 +229,16 @@ public class SecondQuery {
         // Store current System.out before assigning a new value
         PrintStream console = System.out;
 
-
-
-
         // Assign o to output stream
         System.setOut(o);
         stream.foreach((windowed, rankQueue) -> {
 
-            System.out.println(PriorityQueueToString(rankQueue).toString());
+            System.out.println();
         });
 
 
     }
 
-    private static StringBuilder PriorityQueueToString(PriorityQueue<SnappyTuple3<String, String, Integer>> rankQueue){
-
-        StringBuilder sb = new StringBuilder();
-        for( int i = 0; i < Math.min(3,rankQueue.size()) - 1 ; i++){
-            SnappyTuple3<String, String, Integer> t = rankQueue.poll();
-            sb.append(t.k1).append(", ").append(t.k2).append(" ,").append(t.k3);
-        }
-        SnappyTuple3<String, String, Integer> t = rankQueue.poll();
-        sb.append(t.k1).append(", ").append(t.k2).append(" ,").append(t.k3);
-
-        return sb;
-    }
 
 }
 
