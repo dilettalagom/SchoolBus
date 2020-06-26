@@ -59,11 +59,35 @@ services:
     stdin_open: true
     tty: true
     volumes:
-      - ./kafka:/data
+      - ./kafka-producer:/producer
+
+  kafka-consumer:
+    image: wurstmeister/kafka
+    container_name: kafka-consumer
+    hostname: kafka-consumer
+    networks:
+      - app_network
+    expose:
+      - "5006" # remote intellij debug
+    ports:
+      - "5006:5006" # remote intellij debug
+    depends_on:
+      - zookeeper
+      - kafka
+    environment:
+      - KAFKA_ADVERTISED_HOST_NAME=kafka
+      - KAFKA_ZOOKEEPER_CONNECT=zookeeper:2181
+      - KAFKA_LOG_RETENTION_HOURS=1
+      - KAFKA_MESSAGE_MAX_BYTES=2000000000
+    entrypoint: /bin/sh
+    stdin_open: true
+    tty: true
+    volumes:
+      - ./kafka-consumer:/consumer
 
 
 
-#  master:
+#  master: HDFS
 #    build:
 #      context: ../docker-images/hdfs
 #    image: digi/hdfs
@@ -75,12 +99,12 @@ services:
 #      - "9870:9870"  # hdfs ui
 #      - "54310:54310"  # hdfs
 #    volumes:
-#      - ./hdfs-results:/target/results
+#      - ./hdfs-results:/target
 #    stdin_open: true
 #    tty: true
 #
 #
-#  worker1:
+#  worker1:HDFS
 #    image: digi/hdfs
 #    container_name: worker1
 #    hostname: worker1
@@ -89,14 +113,14 @@ services:
 #    ports:
 #      - "9861:9861"
 #    volumes:
-#      - ./hdfs-results:/target/results
+#      - ./hdfs-results:/target
 #    depends_on:
 #      - master
 #    stdin_open: true
 #    tty: true
-#
 
-#
+
+
 #  flink-jobmanager:
 #    build:
 #      context: ../docker-images/flink
@@ -140,39 +164,39 @@ services:
 #      - HADOOP_CONF_DIR=/usr/local/hadoop/etc/hadoop
 
 
-  master:
-    build:
-      context: ../docker-images/spark
-    image: digi/spark
-    container_name: master
-    hostname: master
-    networks:
-      - app_network
-    ports:
-      - "43211:43211" #remote intellij debugging
-      - "18080:18080" #spark history ui
-    volumes:
-      - ./spark-jar:/target
-    stdin_open: true
-    tty: true
-    command: bash -c "sh start-services.sh"
-
-
-  worker1:
-    image: digi/spark
-    container_name: worker1
-    hostname: worker1
-    networks:
-      - app_network
-    ports:
-      - "9861:9861"
-    depends_on:
-      - master
-    volumes:
-      - ./spark-jar:/target
-    stdin_open: true
-    tty: true
-    command: bash -c "sh start-services.sh"
+#  master:
+#    build:
+#      context: ../docker-images/spark
+#    image: digi/spark
+#    container_name: master
+#    hostname: master
+#    networks:
+#      - app_network
+#    ports:
+#      - "43211:43211" #remote intellij debugging
+#      - "18080:18080" #spark history ui
+#    volumes:
+#      - ./spark-jar:/target
+#    stdin_open: true
+#    tty: true
+#    command: bash -c "sh start-services.sh"
+#
+#
+#  worker1:
+#    image: digi/spark
+#    container_name: worker1
+#    hostname: worker1
+#    networks:
+#      - app_network
+#    ports:
+#      - "9861:9861"
+#    depends_on:
+#      - master
+#    volumes:
+#      - ./spark-jar:/target
+#    stdin_open: true
+#    tty: true
+#    command: bash -c "sh start-services.sh"
 
 #  flink-taskmanager2:
 #    build:
