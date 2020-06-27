@@ -24,8 +24,8 @@ public class RankBox implements Serializable {
 
     @Override
     public String toString() {
-        return  "pos1=" + pos1.toString() +
-                ", pos2=" + pos2.toString() +
-                ", pos3=" + pos3.toString() + " ";
+        return  pos1.toString() +
+                ", " + pos2.toString() +
+                ", " + pos3.toString() + " ";
     }
 }
