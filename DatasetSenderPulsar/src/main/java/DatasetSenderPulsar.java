@@ -3,7 +3,6 @@ import org.apache.pulsar.client.api.*;
 import java.io.*;
 import java.time.Instant;
 import java.time.format.DateTimeParseException;
-import java.util.ArrayList;
 
 public class DatasetSenderPulsar {
 
@@ -12,7 +11,6 @@ public class DatasetSenderPulsar {
     private static final String pulsarUrl = "pulsar://pulsar-node:6650";
     //private static final String topicHeader = "non-persistent://public/default/";
     private static final String topicHeader = "";
-    //private static final String[] topicNames = new String[]{"dataQuery1", "dataQuery2", "dataQuery3"};
     private String topic;
     private PulsarClient pulsarClient;
     private Producer<String> producer, producer2, producer3;
