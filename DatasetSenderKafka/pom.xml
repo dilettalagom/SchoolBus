@@ -55,7 +55,7 @@
                         </goals>
 
                         <configuration>
-                            <outputDirectory>../docker-compose/kafka</outputDirectory>
+                            <outputDirectory>../docker-compose/kafka-producer</outputDirectory>
                             <resources>
                                 <resource>
                                     <directory>${basedir}/target</directory>

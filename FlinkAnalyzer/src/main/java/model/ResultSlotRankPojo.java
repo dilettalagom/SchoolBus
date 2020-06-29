@@ -22,10 +22,10 @@ public class ResultSlotRankPojo {
 
     @Override
     public String toString() {
-        return timestamp + ", " +
+        return timestamp + "; " +
                 result.stream().map(Object::toString)
                 .collect(Collectors.joining(", "))
-                + ", " + latency;
+                + "; " + latency;
 
     }
 

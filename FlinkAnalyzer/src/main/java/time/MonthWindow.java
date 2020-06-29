@@ -13,7 +13,7 @@ public class MonthWindow extends TumblingEventTimeWindows {
 
 
     public MonthWindow() {
-        super(Time.days(50).toMilliseconds(), 0L);
+        super(Time.days(31).toMilliseconds(), 0L);
     }
 
     @Override

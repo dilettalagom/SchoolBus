@@ -1,14 +1,9 @@
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.ProducerRecord;
 import org.apache.kafka.common.serialization.StringSerializer;
-
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.time.Instant;
 import java.time.format.DateTimeParseException;
-import java.util.ArrayList;
 import java.util.Properties;
 
 public class DatasetSenderKafka {
@@ -22,6 +17,7 @@ public class DatasetSenderKafka {
     private KafkaProducer producer;
     private float servingSpeed;
     private DelayFormatter delayFormatter;
+    BufferedWriter output;
 
 
     public DatasetSenderKafka(String csvFilePath, float servingSpeed, String topic, String consumerType) {
@@ -37,8 +33,10 @@ public class DatasetSenderKafka {
 
     private void initCSVReader() {
         try {
+            this.output = new BufferedWriter(new FileWriter("./timers"));
+
             this.bufferedReader = new BufferedReader(new FileReader(csvFilePath));
-        } catch (FileNotFoundException e) {
+        } catch (IOException e) {
             System.err.println(e.getMessage());
             System.exit(1);
         }
@@ -51,6 +49,8 @@ public class DatasetSenderKafka {
         props.put("group.id", "SchoolBus");
         props.put("key.serializer", StringSerializer.class);
         props.put("value.serializer", StringSerializer.class);
+        props.put("acks","all"); //ex-once
+
         producer = new KafkaProducer(props);
     }
 
@@ -61,22 +61,26 @@ public class DatasetSenderKafka {
         int i=1;
 
         //Validating first line
-        String[] firstLine = (readLineFromCSV()).split(";",-1);
+        String[] firstLine = splitter(readLineFromCSV());
         firstLine[11] = delayFormatter.createDelayFormat(firstLine[11].toLowerCase());
         if(firstLine[11]!= null) {
             firstTimestamp = extractTimeStamp(firstLine[7]);
-            sendToTopic(firstLine, consumerType);
+            sendToTopic(firstLine);
             i++;
         }
 
         String line;
         while ((line = readLineFromCSV())!=null) {
 
-            String[] tokens = line.split(";",-1);
+            String[] tokens = splitter(line);
 
-            //ckeck if is a valid line  --> total row: 379412, validated row: 332571
+            //ckeck if is a valid line  --> total row: 379412, validated row: 332576
             String validatedDelay = delayFormatter.createDelayFormat(tokens[11].toLowerCase());
-
+            try {
+                output.write(i + " "+ tokens[7]+ " " + tokens[11] + "- " + validatedDelay + "\n");
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
             //publishing on topic only if is a valid line
             if(validatedDelay != null) {
                 i++;
@@ -91,20 +95,21 @@ public class DatasetSenderKafka {
                     firstTimestamp = curTimestamp;
                 }
 
-                sendToTopic(tokens, consumerType);
+                sendToTopic(tokens);
             }
         }
 
+
         System.out.println("poisonedTuple" + "total: " + i);
         String poisonedTuple = "2015-2016;1212751;Special Ed AM Run;201;W685;Poison;75420;3020-09-30T07:42:00.000;2015-09-03T08:06:00.000;Unknown;Unknown;30;2;Yes;Yes;No;2015-09-03T08:06:00.000;;2015-09-03T08:06:11.000;Running Late;School-Age\n";
-        sendToTopic(poisonedTuple.split(";",-1), consumerType);
+        sendToTopic(splitter(poisonedTuple));
 
         try {
+            output.close();
             bufferedReader.close();
         } catch (IOException e) {
             e.printStackTrace();
             System.exit(1);
-
         }
     }
 
@@ -126,17 +131,18 @@ public class DatasetSenderKafka {
 
 
 
-    private void sendToTopic(String[] value, String consumerType){
+    private void sendToTopic(String[] value){
 
         String dataToSend = prepareStringToPublish(value, topic);
         ProducerRecord record=null;
-        if (consumerType.equals("spark")) {
-            record = new ProducerRecord(topic, 0, extractTimeStamp(value[7]), topic, dataToSend);
+        /*TODO:if (consumerType.equals("spark")) {
+            record = new ProducerRecord(topic, null, extractTimeStamp(value[7]), topic, dataToSend);
 
-        }else if(consumerType.equals("flink")){
+        }else if(consumerType.equals("flink")|| consumerType.equals("kafkaS")){
             record = new ProducerRecord(topic, null, dataToSend);
-        }
-        producer.send(record);
+        }*/
+
+       producer.send(new ProducerRecord(topic, null, dataToSend));
 
     }
 
@@ -176,4 +182,11 @@ public class DatasetSenderKafka {
         return line;
     }
 
+    private static String[] splitter(String str) {
+        String pattern = "(\")([^\";]+);([^\"]+)(\")";
+        str = str.replaceAll(pattern, "\"$2 $3\"");
+        str = str.replaceAll(pattern, "\"$2 $3\"");
+
+        return str.split(";", -1);
+    }
 }

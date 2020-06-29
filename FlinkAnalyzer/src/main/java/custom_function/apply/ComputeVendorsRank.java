@@ -35,13 +35,13 @@ public class ComputeVendorsRank implements WindowFunction<Tuple4<Long, String, T
         String date = TimeConverter.getInstance().convertFromEpochToDate(key);
         long end = TimeConverter.currentClock() - maxEventTime;
 
-        sb.append(date + ", ");
+        sb.append(date).append("; (");
         for( int i = 0; i < Math.min(QUEUE_SIZE,rankQueue.size()) - 1 ; i++){
             Tuple2<String, Double> t = rankQueue.poll();
-            sb.append(t._1() + ", " + t._2() + " ,");
+            sb.append(t._1()).append(", ").append(t._2()).append(" ,");
         }
         Tuple2<String, Double> t = rankQueue.poll();
-        sb.append(t._1() + ", " + t._2() + ", " + end);
+        sb.append(t._1()).append(", ").append(t._2()).append("); ").append(end);
         out.collect(sb.toString());
 
     }

@@ -26,20 +26,23 @@ public class ThirdQuery {
         ParameterTool parameter = ParameterTool.fromArgs(args);
         StreamExecutionEnvironment see = StreamExecutionEnvironment.getExecutionEnvironment();
         see.setStreamTimeCharacteristic(TimeCharacteristic.EventTime);
+        String connector = parameter.get("con");
 
-        DataStreamSource<String> input = (new Consumer()).initConsumer(parameter.get("con"), see, topic);
+        DataStreamSource<String> input = (new Consumer()).initConsumer(connector, see, topic);
         assert input!=null;
-
 
 
         KeyedStream<VendorsDelayPojo, String> inputStream = input
                 .map(x -> {
                     String[] tokens = x.split(";", -1);
-                    return new VendorsDelayPojo(tokens[0], tokens[1], tokens[2], Integer.parseInt(tokens[3]));
+                    if ( !tokens[3].equals(""))
+                        return new VendorsDelayPojo(tokens[0], tokens[1], tokens[2], Integer.parseInt(tokens[3]));
+                    return null;
                 })
                 .filter(new VendorsDelayValidator())
                 .assignTimestampsAndWatermarks(new DateTimeAscendingAssignerQuery3())
                 .keyBy((KeySelector<VendorsDelayPojo, String>) vendorsDelayPojo -> vendorsDelayPojo.getVendor());
+
 
         /* day */
         SingleOutputStreamOperator<String> resultDay = inputStream
@@ -57,9 +60,10 @@ public class ThirdQuery {
                 .timeWindow(Time.days(7))
                 .apply(new ComputeVendorsRank());
 
+        String outputPath = "/opt/flink/flink-jar/results-"+connector+"/query3/";
+        resultDay.writeAsText(outputPath + "resultDay.txt", FileSystem.WriteMode.OVERWRITE).setParallelism(1);
+        resultWeek.writeAsText(outputPath + "resultWeek.txt", FileSystem.WriteMode.OVERWRITE).setParallelism(1);
 
-        resultDay.writeAsText("/opt/flink/flink-jar/results/query3/resultDay.txt", FileSystem.WriteMode.OVERWRITE).setParallelism(1);
-        resultWeek.writeAsText("/opt/flink/flink-jar/results/query3/resultWeek.txt", FileSystem.WriteMode.OVERWRITE).setParallelism(1);
 
         try {
             see.execute("FlinkQuery3");

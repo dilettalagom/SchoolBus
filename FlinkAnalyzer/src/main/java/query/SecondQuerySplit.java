@@ -25,7 +25,6 @@ import scala.Tuple4;
 import time.watermark.DateTimeAscendingAssignerQuery2;
 import custom_function.validator.TimeSlotValidator;
 import util.Consumer;
-
 import java.util.Map;
 
 
@@ -40,8 +39,9 @@ public class SecondQuerySplit {
         ParameterTool parameter = ParameterTool.fromArgs(args);
         StreamExecutionEnvironment see = StreamExecutionEnvironment.getExecutionEnvironment();
         see.setStreamTimeCharacteristic(TimeCharacteristic.EventTime);
+        String connector = parameter.get("con");
 
-        DataStreamSource<String> input = (new Consumer()).initConsumer(parameter.get("con"), see, topic);
+        DataStreamSource<String> input = (new Consumer()).initConsumer(connector, see, topic);
         assert input!=null;
 
 
@@ -54,6 +54,7 @@ public class SecondQuerySplit {
                 .assignTimestampsAndWatermarks(new DateTimeAscendingAssignerQuery2())
                 .split(new TimeSlotSplitter());
 
+        String outputPath = "/opt/flink/flink-jar/results-"+connector+"/query2-split/";
 
         /* AM - 24h */
         SingleOutputStreamOperator<Tuple4<Long, String, Map<String, Long>,Long>> rankAMday = computeRankBySlot(inputStream, "AM",1);
@@ -61,7 +62,7 @@ public class SecondQuerySplit {
         SingleOutputStreamOperator<Tuple4<Long, String, Map<String, Long>,Long>> rankPMday = computeRankBySlot(inputStream, "PM",1);
         /* save 24h results */
         DataStream<ResultSlotRankPojo> resultDay = joinSlotResults(rankAMday, rankPMday);
-        resultDay.writeAsText("/opt/flink/flink-jar/results/query2/dayResult.txt", FileSystem.WriteMode.OVERWRITE).setParallelism(1);
+        resultDay.writeAsText(outputPath + "dayResult.txt", FileSystem.WriteMode.OVERWRITE).setParallelism(1);
 
         /* AM - 1week */
         SingleOutputStreamOperator<Tuple4<Long, String, Map<String, Long>, Long>> rankAMweek = computeRankBySlot(inputStream, "AM", 7);
@@ -69,7 +70,7 @@ public class SecondQuerySplit {
         SingleOutputStreamOperator<Tuple4<Long, String, Map<String, Long>, Long>> rankPMweek = computeRankBySlot(inputStream, "PM",7);
         /* save 1week results */
         DataStream<ResultSlotRankPojo> resultWeek = joinSlotResults(rankAMweek, rankPMweek);
-        resultWeek.writeAsText("/opt/flink/flink-jar/results/query2/weekResult.txt", FileSystem.WriteMode.OVERWRITE).setParallelism(1);
+        resultWeek.writeAsText(outputPath + "weekResult.txt", FileSystem.WriteMode.OVERWRITE).setParallelism(1);
 
         try {
             see.execute("FlinkQuery2Split");

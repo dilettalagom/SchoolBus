@@ -1,6 +1,0 @@
-<configuration>
-    <property>
-        <name>mapred.job.tracker</name>
-        <value>master:9870</value>
-    </property>
-</configuration>

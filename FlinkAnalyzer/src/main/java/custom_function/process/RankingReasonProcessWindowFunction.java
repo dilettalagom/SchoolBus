@@ -33,9 +33,6 @@ public class RankingReasonProcessWindowFunction extends ProcessWindowFunction<Tu
                 .collect(Collectors.toMap(
                         Map.Entry::getKey, Map.Entry::getValue, (e1, e2) -> e1, LinkedHashMap::new));
 
-                //.collect(TreeMap::new, (m, e) -> m.put(e.getKey(), e.getValue()), Map::putAll).;
-
-        //out.collect(new Tuple3(aLong, res._1(),remappered));
         out.collect(new Tuple4(key, res._1(), remappered, res._3()));
     }
 }

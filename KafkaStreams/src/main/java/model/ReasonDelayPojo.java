@@ -46,9 +46,9 @@ public class ReasonDelayPojo implements Serializable {
     @Override
     public String toString() {
         return
-                "timestamp=" + timestamp +
-                ", timeslot=" + timeslot +
-                ", reason=" + reason + " ";
+                timestamp +
+                ", " + timeslot +
+                ", " + reason + " ";
     }
 
 

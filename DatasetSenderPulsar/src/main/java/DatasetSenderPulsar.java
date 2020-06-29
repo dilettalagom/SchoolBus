@@ -13,7 +13,7 @@ public class DatasetSenderPulsar {
     private static final String topicHeader = "";
     private String topic;
     private PulsarClient pulsarClient;
-    private Producer<String> producer, producer2, producer3;
+    private Producer<String> producer;
     private float servingSpeed;
     private DelayFormatter delayFormatter;
 

@@ -13,10 +13,10 @@ public class RankBox implements Serializable {
     private ResultPojo pos3;
 
 
-    public RankBox(ResultPojo pos1, ResultPojo pos2, ResultPojo pos3) {
-        this.pos1 = pos1;
-        this.pos2 = pos2;
-        this.pos3 = pos3;
+    public RankBox(String string) {
+        this.pos1 = new ResultPojo("","",0);
+        this.pos2 = new ResultPojo("","",0);
+        this.pos3 = new ResultPojo("","",0);
     }
 
     public RankBox() { }
@@ -24,8 +24,14 @@ public class RankBox implements Serializable {
 
     @Override
     public String toString() {
-        return  pos1.toString() +
-                ", " + pos2.toString() +
-                ", " + pos3.toString() + " ";
+        StringBuilder sb = new StringBuilder();
+        if(pos1.getCount()!=0)
+            sb.append(pos1.toString());
+        if(pos2.getCount()!=0)
+            sb.append(", ").append(pos2.toString());
+        if(pos3.getCount()!=0)
+            sb.append(", ").append(pos3.toString());
+        return  sb.toString();
+
     }
 }

@@ -21,7 +21,7 @@ public class ResultPojo implements Serializable {
 
     @Override
     public String toString() {
-        return timeslot + ", " + reason + ", " + count;
+        return reason + ":" + count + " ";
     }
 
 }

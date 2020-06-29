@@ -3,7 +3,6 @@ package Serializers;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import model.RankBox;
 import org.apache.kafka.common.serialization.Deserializer;
-
 import java.util.Map;
 
 public class RankBoxDeserializer implements Deserializer<RankBox> {
@@ -15,14 +14,14 @@ public class RankBoxDeserializer implements Deserializer<RankBox> {
     @Override
     public RankBox deserialize(String s, byte[] bytes) {
         ObjectMapper mapper = new ObjectMapper();
-        RankBox pojo = null;
+        RankBox rankBox = null;
         try {
-            pojo = mapper.readValue(bytes, RankBox.class);
+            rankBox = mapper.readValue(bytes, RankBox.class);
         } catch (Exception e) {
 
             e.printStackTrace();
         }
-        return pojo;
+        return rankBox;
     }
 
 

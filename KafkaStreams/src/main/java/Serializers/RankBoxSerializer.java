@@ -13,12 +13,12 @@ public class RankBoxSerializer implements Serializer<RankBox> {
     }
 
     @Override
-    public byte[] serialize(String s, RankBox pojo) {
+    public byte[] serialize(String s, RankBox rankBox) {
 
         byte[] pojoByte = null;
         ObjectMapper objectMapper = new ObjectMapper();
         try {
-            pojoByte = objectMapper.writeValueAsString(pojo).getBytes();
+            pojoByte = objectMapper.writeValueAsString(rankBox).getBytes();
         } catch (Exception e) {
             e.printStackTrace();
         }

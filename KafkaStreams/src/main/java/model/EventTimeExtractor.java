@@ -2,9 +2,9 @@ package model;
 
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.apache.kafka.streams.processor.TimestampExtractor;
-
 import java.time.Instant;
 import java.time.format.DateTimeParseException;
+
 
 public class EventTimeExtractor implements TimestampExtractor {
 

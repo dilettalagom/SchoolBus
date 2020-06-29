@@ -33,7 +33,7 @@ sh execute-query.sh -c kafka -q 2
 ####KafkaStreams
 
 #Consumer
-sh execute-query.sh -q 2
+sh submit-query.sh
 
 #Producer
 sh submit-dataset.sh -f bus.csv -s 100000 -t dataQuery2 -c kafkaS

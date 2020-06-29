@@ -11,32 +11,29 @@ import org.apache.flink.streaming.api.TimeCharacteristic;
 import org.apache.flink.streaming.api.datastream.*;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
 import org.apache.flink.streaming.api.windowing.time.Time;
-import scala.Tuple3;
 import scala.Tuple4;
 import time.MonthWindow;
 import time.watermark.DateTimeAscendingAssignerQuery1;
 import custom_function.validator.BoroDelayPojoValidator;
-import util.PulsarSource;
-import java.util.ArrayList;
+import util.Consumer;
 
 
 public class FirstQuery{
 
     //private static final String topic = "non-persistent://public/default/dataQuery1";
     private static final String topic = "dataQuery1";
-    private static final String pulsarUrl = "pulsar://pulsar-node:6650";
 
     public static void main(String[] args) throws Exception{
 
         ParameterTool parameter = ParameterTool.fromArgs(args);
         StreamExecutionEnvironment see = StreamExecutionEnvironment.getExecutionEnvironment();
         see.setStreamTimeCharacteristic(TimeCharacteristic.EventTime);
-        see.enableCheckpointing(100*1000);
+        String connector = parameter.get("con");
 
-        //DataStreamSource<String> input = (new Consumer()).initConsumer(parameter.get("con"), see, topic);
-        //PulsarClient client = initPulsarClient();
-        DataStreamSource<String> input = see.addSource(new PulsarSource());
+
+        DataStreamSource<String> input = (new Consumer()).initConsumer(connector, see, topic);
         assert input!=null;
+
 
         KeyedStream<BoroDelayPojo, String> inputStream = input
                 .map(x -> {
@@ -49,7 +46,7 @@ public class FirstQuery{
                 .keyBy((KeySelector<BoroDelayPojo, String>) BoroDelayPojo::getBoro);
 
         /* day */
-        SingleOutputStreamOperator<Tuple3<String, ArrayList<Tuple3<String, Double, Long>>, Long>> dayResult = inputStream
+        SingleOutputStreamOperator<String> dayResult = inputStream
                 .timeWindow(Time.days(1))
                 .aggregate(new AverageDelayAggregator(), new DelayProcessWindowFunction())
                 .keyBy((KeySelector<Tuple4<Long, String, Double, Long>, Long>) t -> t._1())
@@ -58,7 +55,7 @@ public class FirstQuery{
                 .name("Compute day");
 
         /* week */
-        SingleOutputStreamOperator<Tuple3<String, ArrayList<Tuple3<String, Double, Long>>, Long>> weekResult = inputStream
+        SingleOutputStreamOperator<String> weekResult = inputStream
                 .timeWindow(Time.days(7))
                 .aggregate(new AverageDelayAggregator(), new DelayProcessWindowFunction())
                 .keyBy((KeySelector<Tuple4<Long, String, Double, Long>, Long>) t -> t._1())
@@ -67,7 +64,7 @@ public class FirstQuery{
                 .name("Compute week");
 
         /* month */
-        SingleOutputStreamOperator<Tuple3<String, ArrayList<Tuple3<String, Double, Long>>, Long>> monthResult = inputStream
+        SingleOutputStreamOperator<String> monthResult = inputStream
                 .window(new MonthWindow())
                 .aggregate(new AverageDelayAggregator(), new DelayProcessWindowFunction())
                 .keyBy((KeySelector<Tuple4<Long, String, Double, Long>, Long>) t -> t._1())
@@ -77,9 +74,10 @@ public class FirstQuery{
 
 
         /* save results on textfile */
-        dayResult.writeAsText("/opt/flink/flink-jar/results/query1/dayResult.txt", FileSystem.WriteMode.OVERWRITE).setParallelism(1).name("Write day result ");
-        weekResult.writeAsText("/opt/flink/flink-jar/results/query1/weekResult.txt", FileSystem.WriteMode.OVERWRITE).setParallelism(1).name("Write week result ");
-        monthResult.writeAsText("/opt/flink/flink-jar/results/query1/monthResult.txt", FileSystem.WriteMode.OVERWRITE).setParallelism(1).name("Write month result ");
+        String outputPath = "/opt/flink/flink-jar/results-"+connector+"/query1/";
+        dayResult.writeAsText(outputPath + "dayResult.txt", FileSystem.WriteMode.OVERWRITE).setParallelism(1).name("Write day result ");
+        weekResult.writeAsText(outputPath + "weekResult.txt", FileSystem.WriteMode.OVERWRITE).setParallelism(1).name("Write week result ");
+        monthResult.writeAsText(outputPath + "monthResult.txt", FileSystem.WriteMode.OVERWRITE).setParallelism(1).name("Write month result ");
 
         /*StreamingFileSink<Tuple3<String, ArrayList<Tuple3<String, Double, Long>>,Long>> sink = StreamingFileSink
                  .forRowFormat(new Path("/opt/flink/flink-jar/results/query1/"),
@@ -97,18 +95,6 @@ public class FirstQuery{
         }
 
     }
-
-    /*public static PulsarClient initPulsarClient() {
-        try {
-            return PulsarClient.builder()
-                    .serviceUrl(pulsarUrl)
-                    .build();
-        } catch (PulsarClientException e) {
-            e.printStackTrace();
-            System.exit(1);
-            return null;
-        }
-    }*/
 
 }
 

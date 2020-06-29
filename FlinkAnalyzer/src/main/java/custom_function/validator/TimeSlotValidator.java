@@ -10,6 +10,6 @@ public class TimeSlotValidator implements FilterFunction<ReasonDelayPojo> {
         TimeSlotFilter timeSlotFilter = TimeSlotFilter.getInstance();
 
         return reasonDelayPojo != null && !reasonDelayPojo.getReason().equals("") &&
-                (timeSlotFilter.ckeckAM(reasonDelayPojo) || timeSlotFilter.ckeckPM(reasonDelayPojo));
+                (timeSlotFilter.checkAM(reasonDelayPojo) || timeSlotFilter.checkPM(reasonDelayPojo));
     }
 }

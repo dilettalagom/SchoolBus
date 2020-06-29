@@ -15,7 +15,7 @@ public class KafkaConsumer extends FlinkKafkaConsumer<String> {
         Properties properties = new Properties();
         properties.setProperty("bootstrap.servers", "kafka:9092");
         properties.setProperty("zookeeper.connect", "zookeeper:2181");
-        properties.setProperty("group.id", "test");
+        properties.setProperty("group.id", "SchoolBus");
         return properties;
     }
 }

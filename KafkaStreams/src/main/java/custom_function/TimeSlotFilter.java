@@ -1,9 +1,8 @@
 package custom_function;
 
-
 import model.ReasonDelayPojo;
-
 import java.time.LocalTime;
+
 
 public class TimeSlotFilter {
 
@@ -22,7 +21,7 @@ public class TimeSlotFilter {
         return instance;
     }
 
-    public boolean ckeckAM(ReasonDelayPojo pojo) {
+    public boolean checkAM(ReasonDelayPojo pojo) {
 
         String[] date = pojo.getTimestamp().split("T", -1);
         LocalTime target = LocalTime.parse(date[1]);
@@ -34,7 +33,7 @@ public class TimeSlotFilter {
         return false;
     }
 
-    public boolean ckeckPM(ReasonDelayPojo pojo){
+    public boolean checkPM(ReasonDelayPojo pojo){
 
         String[] date = pojo.getTimestamp().split("T", -1);
         LocalTime target = LocalTime.parse(date[1]);

@@ -21,7 +21,7 @@ public class TimeSlotFilter {
         return instance;
     }
 
-    public boolean ckeckAM(ReasonDelayPojo pojo){
+    public boolean checkAM(ReasonDelayPojo pojo){
 
         LocalTime target = LocalTime.parse(pojo.getTimestamp().split("T", -1)[1]);
         if (target.isAfter(slotAMstart) && target.isBefore(slotAMend)){
@@ -31,7 +31,7 @@ public class TimeSlotFilter {
         return false;
     }
 
-    public boolean ckeckPM(ReasonDelayPojo pojo){
+    public boolean checkPM(ReasonDelayPojo pojo){
 
         LocalTime target = LocalTime.parse(pojo.getTimestamp().split("T", -1)[1]);
         if(target.isAfter(slotPMstart) && target.isBefore(slotPMend)){

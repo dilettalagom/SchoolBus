@@ -9,6 +9,7 @@ import time.TimeConverter;
 
 import java.util.ArrayList;
 
+/*
 public class Process3 extends ProcessWindowFunction<Tuple2<ArrayList<Tuple2<String,Tuple2<String, Long>>>,Long>, Tuple3<Long,ArrayList<Tuple2<String, Tuple2<String, Long>>>,Long>, Long, TimeWindow> {
 
 
@@ -20,3 +21,19 @@ public class Process3 extends ProcessWindowFunction<Tuple2<ArrayList<Tuple2<Stri
         out.collect(new Tuple3<Long,ArrayList<Tuple2<String, Tuple2<String, Long>>>,Long>(key,next._1(),end));
     }
 }
+*/
+
+public class Process3 extends ProcessWindowFunction<Tuple2<ArrayList<Tuple2<String,Tuple2<String, Long>>>,Long>, String, Long, TimeWindow> {
+
+
+    @Override
+    public void process(Long key, Context context, Iterable<Tuple2<ArrayList<Tuple2<String,Tuple2<String, Long>>>,Long>> iterable, Collector<String> out) throws Exception {
+
+        Tuple2<ArrayList<Tuple2<String, Tuple2<String, Long>>>, Long> next = iterable.iterator().next();
+        StringBuilder sb = new StringBuilder();
+        long end = TimeConverter.currentClock() - next._2();
+        sb.append(TimeConverter.getInstance().convertFromEpochToDate(key)).append("; ").append(next._1()).append("; ").append(end);
+        out.collect(sb.toString());
+    }
+}
+

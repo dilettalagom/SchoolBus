@@ -3,7 +3,6 @@
 usage() {
   cat <<EOF >&1
     Usage: $0 [options] [command]
-    Builds or pushes the built-in Spark Docker image.
     Commands:
       execute-query
 

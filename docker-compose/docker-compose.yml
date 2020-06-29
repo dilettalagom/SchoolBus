@@ -87,81 +87,45 @@ services:
 
 
 
-#  master: HDFS
-#    build:
-#      context: ../docker-images/hdfs
-#    image: digi/hdfs
-#    container_name: master
-#    hostname: master
-#    networks:
-#      - app_network
-#    ports:
-#      - "9870:9870"  # hdfs ui
-#      - "54310:54310"  # hdfs
-#    volumes:
-#      - ./hdfs-results:/target
-#    stdin_open: true
-#    tty: true
-#
-#
-#  worker1:HDFS
-#    image: digi/hdfs
-#    container_name: worker1
-#    hostname: worker1
-#    networks:
-#      - app_network
-#    ports:
-#      - "9861:9861"
-#    volumes:
-#      - ./hdfs-results:/target
-#    depends_on:
-#      - master
-#    stdin_open: true
-#    tty: true
+  flink-jobmanager:
+    build:
+      context: ../docker-images/flink
+    image: digi/flink
+    hostname: flink-jobmanager
+    container_name: flink-jobmanager
+    networks:
+      - app_network
+    expose:
+      - "6123"
+    ports:
+      - "8081:8081"
+    command: jobmanager
+    volumes:
+      - ./flink-jar:/opt/flink/flink-jar
+    environment:
+      - JOB_MANAGER_RPC_ADDRESS=flink-jobmanager
 
 
-
-#  flink-jobmanager:
-#    build:
-#      context: ../docker-images/flink
-#    image: digi/flink
-#    hostname: flink-jobmanager
-#    container_name: flink-jobmanager
-#    networks:
-#      - app_network
-#    expose:
-#      - "6123"
-#    ports:
-#      - "8081:8081"
-#    command: jobmanager
-#    volumes:
-#      - ./flink-jar:/opt/flink/flink-jar
-#    environment:
-#      - JOB_MANAGER_RPC_ADDRESS=flink-jobmanager
-#      - HADOOP_CONF_DIR=/usr/local/hadoop/etc/hadoop
-#
-#
-#  flink-taskmanager1:
-#    build:
-#      context: ../docker-images/flink
-#    image: digi/flink
-#    hostname: flink-taskmanager1
-#    container_name: flink-taskmanager1
-#    networks:
-#      - app_network
-#    expose:
-#      - "6121"
-#      - "6122"
-#    depends_on:
-#      - flink-jobmanager
-#    links:
-#      - "flink-jobmanager:jobmanager"
-#    command: taskmanager
-#    volumes:
-#    - ./flink-jar:/opt/flink/flink-jar
-#    environment:
-#      - JOB_MANAGER_RPC_ADDRESS=flink-jobmanager
-#      - HADOOP_CONF_DIR=/usr/local/hadoop/etc/hadoop
+  flink-taskmanager1:
+    build:
+      context: ../docker-images/flink
+    image: digi/flink
+    hostname: flink-taskmanager1
+    container_name: flink-taskmanager1
+    networks:
+      - app_network
+    expose:
+      - "6121"
+      - "6122"
+    depends_on:
+      - flink-jobmanager
+    links:
+      - "flink-jobmanager:jobmanager"
+    command: taskmanager
+    volumes:
+    - ./flink-jar:/opt/flink/flink-jar
+    environment:
+      - JOB_MANAGER_RPC_ADDRESS=flink-jobmanager
 
 
 #  master:
@@ -198,91 +162,48 @@ services:
 #    tty: true
 #    command: bash -c "sh start-services.sh"
 
-#  flink-taskmanager2:
-#    build:
-#      context: ../docker-images/flink
-#    image: digi/flink
-#    hostname: flink-taskmanager2
-#    container_name: flink-taskmanager2
-#    networks:
-#      - app_network
-#    expose:
-#      - "6126"
-#      - "6127"
-#    depends_on:
-#      - flink-jobmanager
-#    links:
-#      - "flink-jobmanager:jobmanager"
-#    command: taskmanager
-#    volumes:
-#      - ./flink-jar:/opt/flink/flink-jar
-#    environment:
-#      - JOB_MANAGER_RPC_ADDRESS=flink-jobmanager
-#      - HADOOP_CONF_DIR=/usr/local/hadoop/etc/hadoop
-
-#  flink-taskmanager3:
-#    build:
-#      context: ../docker-images/flink
-#    image: digi/flink
-#    hostname: flink-taskmanager3
-#    container_name: flink-taskmanager3
-#    networks:
-#      - app_network
-#    expose:
-#      - "6128"
-#      - "6129"
-#    depends_on:
-#      - flink-jobmanager
-#    links:
-#      - "flink-jobmanager:flink-jobmanager"
-#    command: taskmanager
-#    volumes:
-#      - ./flink-jar:/opt/flink/flink-jar
-#    environment:
-#      - JOB_MANAGER_RPC_ADDRESS=flink-jobmanager
-#      - HADOOP_CONF_DIR=/usr/local/hadoop/etc/hadoop
 
 
-#  pulsar-node:
-#    image: apachepulsar/pulsar:2.4.0
-#    hostname: pulsar-node
-#    container_name: pulsar-node
-#    networks:
-#      - app_network
-#    expose:
-#      - 8080
-#      - 6650
-#    environment:
-#      - PULSAR_MEM=" -Xms512m -Xmx512m -XX:MaxDirectMemorySize=1g"
-#    volumes:
-#      - ./pulsar-jar:/pulsar-jar
-#    command: /bin/bash -c "bin/apply-config-from-env.py conf/standalone.conf && bin/pulsar standalone"
-#
-#
-#  pulsar-client:
-#    image: apachepulsar/pulsar:2.4.0
-#    hostname: pulsar-client
-#    container_name: pulsar-client
-#    networks:
-#      - app_network
-#    environment:
-#      - PULSAR_MEM=" -Xms512m -Xmx512m -XX:MaxDirectMemorySize=1g"
-#    volumes:
-#      - ./pulsar-jar:/pulsar-jar
-#    command: /bin/bash
-#    stdin_open: true
-#    tty: true
-#
-#
-#  pulsar-dashboard:
-#    image: apachepulsar/pulsar-dashboard:2.4.0
-#    hostname: pulsar-dashboard
-#    container_name: pulsar-dashboard
-#    networks:
-#      - app_network
-#    depends_on:
-#      - pulsar-node
-#    ports:
-#      - "80:80"
-#    environment:
-#      - SERVICE_URL=http://pulsar-node:8080
+  pulsar-node:
+    image: apachepulsar/pulsar:2.4.0
+    hostname: pulsar-node
+    container_name: pulsar-node
+    networks:
+      - app_network
+    expose:
+      - 8080
+      - 6650
+    environment:
+      - PULSAR_MEM=" -Xms512m -Xmx512m -XX:MaxDirectMemorySize=1g"
+    volumes:
+      - ./pulsar-jar:/pulsar-jar
+    command: /bin/bash -c "bin/apply-config-from-env.py conf/standalone.conf && bin/pulsar standalone"
+
+
+  pulsar-client:
+    image: apachepulsar/pulsar:2.4.0
+    hostname: pulsar-client
+    container_name: pulsar-client
+    networks:
+      - app_network
+    environment:
+      - PULSAR_MEM=" -Xms512m -Xmx512m -XX:MaxDirectMemorySize=1g"
+    volumes:
+      - ./pulsar-jar:/pulsar-jar
+    command: /bin/bash
+    stdin_open: true
+    tty: true
+
+
+  pulsar-dashboard:
+    image: apachepulsar/pulsar-dashboard:2.4.0
+    hostname: pulsar-dashboard
+    container_name: pulsar-dashboard
+    networks:
+      - app_network
+    depends_on:
+      - pulsar-node
+    ports:
+      - "80:80"
+    environment:
+      - SERVICE_URL=http://pulsar-node:8080

@@ -2,9 +2,7 @@ package Serializers;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import model.ReasonDelayPojo;
-import org.apache.kafka.common.header.Headers;
 import org.apache.kafka.common.serialization.Deserializer;
-
 import java.util.Map;
 
 public class ReasonPojoDeserializer implements Deserializer<ReasonDelayPojo> {

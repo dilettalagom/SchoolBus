@@ -6,8 +6,6 @@ import time.TimeConverter;
 
 public class DateTimeAscendingAssignerQuery2 extends AscendingTimestampExtractor<ReasonDelayPojo> {
 
-    public DateTimeAscendingAssignerQuery2() {
-    }
 
     @Override
     public long extractAscendingTimestamp(ReasonDelayPojo reasonDelayPojo) {
