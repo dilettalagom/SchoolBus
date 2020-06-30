@@ -11,21 +11,24 @@ import org.apache.kafka.streams.StreamsBuilder;
 import org.apache.kafka.streams.StreamsConfig;
 import org.apache.kafka.streams.kstream.*;
 import org.apache.kafka.streams.state.WindowStore;
+import org.omg.PortableInterceptor.SYSTEM_EXCEPTION;
+
+import javax.swing.plaf.synth.SynthScrollBarUI;
 import java.time.Duration;
 import java.util.*;
 import java.util.concurrent.CountDownLatch;
 import static java.time.Duration.ofMinutes;
 
 
-public class SecondQuery {
+public class SecondQueryProva {
 
     private static Properties createStreamProperties() {
 
         final String KAFKA_BROKER = "kafka:9092";
         final Properties props = new Properties();
-        props.put(StreamsConfig.APPLICATION_ID_CONFIG,"SchoolBus");
-        props.put(StreamsConfig.CLIENT_ID_CONFIG,"kafka-consumer");
-        props.put(StreamsConfig.BOOTSTRAP_SERVERS_CONFIG,KAFKA_BROKER);
+        props.put(StreamsConfig.APPLICATION_ID_CONFIG, "SchoolBus");
+        props.put(StreamsConfig.CLIENT_ID_CONFIG, "kafka-consumer");
+        props.put(StreamsConfig.BOOTSTRAP_SERVERS_CONFIG, KAFKA_BROKER);
         props.put(StreamsConfig.DEFAULT_TIMESTAMP_EXTRACTOR_CLASS_CONFIG, EventTimeExtractor.class.getName());
         props.put(StreamsConfig.EXACTLY_ONCE, "exactly_once");
 
@@ -48,7 +51,7 @@ public class SecondQuery {
                     return new ReasonDelayPojo(splitted[0], splitted[1]);
                 })
                 .filter((bytes, pojo) -> pojo != null &&
-                        !pojo.getReason().equals("") &&  !pojo.getReason().equals("Poison") &&
+                        !pojo.getReason().equals("") && !pojo.getReason().equals("Poison") &&
                         (timeSlotFilter.checkAM(pojo) || timeSlotFilter.checkPM(pojo)))
                 .selectKey((key, value) -> value.getReason());
 
@@ -56,37 +59,39 @@ public class SecondQuery {
                 .branch((key, value) -> value.getTimeslot().equals("AM : 5:00-11:59"),
                         (key, value) -> value.getTimeslot().equals("PM : 12:00-19:00"));
 
-        /* day */
-        //Windowed<Reason, Tuple3<Timestamp, Timeslot, CountxDay>
-        KStream<Windowed<String>, SnappyTuple3<String, String, Integer>> scoresAMDay = computeScores(branches[0], 1L, "accumulator-AM-day");
-        KStream<Windowed<String>, SnappyTuple3<String, String, Integer>> scoresPMDay = computeScores(branches[1], 1L,"accumulator-PM-day");
 
-        KTable<Windowed<String>, RankBox> rankedAMDay = computeRankStream(scoresAMDay, 1L, "ranker-AM-day");
-        KTable<Windowed<String>, RankBox> rankedPMDay = computeRankStream(scoresPMDay, 1L, "ranker-PM-day");
-
-        KStream<Windowed<String>, String> joinDay = joinFinalResults(rankedAMDay, rankedPMDay).toStream();
-
-        //print on file
-        joinDay.print(Printed.<Windowed<String>, String>toFile("ranker-merged-day.txt").withLabel("joined-day")
-                .withKeyValueMapper((win, v) -> String.format("%s; %s", win.key() , v)));
+//        /* day */
+//        //Windowed<Reason, Tuple3<Timestamp, Timeslot, CountxDay>
+//        KStream<Windowed<String>, SnappyTuple3<String, String, Integer>> scoresAMDay = computeScores(branches[0], 1L, "accumulator-AM-day");
+//        KStream<Windowed<String>, SnappyTuple3<String, String, Integer>> scoresPMDay = computeScores(branches[1], 1L, "accumulator-PM-day");
+//
+//        KTable<Windowed<String>, RankBox> rankedAMDay = computeRankStream(scoresAMDay, 1L, "ranker-AM-day");
+//        KTable<Windowed<String>, RankBox> rankedPMDay = computeRankStream(scoresPMDay, 1L, "ranker-PM-day");
+//
+//        KStream<Windowed<String>, String> joinDay = mergeFinalResults(rankedAMDay, rankedPMDay, "merged-day-acc", 1L);
+//
+//        joinDay.foreach((win, v) -> System.out.println("merged" + win.key() + " " + v));
+//        //print on file
+//        joinDay.print(Printed.<Windowed<String>, String>toFile("ranker-merged-day.txt").withLabel("merged-day")
+//                .withKeyValueMapper((win, v) -> String.format("%s; %s", win.key(), v)));
 
 
         /* week */
         //Windowed<Reason, Tuple3<Timestamp, Timeslot, CountxWeek>
-        KStream<Windowed<String>, SnappyTuple3<String, String, Integer>> scoresAMWeek = computeScores(branches[0], 7L,"accumulator-AM-week");
-        KStream<Windowed<String>, SnappyTuple3<String, String, Integer>> scoresPMWeek = computeScores(branches[1], 7L,"accumulator-PM-week");
+        KStream<Windowed<String>, SnappyTuple3<String, String, Integer>> scoresAMWeek = computeScores(branches[0], 7L, "accumulator-AM-week");
+        KStream<Windowed<String>, SnappyTuple3<String, String, Integer>> scoresPMWeek = computeScores(branches[1], 7L, "accumulator-PM-week");
 
         KTable<Windowed<String>, RankBox> rankedAMWeek = computeRankStream(scoresAMWeek, 7L, "ranker-AM-week");
         KTable<Windowed<String>, RankBox> rankedPMWeek = computeRankStream(scoresPMWeek, 7L, "ranker-PM-week");
 
-        KStream<Windowed<String>, String> joinWeek = joinFinalResults(rankedAMWeek, rankedPMWeek).toStream();
+        KStream<String, String> joinWeek = mergeFinalResults(rankedAMWeek, rankedPMWeek, "merged-week-acc", 7L);
 
         //print on file
-        joinWeek.print(Printed.<Windowed<String>, String>toFile("ranker-merged-week.txt").withLabel("joined-week")
-                .withKeyValueMapper((win, v) -> String.format("%s; %s", win.key() , v)));
+        joinWeek.print(Printed.<String, String>toFile("ranker-merged-week.txt").withLabel("merged-week")
+                .withKeyValueMapper((win, v) -> String.format("%s; %s", win, v)));
 
 
-
+        // attach shutdown handler to catch control-c
         final CountDownLatch latch = new CountDownLatch(1);
         final KafkaStreams streams = new KafkaStreams(builder.build(), props);
 
@@ -107,25 +112,42 @@ public class SecondQuery {
         }
         System.exit(0);
 
+
     }
 
-    private static KTable<Windowed<String>, String> joinFinalResults(KTable<Windowed<String>, RankBox> rankedAMDay, KTable<Windowed<String>, RankBox> rankedPMDay) {
-        return rankedAMDay.outerJoin(rankedPMDay, new ValueJoiner<RankBox, RankBox, String>() {
-            @Override
-            public String apply(RankBox r1, RankBox r2) {
-                StringBuilder sb = new StringBuilder();
-                if (r1 != null) {
-                    sb.append("AM : 5:00-11:59 (")
-                    .append(r1.toString()).append(")");
-                }
-                if(r2 != null) {
-                    sb.append(", PM : 12:00-19:00 (")
-                    .append(r2.toString()).append(")");
-                }
-                return sb.toString();
-            }
-        });
+
+    private static KStream<String, String> mergeFinalResults(KTable<Windowed<String>, RankBox> streamA, KTable<Windowed<String>, RankBox> streamB, String accName, Long window) {
+
+        KStream<String, RankBox> streamAM = streamA.toStream().selectKey((win, value) -> win.key());
+        KStream<String, RankBox> streamPM = streamB.toStream().selectKey((win, value) -> win.key());
+
+        KStream<String, RankBox> merged = streamAM.merge(streamPM);
+
+        KTable<String, String> result = merged
+                .groupByKey(Serialized.with(Serdes.String(), Serdes.serdeFrom(new RankBoxSerializer(), new RankBoxDeserializer())))
+                .aggregate(
+                        new Initializer<String>() {
+                            @Override
+                            public String apply() {
+                                return "";
+                            }
+                        },
+                        new Aggregator<String, RankBox, String>() {
+                            @Override
+                            public String apply(String windowed, RankBox rankBox, String acc) {
+
+                                StringBuilder sb = new StringBuilder();
+                                sb.append(acc).append(rankBox.toString());
+                                return sb.toString();
+                            }
+                        },
+                        Materialized.with(Serdes.String(), Serdes.String())
+                );
+        return result.toStream();
+
     }
+
+
 
     private static KTable<Windowed<String>, RankBox> computeRankStream(KStream<Windowed<String>, SnappyTuple3<String, String, Integer>> scoresAMDay, Long window, String accName) {
         return scoresAMDay
@@ -137,7 +159,7 @@ public class SecondQuery {
                     return KeyValue.pair(newKey, newValue);
                 })
                 .groupByKey(Serialized.with(Serdes.String(), Serdes.serdeFrom(new Tuple3Serializer(), new Tuple3Deserializer())))
-                .windowedBy(TimeWindows.of(Duration.ofDays(window)).until(86460000L * window).grace(ofMinutes(1)))
+                .windowedBy(TimeWindows.of(Duration.ofDays(window)))
                 .aggregate(
                         new Initializer<RankBox>() {
                             @Override
@@ -191,7 +213,7 @@ public class SecondQuery {
                 .groupByKey(Serialized.with(Serdes.String(), Serdes.serdeFrom(new ReasonPojoSerializer(), new ReasonPojoDeserializer())))
                 //until -> window lower bound
                 //grace -> admitted out-of-order events
-                .windowedBy(TimeWindows.of(Duration.ofDays(window)).until(86460000L * window).grace(ofMinutes(1)))
+                .windowedBy(TimeWindows.of(Duration.ofDays(window)))
                 .aggregate(
                         new Initializer<SnappyTuple3<String, String, Integer>>() {
                             @Override
@@ -213,7 +235,8 @@ public class SecondQuery {
 
 }
 
-        /*TODO: send on topic
-        branches[1].to("pm.txt",
-                        Produced.with(Serdes.String(), Serdes.serdeFrom(new ReasonPojoSerializer(), new ReasonPojoDeserializer())));
-         */
+/*TODO: send on topic
+branches[1].to("pm.txt",
+     Produced.with(Serdes.String(), Serdes.serdeFrom(new ReasonPojoSerializer(), new ReasonPojoDeserializer())))
+*/
+

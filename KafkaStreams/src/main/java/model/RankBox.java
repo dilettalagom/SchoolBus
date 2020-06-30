@@ -22,16 +22,32 @@ public class RankBox implements Serializable {
     public RankBox() { }
 
 
+//    @Override
+//    public String toString() {
+//        StringBuilder sb = new StringBuilder();
+//        if(pos1.getCount()!=0)
+//            sb.append(pos1.toString());
+//        if(pos2.getCount()!=0)
+//            sb.append(", ").append(pos2.toString());
+//        if(pos3.getCount()!=0)
+//            sb.append(", ").append(pos3.toString());
+//        return  sb.toString();
+//}
+
+
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
+        sb.append(pos1.getTimeslot()).append(" (");
         if(pos1.getCount()!=0)
             sb.append(pos1.toString());
         if(pos2.getCount()!=0)
             sb.append(", ").append(pos2.toString());
         if(pos3.getCount()!=0)
             sb.append(", ").append(pos3.toString());
+        sb.append(")");
         return  sb.toString();
 
     }
+
 }

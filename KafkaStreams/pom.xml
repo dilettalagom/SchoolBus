@@ -17,8 +17,7 @@
         <scala.binary.version>2.11</scala.binary.version>
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
-        <kafkaStream.version>2.5.0</kafkaStream.version>
-        <kafkaStream.version>2.5.0</kafkaStream.version>
+        <kafkaStream.version>2.3.0</kafkaStream.version>
     </properties>
 
     <dependencies>
