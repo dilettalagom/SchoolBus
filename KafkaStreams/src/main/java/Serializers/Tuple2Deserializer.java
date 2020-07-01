@@ -1,12 +1,14 @@
 package Serializers;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import model.SnappyTuple3;
+import model.SnappyTuple2;
+import model.SnappyTuple4;
 import org.apache.kafka.common.serialization.Deserializer;
+
 import java.util.Map;
 
 
-public class Tuple3Deserializer implements Deserializer<SnappyTuple3<String, String, Integer>> {
+public class Tuple2Deserializer implements Deserializer<SnappyTuple2<String,Long>> {
 
     @Override
     public void configure(Map<String, ?> configs, boolean isKey) {
@@ -14,12 +16,12 @@ public class Tuple3Deserializer implements Deserializer<SnappyTuple3<String, Str
     }
 
     @Override
-    public SnappyTuple3<String, String, Integer> deserialize(String s, byte[] bytes) {
+    public SnappyTuple2<String,Long> deserialize(String s, byte[] bytes) {
 
         ObjectMapper mapper = new ObjectMapper();
-        SnappyTuple3<String, String, Integer> tuple = null;
+        SnappyTuple2<String,Long> tuple = null;
         try {
-            tuple = mapper.readValue(bytes, SnappyTuple3.class);
+            tuple = mapper.readValue(bytes, SnappyTuple2.class);
         } catch (Exception e) {
 
             e.printStackTrace();

@@ -7,7 +7,8 @@ networks:
 services:
 
   zookeeper:
-    image: wurstmeister/zookeeper
+    image: zookeeper
+    restart: always
     container_name: zookeeper
     hostname: zookeeper
     networks:
@@ -18,7 +19,9 @@ services:
       - ALLOW_ANONYMOUS_LOGIN=yes
 
   kafka:
-    image: wurstmeister/kafka
+    build:
+      context: ../docker-images/kafka
+    image: digi/kafka
     container_name: kafka
     hostname: kafka
     networks:
@@ -27,10 +30,13 @@ services:
       - '9092:9092'
     depends_on:
       - zookeeper
+    links:
+      - zookeeper
     environment:
       - KAFKA_ADVERTISED_HOST_NAME=kafka
       - KAFKA_ZOOKEEPER_CONNECT=zookeeper:2181
       - KAFKA_LOG_RETENTION_HOURS=1
+      - BROKER_ID=1
       - KAFKA_MESSAGE_MAX_BYTES=2000000000
       - KAFKA_CREATE_TOPICS=dataQuery1:1:1
       - KAFKA_CREATE_TOPICS=dataQuery2:1:1
@@ -38,7 +44,9 @@ services:
 
 
   kafka-producer:
-    image: wurstmeister/kafka
+    build:
+      context: ../docker-images/kafka
+    image: digi/kafka
     container_name: kafka-producer
     hostname: kafka-producer
     networks:
@@ -50,19 +58,25 @@ services:
     depends_on:
       - zookeeper
       - kafka
+    links:
+      - zookeeper
     environment:
       - KAFKA_ADVERTISED_HOST_NAME=kafka
       - KAFKA_ZOOKEEPER_CONNECT=zookeeper:2181
       - KAFKA_LOG_RETENTION_HOURS=1
       - KAFKA_MESSAGE_MAX_BYTES=2000000000
+
     entrypoint: /bin/sh
     stdin_open: true
     tty: true
     volumes:
       - ./kafka-producer:/producer
 
+
   kafka-consumer:
-    image: wurstmeister/kafka
+    build:
+      context: ../docker-images/kafka
+    image: digi/kafka
     container_name: kafka-consumer
     hostname: kafka-consumer
     networks:
@@ -74,6 +88,8 @@ services:
     depends_on:
       - zookeeper
       - kafka
+    links:
+      - zookeeper
     environment:
       - KAFKA_ADVERTISED_HOST_NAME=kafka
       - KAFKA_ZOOKEEPER_CONNECT=zookeeper:2181

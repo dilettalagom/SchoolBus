@@ -9,6 +9,7 @@ public class ResultPojo implements Serializable {
     String timeslot;
     String reason;
     Integer count;
+    Long currentEventTime;
 
     public ResultPojo() {
     }
@@ -17,6 +18,14 @@ public class ResultPojo implements Serializable {
         this.timeslot = timeslot;
         this.reason = reason;
         this.count = count;
+    }
+
+
+    public ResultPojo(String timeslot, String reason, Integer count, Long current) {
+        this.timeslot = timeslot;
+        this.reason = reason;
+        this.count = count;
+        this.currentEventTime = current;
     }
 
     @Override

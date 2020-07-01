@@ -3,17 +3,19 @@ package model;
 import lombok.Data;
 
 import java.io.Serializable;
-import java.security.Timestamp;
+import java.text.SimpleDateFormat;
 import java.time.Instant;
 import java.time.format.DateTimeParseException;
+import java.util.Date;
 
 
 @Data
 public class BoroDelayPojo implements Serializable {
 
-    private Integer delay;
-    private String boro;
     private String timestamp;
+    private String boro;
+    private Integer delay;
+
 
 
     public BoroDelayPojo(String timestamp, String boro, String delay)  {
@@ -23,8 +25,8 @@ public class BoroDelayPojo implements Serializable {
     }
 
 
-    private int parseInteger( String delay)
-    {
+
+    private int parseInteger( String delay){
         try{
             return Integer.parseInt(delay);
         }catch (NumberFormatException e){
@@ -42,11 +44,18 @@ public class BoroDelayPojo implements Serializable {
 
     public long convertToEpochMilli(String timestampString){
         try {
-            long epochToMilli = Instant.parse(timestampString+'Z').toEpochMilli();
-            return  epochToMilli;
+            return Instant.parse(timestampString+'Z').toEpochMilli();
         } catch (DateTimeParseException e) {
             return 0L;
         }
     }
+
+    private String convertFromEpochToDate(Long epochMilli){
+        Date date = new Date(epochMilli);
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
+        return simpleDateFormat.format(date);
+    }
+
+
 
 }

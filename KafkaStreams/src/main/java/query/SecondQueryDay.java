@@ -11,16 +11,13 @@ import org.apache.kafka.streams.StreamsBuilder;
 import org.apache.kafka.streams.StreamsConfig;
 import org.apache.kafka.streams.kstream.*;
 import org.apache.kafka.streams.state.WindowStore;
-import org.omg.PortableInterceptor.SYSTEM_EXCEPTION;
-
-import javax.swing.plaf.synth.SynthScrollBarUI;
 import java.time.Duration;
 import java.util.*;
 import java.util.concurrent.CountDownLatch;
 import static java.time.Duration.ofMinutes;
 
 
-public class SecondQueryProva {
+public class SecondQueryDay {
 
     private static Properties createStreamProperties() {
 
@@ -37,6 +34,8 @@ public class SecondQueryProva {
 
 
     public static void main(String[] args) throws Exception {
+
+        final Long UNTIL_DAY = 86460000L;
 
         final String topic = "dataQuery2";
         final Properties props = createStreamProperties();
@@ -60,35 +59,19 @@ public class SecondQueryProva {
                         (key, value) -> value.getTimeslot().equals("PM : 12:00-19:00"));
 
 
-//        /* day */
-//        //Windowed<Reason, Tuple3<Timestamp, Timeslot, CountxDay>
-//        KStream<Windowed<String>, SnappyTuple3<String, String, Integer>> scoresAMDay = computeScores(branches[0], 1L, "accumulator-AM-day");
-//        KStream<Windowed<String>, SnappyTuple3<String, String, Integer>> scoresPMDay = computeScores(branches[1], 1L, "accumulator-PM-day");
-//
-//        KTable<Windowed<String>, RankBox> rankedAMDay = computeRankStream(scoresAMDay, 1L, "ranker-AM-day");
-//        KTable<Windowed<String>, RankBox> rankedPMDay = computeRankStream(scoresPMDay, 1L, "ranker-PM-day");
-//
-//        KStream<Windowed<String>, String> joinDay = mergeFinalResults(rankedAMDay, rankedPMDay, "merged-day-acc", 1L);
-//
-//        joinDay.foreach((win, v) -> System.out.println("merged" + win.key() + " " + v));
-//        //print on file
-//        joinDay.print(Printed.<Windowed<String>, String>toFile("ranker-merged-day.txt").withLabel("merged-day")
-//                .withKeyValueMapper((win, v) -> String.format("%s; %s", win.key(), v)));
+        /* day */
+        //Windowed<Reason, Tuple3<Timestamp, Timeslot, CountxDay>
+        KStream<Windowed<String>, SnappyTuple4<String, String, Integer,Long>> scoresAMDay = computeScores(branches[0], 1, UNTIL_DAY,"accumulator-AM-day");
+        KStream<Windowed<String>, SnappyTuple4<String, String, Integer,Long>> scoresPMDay = computeScores(branches[1], 1, UNTIL_DAY,"accumulator-PM-day");
 
+        KTable<Windowed<String>, RankBox> rankedAMDay = computeRankStream(scoresAMDay, 1, UNTIL_DAY, "ranker-AM-day");
+        KTable<Windowed<String>, RankBox> rankedPMDay = computeRankStream(scoresPMDay, 1, UNTIL_DAY, "ranker-PM-day");
 
-        /* week */
-        //Windowed<Reason, Tuple3<Timestamp, Timeslot, CountxWeek>
-        KStream<Windowed<String>, SnappyTuple3<String, String, Integer>> scoresAMWeek = computeScores(branches[0], 7L, "accumulator-AM-week");
-        KStream<Windowed<String>, SnappyTuple3<String, String, Integer>> scoresPMWeek = computeScores(branches[1], 7L, "accumulator-PM-week");
-
-        KTable<Windowed<String>, RankBox> rankedAMWeek = computeRankStream(scoresAMWeek, 7L, "ranker-AM-week");
-        KTable<Windowed<String>, RankBox> rankedPMWeek = computeRankStream(scoresPMWeek, 7L, "ranker-PM-week");
-
-        KStream<String, String> joinWeek = mergeFinalResults(rankedAMWeek, rankedPMWeek, "merged-week-acc", 7L);
+        KStream<String, SnappyTuple2<String,Long>> joinDay = mergeFinalResults(rankedAMDay, rankedPMDay);
 
         //print on file
-        joinWeek.print(Printed.<String, String>toFile("ranker-merged-week.txt").withLabel("merged-week")
-                .withKeyValueMapper((win, v) -> String.format("%s; %s", win, v)));
+        joinDay.print(Printed.<String, SnappyTuple2<String,Long>>toFile("ranker-merged-day.txt").withLabel("merged-day")
+                .withKeyValueMapper((win, v) -> String.format("%s; %s", win, v.toString())));
 
 
         // attach shutdown handler to catch control-c
@@ -116,32 +99,36 @@ public class SecondQueryProva {
     }
 
 
-    private static KStream<String, String> mergeFinalResults(KTable<Windowed<String>, RankBox> streamA, KTable<Windowed<String>, RankBox> streamB, String accName, Long window) {
+    private static KStream<String, SnappyTuple2<String,Long>> mergeFinalResults(KTable<Windowed<String>, RankBox> streamA, KTable<Windowed<String>, RankBox> streamB) {
 
         KStream<String, RankBox> streamAM = streamA.toStream().selectKey((win, value) -> win.key());
         KStream<String, RankBox> streamPM = streamB.toStream().selectKey((win, value) -> win.key());
 
         KStream<String, RankBox> merged = streamAM.merge(streamPM);
 
-        KTable<String, String> result = merged
+        KTable<String, SnappyTuple2<String,Long>> result = merged
                 .groupByKey(Serialized.with(Serdes.String(), Serdes.serdeFrom(new RankBoxSerializer(), new RankBoxDeserializer())))
                 .aggregate(
-                        new Initializer<String>() {
+                        new Initializer<SnappyTuple2<String,Long>>() {
                             @Override
-                            public String apply() {
-                                return "";
+                            public SnappyTuple2<String,Long> apply() {
+                                return new SnappyTuple2<String,Long>("", 0L);
                             }
                         },
-                        new Aggregator<String, RankBox, String>() {
+                        new Aggregator<String, RankBox, SnappyTuple2<String,Long>>() {
                             @Override
-                            public String apply(String windowed, RankBox rankBox, String acc) {
+                            public SnappyTuple2<String,Long> apply(String windowed, RankBox rankBox, SnappyTuple2<String,Long> acc) {
+
+                                Long actual = Math.max(acc.k2, rankBox.getCurrentEventTime());
+                                Long end = System.nanoTime() - actual;
 
                                 StringBuilder sb = new StringBuilder();
-                                sb.append(acc).append(rankBox.toString());
-                                return sb.toString();
+                                sb.append(acc.k1).append(rankBox.toString());
+
+                                return new SnappyTuple2<String,Long>(sb.toString(), end);
                             }
                         },
-                        Materialized.with(Serdes.String(), Serdes.String())
+                        Materialized.with(Serdes.String(), Serdes.serdeFrom(new Tuple2Serializer(), new Tuple2Deserializer()))
                 );
         return result.toStream();
 
@@ -149,31 +136,31 @@ public class SecondQueryProva {
 
 
 
-    private static KTable<Windowed<String>, RankBox> computeRankStream(KStream<Windowed<String>, SnappyTuple3<String, String, Integer>> scoresAMDay, Long window, String accName) {
+    private static KTable<Windowed<String>, RankBox> computeRankStream(KStream<Windowed<String>, SnappyTuple4<String, String, Integer, Long>> scoresAMDay, int window, Long until, String accName) {
         return scoresAMDay
                 .map((key, value) -> {
 
                     String newKey = value.k1;
-                    SnappyTuple3<String, String, Integer> newValue = new SnappyTuple3<String, String, Integer>(value.k2, key.key(), value.k3);
+                    SnappyTuple4<String, String, Integer, Long> newValue = new SnappyTuple4<String, String, Integer, Long>(value.k2, key.key(), value.k3, value.k4);
 
                     return KeyValue.pair(newKey, newValue);
                 })
-                .groupByKey(Serialized.with(Serdes.String(), Serdes.serdeFrom(new Tuple3Serializer(), new Tuple3Deserializer())))
-                .windowedBy(TimeWindows.of(Duration.ofDays(window)))
+                .groupByKey(Serialized.with(Serdes.String(), Serdes.serdeFrom(new Tuple4Serializer(), new Tuple4Deserializer())))
+                .windowedBy(TimeWindows.of(Duration.ofDays(window)).until(until).grace(ofMinutes(1)))
                 .aggregate(
                         new Initializer<RankBox>() {
                             @Override
                             public RankBox apply() {
-                                //Comparator<SnappyTuple3<String, String, Integer>> comp = Comparator.comparing(t -> t.k3);
+                                //Comparator<SnappyTuple4<String, String, Integer>> comp = Comparator.comparing(t -> t.k3);
                                 return new RankBox( "new");
                             }
                         },
-                        new Aggregator<String, SnappyTuple3<String, String, Integer>, RankBox>() {
+                        new Aggregator<String, SnappyTuple4<String, String, Integer, Long>, RankBox>() {
                             @Override
-                            public RankBox apply(String key, SnappyTuple3<String, String, Integer> tuple,
+                            public RankBox apply(String key, SnappyTuple4<String, String, Integer, Long> tuple,
                                                  RankBox rankBox) {
 
-                                ResultPojo pojo = new ResultPojo(tuple.k1,tuple.k2,tuple.k3);
+                                ResultPojo pojo = new ResultPojo(tuple.k1,tuple.k2,tuple.k3, tuple.k4);
 
                                 return checkIfMustAdd(pojo, rankBox);
                             }
@@ -188,6 +175,8 @@ public class SecondQueryProva {
     private static RankBox checkIfMustAdd(ResultPojo p, RankBox rankB){
         int actualValue = p.getCount();
 
+        rankB.setCurrentEventTime(Math.max(p.getCurrentEventTime(), rankB.getCurrentEventTime()));
+
         if ( actualValue > rankB.getPos3().getCount()) {
 
             if (actualValue >= rankB.getPos1().getCount()) {
@@ -195,40 +184,42 @@ public class SecondQueryProva {
                 rankB.setPos2(rankB.getPos1());
                 rankB.setPos1(p);
 
-
             } else if (actualValue >= rankB.getPos2().getCount()) {
                 rankB.setPos3(rankB.getPos2());
                 rankB.setPos2(p);
 
             } else {
                 rankB.setPos3(p);
-
             }
         }
         return rankB;
     }
 
-    private static KStream<Windowed<String>, SnappyTuple3<String, String, Integer>> computeScores(KStream<String, ReasonDelayPojo> branch, Long window, String accName) {
+
+    private static KStream<Windowed<String>, SnappyTuple4<String, String, Integer, Long>> computeScores(KStream<String, ReasonDelayPojo> branch, int window, Long until, String accName) {
         return branch
                 .groupByKey(Serialized.with(Serdes.String(), Serdes.serdeFrom(new ReasonPojoSerializer(), new ReasonPojoDeserializer())))
                 //until -> window lower bound
                 //grace -> admitted out-of-order events
-                .windowedBy(TimeWindows.of(Duration.ofDays(window)))
+                .windowedBy(TimeWindows.of(Duration.ofDays(window)).until(until).grace(ofMinutes(1)))
                 .aggregate(
-                        new Initializer<SnappyTuple3<String, String, Integer>>() {
+                        new Initializer<SnappyTuple4<String, String, Integer, Long>>() {
                             @Override
-                            public SnappyTuple3<String, String, Integer> apply() {
-                                return new SnappyTuple3<String, String, Integer>("", "", 0);
+                            public SnappyTuple4<String, String, Integer, Long> apply() {
+                                return new SnappyTuple4<String, String, Integer, Long>("", "", 0, 0L);
                             }
                         },
-                        new Aggregator<String, ReasonDelayPojo, SnappyTuple3<String, String, Integer>>() {
+                        new Aggregator<String, ReasonDelayPojo, SnappyTuple4<String, String, Integer, Long>>() {
                             @Override
-                            public SnappyTuple3<String, String, Integer> apply(String key, ReasonDelayPojo pojo, SnappyTuple3<String, String, Integer> acc) {
-                                return new SnappyTuple3<String, String, Integer>(pojo.getTimestamp(), pojo.getTimeslot(), acc.k3 + 1);
+                            public SnappyTuple4<String, String, Integer, Long> apply(String key, ReasonDelayPojo pojo, SnappyTuple4<String, String, Integer, Long> acc) {
+
+                                Long actual =  Math.max(pojo.getCurrentEventTime(), acc.k4 );
+
+                                return new SnappyTuple4<String, String, Integer, Long>(pojo.getTimestamp(), pojo.getTimeslot(), acc.k3 + 1, actual);
                             }
                         },
-                        Materialized.<String,SnappyTuple3<String, String, Integer>, WindowStore<Bytes, byte[]>>as(accName)
-                                .withValueSerde(Serdes.serdeFrom(new Tuple3Serializer(), new Tuple3Deserializer()))
+                        Materialized.<String, SnappyTuple4<String, String, Integer, Long>, WindowStore<Bytes, byte[]>>as(accName)
+                                .withValueSerde(Serdes.serdeFrom(new Tuple4Serializer(), new Tuple4Deserializer()))
 
                 ).toStream();
     }

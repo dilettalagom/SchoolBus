@@ -14,12 +14,19 @@ public class ReasonDelayPojo implements Serializable {
     private String reason;
     private String timestamp;
     private String timeslot;
+    private Long currentEventTime;
+
 
     public ReasonDelayPojo(){}
 
     public ReasonDelayPojo(String reason, String timestamp) {
         this.reason = reason;
         this.timestamp = timestamp;
+        this.currentEventTime = setStartTime();;
+    }
+
+    private Long setStartTime() {
+        return System.nanoTime();
     }
 
     public ReasonDelayPojo(String reason, String timestamp, String timeslot) {
@@ -47,8 +54,8 @@ public class ReasonDelayPojo implements Serializable {
     public String toString() {
         return
                 timestamp +
-                ", " + timeslot +
-                ", " + reason + " ";
+                        ", " + timeslot +
+                        ", " + reason + " ";
     }
 
 
