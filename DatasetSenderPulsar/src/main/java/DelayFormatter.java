@@ -145,7 +145,7 @@ public class DelayFormatter {
         else if(numbers.size() == 1){
             resultDelay = numbers.get(0);
         }else{
-            resultDelay = "error";
+            resultDelay = "";
         }
         return resultDelay;
     }
@@ -167,7 +167,7 @@ public class DelayFormatter {
             resultDelay = computeMixedMean(numbers, literal);
         }
         else{
-            resultDelay = "error";
+            resultDelay = "";
         }
         return resultDelay;
     }

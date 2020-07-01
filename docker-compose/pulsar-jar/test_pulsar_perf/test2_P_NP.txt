@@ -1,0 +1,134 @@
+root@pulsar-node:/pulsar# bin/pulsar-perf produce non-persistent://public/default/topic -r 1000000 -i 5 -n 1
+16:54:05.488 [main] INFO  org.apache.pulsar.testclient.PerformanceProducer - Starting Pulsar perf producer with config: {
+  "confFile" : "/pulsar/conf/client.conf",
+  "topics" : [ "non-persistent://public/default/topic" ],
+  "msgRate" : 1000000,
+  "msgSize" : 1024,
+  "numTopics" : 1,
+  "numProducers" : 1,
+  "serviceURL" : "pulsar://localhost:6650/",
+  "authPluginClassName" : "",
+  "authParams" : "",
+  "maxOutstanding" : 1000,
+  "maxPendingMessagesAcrossPartitions" : 50000,
+  "maxConnections" : 100,
+  "numMessages" : 0,
+  "statsIntervalSeconds" : 5,
+  "compression" : "NONE",
+  "payloadFilename" : null,
+  "payloadDelimiter" : "\\n",
+  "batchTimeMillis" : 1.0,
+  "testTime" : 0,
+  "warmupTimeSeconds" : 1.0,
+  "tlsTrustCertsFilePath" : "",
+  "encKeyName" : null,
+  "encKeyFile" : null,
+  "delay" : 0
+}
+16:54:05.978 [main] INFO  org.apache.pulsar.testclient.PerformanceProducer - Adding 1 publishers on topic non-persistent://public/default/topic
+16:54:06.101 [pulsar-client-io-2-2] INFO  org.apache.pulsar.client.impl.ConnectionPool - [[id: 0x167e19cc, L:/127.0.0.1:39664 - R:localhost/127.0.0.1:6650]] Connected to server
+16:54:06.164 [pulsar-client-io-2-2] INFO  org.apache.pulsar.client.impl.ProducerStatsRecorderImpl - Starting Pulsar producer perf with config: {
+  "topicName" : "non-persistent://public/default/topic",
+  "producerName" : null,
+  "sendTimeoutMs" : 0,
+  "blockIfQueueFull" : true,
+  "maxPendingMessages" : 1000,
+  "maxPendingMessagesAcrossPartitions" : 50000,
+  "messageRoutingMode" : "RoundRobinPartition",
+  "hashingScheme" : "JavaStringHash",
+  "cryptoFailureAction" : "FAIL",
+  "batchingMaxPublishDelayMicros" : 1000,
+  "batchingMaxMessages" : 1000,
+  "batchingEnabled" : true,
+  "batcherBuilder" : { },
+  "compressionType" : "NONE",
+  "initialSequenceId" : null,
+  "autoUpdatePartitions" : true,
+  "properties" : { }
+}
+16:54:06.168 [pulsar-client-io-2-2] INFO  org.apache.pulsar.client.impl.ProducerStatsRecorderImpl - Pulsar client config: {
+  "serviceUrl" : "pulsar://localhost:6650/",
+  "authPluginClassName" : null,
+  "authParams" : null,
+  "operationTimeoutMs" : 30000,
+  "statsIntervalSeconds" : 5,
+  "numIoThreads" : 6,
+  "numListenerThreads" : 1,
+  "connectionsPerBroker" : 100,
+  "useTcpNoDelay" : true,
+  "useTls" : false,
+  "tlsTrustCertsFilePath" : "",
+  "tlsAllowInsecureConnection" : false,
+  "tlsHostnameVerificationEnable" : false,
+  "concurrentLookupRequest" : 5000,
+  "maxLookupRequest" : 50000,
+  "maxNumberOfRejectedRequestPerConnection" : 50,
+  "keepAliveIntervalSeconds" : 30,
+  "connectionTimeoutMs" : 10000,
+  "requestTimeoutMs" : 60000,
+  "defaultBackoffIntervalNanos" : 100000000,
+  "maxBackoffIntervalNanos" : 30000000000
+}
+16:54:06.177 [pulsar-client-io-2-5] INFO  org.apache.pulsar.client.impl.ConnectionPool - [[id: 0xe8d1cad2, L:/127.0.0.1:39666 - R:localhost/127.0.0.1:6650]] Connected to server
+16:54:06.185 [pulsar-client-io-2-2] INFO  org.apache.pulsar.client.impl.ConnectionPool - [[id: 0x86d1b938, L:/127.0.0.1:39668 - R:localhost/127.0.0.1:6650]] Connected to server
+16:54:06.186 [pulsar-client-io-2-2] INFO  org.apache.pulsar.client.impl.ClientCnx - [id: 0x86d1b938, L:/127.0.0.1:39668 - R:localhost/127.0.0.1:6650] Connected through proxy to target broker at pulsar-node:6650
+16:54:06.188 [pulsar-client-io-2-2] INFO  org.apache.pulsar.client.impl.ProducerImpl - [non-persistent://public/default/topic] [null] Creating producer on cnx [id: 0x86d1b938, L:/127.0.0.1:39668 - R:localhost/127.0.0.1:6650]
+16:54:06.197 [pulsar-client-io-2-2] INFO  org.apache.pulsar.client.impl.ProducerImpl - [non-persistent://public/default/topic] [standalone-0-3] Created producer on cnx [id: 0x86d1b938, L:/127.0.0.1:39668 - R:localhost/127.0.0.1:6650]
+16:54:06.219 [main] INFO  org.apache.pulsar.testclient.PerformanceProducer - Created 1 producers
+16:54:06.221 [main] INFO  org.apache.pulsar.testclient.PerformanceProducer - Dumping latency stats to perf-producer-1593622446221.hgrm
+16:54:06.252 [pulsar-timer-5-1] INFO  com.scurrilous.circe.checksum.Crc32cIntChecksum - SSE4.2 CRC32C provider initialized
+16:54:11.174 [pulsar-timer-5-1] INFO  org.apache.pulsar.client.impl.ProducerStatsRecorderImpl - [non-persistent://public/default/topic] [standalone-0-3] Pending messages: 7 --- Publish throughput: 342588.80 msg/s --- 2676.48 Mbit/s --- Latency: med: 1.617 ms - 95pct: 5.254 ms - 99pct: 10.195 ms - 99.9pct: 22.005 ms - max: 32.195 ms --- Ack received rate: 342409.68 ack/s --- Failed messages: 0
+16:54:16.176 [pulsar-timer-5-1] INFO  org.apache.pulsar.client.impl.ProducerStatsRecorderImpl - [non-persistent://public/default/topic] [standalone-0-3] Pending messages: 5 --- Publish throughput: 644656.83 msg/s --- 5036.38 Mbit/s --- Latency: med: 0.857 ms - 95pct: 2.222 ms - 99pct: 3.767 ms - 99.9pct: 7.618 ms - max: 251.893 ms --- Ack received rate: 644707.99 ack/s --- Failed messages: 0
+16:54:16.312 [main] INFO  org.apache.pulsar.testclient.PerformanceProducer - Throughput produced: 496888.9  msg/s ---   3881.9 Mbit/s --- Latency: mean:   1.295 ms - med:   0.937 - 95pct:   2.901 - 99pct:   5.240 - 99.9pct:  12.016 - 99.99pct: 251.626 - Max: 251.841
+16:54:21.178 [pulsar-timer-5-1] INFO  org.apache.pulsar.client.impl.ProducerStatsRecorderImpl - [non-persistent://public/default/topic] [standalone-0-3] Pending messages: 5 --- Publish throughput: 748371.60 msg/s --- 5846.65 Mbit/s --- Latency: med: 0.857 ms - 95pct: 1.788 ms - 99pct: 2.915 ms - 99.9pct: 6.752 ms - max: 20.710 ms --- Ack received rate: 748346.01 ack/s --- Failed messages: 0
+16:54:26.182 [pulsar-timer-5-1] INFO  org.apache.pulsar.client.impl.ProducerStatsRecorderImpl - [non-persistent://public/default/topic] [standalone-0-3] Pending messages: 7 --- Publish throughput: 728598.52 msg/s --- 5692.18 Mbit/s --- Latency: med: 0.855 ms - 95pct: 1.832 ms - 99pct: 2.870 ms - 99.9pct: 4.225 ms - max: 221.792 ms --- Ack received rate: 728624.11 ack/s --- Failed messages: 0
+16:54:26.368 [main] INFO  org.apache.pulsar.testclient.PerformanceProducer - Throughput produced: 737741.5  msg/s ---   5763.6 Mbit/s --- Latency: mean:   0.941 ms - med:   0.806 - 95pct:   1.721 - 99pct:   2.799 - 99.9pct:   5.443 - 99.99pct: 216.711 - Max: 221.761
+16:54:31.184 [pulsar-timer-5-1] INFO  org.apache.pulsar.client.impl.ProducerStatsRecorderImpl - [non-persistent://public/default/topic] [standalone-0-3] Pending messages: 8 --- Publish throughput: 791657.32 msg/s --- 6184.82 Mbit/s --- Latency: med: 0.828 ms - 95pct: 1.819 ms - 99pct: 3.001 ms - 99.9pct: 11.637 ms - max: 11.863 ms --- Ack received rate: 791640.33 ack/s --- Failed messages: 0
+16:54:36.187 [pulsar-timer-5-1] INFO  org.apache.pulsar.client.impl.ProducerStatsRecorderImpl - [non-persistent://public/default/topic] [standalone-0-3] Pending messages: 7 --- Publish throughput: 759412.60 msg/s --- 5932.91 Mbit/s --- Latency: med: 0.847 ms - 95pct: 1.787 ms - 99pct: 3.004 ms - 99.9pct: 7.077 ms - max: 188.214 ms --- Ack received rate: 759393.01 ack/s --- Failed messages: 0
+16:54:36.416 [main] INFO  org.apache.pulsar.testclient.PerformanceProducer - Throughput produced: 769270.3  msg/s ---   6009.9 Mbit/s --- Latency: mean:   0.928 ms - med:   0.788 - 95pct:   1.777 - 99pct:   2.917 - 99.9pct:   5.503 - 99.99pct: 187.451 - Max: 188.180
+16:54:41.190 [pulsar-timer-5-1] INFO  org.apache.pulsar.client.impl.ProducerStatsRecorderImpl - [non-persistent://public/default/topic] [standalone-0-3] Pending messages: 8 --- Publish throughput: 754304.58 msg/s --- 5893.00 Mbit/s --- Latency: med: 0.817 ms - 95pct: 2.105 ms - 99pct: 3.400 ms - 99.9pct: 6.318 ms - max: 10.158 ms --- Ack received rate: 754340.57 ack/s --- Failed messages: 0
+16:54:46.194 [pulsar-timer-5-1] INFO  org.apache.pulsar.client.impl.ProducerStatsRecorderImpl - [non-persistent://public/default/topic] [standalone-0-3] Pending messages: 8 --- Publish throughput: 796538.17 msg/s --- 6222.95 Mbit/s --- Latency: med: 0.823 ms - 95pct: 1.737 ms - 99pct: 2.861 ms - 99.9pct: 4.964 ms - max: 6.047 ms --- Ack received rate: 796493.00 ack/s --- Failed messages: 0
+16:54:46.433 [main] INFO  org.apache.pulsar.testclient.PerformanceProducer - Throughput produced: 775460.6  msg/s ---   6058.3 Mbit/s --- Latency: mean:   0.889 ms - med:   0.768 - 95pct:   1.767 - 99pct:   2.811 - 99.9pct:   5.437 - 99.99pct:   9.560 - Max:  10.126
+16:54:51.197 [pulsar-timer-5-1] INFO  org.apache.pulsar.client.impl.ProducerStatsRecorderImpl - [non-persistent://public/default/topic] [standalone-0-3] Pending messages: 7 --- Publish throughput: 774243.53 msg/s --- 6048.78 Mbit/s --- Latency: med: 0.793 ms - 95pct: 1.701 ms - 99pct: 2.909 ms - 99.9pct: 5.850 ms - max: 206.470 ms --- Ack received rate: 774289.30 ack/s --- Failed messages: 0
+16:54:56.200 [pulsar-timer-5-1] INFO  org.apache.pulsar.client.impl.ProducerStatsRecorderImpl - [non-persistent://public/default/topic] [standalone-0-3] Pending messages: 8 --- Publish throughput: 814296.92 msg/s --- 6361.69 Mbit/s --- Latency: med: 0.773 ms - 95pct: 1.668 ms - 99pct: 2.545 ms - 99.9pct: 3.873 ms - max: 12.497 ms --- Ack received rate: 814224.99 ack/s --- Failed messages: 0
+16:54:56.452 [main] INFO  org.apache.pulsar.testclient.PerformanceProducer - Throughput produced: 800738.7  msg/s ---   6255.8 Mbit/s --- Latency: mean:   0.860 ms - med:   0.732 - 95pct:   1.598 - 99pct:   2.548 - 99.9pct:   4.784 - 99.99pct: 205.226 - Max: 206.398
+16:55:01.202 [pulsar-timer-5-1] INFO  org.apache.pulsar.client.impl.ProducerStatsRecorderImpl - [non-persistent://public/default/topic] [standalone-0-3] Pending messages: 6 --- Publish throughput: 725247.92 msg/s --- 5666.00 Mbit/s --- Latency: med: 0.811 ms - 95pct: 1.874 ms - 99pct: 3.042 ms - 99.9pct: 11.553 ms - max: 231.995 ms --- Ack received rate: 725380.46 ack/s --- Failed messages: 0
+16:55:06.205 [pulsar-timer-5-1] INFO  org.apache.pulsar.client.impl.ProducerStatsRecorderImpl - [non-persistent://public/default/topic] [standalone-0-3] Pending messages: 7 --- Publish throughput: 723290.44 msg/s --- 5650.71 Mbit/s --- Latency: med: 0.866 ms - 95pct: 1.822 ms - 99pct: 2.880 ms - 99.9pct: 3.764 ms - max: 8.693 ms --- Ack received rate: 723204.29 ack/s --- Failed messages: 0
+16:55:06.476 [main] INFO  org.apache.pulsar.testclient.PerformanceProducer - Throughput produced: 718785.2  msg/s ---   5615.5 Mbit/s --- Latency: mean:   0.940 ms - med:   0.785 - 95pct:   1.807 - 99pct:   2.898 - 99.9pct:   5.366 - 99.99pct: 231.669 - Max: 231.962
+16:55:11.208 [pulsar-timer-5-1] INFO  org.apache.pulsar.client.impl.ProducerStatsRecorderImpl - [non-persistent://public/default/topic] [standalone-0-3] Pending messages: 7 --- Publish throughput: 667973.39 msg/s --- 5218.54 Mbit/s --- Latency: med: 0.893 ms - 95pct: 2.017 ms - 99pct: 3.181 ms - 99.9pct: 4.356 ms - max: 258.387 ms --- Ack received rate: 667998.98 ack/s --- Failed messages: 0
+16:55:16.210 [pulsar-timer-5-1] INFO  org.apache.pulsar.client.impl.ProducerStatsRecorderImpl - [non-persistent://public/default/topic] [standalone-0-3] Pending messages: 7 --- Publish throughput: 741445.85 msg/s --- 5792.55 Mbit/s --- Latency: med: 0.911 ms - 95pct: 1.907 ms - 99pct: 2.867 ms - 99.9pct: 5.940 ms - max: 8.015 ms --- Ack received rate: 741445.85 ack/s --- Failed messages: 0
+16:55:16.499 [main] INFO  org.apache.pulsar.testclient.PerformanceProducer - Throughput produced: 706682.3  msg/s ---   5521.0 Mbit/s --- Latency: mean:   0.992 ms - med:   0.846 - 95pct:   1.809 - 99pct:   2.903 - 99.9pct:   5.113 - 99.99pct: 257.526 - Max: 258.283
+16:55:21.211 [pulsar-timer-5-1] INFO  org.apache.pulsar.client.impl.ProducerStatsRecorderImpl - [non-persistent://public/default/topic] [standalone-0-3] Pending messages: 2 --- Publish throughput: 653744.43 msg/s --- 5107.38 Mbit/s --- Latency: med: 0.926 ms - 95pct: 2.220 ms - 99pct: 3.571 ms - 99.9pct: 5.186 ms - max: 9.906 ms --- Ack received rate: 653795.61 ack/s --- Failed messages: 0
+16:55:26.214 [pulsar-timer-5-1] INFO  org.apache.pulsar.client.impl.ProducerStatsRecorderImpl - [non-persistent://public/default/topic] [standalone-0-3] Pending messages: 7 --- Publish throughput: 644192.75 msg/s --- 5032.76 Mbit/s --- Latency: med: 0.881 ms - 95pct: 2.094 ms - 99pct: 3.532 ms - 99.9pct: 5.220 ms - max: 279.416 ms --- Ack received rate: 644151.37 ack/s --- Failed messages: 0
+16:55:26.523 [main] INFO  org.apache.pulsar.testclient.PerformanceProducer - Throughput produced: 652343.7  msg/s ---   5096.4 Mbit/s --- Latency: mean:   1.033 ms - med:   0.843 - 95pct:   2.047 - 99pct:   3.347 - 99.9pct:   5.241 - 99.99pct: 278.933 - Max: 279.381
+16:55:31.216 [pulsar-timer-5-1] INFO  org.apache.pulsar.client.impl.ProducerStatsRecorderImpl - [non-persistent://public/default/topic] [standalone-0-3] Pending messages: 7 --- Publish throughput: 695011.69 msg/s --- 5429.78 Mbit/s --- Latency: med: 0.938 ms - 95pct: 1.936 ms - 99pct: 3.039 ms - 99.9pct: 7.229 ms - max: 7.425 ms --- Ack received rate: 694950.71 ack/s --- Failed messages: 0
+16:55:36.218 [pulsar-timer-5-1] INFO  org.apache.pulsar.client.impl.ProducerStatsRecorderImpl - [non-persistent://public/default/topic] [standalone-0-3] Pending messages: 7 --- Publish throughput: 672404.13 msg/s --- 5253.16 Mbit/s --- Latency: med: 0.854 ms - 95pct: 1.934 ms - 99pct: 3.495 ms - 99.9pct: 282.353 ms - max: 282.644 ms --- Ack received rate: 672494.30 ack/s --- Failed messages: 0
+16:55:36.547 [main] INFO  org.apache.pulsar.testclient.PerformanceProducer - Throughput produced: 680945.3  msg/s ---   5319.9 Mbit/s --- Latency: mean:   0.997 ms - med:   0.838 - 95pct:   1.834 - 99pct:   2.934 - 99.9pct:   4.713 - 99.99pct: 282.131 - Max: 282.611
+16:55:41.222 [pulsar-timer-5-1] INFO  org.apache.pulsar.client.impl.ProducerStatsRecorderImpl - [non-persistent://public/default/topic] [standalone-0-3] Pending messages: 7 --- Publish throughput: 649461.41 msg/s --- 5073.92 Mbit/s --- Latency: med: 0.949 ms - 95pct: 2.097 ms - 99pct: 3.620 ms - 99.9pct: 6.389 ms - max: 8.229 ms --- Ack received rate: 649473.61 ack/s --- Failed messages: 0
+16:55:46.226 [pulsar-timer-5-1] INFO  org.apache.pulsar.client.impl.ProducerStatsRecorderImpl - [non-persistent://public/default/topic] [standalone-0-3] Pending messages: 7 --- Publish throughput: 704676.73 msg/s --- 5505.29 Mbit/s --- Latency: med: 0.894 ms - 95pct: 1.964 ms - 99pct: 3.146 ms - 99.9pct: 6.031 ms - max: 6.622 ms --- Ack received rate: 704617.79 ack/s --- Failed messages: 0
+16:55:46.560 [main] INFO  org.apache.pulsar.testclient.PerformanceProducer - Throughput produced: 676839.8  msg/s ---   5287.8 Mbit/s --- Latency: mean:   0.990 ms - med:   0.864 - 95pct:   1.901 - 99pct:   3.094 - 99.9pct:   5.638 - 99.99pct:   7.230 - Max:   7.740
+16:55:51.228 [pulsar-timer-5-1] INFO  org.apache.pulsar.client.impl.ProducerStatsRecorderImpl - [non-persistent://public/default/topic] [standalone-0-3] Pending messages: 6 --- Publish throughput: 697759.17 msg/s --- 5451.24 Mbit/s --- Latency: med: 0.837 ms - 95pct: 1.755 ms - 99pct: 2.878 ms - 99.9pct: 4.184 ms - max: 235.541 ms --- Ack received rate: 697818.15 ack/s --- Failed messages: 0
+16:55:56.230 [pulsar-timer-5-1] INFO  org.apache.pulsar.client.impl.ProducerStatsRecorderImpl - [non-persistent://public/default/topic] [standalone-0-3] Pending messages: 8 --- Publish throughput: 720749.62 msg/s --- 5630.86 Mbit/s --- Latency: med: 0.869 ms - 95pct: 1.779 ms - 99pct: 2.829 ms - 99.9pct: 4.922 ms - max: 11.713 ms --- Ack received rate: 720661.06 ack/s --- Failed messages: 0
+16:55:56.571 [main] INFO  org.apache.pulsar.testclient.PerformanceProducer - Throughput produced: 712959.9  msg/s ---   5570.0 Mbit/s --- Latency: mean:   0.932 ms - med:   0.792 - 95pct:   1.678 - 99pct:   2.779 - 99.9pct:   5.128 - 99.99pct: 235.372 - Max: 235.495
+16:56:01.232 [pulsar-timer-5-1] INFO  org.apache.pulsar.client.impl.ProducerStatsRecorderImpl - [non-persistent://public/default/topic] [standalone-0-3] Pending messages: 7 --- Publish throughput: 671432.36 msg/s --- 5245.57 Mbit/s --- Latency: med: 0.881 ms - 95pct: 1.886 ms - 99pct: 3.241 ms - 99.9pct: 5.104 ms - max: 281.289 ms --- Ack received rate: 671504.53 ack/s --- Failed messages: 0
+16:56:06.235 [pulsar-timer-5-1] INFO  org.apache.pulsar.client.impl.ProducerStatsRecorderImpl - [non-persistent://public/default/topic] [standalone-0-3] Pending messages: 8 --- Publish throughput: 652273.45 msg/s --- 5095.89 Mbit/s --- Latency: med: 0.931 ms - 95pct: 2.120 ms - 99pct: 3.907 ms - 99.9pct: 5.313 ms - max: 8.551 ms --- Ack received rate: 652192.30 ack/s --- Failed messages: 0
+16:56:06.584 [main] INFO  org.apache.pulsar.testclient.PerformanceProducer - Throughput produced: 651784.0  msg/s ---   5092.1 Mbit/s --- Latency: mean:   1.035 ms - med:   0.852 - 95pct:   1.963 - 99pct:   3.515 - 99.9pct:   5.671 - 99.99pct: 281.119 - Max: 281.255
+16:56:11.239 [pulsar-timer-5-1] INFO  org.apache.pulsar.client.impl.ProducerStatsRecorderImpl - [non-persistent://public/default/topic] [standalone-0-3] Pending messages: 7 --- Publish throughput: 515684.08 msg/s --- 4028.78 Mbit/s --- Latency: med: 1.087 ms - 95pct: 2.735 ms - 99pct: 4.433 ms - 99.9pct: 6.338 ms - max: 11.233 ms --- Ack received rate: 515772.82 ack/s --- Failed messages: 0
+16:56:16.241 [pulsar-timer-5-1] INFO  org.apache.pulsar.client.impl.ProducerStatsRecorderImpl - [non-persistent://public/default/topic] [standalone-0-3] Pending messages: 8 --- Publish throughput: 482064.41 msg/s --- 3766.13 Mbit/s --- Latency: med: 1.104 ms - 95pct: 2.523 ms - 99pct: 3.751 ms - 99.9pct: 5.119 ms - max: 270.977 ms --- Ack received rate: 481972.46 ack/s --- Failed messages: 0
+16:56:16.599 [main] INFO  org.apache.pulsar.testclient.PerformanceProducer - Throughput produced: 501415.8  msg/s ---   3917.3 Mbit/s --- Latency: mean:   1.248 ms - med:   1.014 - 95pct:   2.451 - 99pct:   3.712 - 99.9pct:   5.975 - 99.99pct: 270.313 - Max: 270.933
+16:56:21.243 [pulsar-timer-5-1] INFO  org.apache.pulsar.client.impl.ProducerStatsRecorderImpl - [non-persistent://public/default/topic] [standalone-0-3] Pending messages: 7 --- Publish throughput: 519153.50 msg/s --- 4055.89 Mbit/s --- Latency: med: 1.068 ms - 95pct: 2.349 ms - 99pct: 3.720 ms - 99.9pct: 4.333 ms - max: 8.638 ms --- Ack received rate: 519177.49 ack/s --- Failed messages: 0
+16:56:26.249 [pulsar-timer-5-1] INFO  org.apache.pulsar.client.impl.ProducerStatsRecorderImpl - [non-persistent://public/default/topic] [standalone-0-3] Pending messages: 7 --- Publish throughput: 484308.69 msg/s --- 3783.66 Mbit/s --- Latency: med: 1.141 ms - 95pct: 2.344 ms - 99pct: 3.624 ms - 99.9pct: 4.471 ms - max: 10.141 ms --- Ack received rate: 484385.45 ack/s --- Failed messages: 0
+16:56:26.616 [main] INFO  org.apache.pulsar.testclient.PerformanceProducer - Throughput produced: 501059.6  msg/s ---   3914.5 Mbit/s --- Latency: mean:   1.163 ms - med:   1.021 - 95pct:   2.191 - 99pct:   3.539 - 99.9pct:   6.570 - 99.99pct:   8.535 - Max:  10.075
+16:56:31.252 [pulsar-timer-5-1] INFO  org.apache.pulsar.client.impl.ProducerStatsRecorderImpl - [non-persistent://public/default/topic] [standalone-0-3] Pending messages: 8 --- Publish throughput: 516177.58 msg/s --- 4032.64 Mbit/s --- Latency: med: 1.129 ms - 95pct: 2.466 ms - 99pct: 4.085 ms - 99.9pct: 5.059 ms - max: 9.821 ms --- Ack received rate: 516133.83 ack/s --- Failed messages: 0
+16:56:36.255 [pulsar-timer-5-1] INFO  org.apache.pulsar.client.impl.ProducerStatsRecorderImpl - [non-persistent://public/default/topic] [standalone-0-3] Pending messages: 7 --- Publish throughput: 575561.00 msg/s --- 4496.57 Mbit/s --- Latency: med: 1.031 ms - 95pct: 2.137 ms - 99pct: 3.198 ms - 99.9pct: 5.669 ms - max: 267.875 ms --- Ack received rate: 575579.19 ack/s --- Failed messages: 0
+16:56:36.634 [main] INFO  org.apache.pulsar.testclient.PerformanceProducer - Throughput produced: 551947.5  msg/s ---   4312.1 Mbit/s --- Latency: mean:   1.179 ms - med:   0.995 - 95pct:   2.115 - 99pct:   3.493 - 99.9pct:   6.330 - 99.99pct: 267.285 - Max: 267.819
+16:56:41.258 [pulsar-timer-5-1] INFO  org.apache.pulsar.client.impl.ProducerStatsRecorderImpl - [non-persistent://public/default/topic] [standalone-0-3] Pending messages: 7 --- Publish throughput: 625537.51 msg/s --- 4887.01 Mbit/s --- Latency: med: 0.970 ms - 95pct: 1.805 ms - 99pct: 2.811 ms - 99.9pct: 3.878 ms - max: 6.860 ms --- Ack received rate: 625511.92 ack/s --- Failed messages: 0
+16:56:46.259 [pulsar-timer-5-1] INFO  org.apache.pulsar.client.impl.ProducerStatsRecorderImpl - [non-persistent://public/default/topic] [standalone-0-3] Pending messages: 6 --- Publish throughput: 615497.89 msg/s --- 4808.58 Mbit/s --- Latency: med: 1.000 ms - 95pct: 1.819 ms - 99pct: 2.854 ms - 99.9pct: 4.960 ms - max: 253.379 ms --- Ack received rate: 615515.88 ack/s --- Failed messages: 0
+16:56:46.654 [main] INFO  org.apache.pulsar.testclient.PerformanceProducer - Throughput produced: 618666.8  msg/s ---   4833.3 Mbit/s --- Latency: mean:   1.050 ms - med:   0.922 - 95pct:   1.735 - 99pct:   2.712 - 99.9pct:   5.155 - 99.99pct: 250.848 - Max: 253.338
+16:56:51.262 [pulsar-timer-5-1] INFO  org.apache.pulsar.client.impl.ProducerStatsRecorderImpl - [non-persistent://public/default/topic] [standalone-0-3] Pending messages: 7 --- Publish throughput: 670004.22 msg/s --- 5234.41 Mbit/s --- Latency: med: 0.935 ms - 95pct: 1.767 ms - 99pct: 2.768 ms - 99.9pct: 7.278 ms - max: 8.779 ms --- Ack received rate: 669972.04 ack/s --- Failed messages: 0
+16:56:56.264 [pulsar-timer-5-1] INFO  org.apache.pulsar.client.impl.ProducerStatsRecorderImpl - [non-persistent://public/default/topic] [standalone-0-3] Pending messages: 6 --- Publish throughput: 687688.15 msg/s --- 5372.56 Mbit/s --- Latency: med: 0.930 ms - 95pct: 1.691 ms - 99pct: 2.778 ms - 99.9pct: 4.200 ms - max: 6.601 ms --- Ack received rate: 687683.55 ack/s --- Failed messages: 0
+16:56:56.663 [main] INFO  org.apache.pulsar.testclient.PerformanceProducer - Throughput produced: 684695.4  msg/s ---   5349.2 Mbit/s --- Latency: mean:   0.948 ms - med:   0.863 - 95pct:   1.605 - 99pct:   2.648 - 99.9pct:   4.614 - 99.99pct:   7.911 - Max:   8.741
+16:57:01.266 [pulsar-timer-5-1] INFO  org.apache.pulsar.client.impl.ProducerStatsRecorderImpl - [non-persistent://public/default/topic] [standalone-0-3] Pending messages: 5 --- Publish throughput: 637105.96 msg/s --- 4977.39 Mbit/s --- Latency: med: 0.943 ms - 95pct: 1.845 ms - 99pct: 3.126 ms - 99.9pct: 5.248 ms - max: 255.593 ms --- Ack received rate: 637124.75 ack/s --- Failed messages: 0
+16:57:06.272 [pulsar-timer-5-1] INFO  org.apache.pulsar.client.impl.ProducerStatsRecorderImpl - [non-persistent://public/default/topic] [standalone-0-3] Pending messages: 6 --- Publish throughput: 697614.49 msg/s --- 5450.11 Mbit/s --- Latency: med: 0.883 ms - 95pct: 1.771 ms - 99pct: 2.882 ms - 99.9pct: 4.402 ms - max: 7.718 ms --- Ack received rate: 697614.49 ack/s --- Failed messages: 0
+^C16:57:06.464 [Thread-1] INFO  org.apache.pulsar.testclient.PerformanceProducer - Aggregated throughput stats --- 119209078 records sent --- 661385.789 msg/s --- 5167.076 Mbit/s
+16:57:06.474 [Thread-1] INFO  org.apache.pulsar.testclient.PerformanceProducer - Aggregated latency stats --- Latency: mean:   1.007 ms - med:   0.850 - 95pct:   1.913 - 99pct:   3.162 - 99.9pct:   5.893 - 99.99pct: 206.380 - 99.999pct: 281.223 - Max: 282.611

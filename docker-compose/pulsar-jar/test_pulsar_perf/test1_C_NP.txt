@@ -1,0 +1,135 @@
+root@pulsar-node:/pulsar# bin/pulsar-perf consume non-persistent://public/default/topic -r 1000000 -i 5 -n 1
+16:46:29.149 [main] INFO  org.apache.pulsar.testclient.PerformanceConsumer - Starting Pulsar performance consumer with config: {
+  "confFile" : "/pulsar/conf/client.conf",
+  "topic" : [ "non-persistent://public/default/topic" ],
+  "numTopics" : 1,
+  "numConsumers" : 1,
+  "subscriberName" : "sub",
+  "subscriptionType" : "Exclusive",
+  "rate" : 1000000.0,
+  "receiverQueueSize" : 1000,
+  "replicatedSubscription" : false,
+  "acknowledgmentsGroupingDelayMillis" : 100,
+  "maxConnections" : 100,
+  "statsIntervalSeconds" : 5,
+  "serviceURL" : "pulsar://localhost:6650/",
+  "authPluginClassName" : "",
+  "authParams" : "",
+  "tlsTrustCertsFilePath" : "",
+  "encKeyName" : null,
+  "encKeyFile" : null
+}
+16:46:29.599 [main] INFO  org.apache.pulsar.testclient.PerformanceConsumer - Adding 1 consumers on topic non-persistent://public/default/topic
+16:46:29.712 [pulsar-client-io-1-2] INFO  org.apache.pulsar.client.impl.ConnectionPool - [[id: 0x169c734d, L:/127.0.0.1:39646 - R:localhost/127.0.0.1:6650]] Connected to server
+16:46:29.770 [pulsar-client-io-1-2] INFO  org.apache.pulsar.client.impl.ConsumerStatsRecorderImpl - Starting Pulsar consumer perf with config: {
+  "topicNames" : [ "non-persistent://public/default/topic" ],
+  "topicsPattern" : null,
+  "subscriptionName" : "sub",
+  "subscriptionType" : "Exclusive",
+  "receiverQueueSize" : 1000,
+  "acknowledgementsGroupTimeMicros" : 100000,
+  "negativeAckRedeliveryDelayMicros" : 60000000,
+  "maxTotalReceiverQueueSizeAcrossPartitions" : 50000,
+  "consumerName" : null,
+  "ackTimeoutMillis" : 0,
+  "tickDurationMillis" : 1000,
+  "priorityLevel" : 0,
+  "cryptoFailureAction" : "FAIL",
+  "properties" : { },
+  "readCompacted" : false,
+  "subscriptionInitialPosition" : "Latest",
+  "patternAutoDiscoveryPeriod" : 1,
+  "regexSubscriptionMode" : "PersistentOnly",
+  "deadLetterPolicy" : null,
+  "autoUpdatePartitions" : true,
+  "replicateSubscriptionState" : false,
+  "resetIncludeHead" : false
+}
+16:46:29.778 [pulsar-client-io-1-2] INFO  org.apache.pulsar.client.impl.ConsumerStatsRecorderImpl - Pulsar client config: {
+  "serviceUrl" : "pulsar://localhost:6650/",
+  "authPluginClassName" : null,
+  "authParams" : null,
+  "operationTimeoutMs" : 30000,
+  "statsIntervalSeconds" : 5,
+  "numIoThreads" : 6,
+  "numListenerThreads" : 1,
+  "connectionsPerBroker" : 100,
+  "useTcpNoDelay" : true,
+  "useTls" : false,
+  "tlsTrustCertsFilePath" : "",
+  "tlsAllowInsecureConnection" : false,
+  "tlsHostnameVerificationEnable" : false,
+  "concurrentLookupRequest" : 5000,
+  "maxLookupRequest" : 50000,
+  "maxNumberOfRejectedRequestPerConnection" : 50,
+  "keepAliveIntervalSeconds" : 30,
+  "connectionTimeoutMs" : 10000,
+  "requestTimeoutMs" : 60000,
+  "defaultBackoffIntervalNanos" : 100000000,
+  "maxBackoffIntervalNanos" : 30000000000
+}
+16:46:29.789 [pulsar-client-io-1-5] INFO  org.apache.pulsar.client.impl.ConnectionPool - [[id: 0x9e2b6224, L:/127.0.0.1:39648 - R:localhost/127.0.0.1:6650]] Connected to server
+16:46:29.820 [pulsar-client-io-1-2] INFO  org.apache.pulsar.client.impl.ConnectionPool - [[id: 0x9f629c65, L:/127.0.0.1:39650 - R:localhost/127.0.0.1:6650]] Connected to server
+16:46:29.821 [pulsar-client-io-1-2] INFO  org.apache.pulsar.client.impl.ClientCnx - [id: 0x9f629c65, L:/127.0.0.1:39650 - R:localhost/127.0.0.1:6650] Connected through proxy to target broker at pulsar-node:6650
+16:46:29.823 [pulsar-client-io-1-2] INFO  org.apache.pulsar.client.impl.ConsumerImpl - [non-persistent://public/default/topic][sub] Subscribing to topic on cnx [id: 0x9f629c65, L:/127.0.0.1:39650 - R:localhost/127.0.0.1:6650]
+16:46:29.848 [pulsar-client-io-1-2] INFO  org.apache.pulsar.client.impl.ConsumerImpl - [non-persistent://public/default/topic][sub] Subscribed to topic on localhost/127.0.0.1:6650 -- consumer: 0
+16:46:29.849 [main] INFO  org.apache.pulsar.testclient.PerformanceConsumer - Start receiving from 1 consumers on 1 topics
+16:46:39.893 [main] INFO  org.apache.pulsar.testclient.PerformanceConsumer - Throughput received: 0.000  msg/s -- 0.000 Mbit/s --- Latency: mean: 0.000 ms - med: 0 - 95pct: 0 - 99pct: 0 - 99.9pct: 0 - 99.99pct: 0 - Max: 0
+16:46:49.917 [main] INFO  org.apache.pulsar.testclient.PerformanceConsumer - Throughput received: 0.000  msg/s -- 0.000 Mbit/s --- Latency: mean: 0.000 ms - med: 0 - 95pct: 0 - 99pct: 0 - 99.9pct: 0 - 99.99pct: 0 - Max: 0
+16:46:51.208 [pulsar-client-io-1-2] INFO  com.scurrilous.circe.checksum.Crc32cIntChecksum - SSE4.2 CRC32C provider initialized
+16:46:54.787 [pulsar-timer-4-1] INFO  org.apache.pulsar.client.impl.ConsumerStatsRecorderImpl - [non-persistent://public/default/topic] [sub] [7dc96] Prefetched messages: 0 --- Consume throughput received: 77408.54 msgs/s --- 604.75 Mbit/s --- Ack sent rate: 77408.54 ack/s --- Failed messages: 0 --- Failed acks: 0
+16:46:59.788 [pulsar-timer-4-1] INFO  org.apache.pulsar.client.impl.ConsumerStatsRecorderImpl - [non-persistent://public/default/topic] [sub] [7dc96] Prefetched messages: 309 --- Consume throughput received: 284648.04 msgs/s --- 2223.81 Mbit/s --- Ack sent rate: 284635.04 ack/s --- Failed messages: 0 --- Failed acks: 0
+16:46:59.929 [main] INFO  org.apache.pulsar.testclient.PerformanceConsumer - Throughput received: 183672.898  msg/s -- 1434.945 Mbit/s --- Latency: mean: 2.789 ms - med: 2 - 95pct: 7 - 99pct: 12 - 99.9pct: 23 - 99.99pct: 127 - Max: 136
+16:47:04.789 [pulsar-timer-4-1] INFO  org.apache.pulsar.client.impl.ConsumerStatsRecorderImpl - [non-persistent://public/default/topic] [sub] [7dc96] Prefetched messages: 103 --- Consume throughput received: 337125.27 msgs/s --- 2633.79 Mbit/s --- Ack sent rate: 337136.07 ack/s --- Failed messages: 0 --- Failed acks: 0
+16:47:09.791 [pulsar-timer-4-1] INFO  org.apache.pulsar.client.impl.ConsumerStatsRecorderImpl - [non-persistent://public/default/topic] [sub] [7dc96] Prefetched messages: 0 --- Consume throughput received: 402575.50 msgs/s --- 3145.12 Mbit/s --- Ack sent rate: 402577.70 ack/s --- Failed messages: 0 --- Failed acks: 0
+16:47:09.949 [main] INFO  org.apache.pulsar.testclient.PerformanceConsumer - Throughput received: 371863.874  msg/s -- 2905.187 Mbit/s --- Latency: mean: 1.535 ms - med: 1 - 95pct: 3 - 99pct: 5 - 99.9pct: 10 - 99.99pct: 18 - Max: 279
+16:47:14.793 [pulsar-timer-4-1] INFO  org.apache.pulsar.client.impl.ConsumerStatsRecorderImpl - [non-persistent://public/default/topic] [sub] [7dc96] Prefetched messages: 0 --- Consume throughput received: 385963.82 msgs/s --- 3015.34 Mbit/s --- Ack sent rate: 385963.82 ack/s --- Failed messages: 0 --- Failed acks: 0
+16:47:19.795 [pulsar-timer-4-1] INFO  org.apache.pulsar.client.impl.ConsumerStatsRecorderImpl - [non-persistent://public/default/topic] [sub] [7dc96] Prefetched messages: 120 --- Consume throughput received: 408389.29 msgs/s --- 3190.54 Mbit/s --- Ack sent rate: 408370.10 ack/s --- Failed messages: 0 --- Failed acks: 0
+16:47:19.964 [main] INFO  org.apache.pulsar.testclient.PerformanceConsumer - Throughput received: 397456.813  msg/s -- 3105.131 Mbit/s --- Latency: mean: 1.485 ms - med: 1 - 95pct: 3 - 99pct: 4 - 99.9pct: 7 - 99.99pct: 229 - Max: 230
+16:47:24.797 [pulsar-timer-4-1] INFO  org.apache.pulsar.client.impl.ConsumerStatsRecorderImpl - [non-persistent://public/default/topic] [sub] [7dc96] Prefetched messages: 42 --- Consume throughput received: 366799.46 msgs/s --- 2865.62 Mbit/s --- Ack sent rate: 366802.85 ack/s --- Failed messages: 0 --- Failed acks: 0
+16:47:29.799 [pulsar-timer-4-1] INFO  org.apache.pulsar.client.impl.ConsumerStatsRecorderImpl - [non-persistent://public/default/topic] [sub] [7dc96] Prefetched messages: 71 --- Consume throughput received: 394235.95 msgs/s --- 3079.97 Mbit/s --- Ack sent rate: 394240.35 ack/s --- Failed messages: 0 --- Failed acks: 0
+16:47:29.977 [main] INFO  org.apache.pulsar.testclient.PerformanceConsumer - Throughput received: 379620.160  msg/s -- 2965.783 Mbit/s --- Latency: mean: 1.473 ms - med: 1 - 95pct: 3 - 99pct: 4 - 99.9pct: 7 - 99.99pct: 11 - Max: 12
+16:47:34.801 [pulsar-timer-4-1] INFO  org.apache.pulsar.client.impl.ConsumerStatsRecorderImpl - [non-persistent://public/default/topic] [sub] [7dc96] Prefetched messages: 152 --- Consume throughput received: 394461.77 msgs/s --- 3081.73 Mbit/s --- Ack sent rate: 394447.58 ack/s --- Failed messages: 0 --- Failed acks: 0
+16:47:39.802 [pulsar-timer-4-1] INFO  org.apache.pulsar.client.impl.ConsumerStatsRecorderImpl - [non-persistent://public/default/topic] [sub] [7dc96] Prefetched messages: 23 --- Consume throughput received: 393428.49 msgs/s --- 3073.66 Mbit/s --- Ack sent rate: 393431.69 ack/s --- Failed messages: 0 --- Failed acks: 0
+16:47:39.987 [main] INFO  org.apache.pulsar.testclient.PerformanceConsumer - Throughput received: 394454.482  msg/s -- 3081.676 Mbit/s --- Latency: mean: 1.470 ms - med: 1 - 95pct: 3 - 99pct: 4 - 99.9pct: 9 - 99.99pct: 270 - Max: 271
+16:47:44.804 [pulsar-timer-4-1] INFO  org.apache.pulsar.client.impl.ConsumerStatsRecorderImpl - [non-persistent://public/default/topic] [sub] [7dc96] Prefetched messages: 0 --- Consume throughput received: 409856.89 msgs/s --- 3202.01 Mbit/s --- Ack sent rate: 409879.28 ack/s --- Failed messages: 0 --- Failed acks: 0
+16:47:49.805 [pulsar-timer-4-1] INFO  org.apache.pulsar.client.impl.ConsumerStatsRecorderImpl - [non-persistent://public/default/topic] [sub] [7dc96] Prefetched messages: 142 --- Consume throughput received: 395356.69 msgs/s --- 3088.72 Mbit/s --- Ack sent rate: 395333.90 ack/s --- Failed messages: 0 --- Failed acks: 0
+16:47:49.995 [main] INFO  org.apache.pulsar.testclient.PerformanceConsumer - Throughput received: 402247.092  msg/s -- 3142.555 Mbit/s --- Latency: mean: 1.465 ms - med: 1 - 95pct: 3 - 99pct: 4 - 99.9pct: 8 - 99.99pct: 11 - Max: 11
+16:47:54.806 [pulsar-timer-4-1] INFO  org.apache.pulsar.client.impl.ConsumerStatsRecorderImpl - [non-persistent://public/default/topic] [sub] [7dc96] Prefetched messages: 127 --- Consume throughput received: 362573.42 msgs/s --- 2832.60 Mbit/s --- Ack sent rate: 362588.62 ack/s --- Failed messages: 0 --- Failed acks: 0
+16:47:59.812 [pulsar-timer-4-1] INFO  org.apache.pulsar.client.impl.ConsumerStatsRecorderImpl - [non-persistent://public/default/topic] [sub] [7dc96] Prefetched messages: 0 --- Consume throughput received: 327543.23 msgs/s --- 2558.93 Mbit/s --- Ack sent rate: 327550.82 ack/s --- Failed messages: 0 --- Failed acks: 0
+16:48:00.004 [main] INFO  org.apache.pulsar.testclient.PerformanceConsumer - Throughput received: 343793.479  msg/s -- 2685.888 Mbit/s --- Latency: mean: 1.616 ms - med: 1 - 95pct: 3 - 99pct: 5 - 99.9pct: 9 - 99.99pct: 212 - Max: 213
+16:48:04.813 [pulsar-timer-4-1] INFO  org.apache.pulsar.client.impl.ConsumerStatsRecorderImpl - [non-persistent://public/default/topic] [sub] [7dc96] Prefetched messages: 10 --- Consume throughput received: 329011.79 msgs/s --- 2570.40 Mbit/s --- Ack sent rate: 329011.79 ack/s --- Failed messages: 0 --- Failed acks: 0
+16:48:09.815 [pulsar-timer-4-1] INFO  org.apache.pulsar.client.impl.ConsumerStatsRecorderImpl - [non-persistent://public/default/topic] [sub] [7dc96] Prefetched messages: 97 --- Consume throughput received: 382485.02 msgs/s --- 2988.16 Mbit/s --- Ack sent rate: 382481.42 ack/s --- Failed messages: 0 --- Failed acks: 0
+16:48:10.011 [main] INFO  org.apache.pulsar.testclient.PerformanceConsumer - Throughput received: 355992.590  msg/s -- 2781.191 Mbit/s --- Latency: mean: 1.492 ms - med: 1 - 95pct: 3 - 99pct: 4 - 99.9pct: 8 - 99.99pct: 11 - Max: 12
+16:48:14.816 [pulsar-timer-4-1] INFO  org.apache.pulsar.client.impl.ConsumerStatsRecorderImpl - [non-persistent://public/default/topic] [sub] [7dc96] Prefetched messages: 144 --- Consume throughput received: 369069.93 msgs/s --- 2883.36 Mbit/s --- Ack sent rate: 369049.74 ack/s --- Failed messages: 0 --- Failed acks: 0
+16:48:19.817 [pulsar-timer-4-1] INFO  org.apache.pulsar.client.impl.ConsumerStatsRecorderImpl - [non-persistent://public/default/topic] [sub] [7dc96] Prefetched messages: 154 --- Consume throughput received: 387724.18 msgs/s --- 3029.10 Mbit/s --- Ack sent rate: 387743.18 ack/s --- Failed messages: 0 --- Failed acks: 0
+16:48:20.022 [main] INFO  org.apache.pulsar.testclient.PerformanceConsumer - Throughput received: 380034.026  msg/s -- 2969.016 Mbit/s --- Latency: mean: 1.459 ms - med: 1 - 95pct: 3 - 99pct: 4 - 99.9pct: 6 - 99.99pct: 8 - Max: 218
+16:48:24.818 [pulsar-timer-4-1] INFO  org.apache.pulsar.client.impl.ConsumerStatsRecorderImpl - [non-persistent://public/default/topic] [sub] [7dc96] Prefetched messages: 0 --- Consume throughput received: 377679.54 msgs/s --- 2950.62 Mbit/s --- Ack sent rate: 377660.54 ack/s --- Failed messages: 0 --- Failed acks: 0
+16:48:29.821 [pulsar-timer-4-1] INFO  org.apache.pulsar.client.impl.ConsumerStatsRecorderImpl - [non-persistent://public/default/topic] [sub] [7dc96] Prefetched messages: 87 --- Consume throughput received: 315378.03 msgs/s --- 2463.89 Mbit/s --- Ack sent rate: 315396.02 ack/s --- Failed messages: 0 --- Failed acks: 0
+16:48:30.031 [main] INFO  org.apache.pulsar.testclient.PerformanceConsumer - Throughput received: 346062.957  msg/s -- 2703.618 Mbit/s --- Latency: mean: 1.654 ms - med: 1 - 95pct: 3 - 99pct: 5 - 99.9pct: 9 - 99.99pct: 268 - Max: 268
+16:48:34.824 [pulsar-timer-4-1] INFO  org.apache.pulsar.client.impl.ConsumerStatsRecorderImpl - [non-persistent://public/default/topic] [sub] [7dc96] Prefetched messages: 61 --- Consume throughput received: 370519.16 msgs/s --- 2894.68 Mbit/s --- Ack sent rate: 370505.97 ack/s --- Failed messages: 0 --- Failed acks: 0
+16:48:39.826 [pulsar-timer-4-1] INFO  org.apache.pulsar.client.impl.ConsumerStatsRecorderImpl - [non-persistent://public/default/topic] [sub] [7dc96] Prefetched messages: 0 --- Consume throughput received: 376816.10 msgs/s --- 2943.88 Mbit/s --- Ack sent rate: 376835.29 ack/s --- Failed messages: 0 --- Failed acks: 0
+16:48:40.040 [main] INFO  org.apache.pulsar.testclient.PerformanceConsumer - Throughput received: 372879.341  msg/s -- 2913.119 Mbit/s --- Latency: mean: 1.497 ms - med: 1 - 95pct: 3 - 99pct: 4 - 99.9pct: 7 - 99.99pct: 9 - Max: 12
+16:48:44.829 [pulsar-timer-4-1] INFO  org.apache.pulsar.client.impl.ConsumerStatsRecorderImpl - [non-persistent://public/default/topic] [sub] [7dc96] Prefetched messages: 253 --- Consume throughput received: 348749.10 msgs/s --- 2724.60 Mbit/s --- Ack sent rate: 348729.91 ack/s --- Failed messages: 0 --- Failed acks: 0
+16:48:49.831 [pulsar-timer-4-1] INFO  org.apache.pulsar.client.impl.ConsumerStatsRecorderImpl - [non-persistent://public/default/topic] [sub] [7dc96] Prefetched messages: 67 --- Consume throughput received: 388519.77 msgs/s --- 3035.31 Mbit/s --- Ack sent rate: 388528.76 ack/s --- Failed messages: 0 --- Failed acks: 0
+16:48:50.052 [main] INFO  org.apache.pulsar.testclient.PerformanceConsumer - Throughput received: 368521.823  msg/s -- 2879.076 Mbit/s --- Latency: mean: 1.475 ms - med: 1 - 95pct: 2 - 99pct: 4 - 99.9pct: 6 - 99.99pct: 269 - Max: 269
+16:48:54.833 [pulsar-timer-4-1] INFO  org.apache.pulsar.client.impl.ConsumerStatsRecorderImpl - [non-persistent://public/default/topic] [sub] [7dc96] Prefetched messages: 76 --- Consume throughput received: 341381.47 msgs/s --- 2667.04 Mbit/s --- Ack sent rate: 341391.67 ack/s --- Failed messages: 0 --- Failed acks: 0
+16:48:59.835 [pulsar-timer-4-1] INFO  org.apache.pulsar.client.impl.ConsumerStatsRecorderImpl - [non-persistent://public/default/topic] [sub] [7dc96] Prefetched messages: 102 --- Consume throughput received: 371853.33 msgs/s --- 2905.10 Mbit/s --- Ack sent rate: 371848.93 ack/s --- Failed messages: 0 --- Failed acks: 0
+16:49:00.065 [main] INFO  org.apache.pulsar.testclient.PerformanceConsumer - Throughput received: 357794.743  msg/s -- 2795.271 Mbit/s --- Latency: mean: 1.525 ms - med: 1 - 95pct: 2 - 99pct: 4 - 99.9pct: 7 - 99.99pct: 232 - Max: 233
+16:49:04.837 [pulsar-timer-4-1] INFO  org.apache.pulsar.client.impl.ConsumerStatsRecorderImpl - [non-persistent://public/default/topic] [sub] [7dc96] Prefetched messages: 0 --- Consume throughput received: 344214.72 msgs/s --- 2689.18 Mbit/s --- Ack sent rate: 344219.12 ack/s --- Failed messages: 0 --- Failed acks: 0
+16:49:09.838 [pulsar-timer-4-1] INFO  org.apache.pulsar.client.impl.ConsumerStatsRecorderImpl - [non-persistent://public/default/topic] [sub] [7dc96] Prefetched messages: 94 --- Consume throughput received: 365951.37 msgs/s --- 2859.00 Mbit/s --- Ack sent rate: 365951.37 ack/s --- Failed messages: 0 --- Failed acks: 0
+16:49:10.075 [main] INFO  org.apache.pulsar.testclient.PerformanceConsumer - Throughput received: 355437.499  msg/s -- 2776.855 Mbit/s --- Latency: mean: 1.550 ms - med: 1 - 95pct: 3 - 99pct: 4 - 99.9pct: 7 - 99.99pct: 239 - Max: 240
+16:49:14.840 [pulsar-timer-4-1] INFO  org.apache.pulsar.client.impl.ConsumerStatsRecorderImpl - [non-persistent://public/default/topic] [sub] [7dc96] Prefetched messages: 127 --- Consume throughput received: 366566.90 msgs/s --- 2863.80 Mbit/s --- Ack sent rate: 366566.90 ack/s --- Failed messages: 0 --- Failed acks: 0
+16:49:19.841 [pulsar-timer-4-1] INFO  org.apache.pulsar.client.impl.ConsumerStatsRecorderImpl - [non-persistent://public/default/topic] [sub] [7dc96] Prefetched messages: 28 --- Consume throughput received: 371736.10 msgs/s --- 2904.19 Mbit/s --- Ack sent rate: 371717.90 ack/s --- Failed messages: 0 --- Failed acks: 0
+16:49:20.084 [main] INFO  org.apache.pulsar.testclient.PerformanceConsumer - Throughput received: 367165.649  msg/s -- 2868.482 Mbit/s --- Latency: mean: 1.468 ms - med: 1 - 95pct: 2 - 99pct: 4 - 99.9pct: 6 - 99.99pct: 11 - Max: 12
+16:49:24.843 [pulsar-timer-4-1] INFO  org.apache.pulsar.client.impl.ConsumerStatsRecorderImpl - [non-persistent://public/default/topic] [sub] [7dc96] Prefetched messages: 157 --- Consume throughput received: 336527.03 msgs/s --- 2629.12 Mbit/s --- Ack sent rate: 336543.02 ack/s --- Failed messages: 0 --- Failed acks: 0
+16:49:29.844 [pulsar-timer-4-1] INFO  org.apache.pulsar.client.impl.ConsumerStatsRecorderImpl - [non-persistent://public/default/topic] [sub] [7dc96] Prefetched messages: 136 --- Consume throughput received: 258608.89 msgs/s --- 2020.38 Mbit/s --- Ack sent rate: 258603.29 ack/s --- Failed messages: 0 --- Failed acks: 0
+16:49:30.096 [main] INFO  org.apache.pulsar.testclient.PerformanceConsumer - Throughput received: 299496.518  msg/s -- 2339.817 Mbit/s --- Latency: mean: 1.942 ms - med: 2 - 95pct: 3 - 99pct: 4 - 99.9pct: 10 - 99.99pct: 1008 - Max: 1008
+16:49:34.845 [pulsar-timer-4-1] INFO  org.apache.pulsar.client.impl.ConsumerStatsRecorderImpl - [non-persistent://public/default/topic] [sub] [7dc96] Prefetched messages: 260 --- Consume throughput received: 325193.37 msgs/s --- 2540.57 Mbit/s --- Ack sent rate: 325177.77 ack/s --- Failed messages: 0 --- Failed acks: 0
+16:49:39.847 [pulsar-timer-4-1] INFO  org.apache.pulsar.client.impl.ConsumerStatsRecorderImpl - [non-persistent://public/default/topic] [sub] [7dc96] Prefetched messages: 128 --- Consume throughput received: 286180.59 msgs/s --- 2235.79 Mbit/s --- Ack sent rate: 286203.99 ack/s --- Failed messages: 0 --- Failed acks: 0
+16:49:40.110 [main] INFO  org.apache.pulsar.testclient.PerformanceConsumer - Throughput received: 302865.467  msg/s -- 2366.136 Mbit/s --- Latency: mean: 1.807 ms - med: 2 - 95pct: 3 - 99pct: 5 - 99.9pct: 9 - 99.99pct: 218 - Max: 218
+16:49:44.849 [pulsar-timer-4-1] INFO  org.apache.pulsar.client.impl.ConsumerStatsRecorderImpl - [non-persistent://public/default/topic] [sub] [7dc96] Prefetched messages: 0 --- Consume throughput received: 286525.31 msgs/s --- 2238.48 Mbit/s --- Ack sent rate: 286525.31 ack/s --- Failed messages: 0 --- Failed acks: 0
+16:49:49.850 [pulsar-timer-4-1] INFO  org.apache.pulsar.client.impl.ConsumerStatsRecorderImpl - [non-persistent://public/default/topic] [sub] [7dc96] Prefetched messages: 128 --- Consume throughput received: 307546.98 msgs/s --- 2402.71 Mbit/s --- Ack sent rate: 307546.98 ack/s --- Failed messages: 0 --- Failed acks: 0
+16:49:50.120 [main] INFO  org.apache.pulsar.testclient.PerformanceConsumer - Throughput received: 297268.294  msg/s -- 2322.409 Mbit/s --- Latency: mean: 1.795 ms - med: 2 - 95pct: 3 - 99pct: 5 - 99.9pct: 8 - 99.99pct: 13 - Max: 14
+^C16:49:52.697 [Thread-1] INFO  org.apache.pulsar.testclient.PerformanceConsumer - Aggregated throughput stats --- 63500462 records received --- 313048.713 msg/s --- 2445.693 Mbit/s
+16:49:52.716 [Thread-1] INFO  org.apache.pulsar.testclient.PerformanceConsumer - Aggregated latency stats --- Latency: mean: 1.600 ms - med: 1 - 95pct: 3 - 99pct: 5 - 99.9pct: 10 - 99.99pct: 218 - 99.999pct: 1007 - Max: 1008
