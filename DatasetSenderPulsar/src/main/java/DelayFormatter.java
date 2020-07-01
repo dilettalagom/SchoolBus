@@ -1,5 +1,10 @@
 import org.apache.commons.lang.StringUtils;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+
 public class DelayFormatter {
 
     private static DelayFormatter instance = null;
@@ -11,112 +16,159 @@ public class DelayFormatter {
         return instance;
     }
 
-    public String createDelayFormat(String stringTime){
+    public String formatDelay(String inputString)
+    {
+        ArrayList<String> numericValues = replaceAndSplitNumbers(inputString);
+        ArrayList<String> literal = splitLetters(inputString);
+        String delayToSend = "";
 
-        if (!stringTime.matches("[a-zA-Z-? :/]+")  && !stringTime.contains("?") ) {
-            //contiene m && h
-            if (stringTime.contains("m") && stringTime.contains("h") && !stringTime.contains("[/?:]")) {
+        if(inputString.equals(""))
+            delayToSend= "";
 
-                String[] dataArray = stringTime.split("[-+*/= ]");
-
-                if(dataArray.length==2 && !dataArray[0].matches("[a-zA-Z-? :/]+") &&  !dataArray[1].matches("[a-zA-Z-? :/]+")) {
-                    String tempMin = "";
-                    String tempHou = "";
-                    for (String s : dataArray) {
-                        if (s.contains("m"))
-                            tempMin = getNumericSubstring(s, "m");
-                        else if (s.contains("h"))
-                            tempHou = convertHoursToMinutes(getNumericSubstring(s, "h"));
-                    }
-                    return computeMean(tempMin, tempHou);
-                }
-                return null;
-
-                //contiene solo m  (es: "30 min", "30min", "20-30min")
-            }else if(stringTime.contains("m")){
-
-                String[] dataArray = (getNumericSubstring(stringTime, "m")).split("[-,.!/+a-zA-Z:?* ]");
-                if(dataArray.length == 2 && !dataArray[0].equals("") && !dataArray[1].equals("")){
-
-                    return computeMean(dataArray[0],dataArray[1]);
-
-                }else if(dataArray.length == 2 && dataArray[0].equals("")) {
-                    return dataArray[1];
-                }else
-                    return dataArray[0];
-                //contiene solo h
-            }else if(stringTime.contains("h") && stringTime.contains("r")){
-
-                if(stringTime.contains("hr") && StringUtils.countMatches(stringTime, "hr") == 1) {
-                    if(stringTime.contains("1/2"))
-                        return "30";
-                    else {
-                        String actual = stringTime.replace("hr", "").trim();
-                        String[] dataArray = (getNumericSubstring(actual, "h")).split("[: -/+a-zA-Z?* ]");
-                        if (dataArray.length == 2) {
-                            return computeMean(dataArray[0], convertHoursToMinutes(dataArray[1]));
-                        }else {
-                            return convertHoursToMinutes(dataArray[0]);
-                        }
-                    }
-                }else if ( StringUtils.countMatches(stringTime, "h") == 2) {
-                    String[] dataArray = stringTime.split("[-/+a-zA-Z*]");
-                    //TODO
-
-                }
-            }else{
-                if(isNumeric(stringTime))
-                    return stringTime;
-                else if(stringTime.equals(""))
-                    return null;
-                else{
-                    String[] dataArray = stringTime.split("[-/]");
-                    if(!isNumeric(dataArray[0]) || !isNumeric(dataArray[1]))
-                        return null;
-                    return computeMean(dataArray[0],dataArray[1]);
-                }
-            }
-        }
-        return null; //drop
-
-    }
-
-    private String convertHoursToMinutes(String s){
-        return String.valueOf(Integer.parseInt(s)*60);
-    }
-
-    private String computeMean(String a, String b){
-        return String.valueOf( (int)(Math.ceil((Double.parseDouble(a) + Double.parseDouble(b)) / 2)));
-    }
-
-
-    private String getNumericSubstring(String s, String type){
-        int pos;
-        try {
-            if ((pos = s.indexOf(type)) != -1) {
-
-                return s.substring(0, pos);
-
-            } else {
-                return "0";
-            }
-        }catch (NumberFormatException e){
-            return "0";
+            //minutes and hours
+        else if(literal.size() == 2 && inputString.contains("m") && inputString.contains("h")){
+            if (numericValues.size() == 2)
+                delayToSend = computeHourMinutesDelay(numericValues, literal);
+            else
+                delayToSend = "";
         }
 
+        //if contains h more than once
+        else if(numericValues.size() == 2 && Collections.frequency(literal, "h") == 2){
+            if (numericValues.size() == 2)
+                delayToSend = computeMean(convertHoursToMinutes(literal.get(0)),convertHoursToMinutes(literal.get(1)));
+            else
+                delayToSend = "";
+        }
 
+        //only minutes
+        else if(inputString.contains("m")){
+            delayToSend = computeMinutesDelay(numericValues);
+        }
+
+        //only hours
+        else if(inputString.contains("h")){
+
+            delayToSend = computeHoursDelay(numericValues, literal);
+
+        }
+        else{
+            if(numericValues.size() == 2)
+                delayToSend = computeMean(numericValues.get(0),numericValues.get(1));
+            else if(isNumeric(inputString))
+                delayToSend = inputString.replaceAll("[-/]","");
+        }
+        return delayToSend;
+    }
+
+    private String computeMixedMean(ArrayList<String> numericValues, ArrayList<String> literal) {
+        String delayToSend;
+        if(literal.get(0).contains("h"))
+            delayToSend = computeMean(convertHoursToMinutes(numericValues.get(0)),numericValues.get(1));
+        else
+            delayToSend = computeMean(numericValues.get(0),convertHoursToMinutes(numericValues.get(1)));
+        return delayToSend;
+    }
+
+    private String computeHourMinutesDelay(ArrayList<String> numericValues, ArrayList<String> literal) {
+        String delayToSend;
+        if(literal.get(0).contains("h"))
+            delayToSend = sum(convertHoursToMinutes(numericValues.get(0)), numericValues.get(1));
+        else
+            delayToSend = computeMean(numericValues.get(0),convertHoursToMinutes(numericValues.get(1)));
+        return delayToSend;
+    }
+
+
+    private String sum(String a, String b){
+        long sum = Long.parseLong(a) + Long.parseLong(b);
+        return String.valueOf(sum);
+    }
+
+    private ArrayList<String> replaceAndSplitNumbers(String inputString)
+    {
+        String pattern = "[^A-Za-z0-9]";
+
+        inputString = inputString.replaceAll(pattern, " ");
+        ArrayList<String> res = new ArrayList<>(Arrays.asList(inputString.split("[ a-zA-Z]")));
+        res.removeAll(Collections.singleton(""));
+        return res;
+    }
+
+
+    private ArrayList<String> splitLetters(String inputString)
+    {
+        String pattern = "[0-9]";
+        ArrayList<String> res = new ArrayList<>(Arrays.asList(inputString.split(pattern)));
+        res.removeAll(Collections.singleton(""));
+        return res;
     }
 
 
     private boolean isNumeric(String strNum) {
-        if (strNum == null) {
-            return false;
-        }
+
         try {
             Integer.parseInt(strNum);
         } catch (NumberFormatException nfe) {
             return false;
         }
         return true;
+    }
+
+
+    private String convertHoursToMinutes(String s){
+        if(!isNumeric(s)) {
+            return "";
+        }
+        return String.valueOf(Integer.parseInt(s)*60);
+    }
+
+    private String computeMean(String a, String b){
+        if(!isNumeric(a) && isNumeric(b)) {
+            return b;
+        }
+        else if(isNumeric(a) && !isNumeric(b)) {
+            return a;
+        }
+        else if(!isNumeric(a) && !isNumeric(b))
+            return "";
+        else{
+            return String.valueOf( (int)(Math.ceil((Double.parseDouble(a) + Double.parseDouble(b)) / 2)));
+        }
+    }
+
+    private String computeMinutesDelay(List<String> numbers){
+        String resultDelay;
+        if(numbers.size() == 2){
+            resultDelay = computeMean(numbers.get(0),numbers.get(1));
+        }
+        else if(numbers.size() == 1){
+            resultDelay = numbers.get(0);
+        }else{
+            resultDelay = "error";
+        }
+        return resultDelay;
+    }
+
+    private String computeHoursDelay(ArrayList<String> numbers, ArrayList<String> literal){
+
+        String resultDelay;
+
+        if(numbers.size() == 1){
+            resultDelay = convertHoursToMinutes(numbers.get(0));
+        }
+        else if(numbers.size() == 2 && numbers.get(0).equals("1") && numbers.get(1).equals("2")){
+            resultDelay = "30";
+        }
+        else if(numbers.size() == 2 && numbers.get(0).equals("1") && numbers.get(1).equals("5")){
+            resultDelay = "90";
+        }
+        else if(numbers.size() == 2){
+            resultDelay = computeMixedMean(numbers, literal);
+        }
+        else{
+            resultDelay = "error";
+        }
+        return resultDelay;
     }
 }

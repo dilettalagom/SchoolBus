@@ -6,18 +6,18 @@ import java.time.Instant;
 import java.time.format.DateTimeParseException;
 import java.util.Properties;
 
+
+
 public class DatasetSenderKafka {
 
     private String csvFilePath;
     private BufferedReader bufferedReader;
-    //private static final String[] topicNames = new String[]{"dataQuery1", "dataQuery2", "dataQuery3"};
     private String topic;
     private String consumerType;
     private static final String KafkaUri = "kafka:9092";
     private KafkaProducer producer;
     private float servingSpeed;
     private DelayFormatter delayFormatter;
-    BufferedWriter output;
 
 
     public DatasetSenderKafka(String csvFilePath, float servingSpeed, String topic, String consumerType) {
@@ -33,7 +33,7 @@ public class DatasetSenderKafka {
 
     private void initCSVReader() {
         try {
-            this.output = new BufferedWriter(new FileWriter("./timers"));
+            //this.output = new BufferedWriter(new FileWriter("docker-compose/kafka-producer//timers.txt"));
 
             this.bufferedReader = new BufferedReader(new FileReader(csvFilePath));
         } catch (IOException e) {
@@ -52,7 +52,9 @@ public class DatasetSenderKafka {
         props.put("acks","all"); //ex-once
 
         producer = new KafkaProducer(props);
+
     }
+
 
     public void startSendingData(){
 
@@ -62,7 +64,7 @@ public class DatasetSenderKafka {
 
         //Validating first line
         String[] firstLine = splitter(readLineFromCSV());
-        firstLine[11] = delayFormatter.createDelayFormat(firstLine[11].toLowerCase());
+        firstLine[11] = delayFormatter.formatDelay(firstLine[11].toLowerCase());
         if(firstLine[11]!= null) {
             firstTimestamp = extractTimeStamp(firstLine[7]);
             sendToTopic(firstLine);
@@ -74,18 +76,12 @@ public class DatasetSenderKafka {
 
             String[] tokens = splitter(line);
 
-            //ckeck if is a valid line  --> total row: 379412, validated row: 332576
-            String validatedDelay = delayFormatter.createDelayFormat(tokens[11].toLowerCase());
-            try {
-                output.write(i + " "+ tokens[7]+ " " + tokens[11] + "- " + validatedDelay + "\n");
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-            //publishing on topic only if is a valid line
-            if(validatedDelay != null) {
-                i++;
-                tokens[11] = validatedDelay;
+            //ckeck if is a valid line  --> total row: 379412, validated row: 334418
+            tokens[11] = delayFormatter.formatDelay(tokens[11].toLowerCase());
 
+            //publishing on topic only if is a valid line
+            if(!tokens[11].equals("") && Integer.parseInt(tokens[11]) <= 300) {
+                i++;
                 long curTimestamp = extractTimeStamp(tokens[7]);
                 long deltaTimeStamp = computeDelta(firstTimestamp, curTimestamp);
 
@@ -105,7 +101,6 @@ public class DatasetSenderKafka {
         sendToTopic(splitter(poisonedTuple));
 
         try {
-            output.close();
             bufferedReader.close();
         } catch (IOException e) {
             e.printStackTrace();
@@ -134,25 +129,19 @@ public class DatasetSenderKafka {
     private void sendToTopic(String[] value){
 
         String dataToSend = prepareStringToPublish(value, topic);
-        ProducerRecord record=null;
-        /*TODO:if (consumerType.equals("spark")) {
-            record = new ProducerRecord(topic, null, extractTimeStamp(value[7]), topic, dataToSend);
-
-        }else if(consumerType.equals("flink")|| consumerType.equals("kafkaS")){
-            record = new ProducerRecord(topic, null, dataToSend);
-        }*/
-
-       producer.send(new ProducerRecord(topic, null, dataToSend));
-
+        producer.send(new ProducerRecord(topic, null, dataToSend));
     }
 
+
     private void addDelay(long deltaTimeStamp) {
+
         try {
             Thread.sleep(deltaTimeStamp);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
     }
+
 
     private long convertToEpochMilli(String timestamp ){
         try {
@@ -167,10 +156,12 @@ public class DatasetSenderKafka {
         return (long) (milliSecsDelta / servingSpeed);
     }
 
+
     private long extractTimeStamp(String timestampString) {
 
         return convertToEpochMilli(timestampString);
     }
+
 
     private String readLineFromCSV() {
         String line = "";

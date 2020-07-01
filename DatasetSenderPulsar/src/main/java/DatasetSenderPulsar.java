@@ -1,16 +1,17 @@
 import org.apache.pulsar.client.api.*;
-
 import java.io.*;
 import java.time.Instant;
 import java.time.format.DateTimeParseException;
+
+
 
 public class DatasetSenderPulsar {
 
     private String csvFilePath;
     private BufferedReader bufferedReader;
     private static final String pulsarUrl = "pulsar://pulsar-node:6650";
-    //private static final String topicHeader = "non-persistent://public/default/";
-    private static final String topicHeader = "";
+    private static final String topicHeader = "non-persistent://public/default/";
+    //private static final String topicHeader = "";
     private String topic;
     private PulsarClient pulsarClient;
     private Producer<String> producer;
@@ -67,7 +68,7 @@ public class DatasetSenderPulsar {
 
         //Validating first line
         String[] firstLine = splitter(readLineFromCSV());
-        firstLine[11] = delayFormatter.createDelayFormat(firstLine[11].toLowerCase());
+        firstLine[11] = delayFormatter.formatDelay(firstLine[11].toLowerCase());
         if(firstLine[11]!= null) {
             firstTimestamp = extractTimeStamp(firstLine[7]);
             sendToTopic(firstLine);
@@ -79,10 +80,10 @@ public class DatasetSenderPulsar {
 
             String[] tokens = splitter(line);
             //ckeck if is a valid line  --> total row: 379412, validated row: 332571
-            String validatedDelay = delayFormatter.createDelayFormat(tokens[11].toLowerCase());
+            String validatedDelay = delayFormatter.formatDelay(tokens[11].toLowerCase());
 
             //publishing on topic only if is a valid line
-            if(validatedDelay != null) {
+            if(validatedDelay != null && Integer.parseInt(validatedDelay) <= 300) {
                 i++;
                 tokens[11] = validatedDelay;
                 long curTimestamp = extractTimeStamp(tokens[7]);
