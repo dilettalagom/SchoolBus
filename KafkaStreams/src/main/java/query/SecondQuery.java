@@ -22,9 +22,9 @@ public class SecondQuery {
         final Properties props = new Properties();
         props.put(StreamsConfig.APPLICATION_ID_CONFIG,"SchoolBus");
         props.put(StreamsConfig.CLIENT_ID_CONFIG,"kafka-consumer");
-        props.put(StreamsConfig.BOOTSTRAP_SERVERS_CONFIG,KAFKA_BROKER);
+        props.put(StreamsConfig.BOOTSTRAP_SERVERS_CONFIG, KAFKA_BROKER);
         props.put(StreamsConfig.DEFAULT_TIMESTAMP_EXTRACTOR_CLASS_CONFIG, EventTimeExtractor.class.getName());
-        props.put(StreamsConfig.EXACTLY_ONCE, "exactly_once");
+        //props.put(StreamsConfig.PROCESSING_GUARANTEE_CONFIG, StreamsConfig.EXACTLY_ONCE);
 
         return props;
     }

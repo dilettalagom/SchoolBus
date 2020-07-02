@@ -10,7 +10,10 @@ import org.apache.kafka.streams.KeyValue;
 import org.apache.kafka.streams.StreamsBuilder;
 import org.apache.kafka.streams.StreamsConfig;
 import org.apache.kafka.streams.kstream.*;
+import org.apache.kafka.streams.state.StoreBuilder;
 import org.apache.kafka.streams.state.WindowStore;
+import org.apache.log4j.BasicConfigurator;
+
 import java.time.Duration;
 import java.util.*;
 import java.util.concurrent.CountDownLatch;
@@ -28,8 +31,8 @@ public class SecondQueryDay {
         props.put(StreamsConfig.BOOTSTRAP_SERVERS_CONFIG, KAFKA_BROKER);
         props.put(StreamsConfig.DEFAULT_TIMESTAMP_EXTRACTOR_CLASS_CONFIG, EventTimeExtractor.class.getName());
         props.put(StreamsConfig.METRICS_RECORDING_LEVEL_CONFIG,"DEBUG");
-        //props.put(StreamsConfig.COMMIT_INTERVAL_MS_CONFIG, 100);
-        props.put(StreamsConfig.EXACTLY_ONCE, "exactly_once");
+        //props.put(StreamsConfig.COMMIT_INTERVAL_MS_CONFIG, 50);
+        //props.put(StreamsConfig.PROCESSING_GUARANTEE_CONFIG, StreamsConfig.EXACTLY_ONCE);
 
         return props;
     }
@@ -37,12 +40,15 @@ public class SecondQueryDay {
 
     public static void main(String[] args) throws Exception {
 
+        BasicConfigurator.configure();
+
         final Long UNTIL_DAY = 86460000L;
 
         final String topic = "dataQuery2";
         final Properties props = createStreamProperties();
         final StreamsBuilder builder = new StreamsBuilder();
         TimeSlotFilter timeSlotFilter = TimeSlotFilter.getInstance();
+
 
         final KStream<byte[], String> inputStream = builder.stream(topic, Consumed.with(Serdes.ByteArray(), Serdes.String()));
 
@@ -72,7 +78,7 @@ public class SecondQueryDay {
         KStream<String, SnappyTuple2<String,Long>> joinDay = mergeFinalResults(rankedAMDay, rankedPMDay);
 
         KStream<String, SnappyTuple2<String, Long>> finale = joinDay.mapValues((key, value) -> {
-            long end = System.nanoTime() - value.k2;
+            Long end = Long.valueOf(System.nanoTime()) - Long.valueOf(value.k2);
             return new SnappyTuple2<String, Long>(value.k1, end);
         });
 
@@ -127,10 +133,7 @@ public class SecondQueryDay {
                             @Override
                             public SnappyTuple2<String,Long> apply(String windowed, RankBox rankBox, SnappyTuple2<String,Long> acc) {
 
-                                //TODO:Long end = Math.max(acc.k2, rankBox.getCurrentEventTime());
-                                //long end = System.nanoTime() - rankBox.getCurrentEventTime();
-
-                                long actual = Math.max(acc.k2, rankBox.getCurrentEventTime());
+                                Long actual = Math.max(Long.valueOf(acc.k2), Long.valueOf(rankBox.getCurrentEventTime()));
 
                                 StringBuilder sb = new StringBuilder();
                                 sb.append(acc.k1).append(rankBox.toString());
@@ -138,7 +141,9 @@ public class SecondQueryDay {
                                 return new SnappyTuple2<String,Long>(sb.toString(), actual);
                             }
                         },
-                        Materialized.with(Serdes.String(), Serdes.serdeFrom(new Tuple2Serializer(), new Tuple2Deserializer()))
+                        Materialized.as("final-merger").withLoggingDisabled().with(Serdes.String(), Serdes.serdeFrom(new Tuple2Serializer(), new Tuple2Deserializer()))
+
+
                 );
         return result.toStream();
 
@@ -161,7 +166,6 @@ public class SecondQueryDay {
                         new Initializer<RankBox>() {
                             @Override
                             public RankBox apply() {
-                                //Comparator<SnappyTuple4<String, String, Integer>> comp = Comparator.comparing(t -> t.k3);
                                 return new RankBox( "new");
                             }
                         },
@@ -170,12 +174,12 @@ public class SecondQueryDay {
                             public RankBox apply(String key, SnappyTuple4<String, String, Integer, Long> tuple,
                                                  RankBox rankBox) {
 
-                                ResultPojo pojo = new ResultPojo(tuple.k1,tuple.k2,tuple.k3, tuple.k4);
+                                ResultPojo pojo = new ResultPojo(tuple.k1,tuple.k2,tuple.k3, Long.valueOf(tuple.k4));
 
                                 return checkIfMustAdd(pojo, rankBox);
                             }
                         },
-                        Materialized.<String, RankBox, WindowStore<Bytes, byte[]>>as(accName)
+                        Materialized.<String, RankBox, WindowStore<Bytes, byte[]>>as(accName).withLoggingDisabled()
                                 .withValueSerde(Serdes.serdeFrom(new RankBoxSerializer(), new RankBoxDeserializer()))
 
                 );
@@ -185,9 +189,7 @@ public class SecondQueryDay {
     private static RankBox checkIfMustAdd(ResultPojo p, RankBox rankB){
         int actualValue = p.getCount();
 
-       /*TODO: long end = System.nanoTime() - p.getCurrentEventTime();
-        rankB.setCurrentEventTime(Math.max(end, rankB.getCurrentEventTime()));*/
-        rankB.setCurrentEventTime(Math.max(p.getCurrentEventTime(), rankB.getCurrentEventTime()));
+        rankB.setCurrentEventTime(Math.max(Long.valueOf(p.getCurrentEventTime()), Long.valueOf(rankB.getCurrentEventTime())));
 
         if ( actualValue > rankB.getPos3().getCount()) {
 
@@ -225,12 +227,12 @@ public class SecondQueryDay {
                             @Override
                             public SnappyTuple4<String, String, Integer, Long> apply(String key, ReasonDelayPojo pojo, SnappyTuple4<String, String, Integer, Long> acc) {
 
-                                Long actual =  Math.max(pojo.getCurrentEventTime(), acc.k4 );
+                                Long actual =  Math.max(Long.valueOf(pojo.getCurrentEventTime()), Long.valueOf( acc.k4) );
 
                                 return new SnappyTuple4<String, String, Integer, Long>(pojo.getTimestamp(), pojo.getTimeslot(), acc.k3 + 1, actual);
                             }
                         },
-                        Materialized.<String, SnappyTuple4<String, String, Integer, Long>, WindowStore<Bytes, byte[]>>as(accName)
+                        Materialized.<String, SnappyTuple4<String, String, Integer, Long>, WindowStore<Bytes, byte[]>>as(accName).withLoggingDisabled()
                                 .withValueSerde(Serdes.serdeFrom(new Tuple4Serializer(), new Tuple4Deserializer()))
 
                 ).toStream();
