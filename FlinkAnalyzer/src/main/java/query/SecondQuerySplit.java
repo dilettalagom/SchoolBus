@@ -30,8 +30,7 @@ import java.util.Map;
 
 public class SecondQuerySplit {
 
-    //private static final String topic = "persistent://public/default/dataQuery2";
-    private static final String topic = "dataQuery2";
+    private static final String topic = "non-persistent://public/default/dataQuery2";
 
 
     public static void main(String[] args) {
@@ -72,6 +71,8 @@ public class SecondQuerySplit {
         DataStream<ResultSlotRankPojo> resultWeek = joinSlotResults(rankAMweek, rankPMweek);
         resultWeek.writeAsText(outputPath + "weekResult.txt", FileSystem.WriteMode.OVERWRITE).setParallelism(1);
 
+
+        //resultDay.union(resultWeek).writeAsText(outputPath + "forthroughput.txt", FileSystem.WriteMode.OVERWRITE).setParallelism(1).name("For Throughput");
         try {
             see.execute("FlinkQuery2Split");
         } catch (Exception e) {

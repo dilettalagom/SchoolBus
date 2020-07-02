@@ -18,8 +18,7 @@ import util.Consumer;
 
 public class SecondQueryAggregate {
 
-    //private static final String topic = "persistent://public/default/dataQuery2";
-    private static final String topic = "dataQuery2";
+    private static final String topic = "non-persistent://public/default/dataQuery2";
 
 
     public static void main(String[] args) {

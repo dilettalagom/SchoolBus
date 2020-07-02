@@ -20,8 +20,7 @@ import util.Consumer;
 
 public class FirstQuery{
 
-    //private static final String topic = "non-persistent://public/default/dataQuery1";
-    private static final String topic = "dataQuery1";
+    private static final String topic = "non-persistent://public/default/dataQuery1";
 
     public static void main(String[] args) throws Exception{
 
@@ -87,6 +86,8 @@ public class FirstQuery{
                  })
                 .build();
         dayResultPT2.addSink(sink).name("Save dayResult");*/
+
+        //dayResult.union(weekResult, monthResult).writeAsText(outputPath + "forthroughput.txt", FileSystem.WriteMode.OVERWRITE).setParallelism(1).name("For Throughput");
 
         try {
             see.execute("FlinkQuery1");

@@ -11,7 +11,6 @@ public class DatasetSenderPulsar {
     private BufferedReader bufferedReader;
     private static final String pulsarUrl = "pulsar://pulsar-node:6650";
     private static final String topicHeader = "non-persistent://public/default/";
-    //private static final String topicHeader = "";
     private String topic;
     private PulsarClient pulsarClient;
     private Producer<String> producer;
@@ -68,24 +67,24 @@ public class DatasetSenderPulsar {
 
         //Validating first line
         String[] firstLine = splitter(readLineFromCSV());
-        //firstLine[11] = delayFormatter.formatDelay(firstLine[11].toLowerCase());
-        //if(firstLine[11]!= null) {
+        firstLine[11] = delayFormatter.formatDelay(firstLine[11].toLowerCase());
+        if(!firstLine[11].equals("")) {
             firstTimestamp = extractTimeStamp(firstLine[7]);
             sendToTopic(firstLine);
             i++;
-        //}
+        }
 
         String line;
         while ((line = readLineFromCSV())!=null) {
 
             String[] tokens = splitter(line);
-            //ckeck if is a valid line  --> total row: 379412, validated row: 332571
-            //String validatedDelay = delayFormatter.formatDelay(tokens[11].toLowerCase());
+            //ckeck if is a valid line  --> total row: 379412, validated row: 334249
+            String validatedDelay = delayFormatter.formatDelay(tokens[11].toLowerCase());
 
             //publishing on topic only if is a valid line
-            //if(validatedDelay != null && Integer.parseInt(validatedDelay) <= 300) {
+            if(!validatedDelay.equals("") && Long.parseLong(validatedDelay) <= 300) {
                 i++;
-               // tokens[11] = validatedDelay;
+                tokens[11] = validatedDelay;
                 long curTimestamp = extractTimeStamp(tokens[7]);
                 long deltaTimeStamp = computeDelta(firstTimestamp, curTimestamp);
                 if (deltaTimeStamp > 0) {
@@ -93,7 +92,7 @@ public class DatasetSenderPulsar {
                     firstTimestamp = curTimestamp;
                 }
                 sendToTopic( tokens );
-            //}
+            }
         }
 
         System.out.println("poisonedTuple" + "total: " + i);
