@@ -70,8 +70,12 @@ public class SecondQueryWeek {
 
         KStream<String, SnappyTuple2<String,Long>> joinWeek = mergeFinalResults(rankedAMWeek, rankedPMWeek);
 
+        KStream<String, SnappyTuple2<String, Long>> finale = joinWeek.mapValues((key, value) -> {
+            Long end = Long.valueOf(System.nanoTime()) - Long.valueOf(value.k2);
+            return new SnappyTuple2<String, Long>(value.k1, end);
+        });
         //print on file
-        joinWeek.print(Printed.<String, SnappyTuple2<String,Long>>toFile("ranker-merged-week.txt").withLabel("merged-week")
+        finale.print(Printed.<String, SnappyTuple2<String,Long>>toFile("ranker-merged-week.txt").withLabel("merged-week")
                 .withKeyValueMapper((win, v) -> String.format("%s; %s", win, v.toString())));
 
 
@@ -129,7 +133,7 @@ public class SecondQueryWeek {
                                 return new SnappyTuple2<String,Long>(sb.toString(), actual);
                             }
                         },
-                        Materialized.with(Serdes.String(), Serdes.serdeFrom(new Tuple2Serializer(), new Tuple2Deserializer()))
+                        Materialized.as("final-merge-week").withLoggingDisabled().with(Serdes.String(), Serdes.serdeFrom(new Tuple2Serializer(), new Tuple2Deserializer()))
                 );
         return result.toStream();
 
@@ -174,7 +178,7 @@ public class SecondQueryWeek {
                                 return checkIfMustAdd(pojo, rankBox);
                             }
                         },
-                        Materialized.<String, RankBox, WindowStore<Bytes, byte[]>>as(accName)
+                        Materialized.<String, RankBox, WindowStore<Bytes, byte[]>>as(accName).withLoggingDisabled()
                                 .withValueSerde(Serdes.serdeFrom(new RankBoxSerializer(), new RankBoxDeserializer()))
 
                 );
@@ -229,7 +233,7 @@ public class SecondQueryWeek {
                                 return new SnappyTuple4<String, String, Integer, Long>(pojo.getTimestamp(), pojo.getTimeslot(), acc.k3 + 1, actual);
                             }
                         },
-                        Materialized.<String, SnappyTuple4<String, String, Integer, Long>, WindowStore<Bytes, byte[]>>as(accName)
+                        Materialized.<String, SnappyTuple4<String, String, Integer, Long>, WindowStore<Bytes, byte[]>>as(accName).withLoggingDisabled()
                                 .withValueSerde(Serdes.serdeFrom(new Tuple4Serializer(), new Tuple4Deserializer()))
 
                 ).toStream();
