@@ -1,0 +1,937 @@
+2015-09-01; [(AM : 5:00-11:59,{Heavy Traffic=4, Other=3})]; 380213703
+2015-09-02; [(AM : 5:00-11:59,{Heavy Traffic=21, Other=7, Problem Run=2}), (PM : 12:00-19:00,{Heavy Traffic=1, Other=1})]; 283689083
+2015-09-03; [(AM : 5:00-11:59,{Heavy Traffic=13, Other=2, Mechanical Problem=1}), (PM : 12:00-19:00,{Heavy Traffic=1})]; 358315982
+2015-09-04; [(AM : 5:00-11:59,{Heavy Traffic=4, Other=4, Won`t Start=1}), (PM : 12:00-19:00,{Heavy Traffic=1, Other=1})]; 458332147
+2015-09-08; [(AM : 5:00-11:59,{Heavy Traffic=65, Other=21, Mechanical Problem=9}), (PM : 12:00-19:00,{Delayed by School=8, Heavy Traffic=3, Other=3})]; 332193946
+2015-09-09; [(AM : 5:00-11:59,{Heavy Traffic=407, Other=65, Mechanical Problem=25}), (PM : 12:00-19:00,{Delayed by School=20, Heavy Traffic=14, Other=13})]; 251134473
+2015-09-10; [(AM : 5:00-11:59,{Heavy Traffic=308, Weather Conditions=54, Other=35}), (PM : 12:00-19:00,{Heavy Traffic=28, Other=8, Mechanical Problem=7})]; 304132942
+2015-09-11; [(AM : 5:00-11:59,{Heavy Traffic=269, Other=29, Mechanical Problem=8}), (PM : 12:00-19:00,{Heavy Traffic=27, Other=9, Mechanical Problem=5})]; 509172475
+2015-09-14; [(PM : 12:00-19:00,{Heavy Traffic=1, Other=1}), (AM : 5:00-11:59,{Heavy Traffic=12, Other=2, Mechanical Problem=1})]; 251780038
+2015-09-15; [(AM : 5:00-11:59,{Heavy Traffic=22, Other=3}), (PM : 12:00-19:00,{Heavy Traffic=1})]; 345145640
+2015-09-16; [(AM : 5:00-11:59,{Heavy Traffic=317, Other=72, Problem Run=17}), (PM : 12:00-19:00,{Heavy Traffic=26, Other=19, Mechanical Problem=6})]; 75939958
+2015-09-17; [(AM : 5:00-11:59,{Heavy Traffic=277, Other=34, Problem Run=20}), (PM : 12:00-19:00,{Heavy Traffic=27, Other=6, Delayed by School=4})]; 320661011
+2015-09-18; [(AM : 5:00-11:59,{Heavy Traffic=226, Other=30, Problem Run=11}), (PM : 12:00-19:00,{Heavy Traffic=22, Other=14, Delayed by School=4})]; 448577962
+2015-09-21; [(AM : 5:00-11:59,{Heavy Traffic=215, Other=47, Mechanical Problem=17}), (PM : 12:00-19:00,{Other=20, Heavy Traffic=11, Delayed by School=6})]; 241353350
+2015-09-22; [(AM : 5:00-11:59,{Heavy Traffic=169, Other=27, Problem Run=22}), (PM : 12:00-19:00,{Other=12, Heavy Traffic=8, Delayed by School=3})]; 173935222
+2015-09-23; [(AM : 5:00-11:59,{Heavy Traffic=8, Other=2, Won`t Start=1}), (PM : 12:00-19:00,{Other=3})]; 285234199
+2015-09-24; [(AM : 5:00-11:59,{Heavy Traffic=14, Mechanical Problem=3, Problem Run=3}), (PM : 12:00-19:00,{Other=4})]; 188209295
+2015-09-25; [(AM : 5:00-11:59,{Heavy Traffic=188, Other=51, Problem Run=17}), (PM : 12:00-19:00,{Heavy Traffic=12, Other=4, Delayed by School=3})]; 383507647
+2015-09-28; [(AM : 5:00-11:59,{Heavy Traffic=193, Other=47, Problem Run=10}), (PM : 12:00-19:00,{Heavy Traffic=18, Other=3, Delayed by School=2})]; 201102833
+2015-09-29; [(AM : 5:00-11:59,{Heavy Traffic=223, Other=48, Problem Run=16}), (PM : 12:00-19:00,{Heavy Traffic=19, Other=7, Delayed by School=1})]; 181575473
+2015-09-30; [(AM : 5:00-11:59,{Heavy Traffic=201, Other=41, Weather Conditions=35}), (PM : 12:00-19:00,{Other=7, Mechanical Problem=3, Heavy Traffic=3})]; 170314998
+2015-10-01; [(AM : 5:00-11:59,{Heavy Traffic=157, Other=38, Problem Run=24}), (PM : 12:00-19:00,{Heavy Traffic=12, Other=8, Delayed by School=5})]; 189453400
+2015-10-02; [(AM : 5:00-11:59,{Heavy Traffic=152, Weather Conditions=71, Other=35}), (PM : 12:00-19:00,{Heavy Traffic=27, Weather Conditions=9, Other=7})]; 357320691
+2015-10-05; [(AM : 5:00-11:59,{Heavy Traffic=159, Other=55, Problem Run=14}), (PM : 12:00-19:00,{Heavy Traffic=9, Other=9, Delayed by School=5})]; 449054651
+2015-10-06; [(AM : 5:00-11:59,{Heavy Traffic=176, Other=46, Problem Run=18}), (PM : 12:00-19:00,{Heavy Traffic=12, Other=12, Mechanical Problem=8})]; 404328683
+2015-10-07; [(AM : 5:00-11:59,{Heavy Traffic=203, Other=45, Mechanical Problem=14}), (PM : 12:00-19:00,{Heavy Traffic=17, Other=10, Late return from Field Trip=4})]; 377164347
+2015-10-08; [(AM : 5:00-11:59,{Heavy Traffic=194, Other=51, Problem Run=15}), (PM : 12:00-19:00,{Other=10, Heavy Traffic=9, Accident=4})]; 359681074
+2015-10-09; [(AM : 5:00-11:59,{Heavy Traffic=156, Other=29, Mechanical Problem=8}), (PM : 12:00-19:00,{Heavy Traffic=19, Other=11, Accident=3})]; 589185742
+2015-10-13; [(AM : 5:00-11:59,{Heavy Traffic=247, Other=43, Problem Run=10}), (PM : 12:00-19:00,{Heavy Traffic=18, Other=9, Accident=4})]; 340559072
+2015-10-14; [(AM : 5:00-11:59,{Heavy Traffic=269, Other=84, Problem Run=27}), (PM : 12:00-19:00,{Heavy Traffic=28, Late return from Field Trip=25, Other=13})]; 317436731
+2015-10-15; [(AM : 5:00-11:59,{Heavy Traffic=317, Other=124, Problem Run=24}), (PM : 12:00-19:00,{Late return from Field Trip=9, Heavy Traffic=7, Other=4})]; 307544076
+2015-10-16; [(AM : 5:00-11:59,{Heavy Traffic=4, Other=4, Problem Run=1}), (PM : 12:00-19:00,{Other=1})]; 614411257
+2015-10-19; [(PM : 12:00-19:00,{Heavy Traffic=30, Other=12, Mechanical Problem=10}), (AM : 5:00-11:59,{Heavy Traffic=348, Other=110, Mechanical Problem=16})]; 398651995
+2015-10-20; [(AM : 5:00-11:59,{Heavy Traffic=240, Other=89, Problem Run=24}), (PM : 12:00-19:00,{Heavy Traffic=13, Other=6, Delayed by School=4})]; 388289176
+2015-10-21; [(PM : 12:00-19:00,{Heavy Traffic=30, Late return from Field Trip=5, Other=5}), (AM : 5:00-11:59,{Heavy Traffic=93, Other=13, Flat Tire=1})]; 249812542
+2015-10-22; [(AM : 5:00-11:59,{Heavy Traffic=260, Other=51, Mechanical Problem=13}), (PM : 12:00-19:00,{Heavy Traffic=32, Other=18, Late return from Field Trip=10})]; 272263728
+2015-10-23; [(AM : 5:00-11:59,{Heavy Traffic=316, Other=80, Problem Run=14}), (PM : 12:00-19:00,{Late return from Field Trip=32, Heavy Traffic=29, Other=16})]; 557439798
+2015-10-26; [(AM : 5:00-11:59,{Heavy Traffic=218, Other=81, Mechanical Problem=13}), (PM : 12:00-19:00,{Heavy Traffic=16, Other=10, Late return from Field Trip=7})]; 308903991
+2015-10-27; [(AM : 5:00-11:59,{Heavy Traffic=178, Other=50, Mechanical Problem=12}), (PM : 12:00-19:00,{Heavy Traffic=14, Other=10, Mechanical Problem=9})]; 380590257
+2015-10-28; [(AM : 5:00-11:59,{Heavy Traffic=179, Other=57, Mechanical Problem=12}), (PM : 12:00-19:00,{Heavy Traffic=35, Late return from Field Trip=19, Other=14})]; 378388358
+2015-10-29; [(AM : 5:00-11:59,{Heavy Traffic=256, Other=59, Weather Conditions=23}), (PM : 12:00-19:00,{Heavy Traffic=18, Other=7, Late return from Field Trip=4})]; 256680354
+2015-10-30; [(AM : 5:00-11:59,{Heavy Traffic=148, Other=42, Mechanical Problem=11}), (PM : 12:00-19:00,{Heavy Traffic=22, Late return from Field Trip=6, Mechanical Problem=4})]; 469683754
+2015-11-02; [(AM : 5:00-11:59,{Heavy Traffic=152, Other=55, Mechanical Problem=15}), (PM : 12:00-19:00,{Heavy Traffic=13, Other=7, Delayed by School=3})]; 423620174
+2015-11-03; [(AM : 5:00-11:59,{Heavy Traffic=20, Other=14, Mechanical Problem=4}), (PM : 12:00-19:00,{Heavy Traffic=1})]; 529189718
+2015-11-04; [(AM : 5:00-11:59,{Heavy Traffic=174, Other=45, Mechanical Problem=15}), (PM : 12:00-19:00,{Heavy Traffic=13, Other=11, Late return from Field Trip=5})]; 388448355
+2015-11-05; [(AM : 5:00-11:59,{Heavy Traffic=205, Other=35, Mechanical Problem=15}), (PM : 12:00-19:00,{Heavy Traffic=14, Other=14, Mechanical Problem=4})]; 312929833
+2015-11-06; [(AM : 5:00-11:59,{Heavy Traffic=154, Other=41, Flat Tire=8}), (PM : 12:00-19:00,{Other=12, Late return from Field Trip=10, Heavy Traffic=8})]; 626414315
+2015-11-09; [(AM : 5:00-11:59,{Heavy Traffic=159, Other=44, Won`t Start=8}), (PM : 12:00-19:00,{Heavy Traffic=16, Other=15, Late return from Field Trip=9})]; 460499684
+2015-11-10; [(AM : 5:00-11:59,{Heavy Traffic=198, Other=62, Weather Conditions=11}), (PM : 12:00-19:00,{Heavy Traffic=19, Other=11, Weather Conditions=5})]; 365525266
+2015-11-12; [(AM : 5:00-11:59,{Heavy Traffic=197, Other=51, Mechanical Problem=18}), (PM : 12:00-19:00,{Other=13, Heavy Traffic=10, Late return from Field Trip=8})]; 380936888
+2015-11-13; [(AM : 5:00-11:59,{Heavy Traffic=204, Other=51, Mechanical Problem=8}), (PM : 12:00-19:00,{Heavy Traffic=41, Other=15, Late return from Field Trip=12})]; 567246076
+2015-11-16; [(AM : 5:00-11:59,{Heavy Traffic=176, Other=60, Mechanical Problem=17}), (PM : 12:00-19:00,{Other=18, Heavy Traffic=14, Delayed by School=3})]; 383428306
+2015-11-17; [(AM : 5:00-11:59,{Heavy Traffic=221, Other=63, Mechanical Problem=7}), (PM : 12:00-19:00,{Heavy Traffic=12, Other=10, Flat Tire=1})]; 396850572
+2015-11-18; [(AM : 5:00-11:59,{Heavy Traffic=133, Other=39, Delayed by School=4}), (PM : 12:00-19:00,{Heavy Traffic=21, Other=17, Late return from Field Trip=6})]; 424648422
+2015-11-19; [(AM : 5:00-11:59,{Heavy Traffic=132, Other=42, Mechanical Problem=13}), (PM : 12:00-19:00,{Heavy Traffic=22, Other=22, Late return from Field Trip=8})]; 470296363
+2015-11-20; [(AM : 5:00-11:59,{Heavy Traffic=121, Other=41, Won`t Start=4}), (PM : 12:00-19:00,{Heavy Traffic=19, Other=14, Flat Tire=1})]; 531464835
+2015-11-23; [(AM : 5:00-11:59,{Heavy Traffic=179, Other=52, Mechanical Problem=25}), (PM : 12:00-19:00,{Heavy Traffic=27, Other=12, Late return from Field Trip=6})]; 374044082
+2015-11-24; [(AM : 5:00-11:59,{Heavy Traffic=266, Other=34, Mechanical Problem=13}), (PM : 12:00-19:00,{Heavy Traffic=29, Other=16, Late return from Field Trip=12})]; 367469348
+2015-11-25; [(AM : 5:00-11:59,{Heavy Traffic=141, Other=23, Mechanical Problem=5}), (PM : 12:00-19:00,{Heavy Traffic=24, Late return from Field Trip=6, Other=6})]; 408222137
+2015-11-27; [(AM : 5:00-11:59,{Heavy Traffic=1})]; 673455151
+2015-11-30; [(PM : 12:00-19:00,{Heavy Traffic=25, Other=21, Delayed by School=4}), (AM : 5:00-11:59,{Heavy Traffic=226, Other=61, Mechanical Problem=13})]; 467594019
+2015-12-01; [(AM : 5:00-11:59,{Heavy Traffic=238, Weather Conditions=53, Other=32}), (PM : 12:00-19:00,{Heavy Traffic=20, Late return from Field Trip=12, Mechanical Problem=5})]; 390007268
+2015-12-02; [(PM : 12:00-19:00,{Heavy Traffic=37, Other=17, Late return from Field Trip=10}), (AM : 5:00-11:59,{Heavy Traffic=210, Other=52, Weather Conditions=27})]; 399747279
+2015-12-03; [(AM : 5:00-11:59,{Heavy Traffic=151, Other=29, Mechanical Problem=12}), (PM : 12:00-19:00,{Heavy Traffic=15, Late return from Field Trip=7, Other=5})]; 256546549
+2015-12-04; [(AM : 5:00-11:59,{Heavy Traffic=158, Other=40, Mechanical Problem=5}), (PM : 12:00-19:00,{Heavy Traffic=20, Other=4, Accident=2})]; 612658269
+2015-12-07; [(AM : 5:00-11:59,{Heavy Traffic=178, Other=57, Mechanical Problem=8}), (PM : 12:00-19:00,{Heavy Traffic=19, Other=10, Mechanical Problem=6})]; 452007203
+2015-12-08; [(AM : 5:00-11:59,{Heavy Traffic=195, Other=44, Mechanical Problem=6}), (PM : 12:00-19:00,{Heavy Traffic=46, Other=8, Late return from Field Trip=5})]; 473155153
+2015-12-09; [(AM : 5:00-11:59,{Heavy Traffic=157, Other=43, Mechanical Problem=12}), (PM : 12:00-19:00,{Heavy Traffic=20, Late return from Field Trip=13, Other=12})]; 389864504
+2015-12-10; [(PM : 12:00-19:00,{Heavy Traffic=43, Late return from Field Trip=13, Accident=6}), (AM : 5:00-11:59,{Heavy Traffic=162, Other=28, Delayed by School=5})]; 221543166
+2015-12-11; [(AM : 5:00-11:59,{Heavy Traffic=170, Other=36, Delayed by School=7}), (PM : 12:00-19:00,{Heavy Traffic=28, Other=10, Late return from Field Trip=7})]; 443300085
+2015-12-14; [(AM : 5:00-11:59,{Heavy Traffic=165, Other=55, Mechanical Problem=8}), (PM : 12:00-19:00,{Heavy Traffic=16, Other=10, Late return from Field Trip=6})]; 385722358
+2015-12-15; [(AM : 5:00-11:59,{Heavy Traffic=134, Other=37, Mechanical Problem=10}), (PM : 12:00-19:00,{Heavy Traffic=13, Late return from Field Trip=9, Other=4})]; 426429312
+2015-12-16; [(AM : 5:00-11:59,{Heavy Traffic=156, Other=33, Flat Tire=7}), (PM : 12:00-19:00,{Heavy Traffic=13, Delayed by School=5, Mechanical Problem=4})]; 446638543
+2015-12-17; [(AM : 5:00-11:59,{Heavy Traffic=159, Other=33, Problem Run=18}), (PM : 12:00-19:00,{Heavy Traffic=31, Late return from Field Trip=17, Other=14})]; 444766915
+2015-12-18; [(AM : 5:00-11:59,{Heavy Traffic=121, Other=37, Mechanical Problem=12}), (PM : 12:00-19:00,{Late return from Field Trip=30, Heavy Traffic=20, Other=19})]; 480731059
+2015-12-21; [(AM : 5:00-11:59,{Heavy Traffic=133, Other=43, Won`t Start=8}), (PM : 12:00-19:00,{Heavy Traffic=13, Other=9, Mechanical Problem=2})]; 352036632
+2015-12-22; [(AM : 5:00-11:59,{Heavy Traffic=114, Other=32, Weather Conditions=13}), (PM : 12:00-19:00,{Heavy Traffic=35, Other=10, Late return from Field Trip=9})]; 383496191
+2015-12-23; [(AM : 5:00-11:59,{Heavy Traffic=69, Other=24, Weather Conditions=20}), (PM : 12:00-19:00,{Heavy Traffic=18, Weather Conditions=6, Other=4})]; 407961992
+2015-12-24; [(AM : 5:00-11:59,{Heavy Traffic=1})]; 756464166
+2015-12-28; [(AM : 5:00-11:59,{Mechanical Problem=2, Heavy Traffic=2, Other=1})]; 406162726
+2015-12-29; [(PM : 12:00-19:00,{Other=1}), (AM : 5:00-11:59,{Weather Conditions=1, Mechanical Problem=1})]; 488070711
+2015-12-30; [(PM : 12:00-19:00,{Heavy Traffic=1}), (AM : 5:00-11:59,{Heavy Traffic=3})]; 402349373
+2015-12-31; [(AM : 5:00-11:59,{Mechanical Problem=1}), (PM : 12:00-19:00,{Heavy Traffic=2})]; 707693005
+2016-01-04; [(AM : 5:00-11:59,{Heavy Traffic=200, Other=79, Won`t Start=27}), (PM : 12:00-19:00,{Heavy Traffic=19, Other=10, Won`t Start=3})]; 489598784
+2016-01-05; [(AM : 5:00-11:59,{Heavy Traffic=216, Other=74, Won`t Start=40}), (PM : 12:00-19:00,{Other=10, Heavy Traffic=8, Mechanical Problem=6})]; 350162751
+2016-01-06; [(AM : 5:00-11:59,{Heavy Traffic=131, Other=48, Won`t Start=13}), (PM : 12:00-19:00,{Heavy Traffic=15, Late return from Field Trip=5, Other=5})]; 385791328
+2016-01-07; [(AM : 5:00-11:59,{Heavy Traffic=137, Other=43, Mechanical Problem=11}), (PM : 12:00-19:00,{Heavy Traffic=33, Other=12, Delayed by School=4})]; 410940753
+2016-01-08; [(AM : 5:00-11:59,{Heavy Traffic=167, Other=51, Problem Run=17}), (PM : 12:00-19:00,{Heavy Traffic=5, Delayed by School=2, Other=2})]; 541402013
+2016-01-11; [(AM : 5:00-11:59,{Heavy Traffic=141, Other=47, Mechanical Problem=10}), (PM : 12:00-19:00,{Heavy Traffic=6, Other=2, Won`t Start=1})]; 216626284
+2016-01-12; [(AM : 5:00-11:59,{Heavy Traffic=298, Other=68, Mechanical Problem=9}), (PM : 12:00-19:00,{Other=8, Heavy Traffic=7, Mechanical Problem=4})]; 329054656
+2016-01-13; [(AM : 5:00-11:59,{Heavy Traffic=130, Other=42, Mechanical Problem=9}), (PM : 12:00-19:00,{Other=15, Heavy Traffic=14, Mechanical Problem=6})]; 361873630
+2016-01-14; [(AM : 5:00-11:59,{Heavy Traffic=111, Other=46, Won`t Start=12}), (PM : 12:00-19:00,{Heavy Traffic=12, Other=7, Late return from Field Trip=5})]; 347356730
+2016-01-15; [(AM : 5:00-11:59,{Heavy Traffic=119, Other=35, Mechanical Problem=7}), (PM : 12:00-19:00,{Heavy Traffic=17, Other=6, Mechanical Problem=4})]; 553021474
+2016-01-19; [(AM : 5:00-11:59,{Heavy Traffic=152, Other=60, Weather Conditions=36}), (PM : 12:00-19:00,{Heavy Traffic=29, Mechanical Problem=5, Other=4})]; 273475408
+2016-01-20; [(AM : 5:00-11:59,{Heavy Traffic=137, Other=38, Mechanical Problem=14}), (PM : 12:00-19:00,{Heavy Traffic=13, Late return from Field Trip=6, Other=4})]; 408224292
+2016-01-21; [(AM : 5:00-11:59,{Heavy Traffic=142, Other=41, Mechanical Problem=13}), (PM : 12:00-19:00,{Heavy Traffic=19, Other=9, Late return from Field Trip=4})]; 423962864
+2016-01-22; [(AM : 5:00-11:59,{Heavy Traffic=120, Other=39, Weather Conditions=12}), (PM : 12:00-19:00,{Heavy Traffic=21, Late return from Field Trip=6, Other=6})]; 473141777
+2016-01-25; [(AM : 5:00-11:59,{Weather Conditions=741, Heavy Traffic=129, Other=83}), (PM : 12:00-19:00,{Weather Conditions=34, Heavy Traffic=14, Other=8})]; 333604509
+2016-01-26; [(AM : 5:00-11:59,{Heavy Traffic=344, Weather Conditions=263, Other=55}), (PM : 12:00-19:00,{Heavy Traffic=30, Other=7, Weather Conditions=5})]; 395691717
+2016-01-27; [(AM : 5:00-11:59,{Heavy Traffic=238, Other=50, Mechanical Problem=13}), (PM : 12:00-19:00,{Heavy Traffic=27, Delayed by School=5, Other=4})]; 370773467
+2016-01-28; [(AM : 5:00-11:59,{Heavy Traffic=283, Other=30, Mechanical Problem=12}), (PM : 12:00-19:00,{Heavy Traffic=11, Other=3, Won`t Start=2})]; 456535929
+2016-01-29; [(AM : 5:00-11:59,{Heavy Traffic=114, Other=36, Problem Run=7}), (PM : 12:00-19:00,{Heavy Traffic=20, Other=5, Delayed by School=2})]; 616058233
+2016-02-01; [(AM : 5:00-11:59,{Heavy Traffic=174, Other=51, Won`t Start=12}), (PM : 12:00-19:00,{Heavy Traffic=15, Other=14, Mechanical Problem=3})]; 361275061
+2016-02-02; [(AM : 5:00-11:59,{Heavy Traffic=130, Other=42, Mechanical Problem=13}), (PM : 12:00-19:00,{Heavy Traffic=8, Other=7, Mechanical Problem=3})]; 330929909
+2016-02-03; [(AM : 5:00-11:59,{Heavy Traffic=135, Other=61, Mechanical Problem=9}), (PM : 12:00-19:00,{Heavy Traffic=13, Late return from Field Trip=9, Other=9})]; 461186767
+2016-02-04; [(AM : 5:00-11:59,{Heavy Traffic=125, Other=35, Problem Run=11}), (PM : 12:00-19:00,{Heavy Traffic=13, Other=11, Late return from Field Trip=5})]; 310430396
+2016-02-05; [(AM : 5:00-11:59,{Weather Conditions=396, Heavy Traffic=94, Other=18}), (PM : 12:00-19:00,{Heavy Traffic=7, Other=5, Delayed by School=3})]; 554981619
+2016-02-08; [(AM : 5:00-11:59,{Heavy Traffic=23, Other=13, Won`t Start=3}), (PM : 12:00-19:00,{Heavy Traffic=1})]; 287855144
+2016-02-09; [(AM : 5:00-11:59,{Heavy Traffic=210, Other=51, Mechanical Problem=17}), (PM : 12:00-19:00,{Heavy Traffic=11, Other=5, Late return from Field Trip=4})]; 393341805
+2016-02-10; [(AM : 5:00-11:59,{Heavy Traffic=127, Other=40, Mechanical Problem=11}), (PM : 12:00-19:00,{Heavy Traffic=22, Late return from Field Trip=11, Delayed by School=3})]; 408119720
+2016-02-11; [(PM : 12:00-19:00,{Heavy Traffic=15, Late return from Field Trip=12, Other=3}), (AM : 5:00-11:59,{Heavy Traffic=120, Other=43, Mechanical Problem=11})]; 380262323
+2016-02-12; [(AM : 5:00-11:59,{Heavy Traffic=147, Other=39, Won`t Start=17}), (PM : 12:00-19:00,{Heavy Traffic=26, Late return from Field Trip=8, Other=4})]; 703372934
+2016-02-16; [(PM : 12:00-19:00,{Weather Conditions=1}), (AM : 5:00-11:59,{Weather Conditions=4, Other=4, Heavy Traffic=2})]; 365003081
+2016-02-17; [(PM : 12:00-19:00,{Heavy Traffic=1}), (AM : 5:00-11:59,{Heavy Traffic=4, Other=3, Won`t Start=2})]; 266707503
+2016-02-18; [(AM : 5:00-11:59,{Heavy Traffic=4, Mechanical Problem=2, Other=2})]; 397410336
+2016-02-19; [(AM : 5:00-11:59,{Heavy Traffic=4, Won`t Start=1}), (PM : 12:00-19:00,{Other=1})]; 489745752
+2016-02-22; [(AM : 5:00-11:59,{Heavy Traffic=178, Other=74, Mechanical Problem=27}), (PM : 12:00-19:00,{Heavy Traffic=18, Other=11, Mechanical Problem=4})]; 174224450
+2016-02-23; [(AM : 5:00-11:59,{Heavy Traffic=115, Other=41, Problem Run=12}), (PM : 12:00-19:00,{Heavy Traffic=20, Late return from Field Trip=4, Weather Conditions=4})]; 298490948
+2016-02-24; [(AM : 5:00-11:59,{Heavy Traffic=166, Other=27, Weather Conditions=19}), (PM : 12:00-19:00,{Heavy Traffic=21, Late return from Field Trip=6, Other=3})]; 315646398
+2016-02-25; [(AM : 5:00-11:59,{Heavy Traffic=119, Other=35, Problem Run=10}), (PM : 12:00-19:00,{Other=19, Heavy Traffic=17, Late return from Field Trip=4})]; 348693605
+2016-02-26; [(AM : 5:00-11:59,{Heavy Traffic=114, Other=16, Problem Run=9}), (PM : 12:00-19:00,{Heavy Traffic=10, Other=9, Late return from Field Trip=3})]; 588103809
+2016-02-29; [(AM : 5:00-11:59,{Heavy Traffic=136, Other=67, Mechanical Problem=15}), (PM : 12:00-19:00,{Heavy Traffic=21, Other=4, Delayed by School=3})]; 441967775
+2016-03-01; [(PM : 12:00-19:00,{Heavy Traffic=11, Late return from Field Trip=8, Accident=5}), (AM : 5:00-11:59,{Heavy Traffic=105, Other=40, Problem Run=10})]; 295852205
+2016-03-02; [(AM : 5:00-11:59,{Heavy Traffic=178, Other=44, Problem Run=15}), (PM : 12:00-19:00,{Heavy Traffic=15, Late return from Field Trip=5, Other=4})]; 323137938
+2016-03-03; [(AM : 5:00-11:59,{Heavy Traffic=122, Other=35, Problem Run=9}), (PM : 12:00-19:00,{Heavy Traffic=10, Other=10, Accident=3})]; 373270658
+2016-03-04; [(AM : 5:00-11:59,{Heavy Traffic=152, Other=43, Weather Conditions=26}), (PM : 12:00-19:00,{Late return from Field Trip=10, Other=7, Heavy Traffic=5})]; 589953739
+2016-03-07; [(AM : 5:00-11:59,{Heavy Traffic=144, Other=99, Mechanical Problem=18}), (PM : 12:00-19:00,{Other=5, Heavy Traffic=4, Mechanical Problem=2})]; 347628550
+2016-03-08; [(AM : 5:00-11:59,{Heavy Traffic=87, Other=23, Problem Run=11}), (PM : 12:00-19:00,{Heavy Traffic=10, Other=4, Accident=3})]; 414208682
+2016-03-09; [(PM : 12:00-19:00,{Heavy Traffic=16, Other=13, Late return from Field Trip=6}), (AM : 5:00-11:59,{Heavy Traffic=68, Other=26, Mechanical Problem=6})]; 257558830
+2016-03-10; [(AM : 5:00-11:59,{Heavy Traffic=205, Other=43, Flat Tire=9}), (PM : 12:00-19:00,{Heavy Traffic=63, Other=7, Late return from Field Trip=4})]; 378894484
+2016-03-11; [(AM : 5:00-11:59,{Heavy Traffic=146, Other=33, Accident=7}), (PM : 12:00-19:00,{Heavy Traffic=12, Other=10, Flat Tire=2})]; 604925591
+2016-03-14; [(AM : 5:00-11:59,{Heavy Traffic=189, Other=50, Weather Conditions=7}), (PM : 12:00-19:00,{Heavy Traffic=11, Other=8, Late return from Field Trip=7})]; 389905066
+2016-03-15; [(AM : 5:00-11:59,{Heavy Traffic=142, Other=37, Won`t Start=6}), (PM : 12:00-19:00,{Heavy Traffic=15, Other=11, Late return from Field Trip=4})]; 516641933
+2016-03-16; [(AM : 5:00-11:59,{Heavy Traffic=113, Other=49, Mechanical Problem=7}), (PM : 12:00-19:00,{Heavy Traffic=16, Other=5, Late return from Field Trip=4})]; 364339014
+2016-03-17; [(AM : 5:00-11:59,{Heavy Traffic=139, Other=42, Won`t Start=6}), (PM : 12:00-19:00,{Heavy Traffic=9, Other=4, Delayed by School=2})]; 405965359
+2016-03-18; [(AM : 5:00-11:59,{Heavy Traffic=106, Other=44, Mechanical Problem=6}), (PM : 12:00-19:00,{Heavy Traffic=18, Late return from Field Trip=4, Other=4})]; 592218346
+2016-03-21; [(AM : 5:00-11:59,{Heavy Traffic=145, Other=73, Weather Conditions=23}), (PM : 12:00-19:00,{Heavy Traffic=7, Other=7, Mechanical Problem=3})]; 511914126
+2016-03-22; [(AM : 5:00-11:59,{Heavy Traffic=152, Other=39, Mechanical Problem=8}), (PM : 12:00-19:00,{Heavy Traffic=17, Late return from Field Trip=14, Other=4})]; 357335930
+2016-03-23; [(AM : 5:00-11:59,{Heavy Traffic=114, Other=48, Mechanical Problem=5}), (PM : 12:00-19:00,{Heavy Traffic=15, Late return from Field Trip=10, Other=4})]; 494478658
+2016-03-24; [(AM : 5:00-11:59,{Heavy Traffic=85, Other=27, Mechanical Problem=8}), (PM : 12:00-19:00,{Heavy Traffic=19, Other=11, Mechanical Problem=3})]; 746746807
+2016-03-28; [(AM : 5:00-11:59,{Heavy Traffic=141, Other=61, Weather Conditions=47}), (PM : 12:00-19:00,{Heavy Traffic=10, Other=5, Mechanical Problem=4})]; 366853567
+2016-03-29; [(AM : 5:00-11:59,{Heavy Traffic=119, Other=53, Mechanical Problem=6}), (PM : 12:00-19:00,{Heavy Traffic=8, Other=3, Late return from Field Trip=2})]; 399152244
+2016-03-30; [(AM : 5:00-11:59,{Heavy Traffic=110, Other=38, Mechanical Problem=5}), (PM : 12:00-19:00,{Heavy Traffic=18, Other=8, Accident=3})]; 457096927
+2016-03-31; [(PM : 12:00-19:00,{Heavy Traffic=6, Late return from Field Trip=5, Mechanical Problem=3}), (AM : 5:00-11:59,{Heavy Traffic=146, Other=42, Mechanical Problem=6})]; 505782129
+2016-04-01; [(AM : 5:00-11:59,{Heavy Traffic=96, Other=27, Mechanical Problem=13}), (PM : 12:00-19:00,{Heavy Traffic=16, Late return from Field Trip=3, Mechanical Problem=2})]; 568425689
+2016-04-04; [(AM : 5:00-11:59,{Heavy Traffic=186, Other=58, Won`t Start=13}), (PM : 12:00-19:00,{Heavy Traffic=13, Mechanical Problem=6, Other=4})]; 407462514
+2016-04-05; [(AM : 5:00-11:59,{Heavy Traffic=185, Other=52, Won`t Start=14}), (PM : 12:00-19:00,{Heavy Traffic=17, Late return from Field Trip=15, Other=4})]; 430780604
+2016-04-06; [(AM : 5:00-11:59,{Heavy Traffic=139, Other=37, Won`t Start=5}), (PM : 12:00-19:00,{Heavy Traffic=21, Delayed by School=14, Late return from Field Trip=14})]; 441404050
+2016-04-07; [(AM : 5:00-11:59,{Heavy Traffic=190, Other=46, Mechanical Problem=10}), (PM : 12:00-19:00,{Heavy Traffic=18, Late return from Field Trip=9, Other=5})]; 462051486
+2016-04-08; [(AM : 5:00-11:59,{Heavy Traffic=114, Other=29, Mechanical Problem=13}), (PM : 12:00-19:00,{Heavy Traffic=16, Late return from Field Trip=6, Other=3})]; 521575475
+2016-04-11; [(AM : 5:00-11:59,{Heavy Traffic=168, Other=33, Mechanical Problem=12}), (PM : 12:00-19:00,{Heavy Traffic=26, Other=6, Late return from Field Trip=5})]; 373411920
+2016-04-12; [(AM : 5:00-11:59,{Heavy Traffic=188, Other=46, Won`t Start=6}), (PM : 12:00-19:00,{Heavy Traffic=20, Other=7, Late return from Field Trip=3})]; 384027020
+2016-04-13; [(AM : 5:00-11:59,{Heavy Traffic=137, Other=31, Accident=7}), (PM : 12:00-19:00,{Late return from Field Trip=40, Heavy Traffic=24, Other=5})]; 374923748
+2016-04-14; [(AM : 5:00-11:59,{Heavy Traffic=126, Other=41, Mechanical Problem=7}), (PM : 12:00-19:00,{Heavy Traffic=20, Late return from Field Trip=14, Other=8})]; 500016769
+2016-04-15; [(AM : 5:00-11:59,{Heavy Traffic=140, Other=39, Won`t Start=4}), (PM : 12:00-19:00,{Heavy Traffic=28, Late return from Field Trip=22, Other=12})]; 630067000
+2016-04-18; [(AM : 5:00-11:59,{Heavy Traffic=143, Other=53, Mechanical Problem=12}), (PM : 12:00-19:00,{Heavy Traffic=22, Other=9, Late return from Field Trip=8})]; 469157295
+2016-04-19; [(AM : 5:00-11:59,{Heavy Traffic=109, Other=38, Mechanical Problem=12}), (PM : 12:00-19:00,{Heavy Traffic=26, Late return from Field Trip=12, Other=7})]; 336675404
+2016-04-20; [(AM : 5:00-11:59,{Heavy Traffic=111, Other=71, Mechanical Problem=7}), (PM : 12:00-19:00,{Heavy Traffic=33, Late return from Field Trip=19, Other=9})]; 465016609
+2016-04-21; [(AM : 5:00-11:59,{Heavy Traffic=110, Other=42, Won`t Start=8}), (PM : 12:00-19:00,{Late return from Field Trip=31, Heavy Traffic=30, Other=6})]; 504386116
+2016-04-22; [(AM : 5:00-11:59,{Heavy Traffic=105, Other=35, Won`t Start=9}), (PM : 12:00-19:00,{Heavy Traffic=44, Late return from Field Trip=27, Mechanical Problem=7})]; 543157074
+2016-04-25; [(PM : 12:00-19:00,{Heavy Traffic=2}), (AM : 5:00-11:59,{Heavy Traffic=2})]; 492214960
+2016-04-26; [(AM : 5:00-11:59,{Won`t Start=1})]; 433296272
+2016-04-27; [(AM : 5:00-11:59,{Heavy Traffic=1, Other=1}), (PM : 12:00-19:00,{Mechanical Problem=1})]; 517756627
+2016-04-28; [(AM : 5:00-11:59,{Flat Tire=2, Mechanical Problem=1, Heavy Traffic=1})]; 456254197
+2016-04-29; [(AM : 5:00-11:59,{Won`t Start=2, Mechanical Problem=1})]; 571643025
+2016-05-02; [(AM : 5:00-11:59,{Heavy Traffic=172, Other=60, Won`t Start=20}), (PM : 12:00-19:00,{Heavy Traffic=24, Won`t Start=5, Late return from Field Trip=5})]; 391167887
+2016-05-03; [(AM : 5:00-11:59,{Heavy Traffic=243, Weather Conditions=72, Other=40}), (PM : 12:00-19:00,{Heavy Traffic=24, Other=9, Late return from Field Trip=7})]; 374330777
+2016-05-04; [(AM : 5:00-11:59,{Heavy Traffic=159, Weather Conditions=24, Other=17}), (PM : 12:00-19:00,{Heavy Traffic=24, Late return from Field Trip=21, Other=9})]; 395512818
+2016-05-05; [(AM : 5:00-11:59,{Heavy Traffic=98, Other=32, Won`t Start=9}), (PM : 12:00-19:00,{Heavy Traffic=18, Late return from Field Trip=13, Other=4})]; 431052725
+2016-05-06; [(AM : 5:00-11:59,{Heavy Traffic=172, Weather Conditions=74, Other=21}), (PM : 12:00-19:00,{Heavy Traffic=26, Late return from Field Trip=10, Other=6})]; 622372000
+2016-05-09; [(AM : 5:00-11:59,{Heavy Traffic=142, Other=39, Mechanical Problem=11}), (PM : 12:00-19:00,{Heavy Traffic=76, Other=11, Late return from Field Trip=8})]; 464848223
+2016-05-10; [(AM : 5:00-11:59,{Heavy Traffic=176, Other=49, Mechanical Problem=10}), (PM : 12:00-19:00,{Heavy Traffic=20, Late return from Field Trip=11, Other=6})]; 378044258
+2016-05-11; [(PM : 12:00-19:00,{Late return from Field Trip=20, Heavy Traffic=14, Other=7}), (AM : 5:00-11:59,{Heavy Traffic=110, Other=27, Mechanical Problem=6})]; 237826487
+2016-05-12; [(AM : 5:00-11:59,{Heavy Traffic=119, Other=34, Mechanical Problem=7}), (PM : 12:00-19:00,{Heavy Traffic=49, Late return from Field Trip=46, Other=9})]; 346340167
+2016-05-13; [(AM : 5:00-11:59,{Heavy Traffic=100, Other=34, Mechanical Problem=10}), (PM : 12:00-19:00,{Heavy Traffic=63, Late return from Field Trip=23, Other=7})]; 577459070
+2016-05-16; [(AM : 5:00-11:59,{Heavy Traffic=168, Other=51, Flat Tire=5}), (PM : 12:00-19:00,{Heavy Traffic=29, Late return from Field Trip=21, Other=9})]; 416176590
+2016-05-17; [(AM : 5:00-11:59,{Heavy Traffic=99, Other=37, Mechanical Problem=8}), (PM : 12:00-19:00,{Heavy Traffic=26, Late return from Field Trip=17, Other=8})]; 263179850
+2016-05-18; [(AM : 5:00-11:59,{Heavy Traffic=122, Other=33, Mechanical Problem=7}), (PM : 12:00-19:00,{Heavy Traffic=63, Late return from Field Trip=30, Other=6})]; 490936808
+2016-05-19; [(AM : 5:00-11:59,{Heavy Traffic=109, Other=30, Mechanical Problem=8}), (PM : 12:00-19:00,{Late return from Field Trip=32, Heavy Traffic=23, Other=8})]; 300045378
+2016-05-20; [(AM : 5:00-11:59,{Heavy Traffic=213, Other=20, Mechanical Problem=7}), (PM : 12:00-19:00,{Heavy Traffic=37, Late return from Field Trip=31, Other=9})]; 590574449
+2016-05-23; [(AM : 5:00-11:59,{Heavy Traffic=167, Other=24, Mechanical Problem=18}), (PM : 12:00-19:00,{Late return from Field Trip=16, Heavy Traffic=14, Other=9})]; 362785979
+2016-05-24; [(AM : 5:00-11:59,{Heavy Traffic=198, Weather Conditions=57, Other=36}), (PM : 12:00-19:00,{Late return from Field Trip=27, Heavy Traffic=17, Other=9})]; 352954910
+2016-05-25; [(AM : 5:00-11:59,{Heavy Traffic=109, Other=34, Won`t Start=9}), (PM : 12:00-19:00,{Heavy Traffic=25, Late return from Field Trip=21, Other=7})]; 390594861
+2016-05-26; [(AM : 5:00-11:59,{Heavy Traffic=168, Other=39, Mechanical Problem=10}), (PM : 12:00-19:00,{Heavy Traffic=63, Late return from Field Trip=30, Other=18})]; 329069799
+2016-05-27; [(AM : 5:00-11:59,{Heavy Traffic=74, Other=14, Problem Run=4}), (PM : 12:00-19:00,{Late return from Field Trip=44, Heavy Traffic=19, Other=5})]; 474796104
+2016-05-31; [(AM : 5:00-11:59,{Heavy Traffic=148, Other=34, Mechanical Problem=15}), (PM : 12:00-19:00,{Heavy Traffic=26, Late return from Field Trip=19, Other=4})]; 324619119
+2016-06-01; [(AM : 5:00-11:59,{Heavy Traffic=132, Other=38, Mechanical Problem=20}), (PM : 12:00-19:00,{Late return from Field Trip=38, Heavy Traffic=38, Mechanical Problem=6})]; 339547452
+2016-06-02; [(AM : 5:00-11:59,{Heavy Traffic=117, Other=47, Mechanical Problem=9}), (PM : 12:00-19:00,{Heavy Traffic=30, Late return from Field Trip=26, Other=6})]; 248478439
+2016-06-03; [(AM : 5:00-11:59,{Heavy Traffic=124, Other=32, Mechanical Problem=10}), (PM : 12:00-19:00,{Heavy Traffic=32, Late return from Field Trip=29, Other=16})]; 454415584
+2016-06-06; [(AM : 5:00-11:59,{Heavy Traffic=170, Other=47, Mechanical Problem=13}), (PM : 12:00-19:00,{Heavy Traffic=31, Late return from Field Trip=27, Other=14})]; 480073313
+2016-06-07; [(PM : 12:00-19:00,{Late return from Field Trip=43, Heavy Traffic=18, Other=8}), (AM : 5:00-11:59,{Heavy Traffic=130, Other=25, Mechanical Problem=6})]; 297392493
+2016-06-08; [(AM : 5:00-11:59,{Heavy Traffic=136, Other=28, Mechanical Problem=9}), (PM : 12:00-19:00,{Heavy Traffic=40, Late return from Field Trip=27, Other=10})]; 321048073
+2016-06-09; [(AM : 5:00-11:59,{Heavy Traffic=23, Other=5, Won`t Start=2}), (PM : 12:00-19:00,{Accident=1, Mechanical Problem=1, Heavy Traffic=1})]; 423947301
+2016-06-10; [(AM : 5:00-11:59,{Heavy Traffic=123, Other=32, Mechanical Problem=4}), (PM : 12:00-19:00,{Late return from Field Trip=38, Heavy Traffic=23, Other=3})]; 370200376
+2016-06-13; [(AM : 5:00-11:59,{Heavy Traffic=94, Other=22, Mechanical Problem=13}), (PM : 12:00-19:00,{Heavy Traffic=14, Other=2, Flat Tire=1})]; 319148010
+2016-06-14; [(PM : 12:00-19:00,{Heavy Traffic=4, Mechanical Problem=1, Other=1}), (AM : 5:00-11:59,{Heavy Traffic=34, Other=4, Flat Tire=1})]; 425529576
+2016-06-15; [(AM : 5:00-11:59,{Heavy Traffic=119, Other=25, Mechanical Problem=10}), (PM : 12:00-19:00,{Heavy Traffic=12, Other=6, Won`t Start=3})]; 396352035
+2016-06-16; [(AM : 5:00-11:59,{Heavy Traffic=154, Other=18, Mechanical Problem=11}), (PM : 12:00-19:00,{Heavy Traffic=24, Other=7, Mechanical Problem=4})]; 441692954
+2016-06-17; [(AM : 5:00-11:59,{Heavy Traffic=67, Other=8, Mechanical Problem=6}), (PM : 12:00-19:00,{Heavy Traffic=15, Won`t Start=2, Mechanical Problem=2})]; 517023213
+2016-06-20; [(AM : 5:00-11:59,{Heavy Traffic=78, Other=28, Mechanical Problem=7}), (PM : 12:00-19:00,{Heavy Traffic=15, Other=11, Delayed by School=2})]; 410768292
+2016-06-21; [(AM : 5:00-11:59,{Heavy Traffic=73, Other=19, Mechanical Problem=9}), (PM : 12:00-19:00,{Heavy Traffic=8, Flat Tire=4, Delayed by School=3})]; 455705120
+2016-06-22; [(PM : 12:00-19:00,{Heavy Traffic=26, Other=6, Flat Tire=1}), (AM : 5:00-11:59,{Heavy Traffic=71, Other=16, Mechanical Problem=6})]; 277173226
+2016-06-23; [(AM : 5:00-11:59,{Heavy Traffic=61, Mechanical Problem=8, Other=7}), (PM : 12:00-19:00,{Heavy Traffic=18, Other=6, Accident=3})]; 348381545
+2016-06-24; [(AM : 5:00-11:59,{Heavy Traffic=35, Other=19, Mechanical Problem=6}), (PM : 12:00-19:00,{Heavy Traffic=25, Other=6, Flat Tire=1})]; 631232891
+2016-06-27; [(AM : 5:00-11:59,{Heavy Traffic=54, Other=13, Mechanical Problem=4}), (PM : 12:00-19:00,{Heavy Traffic=9, Accident=3, Flat Tire=2})]; 344075990
+2016-06-28; [(AM : 5:00-11:59,{Heavy Traffic=21, Other=14, Won`t Start=5}), (PM : 12:00-19:00,{Heavy Traffic=4, Accident=1, Other=1})]; 430936862
+2016-06-29; [(AM : 5:00-11:59,{Heavy Traffic=3}), (PM : 12:00-19:00,{Mechanical Problem=1, Heavy Traffic=1})]; 355426184
+2016-06-30; [(PM : 12:00-19:00,{Other=1}), (AM : 5:00-11:59,{Heavy Traffic=3})]; 479840604
+2016-07-01; [(AM : 5:00-11:59,{Heavy Traffic=2}), (PM : 12:00-19:00,{Heavy Traffic=1})]; 587542692
+2016-07-05; [(AM : 5:00-11:59,{Heavy Traffic=57, Other=12, Weather Conditions=11}), (PM : 12:00-19:00,{Heavy Traffic=4, Other=2, Accident=1})]; 405859322
+2016-07-06; [(AM : 5:00-11:59,{Heavy Traffic=43, Other=9, Mechanical Problem=4}), (PM : 12:00-19:00,{Flat Tire=1, Accident=1, Heavy Traffic=1})]; 299005775
+2016-07-07; [(AM : 5:00-11:59,{Heavy Traffic=85, Other=22, Problem Run=4}), (PM : 12:00-19:00,{Heavy Traffic=5, Other=4, Flat Tire=2})]; 368716921
+2016-07-08; [(PM : 12:00-19:00,{Heavy Traffic=6, Other=3, Accident=1}), (AM : 5:00-11:59,{Heavy Traffic=53, Other=11, Mechanical Problem=3})]; 460905670
+2016-07-11; [(AM : 5:00-11:59,{Heavy Traffic=91, Other=26, Mechanical Problem=6}), (PM : 12:00-19:00,{Heavy Traffic=20, Delayed by School=1, Late return from Field Trip=1})]; 353134026
+2016-07-12; [(AM : 5:00-11:59,{Heavy Traffic=91, Other=24, Won`t Start=9}), (PM : 12:00-19:00,{Heavy Traffic=12, Mechanical Problem=2, Other=2})]; 419844862
+2016-07-13; [(PM : 12:00-19:00,{Heavy Traffic=17, Delayed by School=1, Accident=1}), (AM : 5:00-11:59,{Heavy Traffic=94, Other=13, Problem Run=4})]; 294585640
+2016-07-14; [(AM : 5:00-11:59,{Heavy Traffic=83, Other=18, Won`t Start=5}), (PM : 12:00-19:00,{Heavy Traffic=14, Other=2})]; 364743358
+2016-07-15; [(AM : 5:00-11:59,{Heavy Traffic=76, Other=16, Problem Run=6}), (PM : 12:00-19:00,{Heavy Traffic=10, Other=6, Accident=1})]; 444163776
+2016-07-18; [(AM : 5:00-11:59,{Heavy Traffic=62, Other=16, Mechanical Problem=8}), (PM : 12:00-19:00,{Heavy Traffic=29, Other=6, Mechanical Problem=5})]; 340280760
+2016-07-19; [(AM : 5:00-11:59,{Heavy Traffic=77, Other=20, Problem Run=6}), (PM : 12:00-19:00,{Heavy Traffic=22, Other=5, Flat Tire=1})]; 405210950
+2016-07-20; [(AM : 5:00-11:59,{Heavy Traffic=92, Other=17, Mechanical Problem=11}), (PM : 12:00-19:00,{Heavy Traffic=8, Delayed by School=1, Won`t Start=1})]; 290936471
+2016-07-21; [(AM : 5:00-11:59,{Heavy Traffic=103, Other=13, Mechanical Problem=6}), (PM : 12:00-19:00,{Heavy Traffic=14, Late return from Field Trip=4, Other=2})]; 344123925
+2016-07-22; [(PM : 12:00-19:00,{Heavy Traffic=9, Other=5, Accident=1}), (AM : 5:00-11:59,{Heavy Traffic=43, Other=12, Problem Run=4})]; 446175886
+2016-07-25; [(AM : 5:00-11:59,{Heavy Traffic=71, Other=24, Mechanical Problem=7}), (PM : 12:00-19:00,{Heavy Traffic=9, Other=3, Accident=1})]; 344788665
+2016-07-26; [(AM : 5:00-11:59,{Heavy Traffic=84, Mechanical Problem=15, Other=12}), (PM : 12:00-19:00,{Heavy Traffic=12, Other=5, Late return from Field Trip=4})]; 410428010
+2016-07-27; [(AM : 5:00-11:59,{Heavy Traffic=62, Other=17, Mechanical Problem=7}), (PM : 12:00-19:00,{Heavy Traffic=5, Flat Tire=1, Mechanical Problem=1})]; 296578419
+2016-07-28; [(AM : 5:00-11:59,{Heavy Traffic=69, Other=16, Mechanical Problem=7}), (PM : 12:00-19:00,{Heavy Traffic=11, Other=4, Mechanical Problem=1})]; 373699035
+2016-07-29; [(AM : 5:00-11:59,{Heavy Traffic=68, Weather Conditions=22, Other=10}), (PM : 12:00-19:00,{Heavy Traffic=9, Flat Tire=1, Won`t Start=1})]; 445282788
+2016-08-01; [(AM : 5:00-11:59,{Heavy Traffic=74, Other=20, Flat Tire=2}), (PM : 12:00-19:00,{Other=6, Heavy Traffic=4, Delayed by School=1})]; 354016058
+2016-08-02; [(AM : 5:00-11:59,{Heavy Traffic=66, Other=18, Mechanical Problem=4}), (PM : 12:00-19:00,{Other=9, Heavy Traffic=8, Flat Tire=1})]; 437115112
+2016-08-03; [(AM : 5:00-11:59,{Heavy Traffic=41, Other=14, Mechanical Problem=4}), (PM : 12:00-19:00,{Heavy Traffic=12, Other=6, Accident=1})]; 323840649
+2016-08-04; [(PM : 12:00-19:00,{Heavy Traffic=6, Other=2, Delayed by School=1}), (AM : 5:00-11:59,{Heavy Traffic=62, Other=15, Mechanical Problem=6})]; 415087200
+2016-08-05; [(AM : 5:00-11:59,{Heavy Traffic=50, Other=10, Mechanical Problem=6}), (PM : 12:00-19:00,{Heavy Traffic=9, Other=4, Delayed by School=1})]; 499408031
+2016-08-08; [(AM : 5:00-11:59,{Heavy Traffic=56, Other=16, Mechanical Problem=7}), (PM : 12:00-19:00,{Other=10, Heavy Traffic=6, Flat Tire=1})]; 401471527
+2016-08-09; [(AM : 5:00-11:59,{Heavy Traffic=37, Other=14, Won`t Start=3}), (PM : 12:00-19:00,{Heavy Traffic=22, Other=3, Late return from Field Trip=2})]; 299981125
+2016-08-10; [(AM : 5:00-11:59,{Heavy Traffic=38, Other=11, Won`t Start=4}), (PM : 12:00-19:00,{Heavy Traffic=14, Weather Conditions=4, Other=2})]; 388738344
+2016-08-11; [(PM : 12:00-19:00,{Heavy Traffic=5, Other=3, Mechanical Problem=2}), (AM : 5:00-11:59,{Heavy Traffic=36, Other=15, Mechanical Problem=6})]; 290913914
+2016-08-12; [(PM : 12:00-19:00,{Heavy Traffic=11, Other=9, Delayed by School=2}), (AM : 5:00-11:59,{Heavy Traffic=21, Other=12, Won`t Start=2})]; 581706948
+2016-08-15; [(AM : 5:00-11:59,{Heavy Traffic=35, Other=22, Mechanical Problem=5}), (PM : 12:00-19:00,{Heavy Traffic=12, Flat Tire=1, Delayed by School=1})]; 308373139
+2016-08-16; [(AM : 5:00-11:59,{Heavy Traffic=6, Other=3, Flat Tire=1}), (PM : 12:00-19:00,{Heavy Traffic=4})]; 419443129
+2016-08-17; [(AM : 5:00-11:59,{Heavy Traffic=2, Other=1})]; 358813906
+2016-08-18; [(AM : 5:00-11:59,{Heavy Traffic=3})]; 472759515
+2016-08-19; [(AM : 5:00-11:59,{Mechanical Problem=1, Heavy Traffic=1})]; 586107902
+2016-08-22; [(AM : 5:00-11:59,{Heavy Traffic=1})]; 332365431
+2016-08-23; [(AM : 5:00-11:59,{Other=2, Heavy Traffic=1}), (PM : 12:00-19:00,{Accident=1})]; 412298850
+2016-08-24; [(AM : 5:00-11:59,{Heavy Traffic=2}), (PM : 12:00-19:00,{Heavy Traffic=2})]; 619964755
+2016-08-26; [(AM : 5:00-11:59,{Heavy Traffic=1})]; 680439627
+2016-08-29; [(PM : 12:00-19:00,{Flat Tire=1}), (AM : 5:00-11:59,{Heavy Traffic=1})]; 590567615
+2016-08-31; [(AM : 5:00-11:59,{Heavy Traffic=5})]; 439514520
+2016-09-01; [(AM : 5:00-11:59,{Heavy Traffic=17, Other=1}), (PM : 12:00-19:00,{Heavy Traffic=1})]; 520196698
+2016-09-02; [(AM : 5:00-11:59,{Heavy Traffic=4, Flat Tire=1, Problem Run=1}), (PM : 12:00-19:00,{Heavy Traffic=1})]; 639560855
+2016-09-06; [(AM : 5:00-11:59,{Heavy Traffic=64, Other=15, Mechanical Problem=5}), (PM : 12:00-19:00,{Heavy Traffic=4, Mechanical Problem=3, Other=1})]; 356774921
+2016-09-07; [(AM : 5:00-11:59,{Heavy Traffic=102, Other=14, Mechanical Problem=5}), (PM : 12:00-19:00,{Heavy Traffic=4, Delayed by School=2, Accident=1})]; 235487420
+2016-09-08; [(AM : 5:00-11:59,{Heavy Traffic=387, Other=57, Won`t Start=11}), (PM : 12:00-19:00,{Heavy Traffic=25, Delayed by School=5, Other=5})]; 483693920
+2016-09-09; [(AM : 5:00-11:59,{Heavy Traffic=288, Other=25, Problem Run=19}), (PM : 12:00-19:00,{Heavy Traffic=31, Other=7, Mechanical Problem=5})]; 584755633
+2016-09-12; [(PM : 12:00-19:00,{Heavy Traffic=2, Accident=1, Mechanical Problem=1}), (AM : 5:00-11:59,{Heavy Traffic=63, Other=10, Mechanical Problem=7})]; 297701068
+2016-09-13; [(AM : 5:00-11:59,{Heavy Traffic=327, Other=49, Mechanical Problem=17}), (PM : 12:00-19:00,{Heavy Traffic=23, Other=10, Delayed by School=4})]; 270643204
+2016-09-14; [(AM : 5:00-11:59,{Heavy Traffic=269, Other=24, Problem Run=20}), (PM : 12:00-19:00,{Heavy Traffic=32, Delayed by School=4, Mechanical Problem=4})]; 272249154
+2016-09-15; [(AM : 5:00-11:59,{Heavy Traffic=281, Other=51, Problem Run=19}), (PM : 12:00-19:00,{Heavy Traffic=15, Other=8, Flat Tire=5})]; 358403207
+2016-09-16; [(AM : 5:00-11:59,{Heavy Traffic=242, Other=19, Mechanical Problem=13}), (PM : 12:00-19:00,{Heavy Traffic=24, Other=11, Flat Tire=3})]; 471573732
+2016-09-19; [(AM : 5:00-11:59,{Heavy Traffic=341, Other=60, Weather Conditions=55}), (PM : 12:00-19:00,{Heavy Traffic=15, Other=4, Won`t Start=2})]; 360701382
+2016-09-20; [(AM : 5:00-11:59,{Heavy Traffic=285, Other=40, Problem Run=25}), (PM : 12:00-19:00,{Heavy Traffic=23, Other=12, Accident=2})]; 342741502
+2016-09-21; [(AM : 5:00-11:59,{Heavy Traffic=274, Other=29, Mechanical Problem=17}), (PM : 12:00-19:00,{Heavy Traffic=33, Mechanical Problem=4, Other=4})]; 331797736
+2016-09-22; [(AM : 5:00-11:59,{Heavy Traffic=261, Other=28, Problem Run=17}), (PM : 12:00-19:00,{Heavy Traffic=21, Other=12, Flat Tire=1})]; 222336203
+2016-09-23; [(AM : 5:00-11:59,{Heavy Traffic=258, Other=37, Problem Run=19}), (PM : 12:00-19:00,{Heavy Traffic=88, Other=10, Mechanical Problem=3})]; 507522488
+2016-09-26; [(AM : 5:00-11:59,{Heavy Traffic=299, Other=42, Problem Run=36}), (PM : 12:00-19:00,{Heavy Traffic=42, Other=6, Flat Tire=2})]; 329146940
+2016-09-27; [(AM : 5:00-11:59,{Heavy Traffic=446, Other=32, Problem Run=26}), (PM : 12:00-19:00,{Heavy Traffic=28, Accident=4, Other=4})]; 505733589
+2016-09-28; [(PM : 12:00-19:00,{Heavy Traffic=28, Other=15, Mechanical Problem=7}), (AM : 5:00-11:59,{Heavy Traffic=184, Problem Run=32, Other=29})]; 345821465
+2016-09-29; [(AM : 5:00-11:59,{Heavy Traffic=213, Other=37, Problem Run=26}), (PM : 12:00-19:00,{Heavy Traffic=33, Other=11, Mechanical Problem=7})]; 384128658
+2016-09-30; [(AM : 5:00-11:59,{Heavy Traffic=187, Problem Run=24, Other=15}), (PM : 12:00-19:00,{Heavy Traffic=30, Other=5, Delayed by School=4})]; 634867806
+2016-10-03; [(PM : 12:00-19:00,{Heavy Traffic=1}), (AM : 5:00-11:59,{Heavy Traffic=8, Other=4, Accident=1})]; 374778643
+2016-10-04; [(AM : 5:00-11:59,{Other=7, Heavy Traffic=6, Flat Tire=2})]; 505948802
+2016-10-05; [(PM : 12:00-19:00,{Heavy Traffic=25, Flat Tire=4, Won`t Start=4}), (AM : 5:00-11:59,{Heavy Traffic=268, Other=54, Mechanical Problem=26})]; 449568483
+2016-10-06; [(AM : 5:00-11:59,{Heavy Traffic=240, Other=42, Problem Run=20}), (PM : 12:00-19:00,{Heavy Traffic=38, Other=9, Mechanical Problem=5})]; 448453827
+2016-10-07; [(AM : 5:00-11:59,{Heavy Traffic=258, Other=30, Mechanical Problem=16}), (PM : 12:00-19:00,{Heavy Traffic=51, Other=23, Won`t Start=4})]; 536743932
+2016-10-10; [(AM : 5:00-11:59,{Flat Tire=1})]; 317241396
+2016-10-11; [(AM : 5:00-11:59,{Heavy Traffic=234, Other=31, Problem Run=22}), (PM : 12:00-19:00,{Heavy Traffic=19, Delayed by School=2, Other=2})]; 382718164
+2016-10-12; [(PM : 12:00-19:00,{Mechanical Problem=1, Other=1}), (AM : 5:00-11:59,{Heavy Traffic=1, Problem Run=1, Other=1})]; 496654611
+2016-10-13; [(PM : 12:00-19:00,{Heavy Traffic=26, Other=7, Late return from Field Trip=5}), (AM : 5:00-11:59,{Heavy Traffic=377, Other=28, Problem Run=25})]; 459408764
+2016-10-14; [(AM : 5:00-11:59,{Heavy Traffic=214, Other=27, Mechanical Problem=18}), (PM : 12:00-19:00,{Heavy Traffic=23, Other=7, Late return from Field Trip=6})]; 569944175
+2016-10-17; [(PM : 12:00-19:00,{Heavy Traffic=11, Mechanical Problem=7, Other=7}), (AM : 5:00-11:59,{Heavy Traffic=181, Other=41, Problem Run=19})]; 224698322
+2016-10-18; [(AM : 5:00-11:59,{Heavy Traffic=170, Other=34, Problem Run=14}), (PM : 12:00-19:00,{Heavy Traffic=13, Other=3, Problem Run=3})]; 268611868
+2016-10-19; [(AM : 5:00-11:59,{Heavy Traffic=198, Other=34, Problem Run=15}), (PM : 12:00-19:00,{Heavy Traffic=20, Other=6, Late return from Field Trip=5})]; 391709542
+2016-10-20; [(AM : 5:00-11:59,{Heavy Traffic=156, Other=23, Problem Run=9}), (PM : 12:00-19:00,{Heavy Traffic=19, Other=11, Mechanical Problem=4})]; 441060529
+2016-10-21; [(AM : 5:00-11:59,{Heavy Traffic=176, Other=31, Problem Run=10}), (PM : 12:00-19:00,{Heavy Traffic=26, Weather Conditions=14, Late return from Field Trip=13})]; 642018911
+2016-10-24; [(AM : 5:00-11:59,{Heavy Traffic=219, Other=37, Mechanical Problem=28}), (PM : 12:00-19:00,{Heavy Traffic=13, Other=9, Accident=3})]; 475579614
+2016-10-25; [(PM : 12:00-19:00,{Heavy Traffic=22, Other=12, Late return from Field Trip=6}), (AM : 5:00-11:59,{Heavy Traffic=196, Other=33, Problem Run=12})]; 301376991
+2016-10-26; [(AM : 5:00-11:59,{Heavy Traffic=265, Other=28, Mechanical Problem=17}), (PM : 12:00-19:00,{Heavy Traffic=16, Late return from Field Trip=9, Won`t Start=4})]; 392725265
+2016-10-27; [(AM : 5:00-11:59,{Heavy Traffic=213, Other=47, Mechanical Problem=22}), (PM : 12:00-19:00,{Heavy Traffic=26, Mechanical Problem=5, Other=4})]; 489337058
+2016-10-28; [(PM : 12:00-19:00,{Heavy Traffic=42, Late return from Field Trip=26, Other=12}), (AM : 5:00-11:59,{Heavy Traffic=191, Other=29, Mechanical Problem=14})]; 402822651
+2016-10-31; [(AM : 5:00-11:59,{Heavy Traffic=199, Other=53, Mechanical Problem=20}), (PM : 12:00-19:00,{Heavy Traffic=25, Other=18, Mechanical Problem=5})]; 231936873
+2016-11-01; [(AM : 5:00-11:59,{Heavy Traffic=229, Other=40, Problem Run=9}), (PM : 12:00-19:00,{Heavy Traffic=28, Other=28, Late return from Field Trip=7})]; 333891352
+2016-11-02; [(AM : 5:00-11:59,{Heavy Traffic=247, Other=49, Mechanical Problem=13}), (PM : 12:00-19:00,{Heavy Traffic=18, Late return from Field Trip=10, Accident=3})]; 341444516
+2016-11-03; [(AM : 5:00-11:59,{Heavy Traffic=148, Other=36, Problem Run=13}), (PM : 12:00-19:00,{Heavy Traffic=11, Other=5, Problem Run=2})]; 385505455
+2016-11-04; [(AM : 5:00-11:59,{Heavy Traffic=176, Other=34, Mechanical Problem=13}), (PM : 12:00-19:00,{Heavy Traffic=22, Other=19, Late return from Field Trip=11})]; 608495481
+2016-11-07; [(PM : 12:00-19:00,{Heavy Traffic=29, Other=17, Late return from Field Trip=5}), (AM : 5:00-11:59,{Heavy Traffic=218, Other=46, Mechanical Problem=23})]; 438712823
+2016-11-08; [(AM : 5:00-11:59,{Heavy Traffic=27, Other=7, Flat Tire=4}), (PM : 12:00-19:00,{Mechanical Problem=1})]; 342423651
+2016-11-09; [(AM : 5:00-11:59,{Heavy Traffic=180, Other=41, Mechanical Problem=12}), (PM : 12:00-19:00,{Heavy Traffic=18, Late return from Field Trip=6, Mechanical Problem=5})]; 364134074
+2016-11-10; [(AM : 5:00-11:59,{Heavy Traffic=146, Other=25, Mechanical Problem=6}), (PM : 12:00-19:00,{Late return from Field Trip=14, Heavy Traffic=14, Won`t Start=3})]; 407567919
+2016-11-11; [(AM : 5:00-11:59,{Heavy Traffic=1})]; 455151360
+2016-11-14; [(AM : 5:00-11:59,{Heavy Traffic=165, Other=51, Mechanical Problem=14}), (PM : 12:00-19:00,{Heavy Traffic=13, Other=13, Flat Tire=3})]; 274827712
+2016-11-15; [(AM : 5:00-11:59,{Heavy Traffic=333, Weather Conditions=78, Other=37}), (PM : 12:00-19:00,{Heavy Traffic=14, Mechanical Problem=7, Weather Conditions=3})]; 352018501
+2016-11-16; [(AM : 5:00-11:59,{Heavy Traffic=145, Other=32, Mechanical Problem=8}), (PM : 12:00-19:00,{Heavy Traffic=27, Late return from Field Trip=4, Mechanical Problem=3})]; 389355468
+2016-11-17; [(AM : 5:00-11:59,{Heavy Traffic=146, Other=29, Problem Run=8}), (PM : 12:00-19:00,{Heavy Traffic=41, Other=8, Late return from Field Trip=4})]; 431057087
+2016-11-18; [(AM : 5:00-11:59,{Heavy Traffic=175, Other=24, Problem Run=7}), (PM : 12:00-19:00,{Heavy Traffic=18, Other=4, Flat Tire=2})]; 475225318
+2016-11-21; [(AM : 5:00-11:59,{Heavy Traffic=190, Other=38, Mechanical Problem=22}), (PM : 12:00-19:00,{Heavy Traffic=17, Flat Tire=4, Late return from Field Trip=4})]; 311211915
+2016-11-22; [(AM : 5:00-11:59,{Heavy Traffic=152, Other=29, Mechanical Problem=12}), (PM : 12:00-19:00,{Heavy Traffic=36, Late return from Field Trip=5, Mechanical Problem=5})]; 246379488
+2016-11-23; [(AM : 5:00-11:59,{Heavy Traffic=146, Other=21, Mechanical Problem=17}), (PM : 12:00-19:00,{Heavy Traffic=17, Other=6, Delayed by School=1})]; 795948746
+2016-11-28; [(PM : 12:00-19:00,{Heavy Traffic=15, Other=8, Mechanical Problem=6}), (AM : 5:00-11:59,{Heavy Traffic=153, Other=47, Mechanical Problem=12})]; 280660007
+2016-11-29; [(AM : 5:00-11:59,{Heavy Traffic=294, Other=39, Mechanical Problem=8}), (PM : 12:00-19:00,{Heavy Traffic=24, Late return from Field Trip=17, Weather Conditions=10})]; 471071485
+2016-11-30; [(AM : 5:00-11:59,{Heavy Traffic=211, Other=28, Mechanical Problem=13}), (PM : 12:00-19:00,{Late return from Field Trip=28, Heavy Traffic=23, Delayed by School=9})]; 290047742
+2016-12-01; [(AM : 5:00-11:59,{Heavy Traffic=218, Other=33, Flat Tire=8}), (PM : 12:00-19:00,{Heavy Traffic=25, Other=7, Mechanical Problem=4})]; 307890254
+2016-12-02; [(AM : 5:00-11:59,{Heavy Traffic=186, Other=33, Mechanical Problem=9}), (PM : 12:00-19:00,{Heavy Traffic=24, Other=6, Late return from Field Trip=4})]; 544067604
+2016-12-05; [(AM : 5:00-11:59,{Heavy Traffic=325, Weather Conditions=44, Other=38}), (PM : 12:00-19:00,{Heavy Traffic=28, Flat Tire=6, Late return from Field Trip=5})]; 333159811
+2016-12-06; [(AM : 5:00-11:59,{Heavy Traffic=197, Other=35, Mechanical Problem=16}), (PM : 12:00-19:00,{Heavy Traffic=21, Late return from Field Trip=10, Other=10})]; 359498750
+2016-12-07; [(AM : 5:00-11:59,{Heavy Traffic=196, Other=34, Mechanical Problem=16}), (PM : 12:00-19:00,{Heavy Traffic=27, Mechanical Problem=5, Other=5})]; 379215870
+2016-12-08; [(AM : 5:00-11:59,{Heavy Traffic=159, Other=20, Mechanical Problem=9}), (PM : 12:00-19:00,{Heavy Traffic=21, Late return from Field Trip=11, Other=10})]; 415023002
+2016-12-09; [(AM : 5:00-11:59,{Heavy Traffic=159, Other=27, Mechanical Problem=16}), (PM : 12:00-19:00,{Heavy Traffic=46, Other=6, Mechanical Problem=5})]; 443954979
+2016-12-12; [(AM : 5:00-11:59,{Heavy Traffic=268, Weather Conditions=103, Other=37}), (PM : 12:00-19:00,{Heavy Traffic=20, Other=10, Late return from Field Trip=4})]; 429996690
+2016-12-13; [(AM : 5:00-11:59,{Heavy Traffic=193, Other=24, Mechanical Problem=16}), (PM : 12:00-19:00,{Heavy Traffic=36, Other=13, Late return from Field Trip=8})]; 266984625
+2016-12-14; [(AM : 5:00-11:59,{Heavy Traffic=212, Other=22, Mechanical Problem=10}), (PM : 12:00-19:00,{Heavy Traffic=26, Late return from Field Trip=10, Delayed by School=5})]; 293406770
+2016-12-15; [(AM : 5:00-11:59,{Heavy Traffic=204, Other=32, Mechanical Problem=10}), (PM : 12:00-19:00,{Heavy Traffic=30, Late return from Field Trip=12, Other=7})]; 326218950
+2016-12-16; [(AM : 5:00-11:59,{Heavy Traffic=255, Other=32, Mechanical Problem=20}), (PM : 12:00-19:00,{Heavy Traffic=22, Mechanical Problem=8, Late return from Field Trip=7})]; 525763811
+2016-12-19; [(AM : 5:00-11:59,{Heavy Traffic=198, Other=45, Mechanical Problem=27}), (PM : 12:00-19:00,{Heavy Traffic=38, Other=12, Mechanical Problem=7})]; 369244257
+2016-12-20; [(AM : 5:00-11:59,{Heavy Traffic=199, Other=21, Flat Tire=7}), (PM : 12:00-19:00,{Heavy Traffic=30, Late return from Field Trip=11, Other=6})]; 388107742
+2016-12-21; [(AM : 5:00-11:59,{Heavy Traffic=194, Other=23, Mechanical Problem=9}), (PM : 12:00-19:00,{Heavy Traffic=30, Late return from Field Trip=13, Mechanical Problem=6})]; 413530441
+2016-12-22; [(AM : 5:00-11:59,{Heavy Traffic=112, Other=34, Mechanical Problem=6}), (PM : 12:00-19:00,{Heavy Traffic=19, Other=6, Late return from Field Trip=4})]; 271719476
+2016-12-23; [(AM : 5:00-11:59,{Heavy Traffic=114, Other=28, Delayed by School=5}), (PM : 12:00-19:00,{Heavy Traffic=27, Other=4, Late return from Field Trip=3})]; 526886734
+2016-12-27; [(AM : 5:00-11:59,{Heavy Traffic=5, Other=1})]; 402750489
+2016-12-28; [(AM : 5:00-11:59,{Heavy Traffic=2}), (PM : 12:00-19:00,{Other=1})]; 702736446
+2017-01-03; [(AM : 5:00-11:59,{Heavy Traffic=238, Other=47, Mechanical Problem=34}), (PM : 12:00-19:00,{Heavy Traffic=28, Other=14, Flat Tire=7})]; 255218054
+2017-01-04; [(AM : 5:00-11:59,{Heavy Traffic=223, Other=50, Mechanical Problem=20}), (PM : 12:00-19:00,{Heavy Traffic=20, Other=6, Mechanical Problem=4})]; 303034050
+2017-01-05; [(AM : 5:00-11:59,{Heavy Traffic=210, Other=41, Mechanical Problem=13}), (PM : 12:00-19:00,{Heavy Traffic=17, Other=10, Mechanical Problem=7})]; 364384746
+2017-01-06; [(AM : 5:00-11:59,{Heavy Traffic=252, Other=31, Weather Conditions=20}), (PM : 12:00-19:00,{Heavy Traffic=13, Other=12, Flat Tire=4})]; 604903078
+2017-01-09; [(PM : 12:00-19:00,{Heavy Traffic=14, Won`t Start=10, Mechanical Problem=7}), (AM : 5:00-11:59,{Heavy Traffic=412, Other=72, Weather Conditions=58})]; 400835894
+2017-01-10; [(AM : 5:00-11:59,{Heavy Traffic=314, Other=59, Won`t Start=21}), (PM : 12:00-19:00,{Heavy Traffic=19, Other=18, Won`t Start=7})]; 357169714
+2017-01-11; [(AM : 5:00-11:59,{Heavy Traffic=225, Other=34, Mechanical Problem=9}), (PM : 12:00-19:00,{Heavy Traffic=28, Other=11, Mechanical Problem=5})]; 373403043
+2017-01-12; [(AM : 5:00-11:59,{Heavy Traffic=284, Other=44, Mechanical Problem=9}), (PM : 12:00-19:00,{Heavy Traffic=37, Other=13, Mechanical Problem=5})]; 348447243
+2017-01-13; [(AM : 5:00-11:59,{Heavy Traffic=222, Other=29, Accident=6}), (PM : 12:00-19:00,{Heavy Traffic=23, Other=12, Late return from Field Trip=7})]; 568036407
+2017-01-17; [(AM : 5:00-11:59,{Heavy Traffic=275, Other=54, Mechanical Problem=20}), (PM : 12:00-19:00,{Heavy Traffic=18, Other=6, Won`t Start=4})]; 300415288
+2017-01-18; [(AM : 5:00-11:59,{Heavy Traffic=299, Other=43, Mechanical Problem=11}), (PM : 12:00-19:00,{Heavy Traffic=36, Other=8, Won`t Start=6})]; 294524826
+2017-01-19; [(AM : 5:00-11:59,{Heavy Traffic=233, Other=26, Problem Run=11}), (PM : 12:00-19:00,{Heavy Traffic=14, Late return from Field Trip=11, Other=7})]; 310578135
+2017-01-20; [(AM : 5:00-11:59,{Heavy Traffic=273, Other=25, Flat Tire=11}), (PM : 12:00-19:00,{Heavy Traffic=21, Mechanical Problem=11, Other=8})]; 522237388
+2017-01-23; [(AM : 5:00-11:59,{Heavy Traffic=197, Other=61, Mechanical Problem=16}), (PM : 12:00-19:00,{Other=21, Heavy Traffic=17, Late return from Field Trip=5})]; 351071416
+2017-01-24; [(AM : 5:00-11:59,{Heavy Traffic=223, Other=51, Weather Conditions=19}), (PM : 12:00-19:00,{Heavy Traffic=33, Weather Conditions=6, Other=3})]; 381644929
+2017-01-25; [(AM : 5:00-11:59,{Heavy Traffic=163, Other=32, Mechanical Problem=17}), (PM : 12:00-19:00,{Heavy Traffic=36, Late return from Field Trip=9, Other=6})]; 435863481
+2017-01-26; [(PM : 12:00-19:00,{Heavy Traffic=28, Other=7, Late return from Field Trip=5}), (AM : 5:00-11:59,{Heavy Traffic=161, Other=30, Mechanical Problem=7})]; 292357752
+2017-01-27; [(AM : 5:00-11:59,{Heavy Traffic=305, Other=14, Flat Tire=3}), (PM : 12:00-19:00,{Heavy Traffic=17, Late return from Field Trip=4, Other=4})]; 531754322
+2017-01-30; [(AM : 5:00-11:59,{Heavy Traffic=210, Other=66, Flat Tire=12}), (PM : 12:00-19:00,{Heavy Traffic=20, Mechanical Problem=8, Late return from Field Trip=3})]; 383568732
+2017-01-31; [(AM : 5:00-11:59,{Heavy Traffic=172, Other=38, Mechanical Problem=14}), (PM : 12:00-19:00,{Heavy Traffic=27, Mechanical Problem=10, Weather Conditions=9})]; 432377607
+2017-02-01; [(AM : 5:00-11:59,{Heavy Traffic=158, Other=33, Mechanical Problem=9}), (PM : 12:00-19:00,{Heavy Traffic=20, Late return from Field Trip=6, Other=6})]; 285058277
+2017-02-02; [(AM : 5:00-11:59,{Heavy Traffic=199, Other=30, Mechanical Problem=11}), (PM : 12:00-19:00,{Heavy Traffic=20, Delayed by School=4, Other=4})]; 424176654
+2017-02-03; [(PM : 12:00-19:00,{Heavy Traffic=27, Other=9, Mechanical Problem=8}), (AM : 5:00-11:59,{Heavy Traffic=174, Other=26, Mechanical Problem=13})]; 572104387
+2017-02-06; [(AM : 5:00-11:59,{Heavy Traffic=204, Other=43, Mechanical Problem=23}), (PM : 12:00-19:00,{Heavy Traffic=36, Other=15, Mechanical Problem=9})]; 426325108
+2017-02-07; [(AM : 5:00-11:59,{Heavy Traffic=308, Other=57, Mechanical Problem=22}), (PM : 12:00-19:00,{Heavy Traffic=34, Mechanical Problem=10, Late return from Field Trip=4})]; 499151014
+2017-02-08; [(AM : 5:00-11:59,{Heavy Traffic=197, Other=37, Flat Tire=11}), (PM : 12:00-19:00,{Heavy Traffic=26, Other=9, Mechanical Problem=6})]; 432812914
+2017-02-10; [(AM : 5:00-11:59,{Weather Conditions=391, Heavy Traffic=231, Other=56}), (PM : 12:00-19:00,{Heavy Traffic=29, Weather Conditions=11, Other=9})]; 438641908
+2017-02-13; [(AM : 5:00-11:59,{Heavy Traffic=258, Other=34, Mechanical Problem=19}), (PM : 12:00-19:00,{Heavy Traffic=29, Mechanical Problem=10, Other=7})]; 364052027
+2017-02-14; [(AM : 5:00-11:59,{Heavy Traffic=172, Other=30, Mechanical Problem=14}), (PM : 12:00-19:00,{Heavy Traffic=34, Other=14, Late return from Field Trip=4})]; 390408480
+2017-02-15; [(AM : 5:00-11:59,{Heavy Traffic=188, Other=35, Mechanical Problem=14}), (PM : 12:00-19:00,{Heavy Traffic=26, Other=8, Late return from Field Trip=7})]; 408174991
+2017-02-16; [(AM : 5:00-11:59,{Heavy Traffic=134, Other=36, Mechanical Problem=16}), (PM : 12:00-19:00,{Heavy Traffic=37, Other=12, Late return from Field Trip=11})]; 445426866
+2017-02-17; [(AM : 5:00-11:59,{Heavy Traffic=149, Other=24, Mechanical Problem=15}), (PM : 12:00-19:00,{Heavy Traffic=40, Other=11, Mechanical Problem=8})]; 682740992
+2017-02-21; [(AM : 5:00-11:59,{Heavy Traffic=6, Other=1})]; 362785200
+2017-02-22; [(AM : 5:00-11:59,{Heavy Traffic=4, Flat Tire=1, Won`t Start=1}), (PM : 12:00-19:00,{Flat Tire=1, Heavy Traffic=1, Other=1})]; 446008623
+2017-02-23; [(PM : 12:00-19:00,{Other=2}), (AM : 5:00-11:59,{Other=2, Won`t Start=1, Mechanical Problem=1})]; 361927560
+2017-02-24; [(AM : 5:00-11:59,{Other=5, Heavy Traffic=2, Won`t Start=1}), (PM : 12:00-19:00,{Heavy Traffic=3, Mechanical Problem=1})]; 667978082
+2017-02-27; [(PM : 12:00-19:00,{Heavy Traffic=28, Mechanical Problem=14, Other=12}), (AM : 5:00-11:59,{Heavy Traffic=249, Other=73, Mechanical Problem=26})]; 468114938
+2017-02-28; [(AM : 5:00-11:59,{Heavy Traffic=142, Other=42, Mechanical Problem=13}), (PM : 12:00-19:00,{Heavy Traffic=24, Other=10, Mechanical Problem=9})]; 500837437
+2017-03-01; [(AM : 5:00-11:59,{Heavy Traffic=134, Other=44, Mechanical Problem=9}), (PM : 12:00-19:00,{Heavy Traffic=35, Late return from Field Trip=7, Won`t Start=6})]; 327113212
+2017-03-02; [(AM : 5:00-11:59,{Heavy Traffic=132, Other=28, Mechanical Problem=15}), (PM : 12:00-19:00,{Heavy Traffic=26, Late return from Field Trip=9, Other=8})]; 361514923
+2017-03-03; [(AM : 5:00-11:59,{Heavy Traffic=142, Other=29, Mechanical Problem=17}), (PM : 12:00-19:00,{Heavy Traffic=19, Other=8, Late return from Field Trip=5})]; 608244501
+2017-03-06; [(AM : 5:00-11:59,{Heavy Traffic=189, Other=46, Mechanical Problem=25}), (PM : 12:00-19:00,{Heavy Traffic=34, Other=5, Mechanical Problem=3})]; 336141527
+2017-03-07; [(AM : 5:00-11:59,{Heavy Traffic=156, Other=32, Delayed by School=8}), (PM : 12:00-19:00,{Heavy Traffic=31, Other=6, Delayed by School=4})]; 475204650
+2017-03-08; [(AM : 5:00-11:59,{Heavy Traffic=172, Other=24, Mechanical Problem=12}), (PM : 12:00-19:00,{Heavy Traffic=23, Late return from Field Trip=7, Mechanical Problem=5})]; 314497288
+2017-03-09; [(AM : 5:00-11:59,{Heavy Traffic=118, Other=32, Delayed by School=7}), (PM : 12:00-19:00,{Heavy Traffic=13, Mechanical Problem=2, Other=2})]; 374251862
+2017-03-10; [(AM : 5:00-11:59,{Heavy Traffic=90, Weather Conditions=13, Other=12}), (PM : 12:00-19:00,{Heavy Traffic=13, Other=11, Delayed by School=3})]; 648492118
+2017-03-13; [(AM : 5:00-11:59,{Heavy Traffic=190, Mechanical Problem=28, Other=23}), (PM : 12:00-19:00,{Heavy Traffic=30, Mechanical Problem=5, Late return from Field Trip=4})]; 388815628
+2017-03-15; [(AM : 5:00-11:59,{Weather Conditions=448, Heavy Traffic=109, Other=29}), (PM : 12:00-19:00,{Heavy Traffic=12, Other=7, Weather Conditions=6})]; 232875538
+2017-03-16; [(AM : 5:00-11:59,{Heavy Traffic=375, Other=61, Mechanical Problem=21}), (PM : 12:00-19:00,{Heavy Traffic=62, Other=9, Weather Conditions=4})]; 478487586
+2017-03-17; [(AM : 5:00-11:59,{Heavy Traffic=229, Other=36, Mechanical Problem=13}), (PM : 12:00-19:00,{Heavy Traffic=50, Late return from Field Trip=20, Other=8})]; 480699846
+2017-03-20; [(AM : 5:00-11:59,{Heavy Traffic=251, Other=39, Mechanical Problem=21}), (PM : 12:00-19:00,{Heavy Traffic=44, Mechanical Problem=8, Flat Tire=6})]; 204738857
+2017-03-21; [(AM : 5:00-11:59,{Heavy Traffic=181, Other=32, Mechanical Problem=14}), (PM : 12:00-19:00,{Heavy Traffic=68, Other=11, Mechanical Problem=5})]; 219189716
+2017-03-22; [(AM : 5:00-11:59,{Heavy Traffic=176, Other=29, Mechanical Problem=7}), (PM : 12:00-19:00,{Heavy Traffic=27, Mechanical Problem=7, Other=5})]; 344935740
+2017-03-23; [(AM : 5:00-11:59,{Heavy Traffic=168, Other=24, Mechanical Problem=11}), (PM : 12:00-19:00,{Heavy Traffic=37, Other=10, Mechanical Problem=6})]; 367729315
+2017-03-24; [(AM : 5:00-11:59,{Heavy Traffic=106, Other=22, Mechanical Problem=14}), (PM : 12:00-19:00,{Heavy Traffic=20, Mechanical Problem=5, Delayed by School=3})]; 623974116
+2017-03-27; [(AM : 5:00-11:59,{Heavy Traffic=322, Other=40, Mechanical Problem=20}), (PM : 12:00-19:00,{Heavy Traffic=40, Late return from Field Trip=9, Other=9})]; 407719359
+2017-03-28; [(AM : 5:00-11:59,{Heavy Traffic=209, Other=32, Mechanical Problem=8}), (PM : 12:00-19:00,{Late return from Field Trip=19, Heavy Traffic=19, Mechanical Problem=5})]; 425514172
+2017-03-29; [(AM : 5:00-11:59,{Heavy Traffic=288, Other=26, Mechanical Problem=10}), (PM : 12:00-19:00,{Heavy Traffic=40, Late return from Field Trip=17, Mechanical Problem=7})]; 410601248
+2017-03-30; [(AM : 5:00-11:59,{Heavy Traffic=210, Other=33, Mechanical Problem=16}), (PM : 12:00-19:00,{Heavy Traffic=37, Late return from Field Trip=20, Other=10})]; 409445594
+2017-03-31; [(AM : 5:00-11:59,{Heavy Traffic=244, Other=22, Weather Conditions=21}), (PM : 12:00-19:00,{Heavy Traffic=57, Late return from Field Trip=18, Other=10})]; 594862794
+2017-04-03; [(AM : 5:00-11:59,{Heavy Traffic=272, Other=44, Mechanical Problem=25}), (PM : 12:00-19:00,{Heavy Traffic=31, Other=8, Flat Tire=2})]; 426887520
+2017-04-04; [(AM : 5:00-11:59,{Heavy Traffic=368, Other=38, Weather Conditions=17}), (PM : 12:00-19:00,{Heavy Traffic=30, Late return from Field Trip=6, Flat Tire=5})]; 395527510
+2017-04-05; [(AM : 5:00-11:59,{Heavy Traffic=314, Other=27, Mechanical Problem=15}), (PM : 12:00-19:00,{Heavy Traffic=50, Late return from Field Trip=24, Mechanical Problem=5})]; 372954872
+2017-04-06; [(AM : 5:00-11:59,{Heavy Traffic=282, Other=22, Weather Conditions=13}), (PM : 12:00-19:00,{Heavy Traffic=62, Late return from Field Trip=22, Other=11})]; 376600642
+2017-04-07; [(AM : 5:00-11:59,{Heavy Traffic=172, Other=17, Flat Tire=10}), (PM : 12:00-19:00,{Heavy Traffic=36, Late return from Field Trip=15, Mechanical Problem=4})]; 619489935
+2017-04-10; [(AM : 5:00-11:59,{Won`t Start=1, Heavy Traffic=1})]; 394106024
+2017-04-11; [(PM : 12:00-19:00,{Heavy Traffic=1}), (AM : 5:00-11:59,{Mechanical Problem=1, Heavy Traffic=1})]; 477127702
+2017-04-12; [(AM : 5:00-11:59,{Heavy Traffic=1, Other=1}), (PM : 12:00-19:00,{Heavy Traffic=1})]; 403299917
+2017-04-13; [(PM : 12:00-19:00,{Heavy Traffic=4})]; 701387524
+2017-04-17; [(AM : 5:00-11:59,{Heavy Traffic=16, Flat Tire=4, Won`t Start=4})]; 374506384
+2017-04-18; [(AM : 5:00-11:59,{Heavy Traffic=22, Other=2, Flat Tire=1}), (PM : 12:00-19:00,{Flat Tire=2, Mechanical Problem=2})]; 450905947
+2017-04-19; [(PM : 12:00-19:00,{Heavy Traffic=55, Other=6, Delayed by School=4}), (AM : 5:00-11:59,{Heavy Traffic=266, Other=36, Mechanical Problem=24})]; 425740854
+2017-04-20; [(AM : 5:00-11:59,{Heavy Traffic=265, Other=36, Flat Tire=12}), (PM : 12:00-19:00,{Heavy Traffic=30, Mechanical Problem=8, Other=6})]; 435574883
+2017-04-21; [(AM : 5:00-11:59,{Heavy Traffic=210, Other=27, Flat Tire=9}), (PM : 12:00-19:00,{Heavy Traffic=73, Late return from Field Trip=18, Other=8})]; 637142118
+2017-04-24; [(AM : 5:00-11:59,{Heavy Traffic=217, Other=39, Mechanical Problem=19}), (PM : 12:00-19:00,{Heavy Traffic=42, Other=6, Mechanical Problem=4})]; 365136674
+2017-04-25; [(AM : 5:00-11:59,{Heavy Traffic=185, Other=35, Weather Conditions=14}), (PM : 12:00-19:00,{Heavy Traffic=40, Late return from Field Trip=9, Other=5})]; 469899963
+2017-04-26; [(AM : 5:00-11:59,{Heavy Traffic=357, Weather Conditions=39, Other=39}), (PM : 12:00-19:00,{Heavy Traffic=33, Mechanical Problem=9, Late return from Field Trip=6})]; 437145762
+2017-04-27; [(AM : 5:00-11:59,{Heavy Traffic=232, Other=34, Mechanical Problem=11}), (PM : 12:00-19:00,{Heavy Traffic=49, Late return from Field Trip=10, Other=8})]; 437263468
+2017-04-28; [(PM : 12:00-19:00,{Heavy Traffic=62, Late return from Field Trip=37, Other=8}), (AM : 5:00-11:59,{Heavy Traffic=215, Other=20, Mechanical Problem=12})]; 643235706
+2017-05-01; [(PM : 12:00-19:00,{Heavy Traffic=24, Mechanical Problem=10, Flat Tire=9}), (AM : 5:00-11:59,{Heavy Traffic=217, Other=32, Mechanical Problem=16})]; 288850206
+2017-05-02; [(AM : 5:00-11:59,{Heavy Traffic=237, Other=25, Mechanical Problem=10}), (PM : 12:00-19:00,{Heavy Traffic=41, Late return from Field Trip=22, Other=10})]; 284694137
+2017-05-03; [(AM : 5:00-11:59,{Heavy Traffic=224, Other=28, Mechanical Problem=14}), (PM : 12:00-19:00,{Heavy Traffic=50, Late return from Field Trip=22, Mechanical Problem=6})]; 430141313
+2017-05-04; [(AM : 5:00-11:59,{Heavy Traffic=202, Other=30, Flat Tire=10}), (PM : 12:00-19:00,{Heavy Traffic=47, Late return from Field Trip=26, Mechanical Problem=8})]; 295967508
+2017-05-05; [(AM : 5:00-11:59,{Heavy Traffic=231, Other=22, Mechanical Problem=15}), (PM : 12:00-19:00,{Heavy Traffic=80, Weather Conditions=28, Late return from Field Trip=26})]; 468158919
+2017-05-08; [(AM : 5:00-11:59,{Heavy Traffic=240, Other=46, Mechanical Problem=16}), (PM : 12:00-19:00,{Heavy Traffic=34, Mechanical Problem=9, Late return from Field Trip=6})]; 359226910
+2017-05-09; [(AM : 5:00-11:59,{Heavy Traffic=214, Other=37, Flat Tire=15}), (PM : 12:00-19:00,{Heavy Traffic=27, Late return from Field Trip=15, Mechanical Problem=11})]; 367299655
+2017-05-10; [(AM : 5:00-11:59,{Heavy Traffic=190, Other=23, Mechanical Problem=9}), (PM : 12:00-19:00,{Heavy Traffic=47, Late return from Field Trip=15, Other=5})]; 375109759
+2017-05-11; [(AM : 5:00-11:59,{Heavy Traffic=249, Other=37, Mechanical Problem=9}), (PM : 12:00-19:00,{Heavy Traffic=55, Late return from Field Trip=29, Other=14})]; 352134187
+2017-05-12; [(AM : 5:00-11:59,{Heavy Traffic=231, Other=28, Mechanical Problem=11}), (PM : 12:00-19:00,{Heavy Traffic=79, Late return from Field Trip=42, Flat Tire=6})]; 370364349
+2017-05-15; [(AM : 5:00-11:59,{Heavy Traffic=280, Other=37, Mechanical Problem=20}), (PM : 12:00-19:00,{Heavy Traffic=59, Late return from Field Trip=18, Other=10})]; 440720564
+2017-05-16; [(AM : 5:00-11:59,{Heavy Traffic=251, Other=31, Won`t Start=7}), (PM : 12:00-19:00,{Heavy Traffic=74, Late return from Field Trip=18, Other=4})]; 404596404
+2017-05-17; [(AM : 5:00-11:59,{Heavy Traffic=243, Other=51, Mechanical Problem=14}), (PM : 12:00-19:00,{Heavy Traffic=93, Late return from Field Trip=33, Mechanical Problem=8})]; 323738673
+2017-05-18; [(AM : 5:00-11:59,{Heavy Traffic=236, Other=23, Mechanical Problem=11}), (PM : 12:00-19:00,{Heavy Traffic=169, Late return from Field Trip=39, Other=19})]; 381135469
+2017-05-19; [(AM : 5:00-11:59,{Heavy Traffic=275, Other=24, Mechanical Problem=12}), (PM : 12:00-19:00,{Heavy Traffic=127, Late return from Field Trip=75, Mechanical Problem=17})]; 609955999
+2017-05-22; [(AM : 5:00-11:59,{Heavy Traffic=258, Other=35, Mechanical Problem=30}), (PM : 12:00-19:00,{Heavy Traffic=61, Late return from Field Trip=9, Other=9})]; 415942833
+2017-05-23; [(AM : 5:00-11:59,{Heavy Traffic=237, Other=39, Mechanical Problem=14}), (PM : 12:00-19:00,{Heavy Traffic=54, Late return from Field Trip=30, Mechanical Problem=5})]; 404137983
+2017-05-24; [(AM : 5:00-11:59,{Heavy Traffic=289, Other=39, Weather Conditions=14}), (PM : 12:00-19:00,{Heavy Traffic=50, Late return from Field Trip=35, Mechanical Problem=7})]; 363967220
+2017-05-25; [(AM : 5:00-11:59,{Heavy Traffic=242, Other=32, Weather Conditions=28}), (PM : 12:00-19:00,{Heavy Traffic=76, Late return from Field Trip=41, Other=12})]; 315007182
+2017-05-26; [(AM : 5:00-11:59,{Heavy Traffic=202, Other=17, Mechanical Problem=12}), (PM : 12:00-19:00,{Heavy Traffic=59, Late return from Field Trip=36, Mechanical Problem=4})]; 511181887
+2017-05-30; [(AM : 5:00-11:59,{Heavy Traffic=216, Other=27, Mechanical Problem=18}), (PM : 12:00-19:00,{Heavy Traffic=55, Late return from Field Trip=26, Accident=4})]; 394561261
+2017-05-31; [(AM : 5:00-11:59,{Heavy Traffic=179, Other=33, Weather Conditions=28}), (PM : 12:00-19:00,{Heavy Traffic=61, Late return from Field Trip=35, Mechanical Problem=6})]; 408630769
+2017-06-01; [(AM : 5:00-11:59,{Heavy Traffic=133, Other=14, Won`t Start=7}), (PM : 12:00-19:00,{Heavy Traffic=72, Late return from Field Trip=41, Other=5})]; 320922057
+2017-06-02; [(AM : 5:00-11:59,{Heavy Traffic=196, Other=16, Mechanical Problem=14}), (PM : 12:00-19:00,{Heavy Traffic=73, Late return from Field Trip=44, Other=9})]; 603848192
+2017-06-05; [(AM : 5:00-11:59,{Heavy Traffic=245, Other=20, Won`t Start=17}), (PM : 12:00-19:00,{Heavy Traffic=51, Late return from Field Trip=21, Other=15})]; 319524556
+2017-06-06; [(AM : 5:00-11:59,{Heavy Traffic=204, Other=30, Mechanical Problem=13}), (PM : 12:00-19:00,{Heavy Traffic=36, Late return from Field Trip=15, Other=6})]; 322742558
+2017-06-07; [(AM : 5:00-11:59,{Heavy Traffic=152, Other=29, Won`t Start=10}), (PM : 12:00-19:00,{Heavy Traffic=59, Late return from Field Trip=26, Mechanical Problem=3})]; 348004056
+2017-06-08; [(AM : 5:00-11:59,{Heavy Traffic=51, Flat Tire=7, Other=7}), (PM : 12:00-19:00,{Heavy Traffic=15, Flat Tire=2, Late return from Field Trip=2})]; 435630564
+2017-06-09; [(AM : 5:00-11:59,{Heavy Traffic=155, Other=22, Mechanical Problem=8}), (PM : 12:00-19:00,{Heavy Traffic=75, Late return from Field Trip=28, Other=14})]; 504078332
+2017-06-12; [(AM : 5:00-11:59,{Heavy Traffic=111, Other=15, Mechanical Problem=5}), (PM : 12:00-19:00,{Heavy Traffic=21, Mechanical Problem=2, Flat Tire=1})]; 386473424
+2017-06-13; [(AM : 5:00-11:59,{Heavy Traffic=208, Other=37, Mechanical Problem=25}), (PM : 12:00-19:00,{Heavy Traffic=77, Other=14, Mechanical Problem=9})]; 265250898
+2017-06-14; [(AM : 5:00-11:59,{Heavy Traffic=209, Other=36, Mechanical Problem=13}), (PM : 12:00-19:00,{Heavy Traffic=73, Late return from Field Trip=8, Mechanical Problem=7})]; 254761046
+2017-06-15; [(AM : 5:00-11:59,{Heavy Traffic=133, Other=20, Won`t Start=3}), (PM : 12:00-19:00,{Heavy Traffic=47, Mechanical Problem=7, Delayed by School=5})]; 262696381
+2017-06-16; [(AM : 5:00-11:59,{Heavy Traffic=151, Other=20, Flat Tire=5}), (PM : 12:00-19:00,{Heavy Traffic=59, Other=5, Flat Tire=2})]; 539758910
+2017-06-19; [(AM : 5:00-11:59,{Heavy Traffic=193, Other=44, Won`t Start=11}), (PM : 12:00-19:00,{Heavy Traffic=102, Other=9, Mechanical Problem=5})]; 503924763
+2017-06-20; [(AM : 5:00-11:59,{Heavy Traffic=172, Other=37, Mechanical Problem=12}), (PM : 12:00-19:00,{Heavy Traffic=60, Other=5, Delayed by School=2})]; 493283753
+2017-06-21; [(AM : 5:00-11:59,{Heavy Traffic=132, Other=15, Mechanical Problem=7}), (PM : 12:00-19:00,{Heavy Traffic=47, Late return from Field Trip=6, Mechanical Problem=3})]; 415647185
+2017-06-22; [(PM : 12:00-19:00,{Heavy Traffic=48, Other=7, Mechanical Problem=4}), (AM : 5:00-11:59,{Heavy Traffic=181, Other=25, Won`t Start=6})]; 252513348
+2017-06-23; [(AM : 5:00-11:59,{Heavy Traffic=136, Other=19, Mechanical Problem=9}), (PM : 12:00-19:00,{Heavy Traffic=55, Other=9, Mechanical Problem=7})]; 584003611
+2017-06-26; [(AM : 5:00-11:59,{Heavy Traffic=16, Flat Tire=1, Other=1}), (PM : 12:00-19:00,{Heavy Traffic=4})]; 527742653
+2017-06-27; [(AM : 5:00-11:59,{Heavy Traffic=119, Other=20, Weather Conditions=7}), (PM : 12:00-19:00,{Heavy Traffic=31, Mechanical Problem=4, Accident=2})]; 377671771
+2017-06-28; [(AM : 5:00-11:59,{Heavy Traffic=49, Other=8, Delayed by School=3}), (PM : 12:00-19:00,{Heavy Traffic=1})]; 492528597
+2017-06-29; [(AM : 5:00-11:59,{Heavy Traffic=2, Other=2})]; 417984570
+2017-06-30; [(PM : 12:00-19:00,{Heavy Traffic=1, Other=1})]; 506510132
+2017-07-03; [(AM : 5:00-11:59,{Heavy Traffic=23, Other=17, Flat Tire=1}), (PM : 12:00-19:00,{Other=1})]; 441907099
+2017-07-05; [(AM : 5:00-11:59,{Heavy Traffic=92, Other=39, Flat Tire=4}), (PM : 12:00-19:00,{Heavy Traffic=9, Mechanical Problem=2, Won`t Start=1})]; 408727484
+2017-07-06; [(AM : 5:00-11:59,{Heavy Traffic=49, Other=24, Mechanical Problem=4}), (PM : 12:00-19:00,{Heavy Traffic=9, Mechanical Problem=2, Other=1})]; 499526946
+2017-07-07; [(PM : 12:00-19:00,{Heavy Traffic=7, Accident=1}), (AM : 5:00-11:59,{Heavy Traffic=31, Other=24, Flat Tire=1})]; 597782711
+2017-07-10; [(AM : 5:00-11:59,{Heavy Traffic=66, Other=18, Mechanical Problem=7}), (PM : 12:00-19:00,{Heavy Traffic=19, Other=3, Flat Tire=2})]; 497583076
+2017-07-11; [(AM : 5:00-11:59,{Heavy Traffic=85, Other=33, Mechanical Problem=11}), (PM : 12:00-19:00,{Heavy Traffic=33, Other=2, Accident=1})]; 365268539
+2017-07-12; [(AM : 5:00-11:59,{Heavy Traffic=41, Other=29, Accident=2}), (PM : 12:00-19:00,{Heavy Traffic=9, Other=3, Delayed by School=2})]; 452081668
+2017-07-13; [(PM : 12:00-19:00,{Heavy Traffic=7, Late return from Field Trip=3, Other=3}), (AM : 5:00-11:59,{Heavy Traffic=48, Other=15, Mechanical Problem=3})]; 347973590
+2017-07-14; [(AM : 5:00-11:59,{Heavy Traffic=44, Other=16, Flat Tire=4}), (PM : 12:00-19:00,{Heavy Traffic=10, Other=3, Late return from Field Trip=1})]; 627026378
+2017-07-17; [(PM : 12:00-19:00,{Heavy Traffic=9, Other=7, Won`t Start=2}), (AM : 5:00-11:59,{Heavy Traffic=48, Other=30, Flat Tire=4})]; 342356776
+2017-07-18; [(AM : 5:00-11:59,{Heavy Traffic=62, Other=30, Mechanical Problem=8}), (PM : 12:00-19:00,{Heavy Traffic=7, Other=2, Delayed by School=1})]; 413185751
+2017-07-19; [(AM : 5:00-11:59,{Heavy Traffic=51, Other=43, Mechanical Problem=7}), (PM : 12:00-19:00,{Heavy Traffic=8, Other=6, Late return from Field Trip=4})]; 489849888
+2017-07-20; [(PM : 12:00-19:00,{Heavy Traffic=7, Other=7, Flat Tire=1}), (AM : 5:00-11:59,{Heavy Traffic=66, Other=30, Mechanical Problem=7})]; 365540815
+2017-07-21; [(AM : 5:00-11:59,{Heavy Traffic=51, Other=20, Mechanical Problem=3}), (PM : 12:00-19:00,{Mechanical Problem=6, Other=6, Heavy Traffic=3})]; 530361307
+2017-07-24; [(PM : 12:00-19:00,{Heavy Traffic=5, Other=3, Late return from Field Trip=1}), (AM : 5:00-11:59,{Heavy Traffic=91, Other=30, Weather Conditions=22})]; 225484698
+2017-07-25; [(AM : 5:00-11:59,{Heavy Traffic=78, Other=10, Flat Tire=2}), (PM : 12:00-19:00,{Heavy Traffic=5, Mechanical Problem=3, Late return from Field Trip=1})]; 408221646
+2017-07-26; [(PM : 12:00-19:00,{Heavy Traffic=8, Other=8, Delayed by School=1}), (AM : 5:00-11:59,{Heavy Traffic=57, Other=14, Mechanical Problem=2})]; 487316962
+2017-07-27; [(PM : 12:00-19:00,{Other=3, Late return from Field Trip=2, Heavy Traffic=2}), (AM : 5:00-11:59,{Heavy Traffic=91, Other=13, Mechanical Problem=3})]; 371748367
+2017-07-28; [(AM : 5:00-11:59,{Heavy Traffic=32, Other=17, Won`t Start=3}), (PM : 12:00-19:00,{Heavy Traffic=14, Other=3, Flat Tire=1})]; 654824088
+2017-07-31; [(PM : 12:00-19:00,{Heavy Traffic=8, Other=5, Flat Tire=1}), (AM : 5:00-11:59,{Heavy Traffic=71, Other=24, Mechanical Problem=8})]; 364769409
+2017-08-01; [(AM : 5:00-11:59,{Heavy Traffic=84, Other=14, Flat Tire=6}), (PM : 12:00-19:00,{Heavy Traffic=2, Late return from Field Trip=1})]; 449061590
+2017-08-02; [(AM : 5:00-11:59,{Heavy Traffic=43, Other=15, Flat Tire=6}), (PM : 12:00-19:00,{Heavy Traffic=21, Late return from Field Trip=5, Mechanical Problem=3})]; 334150066
+2017-08-03; [(AM : 5:00-11:59,{Heavy Traffic=47, Other=25, Mechanical Problem=9}), (PM : 12:00-19:00,{Heavy Traffic=9, Other=3, Mechanical Problem=2})]; 423072417
+2017-08-04; [(AM : 5:00-11:59,{Heavy Traffic=39, Other=15, Flat Tire=1}), (PM : 12:00-19:00,{Heavy Traffic=13, Accident=1, Mechanical Problem=1})]; 514643529
+2017-08-07; [(AM : 5:00-11:59,{Heavy Traffic=46, Other=23, Mechanical Problem=5}), (PM : 12:00-19:00,{Heavy Traffic=6, Mechanical Problem=1, Other=1})]; 2438723559
+2017-09-01; [(AM : 5:00-11:59,{Heavy Traffic=8, Other=3, Won`t Start=1}), (PM : 12:00-19:00,{Heavy Traffic=1})]; 664077866
+2017-09-05; [(PM : 12:00-19:00,{Heavy Traffic=2, Mechanical Problem=1}), (AM : 5:00-11:59,{Heavy Traffic=42, Other=8, Flat Tire=2})]; 304846756
+2017-09-06; [(AM : 5:00-11:59,{Heavy Traffic=56, Other=13, Mechanical Problem=3}), (PM : 12:00-19:00,{Heavy Traffic=2, Other=2})]; 399675833
+2017-09-07; [(AM : 5:00-11:59,{Heavy Traffic=312, Other=29, Mechanical Problem=17}), (PM : 12:00-19:00,{Other=6, Mechanical Problem=4, Heavy Traffic=4})]; 407602543
+2017-09-08; [(AM : 5:00-11:59,{Heavy Traffic=218, Other=23, Mechanical Problem=6}), (PM : 12:00-19:00,{Heavy Traffic=12, Won`t Start=1})]; 672764486
+2017-09-11; [(PM : 12:00-19:00,{Heavy Traffic=44, Mechanical Problem=6, Other=6}), (AM : 5:00-11:59,{Heavy Traffic=297, Other=32, Mechanical Problem=20})]; 301002364
+2017-09-12; [(AM : 5:00-11:59,{Heavy Traffic=228, Other=29, Mechanical Problem=11}), (PM : 12:00-19:00,{Heavy Traffic=33, Other=9, Delayed by School=7})]; 327927543
+2017-09-13; [(AM : 5:00-11:59,{Heavy Traffic=229, Other=23, Mechanical Problem=11}), (PM : 12:00-19:00,{Heavy Traffic=35, Other=6, Delayed by School=5})]; 368731581
+2017-09-14; [(AM : 5:00-11:59,{Heavy Traffic=257, Other=20, Mechanical Problem=12}), (PM : 12:00-19:00,{Heavy Traffic=39, Other=10, Delayed by School=5})]; 390659988
+2017-09-15; [(AM : 5:00-11:59,{Heavy Traffic=223, Other=34, Mechanical Problem=11}), (PM : 12:00-19:00,{Heavy Traffic=69, Mechanical Problem=4, Other=4})]; 602836691
+2017-09-18; [(AM : 5:00-11:59,{Heavy Traffic=365, Other=44, Mechanical Problem=19}), (PM : 12:00-19:00,{Heavy Traffic=44, Delayed by School=8, Other=6})]; 391932042
+2017-09-19; [(AM : 5:00-11:59,{Heavy Traffic=321, Other=35, Mechanical Problem=16}), (PM : 12:00-19:00,{Heavy Traffic=56, Delayed by School=4, Other=4})]; 381193867
+2017-09-20; [(AM : 5:00-11:59,{Heavy Traffic=235, Other=42, Mechanical Problem=16}), (PM : 12:00-19:00,{Heavy Traffic=58, Delayed by School=3, Mechanical Problem=3})]; 371899070
+2017-09-21; [(PM : 12:00-19:00,{Delayed by School=1, Heavy Traffic=1, Other=1}), (AM : 5:00-11:59,{Heavy Traffic=16, Other=5, Flat Tire=2})]; 480126440
+2017-09-22; [(PM : 12:00-19:00,{Heavy Traffic=1, Other=1}), (AM : 5:00-11:59,{Other=1})]; 603779763
+2017-09-25; [(AM : 5:00-11:59,{Heavy Traffic=296, Other=52, Mechanical Problem=24}), (PM : 12:00-19:00,{Heavy Traffic=88, Other=11, Mechanical Problem=7})]; 363295741
+2017-09-26; [(AM : 5:00-11:59,{Heavy Traffic=304, Other=43, Mechanical Problem=23}), (PM : 12:00-19:00,{Heavy Traffic=74, Other=5, Mechanical Problem=4})]; 340909696
+2017-09-27; [(AM : 5:00-11:59,{Heavy Traffic=316, Other=55, Mechanical Problem=10}), (PM : 12:00-19:00,{Heavy Traffic=57, Other=9, Delayed by School=5})]; 312364641
+2017-09-28; [(AM : 5:00-11:59,{Heavy Traffic=300, Other=33, Mechanical Problem=11}), (PM : 12:00-19:00,{Heavy Traffic=84, Other=20, Delayed by School=4})]; 282846194
+2017-09-29; [(AM : 5:00-11:59,{Heavy Traffic=249, Other=27, Mechanical Problem=10}), (PM : 12:00-19:00,{Heavy Traffic=64, Other=6, Delayed by School=4})]; 460434911
+2017-10-02; [(AM : 5:00-11:59,{Heavy Traffic=365, Other=62, Mechanical Problem=26}), (PM : 12:00-19:00,{Heavy Traffic=62, Other=7, Flat Tire=5})]; 434168028
+2017-10-03; [(AM : 5:00-11:59,{Heavy Traffic=354, Other=44, Mechanical Problem=12}), (PM : 12:00-19:00,{Heavy Traffic=57, Other=5, Delayed by School=4})]; 400278288
+2017-10-04; [(AM : 5:00-11:59,{Heavy Traffic=311, Other=32, Mechanical Problem=13}), (PM : 12:00-19:00,{Heavy Traffic=82, Delayed by School=3, Other=2})]; 374721075
+2017-10-05; [(AM : 5:00-11:59,{Heavy Traffic=231, Other=18, Mechanical Problem=14}), (PM : 12:00-19:00,{Heavy Traffic=61, Accident=2, Other=2})]; 384495843
+2017-10-06; [(AM : 5:00-11:59,{Heavy Traffic=175, Other=24, Mechanical Problem=7}), (PM : 12:00-19:00,{Heavy Traffic=83, Other=6, Flat Tire=2})]; 504835892
+2017-10-09; [(PM : 12:00-19:00,{Mechanical Problem=1})]; 254990529
+2017-10-10; [(AM : 5:00-11:59,{Heavy Traffic=337, Other=56, Mechanical Problem=23}), (PM : 12:00-19:00,{Heavy Traffic=63, Delayed by School=7, Other=7})]; 295122683
+2017-10-11; [(AM : 5:00-11:59,{Heavy Traffic=296, Other=35, Mechanical Problem=22}), (PM : 12:00-19:00,{Heavy Traffic=53, Mechanical Problem=5, Accident=3})]; 283408939
+2017-10-12; [(AM : 5:00-11:59,{Heavy Traffic=342, Other=32, Weather Conditions=14}), (PM : 12:00-19:00,{Heavy Traffic=40, Delayed by School=2, Accident=2})]; 455361734
+2017-10-13; [(PM : 12:00-19:00,{Heavy Traffic=30, Late return from Field Trip=6, Mechanical Problem=5}), (AM : 5:00-11:59,{Heavy Traffic=180, Other=21, Problem Run=13})]; 491978772
+2017-10-16; [(AM : 5:00-11:59,{Heavy Traffic=332, Other=47, Mechanical Problem=25}), (PM : 12:00-19:00,{Heavy Traffic=50, Mechanical Problem=7, Other=6})]; 279785451
+2017-10-17; [(AM : 5:00-11:59,{Heavy Traffic=283, Other=47, Mechanical Problem=16}), (PM : 12:00-19:00,{Heavy Traffic=55, Flat Tire=4, Won`t Start=3})]; 458588338
+2017-10-18; [(AM : 5:00-11:59,{Heavy Traffic=255, Other=54, Mechanical Problem=17}), (PM : 12:00-19:00,{Heavy Traffic=51, Mechanical Problem=7, Other=6})]; 448092572
+2017-10-19; [(AM : 5:00-11:59,{Heavy Traffic=317, Other=52, Mechanical Problem=19}), (PM : 12:00-19:00,{Heavy Traffic=71, Other=12, Late return from Field Trip=7})]; 412166457
+2017-10-20; [(AM : 5:00-11:59,{Heavy Traffic=265, Other=27, Mechanical Problem=15}), (PM : 12:00-19:00,{Heavy Traffic=69, Other=15, Late return from Field Trip=7})]; 596930940
+2017-10-23; [(AM : 5:00-11:59,{Heavy Traffic=310, Other=41, Mechanical Problem=25}), (PM : 12:00-19:00,{Heavy Traffic=50, Mechanical Problem=7, Other=6})]; 386086545
+2017-10-24; [(AM : 5:00-11:59,{Heavy Traffic=296, Other=38, Problem Run=12}), (PM : 12:00-19:00,{Heavy Traffic=43, Other=5, Accident=4})]; 366329680
+2017-10-25; [(AM : 5:00-11:59,{Heavy Traffic=321, Other=34, Mechanical Problem=16}), (PM : 12:00-19:00,{Heavy Traffic=35, Late return from Field Trip=8, Delayed by School=5})]; 350607538
+2017-10-26; [(AM : 5:00-11:59,{Heavy Traffic=314, Other=46, Mechanical Problem=15}), (PM : 12:00-19:00,{Heavy Traffic=62, Other=11, Late return from Field Trip=3})]; 320528415
+2017-10-27; [(AM : 5:00-11:59,{Heavy Traffic=263, Other=48, Mechanical Problem=17}), (PM : 12:00-19:00,{Heavy Traffic=73, Late return from Field Trip=18, Mechanical Problem=10})]; 495044009
+2017-10-30; [(AM : 5:00-11:59,{Heavy Traffic=547, Weather Conditions=60, Other=45}), (PM : 12:00-19:00,{Heavy Traffic=65, Other=9, Mechanical Problem=5})]; 401123537
+2017-10-31; [(AM : 5:00-11:59,{Heavy Traffic=275, Other=101, Mechanical Problem=17}), (PM : 12:00-19:00,{Heavy Traffic=39, Other=7, Flat Tire=4})]; 367236901
+2017-11-01; [(AM : 5:00-11:59,{Heavy Traffic=166, Other=21, Mechanical Problem=11}), (PM : 12:00-19:00,{Heavy Traffic=45, Mechanical Problem=7, Delayed by School=4})]; 419525615
+2017-11-02; [(PM : 12:00-19:00,{Heavy Traffic=39, Other=10, Late return from Field Trip=7}), (AM : 5:00-11:59,{Heavy Traffic=45, Other=13, Flat Tire=1})]; 302851140
+2017-11-03; [(AM : 5:00-11:59,{Heavy Traffic=253, Other=23, Mechanical Problem=8}), (PM : 12:00-19:00,{Heavy Traffic=55, Other=8, Late return from Field Trip=6})]; 523225679
+2017-11-06; [(PM : 12:00-19:00,{Heavy Traffic=7, Late return from Field Trip=4, Mechanical Problem=3}), (AM : 5:00-11:59,{Heavy Traffic=27, Other=8})]; 447218312
+2017-11-07; [(PM : 12:00-19:00,{Heavy Traffic=4, Problem Run=1}), (AM : 5:00-11:59,{Heavy Traffic=15, Mechanical Problem=3, Flat Tire=2})]; 356170887
+2017-11-08; [(AM : 5:00-11:59,{Heavy Traffic=319, Other=56, Mechanical Problem=27}), (PM : 12:00-19:00,{Heavy Traffic=33, Other=16, Mechanical Problem=15})]; 341497660
+2017-11-09; [(AM : 5:00-11:59,{Heavy Traffic=351, Other=42, Mechanical Problem=27}), (PM : 12:00-19:00,{Heavy Traffic=56, Other=10, Late return from Field Trip=6})]; 318030440
+2017-11-10; [(AM : 5:00-11:59,{Heavy Traffic=174, Other=21, Mechanical Problem=20}), (PM : 12:00-19:00,{Heavy Traffic=32, Mechanical Problem=5, Delayed by School=4})]; 554755733
+2017-11-13; [(AM : 5:00-11:59,{Heavy Traffic=407, Other=90, Mechanical Problem=33}), (PM : 12:00-19:00,{Heavy Traffic=35, Other=28, Mechanical Problem=7})]; 290583993
+2017-11-14; [(AM : 5:00-11:59,{Heavy Traffic=191, Other=39, Mechanical Problem=21}), (PM : 12:00-19:00,{Heavy Traffic=11, Other=5, Mechanical Problem=2})]; 318154242
+2017-11-15; [(AM : 5:00-11:59,{Heavy Traffic=247, Other=32, Mechanical Problem=12}), (PM : 12:00-19:00,{Heavy Traffic=21, Late return from Field Trip=8, Mechanical Problem=6})]; 328123384
+2017-11-16; [(AM : 5:00-11:59,{Heavy Traffic=435, Other=43, Weather Conditions=38}), (PM : 12:00-19:00,{Heavy Traffic=32, Other=9, Flat Tire=2})]; 257405713
+2017-11-17; [(AM : 5:00-11:59,{Heavy Traffic=186, Other=37, Mechanical Problem=9}), (PM : 12:00-19:00,{Heavy Traffic=40, Late return from Field Trip=25, Mechanical Problem=7})]; 471812256
+2017-11-20; [(AM : 5:00-11:59,{Heavy Traffic=176, Other=40, Mechanical Problem=21}), (PM : 12:00-19:00,{Heavy Traffic=20, Other=6, Late return from Field Trip=4})]; 326253837
+2017-11-21; [(AM : 5:00-11:59,{Heavy Traffic=209, Other=36, Mechanical Problem=16}), (PM : 12:00-19:00,{Heavy Traffic=33, Late return from Field Trip=18, Mechanical Problem=8})]; 315176829
+2017-11-22; [(AM : 5:00-11:59,{Heavy Traffic=230, Other=18, Mechanical Problem=9}), (PM : 12:00-19:00,{Heavy Traffic=23, Late return from Field Trip=5, Mechanical Problem=4})]; 843672607
+2017-11-27; [(AM : 5:00-11:59,{Heavy Traffic=248, Other=43, Mechanical Problem=32}), (PM : 12:00-19:00,{Heavy Traffic=17, Mechanical Problem=9, Late return from Field Trip=3})]; 493798313
+2017-11-28; [(AM : 5:00-11:59,{Heavy Traffic=214, Other=39, Mechanical Problem=17}), (PM : 12:00-19:00,{Heavy Traffic=36, Late return from Field Trip=24, Other=9})]; 486841237
+2017-11-29; [(AM : 5:00-11:59,{Heavy Traffic=210, Other=36, Mechanical Problem=21}), (PM : 12:00-19:00,{Heavy Traffic=25, Late return from Field Trip=11, Mechanical Problem=8})]; 380786036
+2017-11-30; [(AM : 5:00-11:59,{Heavy Traffic=176, Other=32, Mechanical Problem=17}), (PM : 12:00-19:00,{Heavy Traffic=21, Other=7, Won`t Start=5})]; 507245229
+2017-12-01; [(AM : 5:00-11:59,{Heavy Traffic=289, Other=29, Mechanical Problem=14}), (PM : 12:00-19:00,{Heavy Traffic=36, Late return from Field Trip=9, Other=5})]; 404675778
+2017-12-04; [(AM : 5:00-11:59,{Heavy Traffic=264, Other=44, Mechanical Problem=30}), (PM : 12:00-19:00,{Heavy Traffic=23, Mechanical Problem=6, Delayed by School=5})]; 419252624
+2017-12-05; [(AM : 5:00-11:59,{Heavy Traffic=205, Other=44, Mechanical Problem=26}), (PM : 12:00-19:00,{Heavy Traffic=27, Other=11, Accident=6})]; 231900385
+2017-12-06; [(AM : 5:00-11:59,{Heavy Traffic=205, Other=29, Mechanical Problem=19}), (PM : 12:00-19:00,{Heavy Traffic=16, Other=13, Late return from Field Trip=10})]; 248798200
+2017-12-07; [(AM : 5:00-11:59,{Heavy Traffic=212, Other=35, Mechanical Problem=18}), (PM : 12:00-19:00,{Heavy Traffic=46, Late return from Field Trip=8, Other=7})]; 352155478
+2017-12-08; [(AM : 5:00-11:59,{Heavy Traffic=189, Other=42, Mechanical Problem=19}), (PM : 12:00-19:00,{Heavy Traffic=32, Other=14, Mechanical Problem=4})]; 571189892
+2017-12-11; [(AM : 5:00-11:59,{Heavy Traffic=266, Other=51, Mechanical Problem=30}), (PM : 12:00-19:00,{Heavy Traffic=66, Other=13, Mechanical Problem=7})]; 367041149
+2017-12-12; [(AM : 5:00-11:59,{Heavy Traffic=360, Other=38, Mechanical Problem=21}), (PM : 12:00-19:00,{Heavy Traffic=52, Other=18, Late return from Field Trip=13})]; 508812967
+2017-12-13; [(AM : 5:00-11:59,{Heavy Traffic=340, Mechanical Problem=57, Other=39}), (PM : 12:00-19:00,{Heavy Traffic=65, Other=30, Late return from Field Trip=16})]; 321353611
+2017-12-14; [(AM : 5:00-11:59,{Heavy Traffic=609, Weather Conditions=204, Other=40}), (PM : 12:00-19:00,{Heavy Traffic=65, Other=19, Delayed by School=11})]; 419707963
+2017-12-15; [(AM : 5:00-11:59,{Heavy Traffic=472, Other=68, Mechanical Problem=52}), (PM : 12:00-19:00,{Heavy Traffic=65, Late return from Field Trip=25, Other=16})]; 495495680
+2017-12-18; [(AM : 5:00-11:59,{Heavy Traffic=480, Other=76, Mechanical Problem=55}), (PM : 12:00-19:00,{Heavy Traffic=48, Other=28, Late return from Field Trip=7})]; 419238150
+2017-12-19; [(AM : 5:00-11:59,{Heavy Traffic=253, Other=52, Mechanical Problem=34}), (PM : 12:00-19:00,{Heavy Traffic=45, Other=21, Late return from Field Trip=16})]; 401022386
+2017-12-20; [(AM : 5:00-11:59,{Heavy Traffic=287, Other=50, Mechanical Problem=19}), (PM : 12:00-19:00,{Heavy Traffic=50, Late return from Field Trip=20, Other=12})]; 390079803
+2017-12-21; [(AM : 5:00-11:59,{Heavy Traffic=256, Other=44, Mechanical Problem=21}), (PM : 12:00-19:00,{Heavy Traffic=72, Mechanical Problem=11, Late return from Field Trip=8})]; 372798873
+2017-12-22; [(AM : 5:00-11:59,{Heavy Traffic=174, Other=30, Mechanical Problem=26}), (PM : 12:00-19:00,{Heavy Traffic=80, Other=22, Accident=5})]; 571601139
+2017-12-26; [(AM : 5:00-11:59,{Other=8, Won`t Start=4, Heavy Traffic=4}), (PM : 12:00-19:00,{Mechanical Problem=2})]; 425669556
+2017-12-27; [(AM : 5:00-11:59,{Mechanical Problem=2, Heavy Traffic=2, Other=2}), (PM : 12:00-19:00,{Mechanical Problem=1})]; 334703172
+2017-12-28; [(AM : 5:00-11:59,{Mechanical Problem=3, Other=2}), (PM : 12:00-19:00,{Accident=3, Heavy Traffic=2})]; 445658798
+2017-12-29; [(AM : 5:00-11:59,{Heavy Traffic=2})]; 685923427
+2018-01-02; [(PM : 12:00-19:00,{Heavy Traffic=35, Mechanical Problem=15, Other=13}), (AM : 5:00-11:59,{Heavy Traffic=204, Won`t Start=61, Mechanical Problem=54})]; 470105413
+2018-01-03; [(AM : 5:00-11:59,{Heavy Traffic=181, Other=48, Mechanical Problem=34}), (PM : 12:00-19:00,{Heavy Traffic=32, Other=13, Won`t Start=4})]; 405875840
+2018-01-05; [(AM : 5:00-11:59,{Weather Conditions=371, Heavy Traffic=225, Mechanical Problem=42}), (PM : 12:00-19:00,{Heavy Traffic=35, Other=13, Weather Conditions=4})]; 564346031
+2018-01-07; [(AM : 5:00-11:59,{Other=1})]; 424540618
+2018-01-08; [(AM : 5:00-11:59,{Heavy Traffic=272, Mechanical Problem=105, Other=55}), (PM : 12:00-19:00,{Heavy Traffic=27, Other=19, Late return from Field Trip=10})]; 373096641
+2018-01-09; [(AM : 5:00-11:59,{Heavy Traffic=346, Other=82, Mechanical Problem=46}), (PM : 12:00-19:00,{Heavy Traffic=49, Other=11, Late return from Field Trip=9})]; 307745627
+2018-01-10; [(AM : 5:00-11:59,{Heavy Traffic=240, Other=56, Mechanical Problem=25}), (PM : 12:00-19:00,{Heavy Traffic=50, Late return from Field Trip=11, Other=6})]; 294859091
+2018-01-11; [(AM : 5:00-11:59,{Heavy Traffic=173, Other=47, Mechanical Problem=25}), (PM : 12:00-19:00,{Heavy Traffic=48, Other=9, Flat Tire=4})]; 306333877
+2018-01-12; [(AM : 5:00-11:59,{Heavy Traffic=241, Other=27, Weather Conditions=25}), (PM : 12:00-19:00,{Heavy Traffic=28, Other=20, Flat Tire=4})]; 730089665
+2018-01-16; [(PM : 12:00-19:00,{Heavy Traffic=29, Other=13, Mechanical Problem=7}), (AM : 5:00-11:59,{Heavy Traffic=249, Other=69, Mechanical Problem=31})]; 438591172
+2018-01-17; [(AM : 5:00-11:59,{Heavy Traffic=270, Other=51, Mechanical Problem=23}), (PM : 12:00-19:00,{Heavy Traffic=30, Late return from Field Trip=4, Other=4})]; 339171167
+2018-01-18; [(AM : 5:00-11:59,{Heavy Traffic=290, Other=49, Mechanical Problem=20}), (PM : 12:00-19:00,{Heavy Traffic=82, Other=16, Mechanical Problem=10})]; 304199175
+2018-01-19; [(AM : 5:00-11:59,{Heavy Traffic=200, Other=46, Mechanical Problem=24}), (PM : 12:00-19:00,{Heavy Traffic=80, Other=15, Late return from Field Trip=7})]; 616781362
+2018-01-22; [(AM : 5:00-11:59,{Heavy Traffic=280, Other=80, Mechanical Problem=17}), (PM : 12:00-19:00,{Heavy Traffic=58, Other=9, Mechanical Problem=7})]; 408791660
+2018-01-23; [(AM : 5:00-11:59,{Heavy Traffic=338, Other=54, Mechanical Problem=32}), (PM : 12:00-19:00,{Heavy Traffic=29, Other=4, Delayed by School=3})]; 370713684
+2018-01-24; [(AM : 5:00-11:59,{Heavy Traffic=205, Other=87, Mechanical Problem=18}), (PM : 12:00-19:00,{Heavy Traffic=37, Other=9, Late return from Field Trip=6})]; 267308220
+2018-01-25; [(AM : 5:00-11:59,{Heavy Traffic=206, Other=67, Mechanical Problem=23}), (PM : 12:00-19:00,{Heavy Traffic=59, Other=13, Late return from Field Trip=5})]; 266750749
+2018-01-26; [(AM : 5:00-11:59,{Heavy Traffic=226, Other=53, Mechanical Problem=11}), (PM : 12:00-19:00,{Heavy Traffic=48, Other=14, Accident=4})]; 472416664
+2018-01-29; [(AM : 5:00-11:59,{Heavy Traffic=280, Other=63, Mechanical Problem=23}), (PM : 12:00-19:00,{Heavy Traffic=45, Delayed by School=9, Other=7})]; 268407744
+2018-01-30; [(AM : 5:00-11:59,{Heavy Traffic=352, Other=62, Weather Conditions=41}), (PM : 12:00-19:00,{Heavy Traffic=30, Other=6, Late return from Field Trip=5})]; 227078684
+2018-01-31; [(AM : 5:00-11:59,{Heavy Traffic=167, Other=42, Mechanical Problem=19}), (PM : 12:00-19:00,{Heavy Traffic=25, Other=12, Late return from Field Trip=4})]; 347823397
+2018-02-01; [(AM : 5:00-11:59,{Heavy Traffic=169, Other=35, Mechanical Problem=17}), (PM : 12:00-19:00,{Heavy Traffic=18, Other=6, Late return from Field Trip=5})]; 387495815
+2018-02-02; [(AM : 5:00-11:59,{Heavy Traffic=142, Other=25, Mechanical Problem=13}), (PM : 12:00-19:00,{Heavy Traffic=21, Other=10, Late return from Field Trip=6})]; 650431730
+2018-02-05; [(PM : 12:00-19:00,{Other=31, Heavy Traffic=24, Late return from Field Trip=4}), (AM : 5:00-11:59,{Heavy Traffic=208, Other=41, Mechanical Problem=19})]; 303320012
+2018-02-06; [(AM : 5:00-11:59,{Heavy Traffic=211, Other=49, Mechanical Problem=13}), (PM : 12:00-19:00,{Heavy Traffic=23, Other=9, Mechanical Problem=7})]; 341958460
+2018-02-07; [(AM : 5:00-11:59,{Heavy Traffic=129, Other=27, Mechanical Problem=22}), (PM : 12:00-19:00,{Heavy Traffic=40, Other=10, Won`t Start=2})]; 266577894
+2018-02-08; [(AM : 5:00-11:59,{Heavy Traffic=115, Other=26, Mechanical Problem=19}), (PM : 12:00-19:00,{Heavy Traffic=28, Other=15, Mechanical Problem=4})]; 415110025
+2018-02-09; [(AM : 5:00-11:59,{Heavy Traffic=150, Other=42, Mechanical Problem=10}), (PM : 12:00-19:00,{Heavy Traffic=25, Other=12, Late return from Field Trip=5})]; 468978584
+2018-02-12; [(AM : 5:00-11:59,{Heavy Traffic=196, Other=65, Mechanical Problem=18}), (PM : 12:00-19:00,{Heavy Traffic=31, Other=7, Mechanical Problem=5})]; 314219508
+2018-02-13; [(AM : 5:00-11:59,{Heavy Traffic=288, Other=55, Mechanical Problem=35}), (PM : 12:00-19:00,{Heavy Traffic=56, Other=19, Late return from Field Trip=16})]; 273895605
+2018-02-14; [(AM : 5:00-11:59,{Heavy Traffic=312, Other=39, Mechanical Problem=14}), (PM : 12:00-19:00,{Heavy Traffic=8, Other=8, Late return from Field Trip=2})]; 277477676
+2018-02-15; [(AM : 5:00-11:59,{Heavy Traffic=231, Other=49, Mechanical Problem=38}), (PM : 12:00-19:00,{Heavy Traffic=61, Other=36, Late return from Field Trip=20})]; 458908574
+2018-02-16; [(PM : 12:00-19:00,{Heavy Traffic=3, Weather Conditions=2, Other=1}), (AM : 5:00-11:59,{Heavy Traffic=17, Won`t Start=2, Mechanical Problem=2})]; 571810000
+2018-02-20; [(AM : 5:00-11:59,{Other=1}), (PM : 12:00-19:00,{Other=1})]; 419730442
+2018-02-21; [(AM : 5:00-11:59,{Heavy Traffic=9, Other=6, Won`t Start=2})]; 360448666
+2018-02-22; [(PM : 12:00-19:00,{Late return from Field Trip=1}), (AM : 5:00-11:59,{Mechanical Problem=3})]; 449525076
+2018-02-23; [(PM : 12:00-19:00,{Accident=1, Mechanical Problem=1, Other=1}), (AM : 5:00-11:59,{Heavy Traffic=3})]; 565871881
+2018-02-26; [(AM : 5:00-11:59,{Heavy Traffic=306, Mechanical Problem=90, Other=75}), (PM : 12:00-19:00,{Heavy Traffic=50, Other=14, Mechanical Problem=10})]; 332662100
+2018-02-27; [(AM : 5:00-11:59,{Heavy Traffic=263, Other=66, Mechanical Problem=42}), (PM : 12:00-19:00,{Heavy Traffic=48, Late return from Field Trip=10, Other=9})]; 306207428
+2018-02-28; [(AM : 5:00-11:59,{Heavy Traffic=317, Other=67, Flat Tire=11}), (PM : 12:00-19:00,{Heavy Traffic=36, Other=23, Late return from Field Trip=6})]; 446749826
+2018-03-01; [(PM : 12:00-19:00,{Heavy Traffic=29, Other=4, Delayed by School=2}), (AM : 5:00-11:59,{Heavy Traffic=172, Other=29, Mechanical Problem=15})]; 278604198
+2018-03-02; [(AM : 5:00-11:59,{Heavy Traffic=261, Weather Conditions=92, Other=39}), (PM : 12:00-19:00,{Heavy Traffic=132, Weather Conditions=61, Other=28})]; 587101485
+2018-03-05; [(AM : 5:00-11:59,{Heavy Traffic=421, Mechanical Problem=75, Other=63}), (PM : 12:00-19:00,{Heavy Traffic=89, Mechanical Problem=10, Late return from Field Trip=8})]; 312414463
+2018-03-06; [(AM : 5:00-11:59,{Heavy Traffic=439, Other=73, Mechanical Problem=33}), (PM : 12:00-19:00,{Heavy Traffic=37, Other=7, Mechanical Problem=5})]; 441802153
+2018-03-07; [(AM : 5:00-11:59,{Heavy Traffic=171, Weather Conditions=49, Other=19}), (PM : 12:00-19:00,{Heavy Traffic=52, Weather Conditions=10, Accident=5})]; 457093684
+2018-03-08; [(AM : 5:00-11:59,{Heavy Traffic=313, Other=51, Mechanical Problem=21}), (PM : 12:00-19:00,{Heavy Traffic=50, Other=10, Flat Tire=5})]; 417185128
+2018-03-09; [(AM : 5:00-11:59,{Heavy Traffic=287, Other=41, Mechanical Problem=14}), (PM : 12:00-19:00,{Heavy Traffic=73, Other=17, Accident=6})]; 501470302
+2018-03-12; [(AM : 5:00-11:59,{Heavy Traffic=385, Other=66, Mechanical Problem=36}), (PM : 12:00-19:00,{Heavy Traffic=74, Other=20, Mechanical Problem=6})]; 343462898
+2018-03-13; [(AM : 5:00-11:59,{Heavy Traffic=356, Weather Conditions=113, Other=49}), (PM : 12:00-19:00,{Heavy Traffic=57, Mechanical Problem=8, Accident=5})]; 451140622
+2018-03-14; [(AM : 5:00-11:59,{Heavy Traffic=460, Other=89, Mechanical Problem=26}), (PM : 12:00-19:00,{Heavy Traffic=64, Late return from Field Trip=17, Other=15})]; 354200111
+2018-03-15; [(AM : 5:00-11:59,{Heavy Traffic=323, Other=61, Mechanical Problem=27}), (PM : 12:00-19:00,{Heavy Traffic=46, Other=7, Accident=5})]; 321676285
+2018-03-16; [(AM : 5:00-11:59,{Heavy Traffic=250, Other=59, Mechanical Problem=24}), (PM : 12:00-19:00,{Heavy Traffic=65, Late return from Field Trip=19, Other=11})]; 499631257
+2018-03-19; [(AM : 5:00-11:59,{Heavy Traffic=386, Other=69, Mechanical Problem=39}), (PM : 12:00-19:00,{Heavy Traffic=60, Other=12, Late return from Field Trip=8})]; 262547804
+2018-03-20; [(AM : 5:00-11:59,{Heavy Traffic=375, Other=70, Mechanical Problem=22}), (PM : 12:00-19:00,{Heavy Traffic=85, Late return from Field Trip=15, Other=13})]; 403421342
+2018-03-22; [(AM : 5:00-11:59,{Heavy Traffic=276, Weather Conditions=261, Other=67}), (PM : 12:00-19:00,{Heavy Traffic=41, Other=11, Late return from Field Trip=6})]; 427716339
+2018-03-23; [(AM : 5:00-11:59,{Heavy Traffic=236, Other=65, Mechanical Problem=13}), (PM : 12:00-19:00,{Heavy Traffic=99, Late return from Field Trip=13, Other=12})]; 616249990
+2018-03-26; [(AM : 5:00-11:59,{Heavy Traffic=362, Other=75, Mechanical Problem=33}), (PM : 12:00-19:00,{Heavy Traffic=50, Mechanical Problem=7, Other=6})]; 387717943
+2018-03-27; [(AM : 5:00-11:59,{Heavy Traffic=194, Other=64, Mechanical Problem=12}), (PM : 12:00-19:00,{Heavy Traffic=88, Late return from Field Trip=30, Other=17})]; 377724462
+2018-03-28; [(AM : 5:00-11:59,{Heavy Traffic=296, Other=41, Mechanical Problem=24}), (PM : 12:00-19:00,{Heavy Traffic=54, Other=13, Late return from Field Trip=7})]; 352894956
+2018-03-29; [(AM : 5:00-11:59,{Heavy Traffic=207, Other=36, Accident=3}), (PM : 12:00-19:00,{Heavy Traffic=40, Late return from Field Trip=6, Other=5})]; 380889305
+2018-03-30; [(AM : 5:00-11:59,{Other=1})]; 528486101
+2018-04-02; [(PM : 12:00-19:00,{Heavy Traffic=1}), (AM : 5:00-11:59,{Weather Conditions=11, Mechanical Problem=4, Heavy Traffic=4})]; 431965974
+2018-04-03; [(AM : 5:00-11:59,{Heavy Traffic=6, Other=3, Mechanical Problem=2})]; 375372319
+2018-04-04; [(AM : 5:00-11:59,{Heavy Traffic=3, Mechanical Problem=1}), (PM : 12:00-19:00,{Heavy Traffic=2, Other=2})]; 262049358
+2018-04-05; [(AM : 5:00-11:59,{Heavy Traffic=7, Other=4, Mechanical Problem=2}), (PM : 12:00-19:00,{Heavy Traffic=1})]; 368314671
+2018-04-06; [(PM : 12:00-19:00,{Heavy Traffic=2, Other=1}), (AM : 5:00-11:59,{Heavy Traffic=2})]; 580675208
+2018-04-09; [(AM : 5:00-11:59,{Heavy Traffic=289, Other=94, Mechanical Problem=48}), (PM : 12:00-19:00,{Heavy Traffic=31, Other=20, Late return from Field Trip=8})]; 365346201
+2018-04-10; [(AM : 5:00-11:59,{Heavy Traffic=247, Other=50, Mechanical Problem=23}), (PM : 12:00-19:00,{Heavy Traffic=50, Mechanical Problem=11, Other=8})]; 362140713
+2018-04-11; [(AM : 5:00-11:59,{Heavy Traffic=214, Other=35, Mechanical Problem=22}), (PM : 12:00-19:00,{Heavy Traffic=63, Late return from Field Trip=24, Delayed by School=11})]; 360922625
+2018-04-12; [(AM : 5:00-11:59,{Heavy Traffic=194, Other=35, Flat Tire=9}), (PM : 12:00-19:00,{Heavy Traffic=53, Late return from Field Trip=19, Delayed by School=11})]; 394195860
+2018-04-13; [(AM : 5:00-11:59,{Heavy Traffic=179, Other=37, Mechanical Problem=17}), (PM : 12:00-19:00,{Heavy Traffic=75, Other=15, Late return from Field Trip=7})]; 607454162
+2018-04-16; [(AM : 5:00-11:59,{Heavy Traffic=284, Weather Conditions=112, Other=42}), (PM : 12:00-19:00,{Heavy Traffic=55, Other=12, Mechanical Problem=9})]; 376792475
+2018-04-17; [(AM : 5:00-11:59,{Heavy Traffic=197, Other=38, Mechanical Problem=16}), (PM : 12:00-19:00,{Heavy Traffic=63, Late return from Field Trip=6, Mechanical Problem=6})]; 278188510
+2018-04-18; [(AM : 5:00-11:59,{Heavy Traffic=171, Other=38, Mechanical Problem=15}), (PM : 12:00-19:00,{Heavy Traffic=59, Other=8, Accident=4})]; 288747548
+2018-04-19; [(AM : 5:00-11:59,{Heavy Traffic=317, Other=42, Mechanical Problem=19}), (PM : 12:00-19:00,{Heavy Traffic=53, Late return from Field Trip=7, Mechanical Problem=5})]; 263328639
+2018-04-20; [(AM : 5:00-11:59,{Heavy Traffic=178, Other=39, Mechanical Problem=14}), (PM : 12:00-19:00,{Heavy Traffic=58, Late return from Field Trip=19, Mechanical Problem=5})]; 477162245
+2018-04-23; [(AM : 5:00-11:59,{Heavy Traffic=215, Other=42, Mechanical Problem=22}), (PM : 12:00-19:00,{Heavy Traffic=65, Late return from Field Trip=8, Other=8})]; 303824551
+2018-04-24; [(AM : 5:00-11:59,{Heavy Traffic=235, Other=51, Mechanical Problem=19}), (PM : 12:00-19:00,{Heavy Traffic=28, Late return from Field Trip=12, Delayed by School=8})]; 299020389
+2018-04-25; [(AM : 5:00-11:59,{Heavy Traffic=419, Weather Conditions=58, Other=46}), (PM : 12:00-19:00,{Heavy Traffic=77, Late return from Field Trip=13, Other=10})]; 413133271
+2018-04-26; [(AM : 5:00-11:59,{Heavy Traffic=390, Other=26, Mechanical Problem=16}), (PM : 12:00-19:00,{Heavy Traffic=66, Late return from Field Trip=14, Other=4})]; 333176509
+2018-04-27; [(AM : 5:00-11:59,{Heavy Traffic=239, Other=43, Mechanical Problem=18}), (PM : 12:00-19:00,{Heavy Traffic=69, Late return from Field Trip=24, Other=19})]; 484263178
+2018-04-30; [(AM : 5:00-11:59,{Heavy Traffic=257, Other=48, Mechanical Problem=20}), (PM : 12:00-19:00,{Heavy Traffic=100, Other=23, Mechanical Problem=11})]; 262946405
+2018-05-01; [(AM : 5:00-11:59,{Heavy Traffic=349, Other=56, Mechanical Problem=39}), (PM : 12:00-19:00,{Heavy Traffic=120, Late return from Field Trip=67, Other=26})]; 333829760
+2018-05-02; [(AM : 5:00-11:59,{Heavy Traffic=277, Other=60, Mechanical Problem=21}), (PM : 12:00-19:00,{Heavy Traffic=66, Late return from Field Trip=29, Mechanical Problem=9})]; 383433105
+2018-05-03; [(AM : 5:00-11:59,{Heavy Traffic=209, Other=51, Mechanical Problem=17}), (PM : 12:00-19:00,{Heavy Traffic=62, Late return from Field Trip=27, Other=18})]; 369152876
+2018-05-04; [(AM : 5:00-11:59,{Heavy Traffic=211, Other=47, Mechanical Problem=24}), (PM : 12:00-19:00,{Heavy Traffic=92, Mechanical Problem=11, Late return from Field Trip=8})]; 543516642
+2018-05-07; [(AM : 5:00-11:59,{Heavy Traffic=240, Other=62, Mechanical Problem=29}), (PM : 12:00-19:00,{Heavy Traffic=57, Mechanical Problem=8, Other=8})]; 335447078
+2018-05-08; [(AM : 5:00-11:59,{Heavy Traffic=217, Other=29, Mechanical Problem=14}), (PM : 12:00-19:00,{Heavy Traffic=41, Late return from Field Trip=8, Other=8})]; 337973818
+2018-05-09; [(AM : 5:00-11:59,{Heavy Traffic=231, Other=41, Mechanical Problem=14}), (PM : 12:00-19:00,{Heavy Traffic=66, Other=13, Late return from Field Trip=11})]; 321411626
+2018-05-10; [(AM : 5:00-11:59,{Heavy Traffic=183, Other=56, Mechanical Problem=12}), (PM : 12:00-19:00,{Heavy Traffic=44, Late return from Field Trip=28, Other=16})]; 225636529
+2018-05-11; [(AM : 5:00-11:59,{Heavy Traffic=225, Other=57, Mechanical Problem=18}), (PM : 12:00-19:00,{Heavy Traffic=83, Late return from Field Trip=40, Other=18})]; 513703728
+2018-05-14; [(AM : 5:00-11:59,{Heavy Traffic=244, Other=62, Mechanical Problem=17}), (PM : 12:00-19:00,{Heavy Traffic=76, Mechanical Problem=14, Late return from Field Trip=9})]; 355358518
+2018-05-15; [(AM : 5:00-11:59,{Heavy Traffic=133, Other=27, Mechanical Problem=10}), (PM : 12:00-19:00,{Heavy Traffic=67, Late return from Field Trip=20, Other=9})]; 392978745
+2018-05-16; [(AM : 5:00-11:59,{Heavy Traffic=175, Other=54, Mechanical Problem=12}), (PM : 12:00-19:00,{Heavy Traffic=81, Other=14, Late return from Field Trip=6})]; 422826266
+2018-05-17; [(AM : 5:00-11:59,{Heavy Traffic=327, Weather Conditions=60, Other=46}), (PM : 12:00-19:00,{Heavy Traffic=61, Late return from Field Trip=13, Mechanical Problem=11})]; 406486804
+2018-05-18; [(AM : 5:00-11:59,{Heavy Traffic=208, Other=44, Mechanical Problem=11}), (PM : 12:00-19:00,{Heavy Traffic=66, Late return from Field Trip=15, Other=6})]; 604980965
+2018-05-21; [(AM : 5:00-11:59,{Heavy Traffic=225, Other=42, Mechanical Problem=17}), (PM : 12:00-19:00,{Heavy Traffic=52, Late return from Field Trip=7, Mechanical Problem=6})]; 432630371
+2018-05-22; [(AM : 5:00-11:59,{Heavy Traffic=227, Other=43, Mechanical Problem=20}), (PM : 12:00-19:00,{Heavy Traffic=51, Late return from Field Trip=15, Other=6})]; 421812179
+2018-05-23; [(AM : 5:00-11:59,{Heavy Traffic=238, Other=31, Mechanical Problem=28}), (PM : 12:00-19:00,{Heavy Traffic=64, Late return from Field Trip=19, Mechanical Problem=7})]; 411900861
+2018-05-24; [(AM : 5:00-11:59,{Heavy Traffic=260, Other=46, Mechanical Problem=11}), (PM : 12:00-19:00,{Heavy Traffic=56, Late return from Field Trip=39, Other=13})]; 388633489
+2018-05-25; [(AM : 5:00-11:59,{Heavy Traffic=183, Other=39, Mechanical Problem=9}), (PM : 12:00-19:00,{Heavy Traffic=66, Late return from Field Trip=42, Flat Tire=4})]; 508841896
+2018-05-29; [(AM : 5:00-11:59,{Heavy Traffic=259, Other=40, Mechanical Problem=27}), (PM : 12:00-19:00,{Heavy Traffic=43, Late return from Field Trip=14, Other=14})]; 327344952
+2018-05-30; [(AM : 5:00-11:59,{Heavy Traffic=205, Other=50, Mechanical Problem=26}), (PM : 12:00-19:00,{Heavy Traffic=61, Late return from Field Trip=21, Other=13})]; 318012886
+2018-05-31; [(AM : 5:00-11:59,{Heavy Traffic=223, Other=61, Mechanical Problem=22}), (PM : 12:00-19:00,{Heavy Traffic=64, Late return from Field Trip=18, Mechanical Problem=12})]; 306234846
+2018-06-01; [(AM : 5:00-11:59,{Heavy Traffic=236, Other=48, Mechanical Problem=17}), (PM : 12:00-19:00,{Heavy Traffic=61, Other=22, Late return from Field Trip=21})]; 491904594
+2018-06-04; [(AM : 5:00-11:59,{Heavy Traffic=280, Other=54, Mechanical Problem=30}), (PM : 12:00-19:00,{Heavy Traffic=44, Other=18, Late return from Field Trip=12})]; 289743338
+2018-06-05; [(AM : 5:00-11:59,{Heavy Traffic=291, Other=39, Mechanical Problem=19}), (PM : 12:00-19:00,{Heavy Traffic=51, Late return from Field Trip=27, Other=6})]; 463890938
+2018-06-06; [(AM : 5:00-11:59,{Heavy Traffic=188, Other=38, Mechanical Problem=16}), (PM : 12:00-19:00,{Late return from Field Trip=53, Heavy Traffic=44, Other=6})]; 452201934
+2018-06-07; [(AM : 5:00-11:59,{Heavy Traffic=39, Other=4, Mechanical Problem=3}), (PM : 12:00-19:00,{Heavy Traffic=9, Late return from Field Trip=4, Other=2})]; 347738110
+2018-06-08; [(AM : 5:00-11:59,{Heavy Traffic=210, Other=44, Mechanical Problem=19}), (PM : 12:00-19:00,{Heavy Traffic=72, Late return from Field Trip=38, Other=18})]; 538761049
+2018-06-11; [(AM : 5:00-11:59,{Heavy Traffic=36, Other=15, Mechanical Problem=7}), (PM : 12:00-19:00,{Heavy Traffic=11, Mechanical Problem=2, Other=2})]; 356274268
+2018-06-12; [(AM : 5:00-11:59,{Heavy Traffic=299, Other=64, Mechanical Problem=19}), (PM : 12:00-19:00,{Heavy Traffic=84, Late return from Field Trip=40, Other=22})]; 294201884
+2018-06-13; [(AM : 5:00-11:59,{Heavy Traffic=322, Other=52, Mechanical Problem=20}), (PM : 12:00-19:00,{Heavy Traffic=112, Late return from Field Trip=40, Other=28})]; 217978532
+2018-06-14; [(AM : 5:00-11:59,{Heavy Traffic=311, Other=48, Mechanical Problem=22}), (PM : 12:00-19:00,{Late return from Field Trip=64, Heavy Traffic=60, Mechanical Problem=16})]; 470820021
+2018-06-15; [(PM : 12:00-19:00,{Heavy Traffic=16, Flat Tire=2, Mechanical Problem=2}), (AM : 5:00-11:59,{Heavy Traffic=52, Flat Tire=4, Other=4})]; 467608639
+2018-06-18; [(AM : 5:00-11:59,{Heavy Traffic=381, Other=81, Mechanical Problem=20}), (PM : 12:00-19:00,{Heavy Traffic=36, Mechanical Problem=16, Other=16})]; 336506377
+2018-06-19; [(AM : 5:00-11:59,{Heavy Traffic=8, Accident=3, Other=1})]; 879119951
+2018-06-25; [(AM : 5:00-11:59,{Heavy Traffic=124, Other=34, Mechanical Problem=9})]; 6502558414
+2018-09-04; [(PM : 12:00-19:00,{Heavy Traffic=1}), (AM : 5:00-11:59,{Heavy Traffic=68, Other=20, Mechanical Problem=8})]; 311053366
+2018-09-05; [(AM : 5:00-11:59,{Heavy Traffic=291, Other=61, Mechanical Problem=41}), (PM : 12:00-19:00,{Heavy Traffic=30, Mechanical Problem=7, Other=6})]; 261785845
+2018-09-06; [(AM : 5:00-11:59,{Heavy Traffic=297, Mechanical Problem=31, Other=29}), (PM : 12:00-19:00,{Other=43, Heavy Traffic=34, Mechanical Problem=5})]; 425518021
+2018-09-07; [(AM : 5:00-11:59,{Heavy Traffic=219, Other=35, Mechanical Problem=20}), (PM : 12:00-19:00,{Heavy Traffic=35, Other=11, Flat Tire=3})]; 436842813
+2018-09-10; [(AM : 5:00-11:59,{Heavy Traffic=11, Other=7, Mechanical Problem=5}), (PM : 12:00-19:00,{Weather Conditions=1, Mechanical Problem=1, Other=1})]; 363829975
+2018-09-11; [(AM : 5:00-11:59,{Heavy Traffic=17, Other=7, Mechanical Problem=5})]; 300648811
+2018-09-12; [(AM : 5:00-11:59,{Heavy Traffic=581, Other=84, Mechanical Problem=50}), (PM : 12:00-19:00,{Heavy Traffic=40, Other=33, Mechanical Problem=8})]; 325270111
+2018-09-13; [(AM : 5:00-11:59,{Heavy Traffic=583, Other=62, Mechanical Problem=24}), (PM : 12:00-19:00,{Heavy Traffic=101, Other=18, Delayed by School=8})]; 247544331
+2018-09-14; [(AM : 5:00-11:59,{Heavy Traffic=409, Other=50, Mechanical Problem=47}), (PM : 12:00-19:00,{Heavy Traffic=108, Other=27, Mechanical Problem=13})]; 593371960
+2018-09-17; [(AM : 5:00-11:59,{Heavy Traffic=513, Other=59, Mechanical Problem=39}), (PM : 12:00-19:00,{Heavy Traffic=106, Other=7, Accident=5})]; 364822930
+2018-09-18; [(AM : 5:00-11:59,{Heavy Traffic=191, Other=19, Problem Run=10}), (PM : 12:00-19:00,{Heavy Traffic=83, Other=11, Delayed by School=5})]; 394635363
+2018-09-19; [(AM : 5:00-11:59,{Heavy Traffic=3, Flat Tire=1, Other=1}), (PM : 12:00-19:00,{Other=2, Heavy Traffic=1})]; 307828892
+2018-09-20; [(AM : 5:00-11:59,{Heavy Traffic=449, Other=93, Mechanical Problem=36}), (PM : 12:00-19:00,{Heavy Traffic=164, Other=16, Mechanical Problem=6})]; 435273408
+2018-09-21; [(AM : 5:00-11:59,{Heavy Traffic=151, Other=16, Mechanical Problem=9}), (PM : 12:00-19:00,{Heavy Traffic=42, Other=3, Mechanical Problem=1})]; 492217537
+2018-09-24; [(AM : 5:00-11:59,{Heavy Traffic=337, Other=36, Mechanical Problem=9}), (PM : 12:00-19:00,{Heavy Traffic=128, Other=14, Mechanical Problem=9})]; 271061609
+2018-09-25; [(AM : 5:00-11:59,{Heavy Traffic=520, Weather Conditions=56, Other=49}), (PM : 12:00-19:00,{Heavy Traffic=34, Other=3, Weather Conditions=2})]; 457151073
+2018-09-26; [(AM : 5:00-11:59,{Heavy Traffic=176, Other=13, Mechanical Problem=6}), (PM : 12:00-19:00,{Heavy Traffic=49, Other=3, Flat Tire=1})]; 483091610
+2018-09-27; [(PM : 12:00-19:00,{Heavy Traffic=24, Other=4, Delayed by School=2}), (AM : 5:00-11:59,{Heavy Traffic=157, Other=15, Problem Run=15})]; 330489895
+2018-09-28; [(AM : 5:00-11:59,{Heavy Traffic=173, Weather Conditions=57, Other=13}), (PM : 12:00-19:00,{Heavy Traffic=42, Other=5, Flat Tire=2})]; 553752027
+2018-10-01; [(AM : 5:00-11:59,{Heavy Traffic=118, Other=12, Problem Run=10}), (PM : 12:00-19:00,{Heavy Traffic=41, Other=10, Flat Tire=2})]; 335900073
+2018-10-02; [(AM : 5:00-11:59,{Heavy Traffic=80, Problem Run=12, Other=12}), (PM : 12:00-19:00,{Heavy Traffic=37, Mechanical Problem=2, Flat Tire=1})]; 500325838
+2018-10-03; [(AM : 5:00-11:59,{Heavy Traffic=154, Mechanical Problem=14, Other=12}), (PM : 12:00-19:00,{Heavy Traffic=58, Other=18, Mechanical Problem=5})]; 333373160
+2018-10-04; [(AM : 5:00-11:59,{Heavy Traffic=105, Other=25, Mechanical Problem=7}), (PM : 12:00-19:00,{Heavy Traffic=63, Other=7, Mechanical Problem=6})]; 374474616
+2018-10-05; [(AM : 5:00-11:59,{Heavy Traffic=108, Mechanical Problem=8, Other=7}), (PM : 12:00-19:00,{Heavy Traffic=49, Other=6, Mechanical Problem=2})]; 622221341
+2018-10-09; [(AM : 5:00-11:59,{Heavy Traffic=152, Problem Run=21, Other=18}), (PM : 12:00-19:00,{Heavy Traffic=46, Mechanical Problem=5, Other=4})]; 364672434
+2018-10-10; [(AM : 5:00-11:59,{Heavy Traffic=98, Other=16, Problem Run=9}), (PM : 12:00-19:00,{Heavy Traffic=39, Other=5, Late return from Field Trip=3})]; 321282462
+2018-10-11; [(AM : 5:00-11:59,{Heavy Traffic=127, Other=26, Mechanical Problem=10}), (PM : 12:00-19:00,{Heavy Traffic=33, Other=5, Weather Conditions=4})]; 481065676
+2018-10-12; [(AM : 5:00-11:59,{Heavy Traffic=142, Mechanical Problem=13, Other=12}), (PM : 12:00-19:00,{Heavy Traffic=59, Mechanical Problem=12, Other=6})]; 430117863
+2018-10-15; [(AM : 5:00-11:59,{Heavy Traffic=158, Mechanical Problem=21, Other=19}), (PM : 12:00-19:00,{Heavy Traffic=93, Other=21, Flat Tire=5})]; 291900128
+2018-10-16; [(AM : 5:00-11:59,{Heavy Traffic=559, Other=58, Mechanical Problem=44}), (PM : 12:00-19:00,{Heavy Traffic=151, Mechanical Problem=27, Late return from Field Trip=22})]; 424570470
+2018-10-17; [(AM : 5:00-11:59,{Heavy Traffic=401, Other=65, Mechanical Problem=22}), (PM : 12:00-19:00,{Heavy Traffic=155, Late return from Field Trip=9, Other=9})]; 332675380
+2018-10-18; [(AM : 5:00-11:59,{Heavy Traffic=582, Other=88, Mechanical Problem=40}), (PM : 12:00-19:00,{Heavy Traffic=209, Other=23, Mechanical Problem=13})]; 231832954
+2018-10-19; [(AM : 5:00-11:59,{Heavy Traffic=601, Other=62, Mechanical Problem=27}), (PM : 12:00-19:00,{Heavy Traffic=241, Other=27, Mechanical Problem=23})]; 447004229
+2018-10-22; [(AM : 5:00-11:59,{Heavy Traffic=350, Other=50, Mechanical Problem=47}), (PM : 12:00-19:00,{Heavy Traffic=90, Late return from Field Trip=34, Other=21})]; 499446428
+2018-10-23; [(AM : 5:00-11:59,{Heavy Traffic=359, Other=44, Mechanical Problem=20}), (PM : 12:00-19:00,{Heavy Traffic=106, Other=11, Mechanical Problem=10})]; 445180683
+2018-10-24; [(AM : 5:00-11:59,{Heavy Traffic=353, Other=48, Mechanical Problem=22}), (PM : 12:00-19:00,{Heavy Traffic=108, Late return from Field Trip=16, Mechanical Problem=15})]; 381492594
+2018-10-25; [(AM : 5:00-11:59,{Heavy Traffic=337, Other=54, Mechanical Problem=30}), (PM : 12:00-19:00,{Heavy Traffic=111, Other=26, Won`t Start=6})]; 310380827
+2018-10-26; [(AM : 5:00-11:59,{Heavy Traffic=291, Other=50, Problem Run=22}), (PM : 12:00-19:00,{Heavy Traffic=131, Late return from Field Trip=63, Other=13})]; 381521752
+2018-10-29; [(AM : 5:00-11:59,{Heavy Traffic=404, Other=89, Mechanical Problem=34}), (PM : 12:00-19:00,{Heavy Traffic=121, Other=22, Mechanical Problem=20})]; 444529026
+2018-10-30; [(AM : 5:00-11:59,{Heavy Traffic=355, Other=56, Problem Run=28}), (PM : 12:00-19:00,{Heavy Traffic=108, Other=16, Mechanical Problem=9})]; 404088192
+2018-10-31; [(AM : 5:00-11:59,{Heavy Traffic=363, Other=68, Problem Run=32}), (PM : 12:00-19:00,{Heavy Traffic=128, Mechanical Problem=8, Late return from Field Trip=5})]; 301597471
+2018-11-01; [(AM : 5:00-11:59,{Heavy Traffic=347, Other=63, Problem Run=24}), (PM : 12:00-19:00,{Heavy Traffic=122, Other=9, Late return from Field Trip=7})]; 399835268
+2018-11-02; [(AM : 5:00-11:59,{Heavy Traffic=334, Other=64, Problem Run=27}), (PM : 12:00-19:00,{Heavy Traffic=139, Other=23, Late return from Field Trip=15})]; 406122672
+2018-11-04; [(AM : 5:00-11:59,{Heavy Traffic=1})]; 268655241
+2018-11-05; [(AM : 5:00-11:59,{Heavy Traffic=680, Other=126, Mechanical Problem=60}), (PM : 12:00-19:00,{Heavy Traffic=211, Other=40, Flat Tire=12})]; 449375320
+2018-11-06; [(AM : 5:00-11:59,{Heavy Traffic=189, Mechanical Problem=8, Other=8}), (PM : 12:00-19:00,{Heavy Traffic=123, Delayed by School=2, Weather Conditions=2})]; 367257330
+2018-11-07; [(AM : 5:00-11:59,{Heavy Traffic=474, Other=60, Mechanical Problem=44}), (PM : 12:00-19:00,{Heavy Traffic=124, Mechanical Problem=5, Accident=3})]; 397790910
+2018-11-08; [(AM : 5:00-11:59,{Heavy Traffic=417, Other=44, Mechanical Problem=22}), (PM : 12:00-19:00,{Heavy Traffic=114, Late return from Field Trip=8, Other=8})]; 298503689
+2018-11-09; [(AM : 5:00-11:59,{Heavy Traffic=360, Other=46, Problem Run=31}), (PM : 12:00-19:00,{Heavy Traffic=243, Other=20, Late return from Field Trip=16})]; 490019112
+2018-11-12; [(AM : 5:00-11:59,{Heavy Traffic=4})]; 469457919
+2018-11-13; [(AM : 5:00-11:59,{Heavy Traffic=1115, Weather Conditions=142, Other=127}), (PM : 12:00-19:00,{Heavy Traffic=215, Mechanical Problem=27, Late return from Field Trip=24})]; 269740103
+2018-11-14; [(AM : 5:00-11:59,{Heavy Traffic=463, Other=67, Mechanical Problem=26}), (PM : 12:00-19:00,{Heavy Traffic=125, Other=14, Late return from Field Trip=13})]; 447515738
+2018-11-15; [(AM : 5:00-11:59,{Heavy Traffic=351, Other=115, Mechanical Problem=34}), (PM : 12:00-19:00,{Heavy Traffic=161, Weather Conditions=139, Other=13})]; 349368823
+2018-11-16; [(AM : 5:00-11:59,{Heavy Traffic=488, Weather Conditions=423, Other=51}), (PM : 12:00-19:00,{Heavy Traffic=175, Other=38, Mechanical Problem=8})]; 647589042
+2018-11-19; [(AM : 5:00-11:59,{Heavy Traffic=813, Other=135, Mechanical Problem=56}), (PM : 12:00-19:00,{Heavy Traffic=220, Late return from Field Trip=20, Other=20})]; 390556047
+2018-11-20; [(AM : 5:00-11:59,{Heavy Traffic=666, Other=80, Problem Run=38}), (PM : 12:00-19:00,{Heavy Traffic=239, Other=21, Mechanical Problem=10})]; 373697965
+2018-11-21; [(AM : 5:00-11:59,{Heavy Traffic=535, Other=65, Problem Run=50}), (PM : 12:00-19:00,{Heavy Traffic=126, Late return from Field Trip=16, Mechanical Problem=14})]; 396674560
+2018-11-23; [(AM : 5:00-11:59,{Heavy Traffic=2})]; 651809608
+2018-11-26; [(AM : 5:00-11:59,{Heavy Traffic=666, Other=89, Problem Run=46}), (PM : 12:00-19:00,{Heavy Traffic=248, Other=18, Late return from Field Trip=14})]; 419647404
+2018-11-27; [(AM : 5:00-11:59,{Heavy Traffic=652, Other=108, Mechanical Problem=46}), (PM : 12:00-19:00,{Heavy Traffic=227, Other=24, Accident=6})]; 363592722
+2018-11-28; [(AM : 5:00-11:59,{Heavy Traffic=594, Other=69, Problem Run=36}), (PM : 12:00-19:00,{Heavy Traffic=229, Late return from Field Trip=55, Mechanical Problem=11})]; 443181100
+2018-11-29; [(AM : 5:00-11:59,{Heavy Traffic=624, Other=91, Mechanical Problem=30}), (PM : 12:00-19:00,{Heavy Traffic=289, Late return from Field Trip=44, Other=40})]; 326839186
+2018-11-30; [(AM : 5:00-11:59,{Heavy Traffic=539, Other=72, Mechanical Problem=44}), (PM : 12:00-19:00,{Heavy Traffic=221, Other=26, Mechanical Problem=13})]; 528706943
+2018-12-03; [(AM : 5:00-11:59,{Heavy Traffic=269, Other=46, Mechanical Problem=25}), (PM : 12:00-19:00,{Heavy Traffic=2, Other=2, Late return from Field Trip=1})]; 315312494
+2018-12-04; [(AM : 5:00-11:59,{Heavy Traffic=12, Other=4}), (PM : 12:00-19:00,{Heavy Traffic=2})]; 422218862
+2018-12-05; [(AM : 5:00-11:59,{Heavy Traffic=4, Other=4}), (PM : 12:00-19:00,{Heavy Traffic=2, Other=1})]; 333103137
+2018-12-06; [(PM : 12:00-19:00,{Heavy Traffic=2}), (AM : 5:00-11:59,{Heavy Traffic=3, Other=1})]; 448146838
+2018-12-07; [(AM : 5:00-11:59,{Heavy Traffic=3, Other=3}), (PM : 12:00-19:00,{Heavy Traffic=3, Other=1})]; 555075099
+2018-12-10; [(AM : 5:00-11:59,{Heavy Traffic=3, Other=3, Problem Run=1}), (PM : 12:00-19:00,{Other=1})]; 302763863
+2018-12-11; [(AM : 5:00-11:59,{Heavy Traffic=6, Accident=1})]; 434962606
+2018-12-12; [(AM : 5:00-11:59,{Heavy Traffic=1, Other=1})]; 347914078
+2018-12-13; [(AM : 5:00-11:59,{Other=2, Heavy Traffic=1})]; 455514231
+2018-12-14; [(AM : 5:00-11:59,{Heavy Traffic=5, Other=3}), (PM : 12:00-19:00,{Heavy Traffic=2})]; 536911895
+2018-12-17; [(AM : 5:00-11:59,{Other=3, Heavy Traffic=1})]; 301963538
+2018-12-18; [(AM : 5:00-11:59,{Heavy Traffic=1, Other=1}), (PM : 12:00-19:00,{Mechanical Problem=1})]; 396473670
+2018-12-19; [(AM : 5:00-11:59,{Other=3, Heavy Traffic=2, Accident=1}), (PM : 12:00-19:00,{Flat Tire=1, Accident=1})]; 304485038
+2018-12-20; [(AM : 5:00-11:59,{Heavy Traffic=4, Flat Tire=1, Mechanical Problem=1}), (PM : 12:00-19:00,{Mechanical Problem=1})]; 414229896
+2018-12-21; [(AM : 5:00-11:59,{Heavy Traffic=7, Other=1})]; 743262079
+2018-12-26; [(AM : 5:00-11:59,{Won`t Start=1})]; 923982148
+2019-01-02; [(AM : 5:00-11:59,{Heavy Traffic=5, Other=3})]; 307637103
+2019-01-03; [(AM : 5:00-11:59,{Heavy Traffic=3, Other=1}), (PM : 12:00-19:00,{Heavy Traffic=36, Other=7, Mechanical Problem=3})]; 367487491
+2019-01-04; [(AM : 5:00-11:59,{Heavy Traffic=232, Other=45, Mechanical Problem=25}), (PM : 12:00-19:00,{Heavy Traffic=93, Other=11, Mechanical Problem=5})]; 559446171
+2019-01-07; [(AM : 5:00-11:59,{Heavy Traffic=255, Other=50, Mechanical Problem=37}), (PM : 12:00-19:00,{Heavy Traffic=88, Other=20, Mechanical Problem=10})]; 353576833
+2019-01-08; [(AM : 5:00-11:59,{Heavy Traffic=315, Other=42, Weather Conditions=33}), (PM : 12:00-19:00,{Heavy Traffic=100, Other=15, Late return from Field Trip=4})]; 306638608
+2019-01-09; [(AM : 5:00-11:59,{Heavy Traffic=255, Other=43, Mechanical Problem=15}), (PM : 12:00-19:00,{Heavy Traffic=102, Other=18, Mechanical Problem=6})]; 263082481
+2019-01-10; [(AM : 5:00-11:59,{Heavy Traffic=262, Other=48, Mechanical Problem=19}), (PM : 12:00-19:00,{Heavy Traffic=100, Other=16, Late return from Field Trip=7})]; 395474507
+2019-01-11; [(AM : 5:00-11:59,{Heavy Traffic=217, Other=35, Mechanical Problem=23}), (PM : 12:00-19:00,{Heavy Traffic=137, Other=15, Flat Tire=4})]; 540257829
+2019-01-14; [(AM : 5:00-11:59,{Heavy Traffic=282, Other=50, Mechanical Problem=33}), (PM : 12:00-19:00,{Heavy Traffic=107, Other=21, Mechanical Problem=4})]; 298692857
+2019-01-15; [(AM : 5:00-11:59,{Heavy Traffic=244, Other=51, Mechanical Problem=17}), (PM : 12:00-19:00,{Heavy Traffic=99, Other=10, Delayed by School=1})]; 275042618
+2019-01-16; [(AM : 5:00-11:59,{Heavy Traffic=279, Other=38, Mechanical Problem=24}), (PM : 12:00-19:00,{Other=20, Heavy Traffic=16, Mechanical Problem=8})]; 402483360
+2019-01-17; [(AM : 5:00-11:59,{Heavy Traffic=209, Other=44, Mechanical Problem=10}), (PM : 12:00-19:00,{Heavy Traffic=107, Other=24, Mechanical Problem=6})]; 329820672
+2019-01-18; [(AM : 5:00-11:59,{Heavy Traffic=267, Weather Conditions=38, Other=38}), (PM : 12:00-19:00,{Heavy Traffic=88, Other=19, Late return from Field Trip=8})]; 679978889
+2019-01-22; [(AM : 5:00-11:59,{Heavy Traffic=347, Mechanical Problem=72, Won`t Start=51}), (PM : 12:00-19:00,{Heavy Traffic=106, Other=19, Late return from Field Trip=5})]; 293272604
+2019-01-23; [(AM : 5:00-11:59,{Heavy Traffic=265, Other=32, Mechanical Problem=15}), (PM : 12:00-19:00,{Heavy Traffic=98, Other=6, Accident=2})]; 278804324
+2019-01-24; [(AM : 5:00-11:59,{Heavy Traffic=263, Weather Conditions=34, Other=29}), (PM : 12:00-19:00,{Heavy Traffic=102, Other=6, Weather Conditions=5})]; 255531250
+2019-01-25; [(AM : 5:00-11:59,{Heavy Traffic=325, Other=27, Problem Run=18}), (PM : 12:00-19:00,{Heavy Traffic=218, Other=17, Late return from Field Trip=6})]; 670167447
+2019-01-28; [(AM : 5:00-11:59,{Heavy Traffic=503, Other=107, Mechanical Problem=67}), (PM : 12:00-19:00,{Heavy Traffic=205, Other=11, Mechanical Problem=10})]; 421958113
+2019-01-29; [(AM : 5:00-11:59,{Heavy Traffic=578, Other=71, Mechanical Problem=48}), (PM : 12:00-19:00,{Heavy Traffic=241, Other=28, Late return from Field Trip=12})]; 218903531
+2019-01-30; [(AM : 5:00-11:59,{Heavy Traffic=593, Mechanical Problem=53, Other=52}), (PM : 12:00-19:00,{Heavy Traffic=219, Late return from Field Trip=14, Mechanical Problem=8})]; 334742780
+2019-01-31; [(AM : 5:00-11:59,{Heavy Traffic=645, Weather Conditions=183, Won`t Start=151}), (PM : 12:00-19:00,{Heavy Traffic=246, Mechanical Problem=22, Other=14})]; 399409315
+2019-02-01; [(AM : 5:00-11:59,{Heavy Traffic=591, Mechanical Problem=68, Other=62}), (PM : 12:00-19:00,{Heavy Traffic=222, Other=18, Late return from Field Trip=16})]; 493579504
+2019-02-04; [(AM : 5:00-11:59,{Heavy Traffic=716, Mechanical Problem=87, Other=84}), (PM : 12:00-19:00,{Heavy Traffic=287, Late return from Field Trip=18, Mechanical Problem=13})]; 356626267
+2019-02-05; [(AM : 5:00-11:59,{Heavy Traffic=122, Mechanical Problem=16, Other=11}), (PM : 12:00-19:00,{Mechanical Problem=2, Heavy Traffic=2})]; 421977237
+2019-02-06; [(AM : 5:00-11:59,{Heavy Traffic=534, Other=107, Mechanical Problem=69}), (PM : 12:00-19:00,{Heavy Traffic=206, Late return from Field Trip=10, Accident=8})]; 338829425
+2019-02-07; [(AM : 5:00-11:59,{Heavy Traffic=511, Other=50, Mechanical Problem=28}), (PM : 12:00-19:00,{Heavy Traffic=122, Other=15, Late return from Field Trip=9})]; 208827633
+2019-02-08; [(AM : 5:00-11:59,{Heavy Traffic=341, Other=60, Mechanical Problem=24}), (PM : 12:00-19:00,{Heavy Traffic=120, Other=12, Mechanical Problem=9})]; 544291436
+2019-02-11; [(AM : 5:00-11:59,{Heavy Traffic=493, Other=62, Mechanical Problem=32}), (PM : 12:00-19:00,{Heavy Traffic=107, Other=13, Mechanical Problem=9})]; 410809360
+2019-02-12; [(AM : 5:00-11:59,{Heavy Traffic=269, Other=28, Mechanical Problem=18}), (PM : 12:00-19:00,{Heavy Traffic=101, Weather Conditions=15, Mechanical Problem=7})]; 338673126
+2019-02-13; [(AM : 5:00-11:59,{Heavy Traffic=391, Other=53, Mechanical Problem=36}), (PM : 12:00-19:00,{Heavy Traffic=122, Other=16, Late return from Field Trip=9})]; 390853871
+2019-02-14; [(AM : 5:00-11:59,{Heavy Traffic=316, Other=57, Mechanical Problem=33}), (PM : 12:00-19:00,{Heavy Traffic=132, Late return from Field Trip=14, Mechanical Problem=12})]; 470246785
+2019-02-15; [(AM : 5:00-11:59,{Heavy Traffic=275, Other=33, Mechanical Problem=27}), (PM : 12:00-19:00,{Heavy Traffic=136, Other=29, Late return from Field Trip=11})]; 638409089
+2019-02-19; [(AM : 5:00-11:59,{Heavy Traffic=5, Other=2}), (PM : 12:00-19:00,{Flat Tire=1})]; 495396280
+2019-02-20; [(PM : 12:00-19:00,{Heavy Traffic=5, Accident=1, Other=1}), (AM : 5:00-11:59,{Flat Tire=6, Heavy Traffic=4, Other=2})]; 396520223
+2019-02-21; [(AM : 5:00-11:59,{Heavy Traffic=5, Won`t Start=1}), (PM : 12:00-19:00,{Mechanical Problem=2, Heavy Traffic=1, Other=1})]; 308222433
+2019-02-22; [(AM : 5:00-11:59,{Other=4, Heavy Traffic=3, Mechanical Problem=1}), (PM : 12:00-19:00,{Heavy Traffic=1, Other=1})]; 511013983
+2019-02-25; [(AM : 5:00-11:59,{Heavy Traffic=441, Other=93, Mechanical Problem=59}), (PM : 12:00-19:00,{Heavy Traffic=118, Other=31, Mechanical Problem=10})]; 252396724
+2019-02-26; [(AM : 5:00-11:59,{Heavy Traffic=369, Other=57, Mechanical Problem=39}), (PM : 12:00-19:00,{Heavy Traffic=85, Other=26, Late return from Field Trip=7})]; 461542613
+2019-02-27; [(AM : 5:00-11:59,{Heavy Traffic=325, Other=55, Mechanical Problem=26}), (PM : 12:00-19:00,{Heavy Traffic=119, Other=20, Late return from Field Trip=7})]; 402958022
+2019-02-28; [(AM : 5:00-11:59,{Heavy Traffic=386, Other=62, Mechanical Problem=20}), (PM : 12:00-19:00,{Heavy Traffic=127, Other=22, Late return from Field Trip=13})]; 216670700
+2019-03-01; [(AM : 5:00-11:59,{Heavy Traffic=440, Weather Conditions=78, Other=51}), (PM : 12:00-19:00,{Heavy Traffic=118, Other=22, Mechanical Problem=10})]; 630705430
+2019-03-05; [(AM : 5:00-11:59,{Heavy Traffic=414, Other=84, Mechanical Problem=34}), (PM : 12:00-19:00,{Heavy Traffic=127, Other=10, Mechanical Problem=6})]; 277124407
+2019-03-06; [(AM : 5:00-11:59,{Heavy Traffic=324, Other=52, Mechanical Problem=40}), (PM : 12:00-19:00,{Heavy Traffic=128, Other=16, Mechanical Problem=9})]; 246591995
+2019-03-07; [(AM : 5:00-11:59,{Heavy Traffic=356, Other=39, Mechanical Problem=30}), (PM : 12:00-19:00,{Heavy Traffic=83, Other=14, Mechanical Problem=8})]; 341778167
+2019-03-08; [(AM : 5:00-11:59,{Heavy Traffic=322, Other=42, Mechanical Problem=19}), (PM : 12:00-19:00,{Heavy Traffic=109, Other=10, Mechanical Problem=6})]; 644228087
+2019-03-11; [(AM : 5:00-11:59,{Heavy Traffic=332, Mechanical Problem=59, Other=58}), (PM : 12:00-19:00,{Heavy Traffic=117, Other=25, Mechanical Problem=11})]; 375836950
+2019-03-12; [(AM : 5:00-11:59,{Heavy Traffic=393, Other=63, Mechanical Problem=34}), (PM : 12:00-19:00,{Heavy Traffic=116, Other=13, Mechanical Problem=8})]; 310857632
+2019-03-13; [(AM : 5:00-11:59,{Heavy Traffic=290, Other=65, Mechanical Problem=19}), (PM : 12:00-19:00,{Heavy Traffic=124, Other=9, Mechanical Problem=8})]; 294700066
+2019-03-14; [(AM : 5:00-11:59,{Heavy Traffic=139, Other=7, Mechanical Problem=5}), (PM : 12:00-19:00,{Other=1})]; 389666249
+2019-03-15; [(AM : 5:00-11:59,{Heavy Traffic=307, Other=50, Mechanical Problem=30}), (PM : 12:00-19:00,{Heavy Traffic=108, Other=9, Mechanical Problem=6})]; 557992557
+2019-03-18; [(AM : 5:00-11:59,{Heavy Traffic=346, Other=64, Mechanical Problem=30}), (PM : 12:00-19:00,{Heavy Traffic=98, Other=22, Mechanical Problem=16})]; 351625809
+2019-03-19; [(AM : 5:00-11:59,{Heavy Traffic=339, Other=82, Mechanical Problem=31}), (PM : 12:00-19:00,{Heavy Traffic=113, Other=19, Mechanical Problem=6})]; 320592493
+2019-03-20; [(AM : 5:00-11:59,{Heavy Traffic=301, Other=49, Mechanical Problem=26}), (PM : 12:00-19:00,{Heavy Traffic=93, Late return from Field Trip=6, Other=3})]; 298239558
+2019-03-21; [(AM : 5:00-11:59,{Heavy Traffic=309, Other=36, Mechanical Problem=13}), (PM : 12:00-19:00,{Heavy Traffic=98, Late return from Field Trip=13, Mechanical Problem=8})]; 268117683
+2019-03-22; [(AM : 5:00-11:59,{Heavy Traffic=409, Other=40, Weather Conditions=37}), (PM : 12:00-19:00,{Heavy Traffic=101, Other=10, Late return from Field Trip=7})]; 532061574
+2019-03-25; [(AM : 5:00-11:59,{Heavy Traffic=350, Other=87, Mechanical Problem=30}), (PM : 12:00-19:00,{Heavy Traffic=88, Mechanical Problem=12, Other=9})]; 286047084
+2019-03-26; [(AM : 5:00-11:59,{Heavy Traffic=336, Other=50, Mechanical Problem=28}), (PM : 12:00-19:00,{Heavy Traffic=90, Other=11, Flat Tire=4})]; 439462658
+2019-03-27; [(AM : 5:00-11:59,{Heavy Traffic=283, Other=67, Mechanical Problem=13}), (PM : 12:00-19:00,{Heavy Traffic=57, Other=20, Late return from Field Trip=9})]; 413073246
+2019-03-28; [(AM : 5:00-11:59,{Heavy Traffic=234, Other=51, Mechanical Problem=20}), (PM : 12:00-19:00,{Heavy Traffic=71, Other=26, Late return from Field Trip=6})]; 393217082
+2019-03-29; [(AM : 5:00-11:59,{Heavy Traffic=230, Other=78, Mechanical Problem=20}), (PM : 12:00-19:00,{Heavy Traffic=67, Other=22, Late return from Field Trip=13})]; 575976593
+2019-04-01; [(AM : 5:00-11:59,{Heavy Traffic=321, Other=93, Mechanical Problem=35}), (PM : 12:00-19:00,{Heavy Traffic=72, Other=26, Mechanical Problem=14})]; 314003060
+2019-04-02; [(AM : 5:00-11:59,{Heavy Traffic=270, Other=76, Mechanical Problem=34}), (PM : 12:00-19:00,{Heavy Traffic=62, Late return from Field Trip=26, Other=25})]; 263088173
+2019-04-03; [(AM : 5:00-11:59,{Heavy Traffic=279, Other=57, Mechanical Problem=22}), (PM : 12:00-19:00,{Heavy Traffic=77, Late return from Field Trip=19, Other=14})]; 418716805
+2019-04-04; [(AM : 5:00-11:59,{Heavy Traffic=300, Other=62, Mechanical Problem=20}), (PM : 12:00-19:00,{Heavy Traffic=75, Other=18, Late return from Field Trip=6})]; 382484460
+2019-04-05; [(PM : 12:00-19:00,{Heavy Traffic=94, Other=16, Late return from Field Trip=13}), (AM : 5:00-11:59,{Heavy Traffic=207, Other=61, Mechanical Problem=19})]; 562898710
+2019-04-08; [(AM : 5:00-11:59,{Heavy Traffic=262, Other=81, Mechanical Problem=40}), (PM : 12:00-19:00,{Heavy Traffic=59, Other=23, Mechanical Problem=5})]; 351602371
+2019-04-09; [(AM : 5:00-11:59,{Heavy Traffic=320, Other=42, Mechanical Problem=27}), (PM : 12:00-19:00,{Heavy Traffic=64, Other=26, Late return from Field Trip=12})]; 270811251
+2019-04-10; [(AM : 5:00-11:59,{Heavy Traffic=262, Other=66, Mechanical Problem=17}), (PM : 12:00-19:00,{Heavy Traffic=77, Other=21, Late return from Field Trip=11})]; 411633601
+2019-04-11; [(AM : 5:00-11:59,{Heavy Traffic=246, Other=43, Mechanical Problem=15}), (PM : 12:00-19:00,{Heavy Traffic=70, Other=11, Late return from Field Trip=10})]; 373926557
+2019-04-12; [(PM : 12:00-19:00,{Heavy Traffic=1, Other=1}), (AM : 5:00-11:59,{Heavy Traffic=62, Other=20, Mechanical Problem=6})]; 477218159
+2019-04-15; [(AM : 5:00-11:59,{Heavy Traffic=7, Other=3, Weather Conditions=1}), (PM : 12:00-19:00,{Other=1})]; 411464770
+2019-04-16; [(PM : 12:00-19:00,{Heavy Traffic=1, Other=1}), (AM : 5:00-11:59,{Heavy Traffic=3, Other=2})]; 326058528
+2019-04-17; [(AM : 5:00-11:59,{Other=3, Heavy Traffic=2}), (PM : 12:00-19:00,{Other=1})]; 435013108
+2019-04-18; [(AM : 5:00-11:59,{Heavy Traffic=3}), (PM : 12:00-19:00,{Heavy Traffic=1})]; 550093174
+2019-04-22; [(AM : 5:00-11:59,{Heavy Traffic=1})]; 426389289
+2019-04-24; [(AM : 5:00-11:59,{Other=2})]; 652191976
+2019-04-29; [(AM : 5:00-11:59,{Heavy Traffic=1})]; 419567436
+2019-04-30; [(PM : 12:00-19:00,{Heavy Traffic=1}), (AM : 5:00-11:59,{Heavy Traffic=3, Other=2})]; 315199870
+2019-05-01; [(AM : 5:00-11:59,{Heavy Traffic=3, Other=2}), (PM : 12:00-19:00,{Heavy Traffic=2, Late return from Field Trip=1})]; 415691722
+2019-05-02; [(AM : 5:00-11:59,{Heavy Traffic=4, Other=1})]; 352508415
+2019-05-03; [(AM : 5:00-11:59,{Heavy Traffic=4, Flat Tire=1, Other=1}), (PM : 12:00-19:00,{Mechanical Problem=1})]; 439987204
+2019-05-06; [(AM : 5:00-11:59,{Heavy Traffic=3, Other=2}), (PM : 12:00-19:00,{Heavy Traffic=2, Other=1})]; 371575586
+2019-05-07; [(AM : 5:00-11:59,{Heavy Traffic=4})]; 316437150
+2019-05-08; [(AM : 5:00-11:59,{Heavy Traffic=3, Other=2, Mechanical Problem=1}), (PM : 12:00-19:00,{Other=1})]; 406802693
+2019-05-09; [(PM : 12:00-19:00,{Flat Tire=1, Heavy Traffic=1}), (AM : 5:00-11:59,{Heavy Traffic=2, Problem Run=1})]; 320188347
+2019-05-10; [(AM : 5:00-11:59,{Heavy Traffic=3, Other=2, Flat Tire=1})]; 457291724
+2019-05-13; [(AM : 5:00-11:59,{Heavy Traffic=6, Other=3}), (PM : 12:00-19:00,{Heavy Traffic=3})]; 371965355
+2019-05-14; [(AM : 5:00-11:59,{Other=5, Heavy Traffic=3}), (PM : 12:00-19:00,{Other=1})]; 278216208
+2019-05-15; [(AM : 5:00-11:59,{Heavy Traffic=3, Flat Tire=2, Other=2}), (PM : 12:00-19:00,{Other=1})]; 389871092
+2019-05-16; [(PM : 12:00-19:00,{Heavy Traffic=78, Late return from Field Trip=27, Other=11}), (AM : 5:00-11:59,{Heavy Traffic=53, Other=5, Accident=3})]; 233065845
+2019-05-17; [(AM : 5:00-11:59,{Heavy Traffic=264, Other=62, Mechanical Problem=11}), (PM : 12:00-19:00,{Heavy Traffic=107, Late return from Field Trip=54, Other=40})]; 551647445
+2019-05-20; [(AM : 5:00-11:59,{Heavy Traffic=263, Other=86, Mechanical Problem=25}), (PM : 12:00-19:00,{Heavy Traffic=84, Late return from Field Trip=17, Other=16})]; 308016609
+2019-05-21; [(AM : 5:00-11:59,{Heavy Traffic=258, Other=45, Mechanical Problem=18}), (PM : 12:00-19:00,{Heavy Traffic=74, Late return from Field Trip=20, Other=9})]; 269879677
+2019-05-22; [(AM : 5:00-11:59,{Heavy Traffic=263, Other=36, Mechanical Problem=20}), (PM : 12:00-19:00,{Heavy Traffic=82, Late return from Field Trip=29, Other=9})]; 230253509
+2019-05-23; [(AM : 5:00-11:59,{Heavy Traffic=369, Other=55, Mechanical Problem=24}), (PM : 12:00-19:00,{Heavy Traffic=79, Late return from Field Trip=28, Other=6})]; 442570021
+2019-05-24; [(AM : 5:00-11:59,{Heavy Traffic=235, Other=24, Problem Run=12}), (PM : 12:00-19:00,{Heavy Traffic=99, Late return from Field Trip=46, Delayed by School=14})]; 611711425
+2019-05-28; [(AM : 5:00-11:59,{Heavy Traffic=271, Other=63, Mechanical Problem=22}), (PM : 12:00-19:00,{Heavy Traffic=57, Other=9, Late return from Field Trip=7})]; 517730772
+2019-05-29; [(AM : 5:00-11:59,{Heavy Traffic=320, Other=63, Mechanical Problem=17}), (PM : 12:00-19:00,{Heavy Traffic=61, Late return from Field Trip=30, Other=13})]; 441298647
+2019-05-30; [(AM : 5:00-11:59,{Heavy Traffic=272, Other=57, Mechanical Problem=16}), (PM : 12:00-19:00,{Heavy Traffic=42, Other=27, Late return from Field Trip=14})]; 405627062
+2019-05-31; [(AM : 5:00-11:59,{Heavy Traffic=325, Other=87, Mechanical Problem=18}), (PM : 12:00-19:00,{Heavy Traffic=94, Late return from Field Trip=28, Other=15})]; 522306814
+2019-06-03; [(AM : 5:00-11:59,{Heavy Traffic=254, Other=53, Mechanical Problem=26}), (PM : 12:00-19:00,{Heavy Traffic=58, Late return from Field Trip=27, Other=18})]; 491035043
+2019-06-04; [(AM : 5:00-11:59,{Heavy Traffic=24, Other=9, Mechanical Problem=4}), (PM : 12:00-19:00,{Heavy Traffic=14, Other=2, Flat Tire=1})]; 388713844
+2019-06-05; [(AM : 5:00-11:59,{Heavy Traffic=244, Other=70, Mechanical Problem=22}), (PM : 12:00-19:00,{Heavy Traffic=47, Late return from Field Trip=35, Other=13})]; 360066214
+2019-06-06; [(AM : 5:00-11:59,{Heavy Traffic=61, Other=11, Accident=1}), (PM : 12:00-19:00,{Heavy Traffic=33, Other=7, Late return from Field Trip=6})]; 438781578
+2019-06-07; [(AM : 5:00-11:59,{Heavy Traffic=217, Other=75, Mechanical Problem=31}), (PM : 12:00-19:00,{Heavy Traffic=94, Late return from Field Trip=31, Other=15})]; 603347905
+2019-06-10; [(AM : 5:00-11:59,{Heavy Traffic=273, Other=61, Mechanical Problem=36}), (PM : 12:00-19:00,{Heavy Traffic=78, Late return from Field Trip=17, Other=5})]; 408117103
+2019-06-11; [(AM : 5:00-11:59,{Heavy Traffic=109, Other=31, Mechanical Problem=6}), (PM : 12:00-19:00,{Heavy Traffic=39, Other=8, Mechanical Problem=2})]; 456018064
+2019-06-12; [(AM : 5:00-11:59,{Heavy Traffic=246, Other=94, Mechanical Problem=22}), (PM : 12:00-19:00,{Heavy Traffic=74, Late return from Field Trip=23, Other=23})]; 418770955
+2019-06-13; [(AM : 5:00-11:59,{Heavy Traffic=216, Other=64, Mechanical Problem=19}), (PM : 12:00-19:00,{Heavy Traffic=83, Late return from Field Trip=19, Other=19})]; 397065930
+2019-06-14; [(AM : 5:00-11:59,{Heavy Traffic=250, Other=84, Mechanical Problem=20}), (PM : 12:00-19:00,{Heavy Traffic=70, Other=45, Late return from Field Trip=31})]; 555373207
+2019-06-17; [(AM : 5:00-11:59,{Heavy Traffic=232, Other=90, Mechanical Problem=22}), (PM : 12:00-19:00,{Heavy Traffic=52, Other=21, Mechanical Problem=5})]; 351494636
+2019-06-18; [(AM : 5:00-11:59,{Heavy Traffic=217, Other=47, Problem Run=10}), (PM : 12:00-19:00,{Heavy Traffic=59, Other=12, Late return from Field Trip=7})]; 349626920
+2019-06-19; [(AM : 5:00-11:59,{Heavy Traffic=214, Other=58, Mechanical Problem=7}), (PM : 12:00-19:00,{Heavy Traffic=48, Other=20, Late return from Field Trip=7})]; 355925316
+2019-06-20; [(AM : 5:00-11:59,{Heavy Traffic=224, Other=71, Problem Run=10}), (PM : 12:00-19:00,{Heavy Traffic=64, Other=17, Accident=4})]; 372854200
+2019-06-21; [(AM : 5:00-11:59,{Heavy Traffic=213, Other=74, Weather Conditions=20}), (PM : 12:00-19:00,{Heavy Traffic=65, Other=21, Mechanical Problem=3})]; 559553490
+2019-06-24; [(AM : 5:00-11:59,{Heavy Traffic=167, Other=64, Mechanical Problem=14}), (PM : 12:00-19:00,{Heavy Traffic=68, Other=18, Mechanical Problem=8})]; 390549995
+2019-06-25; [(AM : 5:00-11:59,{Heavy Traffic=157, Other=38, Weather Conditions=16}), (PM : 12:00-19:00,{Heavy Traffic=20, Other=7, Mechanical Problem=2})]; 431666551
+2019-06-26; [(AM : 5:00-11:59,{Heavy Traffic=87, Other=31, Accident=3}), (PM : 12:00-19:00,{Heavy Traffic=9, Delayed by School=1, Mechanical Problem=1})]; 506460994
+2019-06-27; [(PM : 12:00-19:00,{Heavy Traffic=1, Other=1}), (AM : 5:00-11:59,{Heavy Traffic=6, Mechanical Problem=1, Other=1})]; 6234019492
+2019-09-03; [(AM : 5:00-11:59,{Heavy Traffic=95, Other=21, Mechanical Problem=8}), (PM : 12:00-19:00,{Heavy Traffic=12, Other=1})]; 299234542
+2019-09-04; [(AM : 5:00-11:59,{Heavy Traffic=141, Other=23, Mechanical Problem=20}), (PM : 12:00-19:00,{Heavy Traffic=11, Other=3, Flat Tire=2})]; 341025349
+2019-09-05; [(AM : 5:00-11:59,{Heavy Traffic=530, Other=108, Mechanical Problem=46}), (PM : 12:00-19:00,{Heavy Traffic=80, Mechanical Problem=25, Delayed by School=22})]; 394349861
+2019-09-06; [(AM : 5:00-11:59,{Heavy Traffic=499, Other=97, Mechanical Problem=38}), (PM : 12:00-19:00,{Heavy Traffic=102, Other=22, Delayed by School=9})]; 452893497
+2019-09-09; [(AM : 5:00-11:59,{Heavy Traffic=621, Other=123, Problem Run=52}), (PM : 12:00-19:00,{Heavy Traffic=58, Mechanical Problem=24, Other=19})]; 299146616
+2019-09-10; [(AM : 5:00-11:59,{Heavy Traffic=680, Other=91, Problem Run=59}), (PM : 12:00-19:00,{Heavy Traffic=73, Other=33, Mechanical Problem=17})]; 316180350
+2019-09-11; [(AM : 5:00-11:59,{Heavy Traffic=537, Other=75, Problem Run=61}), (PM : 12:00-19:00,{Heavy Traffic=89, Mechanical Problem=27, Other=23})]; 362079708
+2019-09-12; [(AM : 5:00-11:59,{Heavy Traffic=491, Other=90, Problem Run=48}), (PM : 12:00-19:00,{Heavy Traffic=109, Other=25, Mechanical Problem=22})]; 415219554
+2019-09-13; [(AM : 5:00-11:59,{Heavy Traffic=483, Other=60, Problem Run=51}), (PM : 12:00-19:00,{Heavy Traffic=124, Other=18, Accident=6})]; 514271706
+2019-09-16; [(AM : 5:00-11:59,{Heavy Traffic=555, Other=58, Problem Run=52})]; 457680126
+2019-09-17; [(AM : 5:00-11:59,{Heavy Traffic=51, Other=12, Mechanical Problem=2}), (PM : 12:00-19:00,{Heavy Traffic=66, Other=15, Accident=8})]; 308300826
+2019-09-18; [(AM : 5:00-11:59,{Heavy Traffic=415, Other=52, Problem Run=45}), (PM : 12:00-19:00,{Heavy Traffic=100, Mechanical Problem=16, Delayed by School=8})]; 420843522
+2019-09-19; [(AM : 5:00-11:59,{Heavy Traffic=435, Other=64, Problem Run=51}), (PM : 12:00-19:00,{Heavy Traffic=114, Other=19, Mechanical Problem=9})]; 318471496
+2019-09-20; [(AM : 5:00-11:59,{Heavy Traffic=409, Other=65, Problem Run=56}), (PM : 12:00-19:00,{Heavy Traffic=109, Other=21, Mechanical Problem=10})]; 420095540
+2019-09-23; [(AM : 5:00-11:59,{Heavy Traffic=457, Other=90, Problem Run=47}), (PM : 12:00-19:00,{Heavy Traffic=158, Other=16, Mechanical Problem=10})]; 320565280
+2019-09-24; [(AM : 5:00-11:59,{Heavy Traffic=603, Problem Run=67, Other=65}), (PM : 12:00-19:00,{Heavy Traffic=117, Mechanical Problem=10, Other=10})]; 375401157
+2019-09-25; [(AM : 5:00-11:59,{Heavy Traffic=469, Other=57, Problem Run=40}), (PM : 12:00-19:00,{Heavy Traffic=142, Other=17, Mechanical Problem=8})]; 258827945
+2019-09-26; [(AM : 5:00-11:59,{Heavy Traffic=452, Problem Run=43, Other=42}), (PM : 12:00-19:00,{Heavy Traffic=111, Other=22, Delayed by School=8})]; 368315456
+2019-09-27; [(AM : 5:00-11:59,{Heavy Traffic=493, Other=63, Problem Run=42}), (PM : 12:00-19:00,{Heavy Traffic=101, Mechanical Problem=12, Other=10})]; 456189968
+2019-09-30; [(AM : 5:00-11:59,{Heavy Traffic=7, Other=4, Mechanical Problem=3}), (PM : 12:00-19:00,{Heavy Traffic=3})]; 395157097
+2019-10-01; [(AM : 5:00-11:59,{Heavy Traffic=11, Other=2})]; 332931516
+2019-10-02; [(AM : 5:00-11:59,{Heavy Traffic=480, Other=72, Mechanical Problem=29}), (PM : 12:00-19:00,{Heavy Traffic=116, Other=19, Mechanical Problem=7})]; 378962087
+2019-10-03; [(AM : 5:00-11:59,{Heavy Traffic=429, Other=55, Weather Conditions=31}), (PM : 12:00-19:00,{Heavy Traffic=139, Other=20, Mechanical Problem=13})]; 268920818
+2019-10-04; [(AM : 5:00-11:59,{Heavy Traffic=480, Other=70, Mechanical Problem=19}), (PM : 12:00-19:00,{Heavy Traffic=180, Other=28, Mechanical Problem=9})]; 575588230
+2019-10-07; [(AM : 5:00-11:59,{Heavy Traffic=550, Other=76, Mechanical Problem=44}), (PM : 12:00-19:00,{Heavy Traffic=103, Other=12, Mechanical Problem=9})]; 260874690
+2019-10-08; [(AM : 5:00-11:59,{Heavy Traffic=403, Other=77, Problem Run=38}), (PM : 12:00-19:00,{Heavy Traffic=111, Other=8, Late return from Field Trip=6})]; 372358454
+2019-10-09; [(PM : 12:00-19:00,{Mechanical Problem=1, Heavy Traffic=1}), (AM : 5:00-11:59,{Heavy Traffic=8, Mechanical Problem=5, Other=2})]; 286796287
+2019-10-10; [(AM : 5:00-11:59,{Heavy Traffic=438, Other=71, Mechanical Problem=36}), (PM : 12:00-19:00,{Heavy Traffic=118, Other=21, Delayed by School=4})]; 370131022
+2019-10-11; [(AM : 5:00-11:59,{Heavy Traffic=400, Other=78, Problem Run=35}), (PM : 12:00-19:00,{Heavy Traffic=142, Late return from Field Trip=22, Other=16})]; 666712908
+2019-10-15; [(AM : 5:00-11:59,{Heavy Traffic=386, Other=76, Problem Run=29}), (PM : 12:00-19:00,{Heavy Traffic=113, Other=7, Mechanical Problem=6})]; 313416263
+2019-10-16; [(AM : 5:00-11:59,{Heavy Traffic=398, Other=64, Problem Run=32}), (PM : 12:00-19:00,{Heavy Traffic=102, Other=19, Late return from Field Trip=5})]; 426733545
+2019-10-17; [(PM : 12:00-19:00,{Heavy Traffic=132, Other=15, Mechanical Problem=6}), (AM : 5:00-11:59,{Heavy Traffic=332, Other=69, Problem Run=37})]; 384345133
+2019-10-18; [(AM : 5:00-11:59,{Heavy Traffic=430, Other=62, Problem Run=39}), (PM : 12:00-19:00,{Heavy Traffic=184, Late return from Field Trip=21, Delayed by School=6})]; 502387578
+2019-10-21; [(AM : 5:00-11:59,{Heavy Traffic=414, Other=73, Mechanical Problem=31}), (PM : 12:00-19:00,{Heavy Traffic=124, Other=12, Delayed by School=7})]; 513118974
+2019-10-22; [(AM : 5:00-11:59,{Heavy Traffic=458, Other=77, Mechanical Problem=34}), (PM : 12:00-19:00,{Heavy Traffic=205, Late return from Field Trip=6, Other=6})]; 221590995
+2019-10-23; [(AM : 5:00-11:59,{Heavy Traffic=397, Other=52, Problem Run=30}), (PM : 12:00-19:00,{Heavy Traffic=128, Mechanical Problem=10, Other=10})]; 429403744
+2019-10-24; [(AM : 5:00-11:59,{Heavy Traffic=645, Other=122, Mechanical Problem=34}), (PM : 12:00-19:00,{Heavy Traffic=210, Late return from Field Trip=45, Other=30})]; 291985854
+2019-10-25; [(AM : 5:00-11:59,{Heavy Traffic=612, Other=98, Mechanical Problem=36}), (PM : 12:00-19:00,{Heavy Traffic=199, Other=33, Late return from Field Trip=31})]; 559350632
+2019-10-28; [(AM : 5:00-11:59,{Heavy Traffic=696, Other=100, Mechanical Problem=58}), (PM : 12:00-19:00,{Heavy Traffic=153, Other=38, Late return from Field Trip=10})]; 326785678
+2019-10-29; [(AM : 5:00-11:59,{Heavy Traffic=371, Other=46, Mechanical Problem=23}), (PM : 12:00-19:00,{Heavy Traffic=85, Other=15, Late return from Field Trip=7})]; 446102280
+2019-10-30; [(AM : 5:00-11:59,{Heavy Traffic=358, Other=42, Mechanical Problem=23}), (PM : 12:00-19:00,{Heavy Traffic=82, Late return from Field Trip=15, Mechanical Problem=5})]; 372696936
+2019-10-31; [(AM : 5:00-11:59,{Heavy Traffic=474, Other=78, Weather Conditions=68}), (PM : 12:00-19:00,{Heavy Traffic=145, Other=40, Delayed by School=4})]; 368072647
+2019-11-01; [(AM : 5:00-11:59,{Heavy Traffic=623, Other=80, Mechanical Problem=47}), (PM : 12:00-19:00,{Heavy Traffic=193, Other=54, Mechanical Problem=10})]; 402414946
+2019-11-04; [(AM : 5:00-11:59,{Heavy Traffic=755, Other=131, Mechanical Problem=52}), (PM : 12:00-19:00,{Heavy Traffic=129, Other=60, Mechanical Problem=16})]; 307228013
+2019-11-05; [(PM : 12:00-19:00,{Heavy Traffic=6, Mechanical Problem=1}), (AM : 5:00-11:59,{Heavy Traffic=58, Other=14, Mechanical Problem=7})]; 483475271
+2019-11-06; [(AM : 5:00-11:59,{Heavy Traffic=545, Other=88, Mechanical Problem=26}), (PM : 12:00-19:00,{Heavy Traffic=74, Other=11, Flat Tire=4})]; 249726495
+2019-11-07; [(AM : 5:00-11:59,{Heavy Traffic=343, Other=55, Mechanical Problem=25}), (PM : 12:00-19:00,{Heavy Traffic=67, Other=16, Flat Tire=2})]; 207791402
+2019-11-08; [(AM : 5:00-11:59,{Heavy Traffic=280, Other=49, Mechanical Problem=21}), (PM : 12:00-19:00,{Heavy Traffic=79, Late return from Field Trip=13, Other=12})]; 482004439
+2019-11-11; [(AM : 5:00-11:59,{Other=1})]; 355228735
+2019-11-12; [(AM : 5:00-11:59,{Heavy Traffic=401, Other=74, Mechanical Problem=58}), (PM : 12:00-19:00,{Heavy Traffic=95, Other=25, Late return from Field Trip=9})]; 226374265
+2019-11-13; [(AM : 5:00-11:59,{Heavy Traffic=300, Other=75, Mechanical Problem=46}), (PM : 12:00-19:00,{Heavy Traffic=93, Other=24, Mechanical Problem=8})]; 463976876
+2019-11-14; [(AM : 5:00-11:59,{Heavy Traffic=294, Other=88, Mechanical Problem=34}), (PM : 12:00-19:00,{Heavy Traffic=70, Other=6, Accident=2})]; 298651172
+2019-11-15; [(AM : 5:00-11:59,{Heavy Traffic=332, Other=57, Mechanical Problem=27}), (PM : 12:00-19:00,{Heavy Traffic=120, Other=28, Late return from Field Trip=17})]; 503002765
+2019-11-18; [(AM : 5:00-11:59,{Heavy Traffic=446, Other=71, Mechanical Problem=46}), (PM : 12:00-19:00,{Heavy Traffic=161, Other=45, Mechanical Problem=20})]; 349481774
+2019-11-19; [(AM : 5:00-11:59,{Heavy Traffic=649, Other=118, Mechanical Problem=44}), (PM : 12:00-19:00,{Heavy Traffic=179, Other=61, Late return from Field Trip=26})]; 370396372
+2019-11-20; [(AM : 5:00-11:59,{Heavy Traffic=630, Other=146, Mechanical Problem=41}), (PM : 12:00-19:00,{Heavy Traffic=174, Other=41, Late return from Field Trip=30})]; 431788431
+2019-11-21; [(AM : 5:00-11:59,{Heavy Traffic=557, Other=123, Mechanical Problem=38}), (PM : 12:00-19:00,{Heavy Traffic=235, Other=38, Late return from Field Trip=16})]; 349753486
+2019-11-22; [(AM : 5:00-11:59,{Heavy Traffic=564, Other=110, Mechanical Problem=42}), (PM : 12:00-19:00,{Heavy Traffic=198, Other=34, Weather Conditions=14})]; 646687999
+2019-11-25; [(AM : 5:00-11:59,{Heavy Traffic=805, Other=109, Mechanical Problem=59}), (PM : 12:00-19:00,{Heavy Traffic=174, Other=34, Late return from Field Trip=18})]; 303568493
+2019-11-26; [(AM : 5:00-11:59,{Heavy Traffic=566, Other=110, Mechanical Problem=28}), (PM : 12:00-19:00,{Heavy Traffic=141, Late return from Field Trip=20, Other=16})]; 426463907
+2019-11-27; [(AM : 5:00-11:59,{Heavy Traffic=210, Other=30, Mechanical Problem=15}), (PM : 12:00-19:00,{Heavy Traffic=92, Other=7, Delayed by School=4})]; 300324954
