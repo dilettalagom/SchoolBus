@@ -27,6 +27,8 @@ public class SecondQueryDay {
         props.put(StreamsConfig.CLIENT_ID_CONFIG, "kafka-consumer");
         props.put(StreamsConfig.BOOTSTRAP_SERVERS_CONFIG, KAFKA_BROKER);
         props.put(StreamsConfig.DEFAULT_TIMESTAMP_EXTRACTOR_CLASS_CONFIG, EventTimeExtractor.class.getName());
+        props.put(StreamsConfig.METRICS_RECORDING_LEVEL_CONFIG,"DEBUG");
+        //props.put(StreamsConfig.COMMIT_INTERVAL_MS_CONFIG, 100);
         props.put(StreamsConfig.EXACTLY_ONCE, "exactly_once");
 
         return props;
@@ -69,8 +71,14 @@ public class SecondQueryDay {
 
         KStream<String, SnappyTuple2<String,Long>> joinDay = mergeFinalResults(rankedAMDay, rankedPMDay);
 
+        KStream<String, SnappyTuple2<String, Long>> finale = joinDay.mapValues((key, value) -> {
+            long end = System.nanoTime() - value.k2;
+            return new SnappyTuple2<String, Long>(value.k1, end);
+        });
+
+
         //print on file
-        joinDay.print(Printed.<String, SnappyTuple2<String,Long>>toFile("ranker-merged-day.txt").withLabel("merged-day")
+        finale.print(Printed.<String, SnappyTuple2<String,Long>>toFile("ranker-merged-day.txt").withLabel("merged-day")
                 .withKeyValueMapper((win, v) -> String.format("%s; %s", win, v.toString())));
 
 
@@ -119,13 +127,15 @@ public class SecondQueryDay {
                             @Override
                             public SnappyTuple2<String,Long> apply(String windowed, RankBox rankBox, SnappyTuple2<String,Long> acc) {
 
-                                Long actual = Math.max(acc.k2, rankBox.getCurrentEventTime());
-                                Long end = System.nanoTime() - actual;
+                                //TODO:Long end = Math.max(acc.k2, rankBox.getCurrentEventTime());
+                                //long end = System.nanoTime() - rankBox.getCurrentEventTime();
+
+                                long actual = Math.max(acc.k2, rankBox.getCurrentEventTime());
 
                                 StringBuilder sb = new StringBuilder();
                                 sb.append(acc.k1).append(rankBox.toString());
 
-                                return new SnappyTuple2<String,Long>(sb.toString(), end);
+                                return new SnappyTuple2<String,Long>(sb.toString(), actual);
                             }
                         },
                         Materialized.with(Serdes.String(), Serdes.serdeFrom(new Tuple2Serializer(), new Tuple2Deserializer()))
@@ -175,6 +185,8 @@ public class SecondQueryDay {
     private static RankBox checkIfMustAdd(ResultPojo p, RankBox rankB){
         int actualValue = p.getCount();
 
+       /*TODO: long end = System.nanoTime() - p.getCurrentEventTime();
+        rankB.setCurrentEventTime(Math.max(end, rankB.getCurrentEventTime()));*/
         rankB.setCurrentEventTime(Math.max(p.getCurrentEventTime(), rankB.getCurrentEventTime()));
 
         if ( actualValue > rankB.getPos3().getCount()) {

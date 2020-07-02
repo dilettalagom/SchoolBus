@@ -121,12 +121,12 @@ public class SecondQueryWeek {
                             public SnappyTuple2<String,Long> apply(String windowed, RankBox rankBox, SnappyTuple2<String,Long> acc) {
 
                                 Long actual = Math.max(acc.k2, rankBox.getCurrentEventTime());
-                                Long end = System.nanoTime() - actual;
+                               //TODO: Long end = System.nanoTime() - actual;
 
                                 StringBuilder sb = new StringBuilder();
                                 sb.append(acc.k1).append(rankBox.toString());
 
-                                return new SnappyTuple2<String,Long>(sb.toString(), end);
+                                return new SnappyTuple2<String,Long>(sb.toString(), actual);
                             }
                         },
                         Materialized.with(Serdes.String(), Serdes.serdeFrom(new Tuple2Serializer(), new Tuple2Deserializer()))
