@@ -7,7 +7,7 @@ usage() {
       execute-query
 
     Options:
-      -q type_query         Execute the specific type of query (1=day, 2=week)
+      -q type_query         Execute the specific type of query (1=day.merge, 2=week.merge, 3=day.week.join)
       -h help               Consuming dataQuery2 topic data
 
     Example:
@@ -25,12 +25,17 @@ execute_query() {
   if [ $q = 1 ]
   then
     echo "--------------------< consuming dataQuery2 Day>--------------------"
-    java -cp KafkaStreams-1.0-SNAPSHOT.jar query.SecondQueryDay
+    java -Djava.rmi.server.hostname=kafka-consumer -Dcom.sun.management.jmxremote=true -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.port=9992 -cp KafkaStreams-1.0-SNAPSHOT.jar query.SecondQueryDay
 
   elif [ $q = 2 ]
   then
-      echo "--------------------< consuming dataQuery2 Week>--------------------"
-      java -cp KafkaStreams-1.0-SNAPSHOT.jar query.SecondQueryWeek
+    echo "--------------------< consuming dataQuery2 Week>--------------------"
+    java -Djava.rmi.server.hostname=kafka-consumer -Dcom.sun.management.jmxremote=true -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.port=9992 -cp KafkaStreams-1.0-SNAPSHOT.jar query.SecondQueryWeek
+
+  elif [ $q = 3 ]
+  then
+    echo "--------------------< consuming dataQuery2 Split>--------------------"
+    java -Djava.rmi.server.hostname=kafka-consumer -Dcom.sun.management.jmxremote=true -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.port=9992 -cp KafkaStreams-1.0-SNAPSHOT.jar query.SecondQuery
 
   else
     wrong_query_name

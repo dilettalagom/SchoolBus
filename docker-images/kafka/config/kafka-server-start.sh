@@ -29,8 +29,11 @@ if [ "x$KAFKA_HEAP_OPTS" = "x" ]; then
     export KAFKA_HEAP_OPTS="-Xmx1G -Xms1G"
 fi
 
-EXTRA_ARGS=${EXTRA_ARGS-'-name kafkaServer -loggc -Dcom.sun.management.config.file=/kafka/config/JMXconf.config'}
+#EXTRA_ARGS=${EXTRA_ARGS-'-name kafkaServer -loggc -Dcom.sun.management.config.file=/kafka/config/JMXconf.properties'}
+EXTRA_ARGS=${EXTRA_ARGS-'-loggc'}
 
+export PROMETHEUS_PORT=${PROMETHEUS_PORT:-7072}
+export JMX_PORT=${JMX_PORT:-9999}
 COMMAND=$1
 case $COMMAND in
   -daemon)
@@ -41,5 +44,5 @@ case $COMMAND in
     ;;
 esac
 
-export JMX_PORT=${JMX_PORT:-9999}
-exec $base_dir/kafka-run-class.sh $EXTRA_ARGS kafka.Kafka "$@"
+
+exec $base_dir/kafka-run-class.sh $EXTRA_ARGS -javaagent:jmx_prometheus_javaagent-0.6.jar=$PROMETHEUS_PORT:kafka-0-8-2.yml kafka.Kafka "$@"
