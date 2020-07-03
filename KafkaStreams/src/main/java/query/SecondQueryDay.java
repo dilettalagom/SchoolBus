@@ -27,6 +27,7 @@ public class SecondQueryDay {
         props.put(StreamsConfig.DEFAULT_TIMESTAMP_EXTRACTOR_CLASS_CONFIG, EventTimeExtractor.class.getName());
         //props.put(StreamsConfig.METRICS_RECORDING_LEVEL_CONFIG,"DEBUG");
         //props.put(StreamsConfig.NUM_STREAM_THREADS_CONFIG, "10");
+        //props.put(StreamsConfig.PROCESSING_GUARANTEE_CONFIG, StreamsConfig.EXACTLY_ONCE);
 
         return props;
     }

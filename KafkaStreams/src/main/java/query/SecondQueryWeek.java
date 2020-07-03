@@ -30,9 +30,8 @@ public class SecondQueryWeek {
         props.put(StreamsConfig.CLIENT_ID_CONFIG, "kafka-consumer");
         props.put(StreamsConfig.BOOTSTRAP_SERVERS_CONFIG, KAFKA_BROKER);
         props.put(StreamsConfig.DEFAULT_TIMESTAMP_EXTRACTOR_CLASS_CONFIG, EventTimeExtractor.class);
-        //props.put(StreamsConfig.COMMIT_INTERVAL_MS_CONFIG, "50");
-        props.put(StreamsConfig.NUM_STREAM_THREADS_CONFIG, "10");
-        //props.put("acks","all");
+        //props.put(StreamsConfig.NUM_STREAM_THREADS_CONFIG, "10");
+        //props.put(StreamsConfig.METRICS_RECORDING_LEVEL_CONFIG,"DEBUG");
         //props.put(StreamsConfig.PROCESSING_GUARANTEE_CONFIG, StreamsConfig.EXACTLY_ONCE);
 
         return props;
@@ -41,7 +40,6 @@ public class SecondQueryWeek {
 
     public static void main(String[] args) throws Exception {
 
-        //final Long UNTIL_WEEK = 604800000L*2;
         final Long UNTIL_WEEK = 604860000L;
 
         final String topic = "dataQuery2";

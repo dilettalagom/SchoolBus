@@ -1,4 +1,4 @@
-##SABD:SchoolBusAnalyst
+##SABD:SchoolBusAnalyzer
 
 SchoolBusAnalyzer è un sistema per l’analisi dei dati relativi ai ritardi degli autobus scolastici della città di New York.
 L’architettura è costituita da:
@@ -38,7 +38,7 @@ dove:
  2. spostarsi all'interno della cartella principale:
     ``` $cd producer/``` 
  3. eseguire il comando per la submit del dataset:
-     ``` $sh submit-dataset.sh -f bus.csv -s <speed_factor>  -t <topic_name> ```
+     ``` $sh submit-dataset.sh -f bus-breakdown-and-delays.csv -s <speed_factor>  -t <topic_name> ```
  dove:
   ```<speed_factor>``` è il fattore di accelerazione temporale desiderato per la simulazione;
   ```<topic_name>``` è il nome del topic corrispondente ai dati della query che si vuole processare (dataQuery1, dataQuery2, dataQuery3);
@@ -51,7 +51,8 @@ Per invocare l’esecuzione delle varie query è necessario avviare uno dei cons
  Per avviare la computazione delle query è necessario:
  1. spostarsi sul nodo del consumer (master) di Flink eseguendo: 
         ``` $docker exec -it flink-jobmanager bash```
- 2. eseguire il comando per la submit della query:
+ 2. creare le cartelle "results-kafka" e "results-pulsar" all'interno della directory ed eventualmente cambiare i permessi di scrittura (anche a partire dal volume docker-compose/flink-jar)
+ 3. eseguire il comando per la submit della query:
      ``` $sh submit-query.sh -c <connector_type> -q <num_query> [-v <query2_type>] -t <topic_name>```
  dove:
   ```<connector_type>``` è il nome del tipo di producer a cui ci si vuole connettere (pulsar, kafka);
@@ -72,8 +73,11 @@ Per invocare l’esecuzione delle varie query è necessario avviare uno dei cons
   dove:
   ```<num_query>: [1,2]``` corrisponde al tipo di finestra temporale che si vuole eseguire della Query2 (1=day, 2=week).
  
+ Tutte le possibili configurazioni delle run degli .sh sono riportate nel file RUN.md.
  
- 
- Tutte le configurazioni possibili sono riportate nel file RUN.md.
+ Per accedere alle dashboard collegarsi a:
+ - dashboard di Pulsar:  http://localhost:80
+ - dashboard di Flink:  http://localhost:8081
+
  
  
