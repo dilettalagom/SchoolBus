@@ -77,15 +77,3 @@ Per invocare l’esecuzione delle varie query è necessario avviare uno dei cons
  Tutte le configurazioni possibili sono riportate nel file RUN.md.
  
  
- 
- 
- 
- 
- 
- 
- 
-`access kafka
-$ hostname -i --> ip
-
-access local terminal 
-$jconsole  --> <ip> :9999`
