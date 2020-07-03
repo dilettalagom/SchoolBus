@@ -34,8 +34,8 @@ execute_query() {
 
   elif [ $q = 3 ]
   then
-    echo "--------------------< consuming dataQuery2 Split>--------------------"
-    java -Djava.rmi.server.hostname=kafka-consumer -Dcom.sun.management.jmxremote=true -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.port=9992 -cp KafkaStreams-1.0-SNAPSHOT.jar query.SecondQuery
+    echo "--------------------< consuming dataQuery2 Join>--------------------"
+    java -Djava.rmi.server.hostname=kafka-consumer -Dcom.sun.management.jmxremote=true -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.port=9992 -cp KafkaStreams-1.0-SNAPSHOT.jar query.SecondQueryJoin
 
   else
     wrong_query_name
