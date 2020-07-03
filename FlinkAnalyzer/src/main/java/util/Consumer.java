@@ -11,7 +11,7 @@ public class Consumer {
         DataStreamSource<String> input = null;
         switch (type){
             case "pulsar":
-                PulsarConsumer conn = new PulsarConsumer(topic);
+                PulsarConsumer conn = new PulsarConsumer("non-persistent://public/default/"+topic);
                 SourceFunction<String> src = conn.initPulsarConnection();
                 input = see.addSource(src);
                 break;
@@ -21,4 +21,6 @@ public class Consumer {
         }
         return input;
     }
+
+
 }

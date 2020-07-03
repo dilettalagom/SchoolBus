@@ -3,6 +3,7 @@ package query;
 import Serializers.*;
 import custom_function.TimeSlotFilter;
 import model.*;
+import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.common.serialization.Serdes;
 import org.apache.kafka.common.utils.Bytes;
 import org.apache.kafka.streams.KafkaStreams;
@@ -29,6 +30,9 @@ public class SecondQueryWeek {
         props.put(StreamsConfig.CLIENT_ID_CONFIG, "kafka-consumer");
         props.put(StreamsConfig.BOOTSTRAP_SERVERS_CONFIG, KAFKA_BROKER);
         props.put(StreamsConfig.DEFAULT_TIMESTAMP_EXTRACTOR_CLASS_CONFIG, EventTimeExtractor.class);
+        //props.put(StreamsConfig.COMMIT_INTERVAL_MS_CONFIG, "50");
+        props.put(StreamsConfig.NUM_STREAM_THREADS_CONFIG, "10");
+        //props.put("acks","all");
         //props.put(StreamsConfig.PROCESSING_GUARANTEE_CONFIG, StreamsConfig.EXACTLY_ONCE);
 
         return props;
@@ -37,7 +41,8 @@ public class SecondQueryWeek {
 
     public static void main(String[] args) throws Exception {
 
-        final Long UNTIL_WEEK = 604800000L*2;
+        //final Long UNTIL_WEEK = 604800000L*2;
+        final Long UNTIL_WEEK = 604860000L;
 
         final String topic = "dataQuery2";
         final Properties props = createStreamProperties();
@@ -71,7 +76,10 @@ public class SecondQueryWeek {
         KStream<String, SnappyTuple2<String,Long>> joinWeek = mergeFinalResults(rankedAMWeek, rankedPMWeek);
 
         //print on file
-        joinWeek.print(Printed.<String, SnappyTuple2<String,Long>>toFile("ranker-merged-week.txt").withLabel("merged-week")
+        joinWeek.mapValues((key, value) -> {
+            Long end = System.nanoTime() - value.k2;
+            return new SnappyTuple2<String, Long>(value.k1, end);
+        }).print(Printed.<String, SnappyTuple2<String,Long>>toFile("weekResult.txt").withLabel("merged-week")
                 .withKeyValueMapper((win, v) -> String.format("%s; %s", win, v.toString())));
 
 

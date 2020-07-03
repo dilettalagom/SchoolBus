@@ -20,7 +20,7 @@ import util.Consumer;
 
 public class FirstQuery{
 
-    private static final String topic = "non-persistent://public/default/dataQuery1";
+    private static final String topic = "dataQuery1";
 
     public static void main(String[] args) throws Exception{
 
@@ -78,15 +78,7 @@ public class FirstQuery{
         weekResult.writeAsText(outputPath + "weekResult.txt", FileSystem.WriteMode.OVERWRITE).setParallelism(1).name("Write week result ");
         monthResult.writeAsText(outputPath + "monthResult.txt", FileSystem.WriteMode.OVERWRITE).setParallelism(1).name("Write month result ");
 
-        /*StreamingFileSink<Tuple3<String, ArrayList<Tuple3<String, Double, Long>>,Long>> sink = StreamingFileSink
-                 .forRowFormat(new Path("/opt/flink/flink-jar/results/query1/"),
-                         (Encoder<Tuple3<String, ArrayList<Tuple3<String, Double, Long>>,Long>>) (element, stream) -> {
-                             PrintStream out = new PrintStream(stream);
-                             out.println(element);
-                 })
-                .build();
-        dayResultPT2.addSink(sink).name("Save dayResult");*/
-
+        /* for throughput only */
         //dayResult.union(weekResult, monthResult).writeAsText(outputPath + "forthroughput.txt", FileSystem.WriteMode.OVERWRITE).setParallelism(1).name("For Throughput");
 
         try {
@@ -96,6 +88,8 @@ public class FirstQuery{
         }
 
     }
+
+
 
 }
 

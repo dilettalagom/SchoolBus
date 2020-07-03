@@ -144,42 +144,6 @@ services:
       - JOB_MANAGER_RPC_ADDRESS=flink-jobmanager
 
 
-#  master:
-#    build:
-#      context: ../docker-images/spark
-#    image: digi/spark
-#    container_name: master
-#    hostname: master
-#    networks:
-#      - app_network
-#    ports:
-#      - "43211:43211" #remote intellij debugging
-#      - "18080:18080" #spark history ui
-#    volumes:
-#      - ./spark-jar:/target
-#    stdin_open: true
-#    tty: true
-#    command: bash -c "sh start-services.sh"
-#
-#
-#  worker1:
-#    image: digi/spark
-#    container_name: worker1
-#    hostname: worker1
-#    networks:
-#      - app_network
-#    ports:
-#      - "9861:9861"
-#    depends_on:
-#      - master
-#    volumes:
-#      - ./spark-jar:/target
-#    stdin_open: true
-#    tty: true
-#    command: bash -c "sh start-services.sh"
-
-
-
   pulsar-node:
     image: apachepulsar/pulsar:2.4.0
     hostname: pulsar-node
@@ -196,20 +160,20 @@ services:
     command: /bin/bash -c "bin/apply-config-from-env.py conf/standalone.conf && bin/pulsar standalone"
 
 
-  pulsar-client:
-    image: apachepulsar/pulsar:2.4.0
-    hostname: pulsar-client
-    container_name: pulsar-client
-    networks:
-      - app_network
-    environment:
-      - PULSAR_MEM=" -Xms512m -Xmx512m -XX:MaxDirectMemorySize=1g"
-    volumes:
-      - ./pulsar-jar:/pulsar-jar
-    command: /bin/bash
-    stdin_open: true
-    tty: true
-
+#  pulsar-client:
+#    image: apachepulsar/pulsar:2.4.0
+#    hostname: pulsar-client
+#    container_name: pulsar-client
+#    networks:
+#      - app_network
+#    environment:
+#      - PULSAR_MEM=" -Xms512m -Xmx512m -XX:MaxDirectMemorySize=1g"
+#    volumes:
+#      - ./pulsar-jar:/pulsar-jar
+#    command: /bin/bash
+#    stdin_open: true
+#    tty: true
+#
 
   pulsar-dashboard:
     image: apachepulsar/pulsar-dashboard:2.4.0

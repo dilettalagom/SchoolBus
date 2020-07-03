@@ -2,10 +2,6 @@ package model;
 
 import lombok.Data;
 import java.io.Serializable;
-import java.text.SimpleDateFormat;
-import java.time.Instant;
-import java.time.format.DateTimeParseException;
-import java.util.Date;
 
 
 @Data
@@ -14,7 +10,7 @@ public class ReasonDelayPojo implements Serializable {
     private String reason;
     private String timestamp;
     private String timeslot;
-    private Long currentEventTime;
+    private long currentEventTime;
 
 
     public ReasonDelayPojo(){}
@@ -35,20 +31,6 @@ public class ReasonDelayPojo implements Serializable {
         this.timeslot = timeslot;
     }
 
-    public String convertFromEpochToDate(Long epochMilli){
-        Date date = new Date(epochMilli);
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
-        return simpleDateFormat.format(date);
-    }
-
-    public long convertToEpochMilli(String timestampString){
-        try {
-            long epochToMilli = Instant.parse(timestampString+'Z').toEpochMilli();
-            return  epochToMilli;
-        } catch (DateTimeParseException e) {
-            return 0L;
-        }
-    }
 
     @Override
     public String toString() {

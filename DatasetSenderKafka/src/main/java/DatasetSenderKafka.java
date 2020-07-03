@@ -13,18 +13,16 @@ public class DatasetSenderKafka {
     private String csvFilePath;
     private BufferedReader bufferedReader;
     private String topic;
-    private String consumerType;
     private static final String KafkaUri = "kafka:9092";
     private KafkaProducer producer;
     private float servingSpeed;
     private DelayFormatter delayFormatter;
 
 
-    public DatasetSenderKafka(String csvFilePath, float servingSpeed, String topic, String consumerType) {
+    public DatasetSenderKafka(String csvFilePath, float servingSpeed, String topic) {
         this.csvFilePath = csvFilePath;
         this.servingSpeed = servingSpeed;
         this.topic = topic;
-        this.consumerType = consumerType;
         this.delayFormatter = DelayFormatter.getInstance();
         initCSVReader();
         initKafkaProducer();
@@ -33,8 +31,6 @@ public class DatasetSenderKafka {
 
     private void initCSVReader() {
         try {
-            //this.output = new BufferedWriter(new FileWriter("docker-compose/kafka-producer//timers.txt"));
-
             this.bufferedReader = new BufferedReader(new FileReader(csvFilePath));
         } catch (IOException e) {
             System.err.println(e.getMessage());
@@ -49,8 +45,7 @@ public class DatasetSenderKafka {
         props.put("group.id", "SchoolBus");
         props.put("key.serializer", StringSerializer.class);
         props.put("value.serializer", StringSerializer.class);
-        props.put("acks","all"); //ex-once
-
+        //props.put(ProducerConfig.ENABLE_IDEMPOTENCE_CONFIG,true);
         producer = new KafkaProducer(props);
 
     }
@@ -64,8 +59,9 @@ public class DatasetSenderKafka {
 
         //Validating first line
         String[] firstLine = splitter(readLineFromCSV());
-        firstLine[11] = delayFormatter.formatDelay(firstLine[11].toLowerCase());
-        if(firstLine[11]!= null) {
+        String firstdelay  = delayFormatter.formatDelay(firstLine[11].toLowerCase());
+        if(!firstdelay.equals("") && Long.parseLong(firstdelay) <= 300L ) {
+            firstLine[11] = firstdelay;
             firstTimestamp = extractTimeStamp(firstLine[7]);
             sendToTopic(firstLine);
             i++;
@@ -77,11 +73,12 @@ public class DatasetSenderKafka {
             String[] tokens = splitter(line);
 
             //ckeck if is a valid line  --> total row: 379412, validated row: 334418
-            tokens[11] = delayFormatter.formatDelay(tokens[11].toLowerCase());
+            String delay = delayFormatter.formatDelay(tokens[11].toLowerCase());
 
             //publishing on topic only if is a valid line
-            if(!tokens[11].equals("") && Integer.parseInt(tokens[11]) <= 300) {
+            if(!delay.equals("") && Long.parseLong(delay) <= 300L) {
                 i++;
+                tokens[11] = delay;
                 long curTimestamp = extractTimeStamp(tokens[7]);
                 long deltaTimeStamp = computeDelta(firstTimestamp, curTimestamp);
 

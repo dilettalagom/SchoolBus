@@ -8,20 +8,20 @@ public class ResultPojo implements Serializable {
 
     String timeslot;
     String reason;
-    Integer count;
-    Long currentEventTime;
+    int count;
+    long currentEventTime;
 
     public ResultPojo() {
     }
 
-    public ResultPojo(String timeslot, String reason, Integer count) {
+    public ResultPojo(String timeslot, String reason, int count) {
         this.timeslot = timeslot;
         this.reason = reason;
         this.count = count;
     }
 
 
-    public ResultPojo(String timeslot, String reason, Integer count, Long current) {
+    public ResultPojo(String timeslot, String reason, int count, long current) {
         this.timeslot = timeslot;
         this.reason = reason;
         this.count = count;

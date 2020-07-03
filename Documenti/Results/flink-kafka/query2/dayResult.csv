@@ -1,0 +1,937 @@
+﻿01/09/15, AM : 5:00-11:59,{Heavy Traffic=4, Other=3}
+02/09/15, AM : 5:00-11:59,{Heavy Traffic=21, Other=7, Problem Run=2},PM : 12:00-19:00,{Heavy Traffic=1, Other=1}
+03/09/15, AM : 5:00-11:59,{Heavy Traffic=13, Other=2, Mechanical Problem=1},PM : 12:00-19:00,{Heavy Traffic=1}
+04/09/15, AM : 5:00-11:59,{Heavy Traffic=4, Other=4, Won`t Start=1},PM : 12:00-19:00,{Heavy Traffic=1, Other=1}
+08/09/15, AM : 5:00-11:59,{Heavy Traffic=65, Other=21, Mechanical Problem=9},PM : 12:00-19:00,{Delayed by School=8, Heavy Traffic=3, Other=3}
+09/09/15, AM : 5:00-11:59,{Heavy Traffic=407, Other=65, Mechanical Problem=25},PM : 12:00-19:00,{Delayed by School=20, Heavy Traffic=14, Other=13}
+10/09/15, AM : 5:00-11:59,{Heavy Traffic=308, Weather Conditions=54, Other=35},PM : 12:00-19:00,{Heavy Traffic=28, Other=8, Mechanical Problem=7}
+11/09/15, AM : 5:00-11:59,{Heavy Traffic=269, Other=29, Mechanical Problem=8},PM : 12:00-19:00,{Heavy Traffic=27, Other=9, Mechanical Problem=5}
+14/09/15, AM : 5:00-11:59,{Heavy Traffic=12, Other=2, Mechanical Problem=1},PM : 12:00-19:00,{Heavy Traffic=1, Other=1}
+15/09/15, AM : 5:00-11:59,{Heavy Traffic=22, Other=3},PM : 12:00-19:00,{Heavy Traffic=1}
+16/09/15, AM : 5:00-11:59,{Heavy Traffic=317, Other=72, Problem Run=17},PM : 12:00-19:00,{Heavy Traffic=26, Other=19, Mechanical Problem=6}
+17/09/15, AM : 5:00-11:59,{Heavy Traffic=277, Other=34, Problem Run=20},PM : 12:00-19:00,{Heavy Traffic=27, Other=6, Delayed by School=4}
+18/09/15, AM : 5:00-11:59,{Heavy Traffic=226, Other=30, Problem Run=11},PM : 12:00-19:00,{Heavy Traffic=22, Other=14, Delayed by School=4}
+21/09/15, AM : 5:00-11:59,{Heavy Traffic=215, Other=47, Mechanical Problem=17},PM : 12:00-19:00,{Other=20, Heavy Traffic=11, Delayed by School=6}
+22/09/15, AM : 5:00-11:59,{Heavy Traffic=169, Other=27, Problem Run=22},PM : 12:00-19:00,{Other=12, Heavy Traffic=8, Delayed by School=3}
+23/09/15, AM : 5:00-11:59,{Heavy Traffic=8, Other=2, Won`t Start=1},PM : 12:00-19:00,{Other=3}
+24/09/15, AM : 5:00-11:59,{Heavy Traffic=14, Mechanical Problem=3, Problem Run=3},PM : 12:00-19:00,{Other=4}
+25/09/15, AM : 5:00-11:59,{Heavy Traffic=188, Other=51, Problem Run=17},PM : 12:00-19:00,{Heavy Traffic=12, Other=4, Delayed by School=3}
+28/09/15, AM : 5:00-11:59,{Heavy Traffic=193, Other=47, Problem Run=10},PM : 12:00-19:00,{Heavy Traffic=18, Other=3, Delayed by School=2}
+29/09/15, AM : 5:00-11:59,{Heavy Traffic=223, Other=48, Problem Run=16},PM : 12:00-19:00,{Heavy Traffic=19, Other=7, Delayed by School=1}
+30/09/15, AM : 5:00-11:59,{Heavy Traffic=201, Other=41, Weather Conditions=35},PM : 12:00-19:00,{Other=7, Mechanical Problem=3, Heavy Traffic=3}
+01/10/15, AM : 5:00-11:59,{Heavy Traffic=157, Other=38, Problem Run=24},PM : 12:00-19:00,{Heavy Traffic=12, Other=8, Delayed by School=5}
+02/10/15, AM : 5:00-11:59,{Heavy Traffic=152, Weather Conditions=71, Other=35},PM : 12:00-19:00,{Heavy Traffic=27, Weather Conditions=9, Other=7}
+05/10/15, AM : 5:00-11:59,{Heavy Traffic=159, Other=55, Problem Run=14},PM : 12:00-19:00,{Heavy Traffic=9, Other=9, Delayed by School=5}
+06/10/15, AM : 5:00-11:59,{Heavy Traffic=176, Other=46, Problem Run=18},PM : 12:00-19:00,{Heavy Traffic=12, Other=12, Mechanical Problem=8}
+07/10/15, AM : 5:00-11:59,{Heavy Traffic=203, Other=45, Mechanical Problem=14},PM : 12:00-19:00,{Heavy Traffic=17, Other=10, Late return from Field Trip=4}
+08/10/15, AM : 5:00-11:59,{Heavy Traffic=194, Other=51, Problem Run=15},PM : 12:00-19:00,{Other=10, Heavy Traffic=9, Accident=4}
+09/10/15, AM : 5:00-11:59,{Heavy Traffic=156, Other=29, Mechanical Problem=8},PM : 12:00-19:00,{Heavy Traffic=19, Other=11, Accident=3}
+13/10/15, AM : 5:00-11:59,{Heavy Traffic=247, Other=43, Problem Run=10},PM : 12:00-19:00,{Heavy Traffic=18, Other=9, Accident=4}
+14/10/15, AM : 5:00-11:59,{Heavy Traffic=269, Other=84, Problem Run=27},PM : 12:00-19:00,{Heavy Traffic=28, Late return from Field Trip=25, Other=13}
+15/10/15, AM : 5:00-11:59,{Heavy Traffic=317, Other=124, Problem Run=24},PM : 12:00-19:00,{Late return from Field Trip=9, Heavy Traffic=7, Other=4}
+16/10/15, AM : 5:00-11:59,{Heavy Traffic=4, Other=4, Problem Run=1},PM : 12:00-19:00,{Other=1}
+19/10/15, AM : 5:00-11:59,{Heavy Traffic=348, Other=110, Mechanical Problem=16},PM : 12:00-19:00,{Heavy Traffic=30, Other=12, Mechanical Problem=10}
+20/10/15, AM : 5:00-11:59,{Heavy Traffic=240, Other=89, Problem Run=24},PM : 12:00-19:00,{Heavy Traffic=13, Other=6, Delayed by School=4}
+21/10/15, AM : 5:00-11:59,{Heavy Traffic=93, Other=13, Flat Tire=1},PM : 12:00-19:00,{Heavy Traffic=30, Late return from Field Trip=5, Other=5}
+22/10/15, AM : 5:00-11:59,{Heavy Traffic=260, Other=51, Mechanical Problem=13},PM : 12:00-19:00,{Heavy Traffic=32, Other=18, Late return from Field Trip=10}
+23/10/15, AM : 5:00-11:59,{Heavy Traffic=316, Other=80, Problem Run=14},PM : 12:00-19:00,{Late return from Field Trip=32, Heavy Traffic=29, Other=16}
+26/10/15, AM : 5:00-11:59,{Heavy Traffic=218, Other=81, Mechanical Problem=13},PM : 12:00-19:00,{Heavy Traffic=16, Other=10, Late return from Field Trip=7}
+27/10/15, AM : 5:00-11:59,{Heavy Traffic=178, Other=50, Mechanical Problem=12},PM : 12:00-19:00,{Heavy Traffic=14, Other=10, Mechanical Problem=9}
+28/10/15, AM : 5:00-11:59,{Heavy Traffic=179, Other=57, Mechanical Problem=12},PM : 12:00-19:00,{Heavy Traffic=35, Late return from Field Trip=19, Other=14}
+29/10/15, AM : 5:00-11:59,{Heavy Traffic=256, Other=59, Weather Conditions=23},PM : 12:00-19:00,{Heavy Traffic=18, Other=7, Late return from Field Trip=4}
+30/10/15, AM : 5:00-11:59,{Heavy Traffic=148, Other=42, Mechanical Problem=11},PM : 12:00-19:00,{Heavy Traffic=22, Late return from Field Trip=6, Mechanical Problem=4}
+02/11/15, AM : 5:00-11:59,{Heavy Traffic=152, Other=55, Mechanical Problem=15},PM : 12:00-19:00,{Heavy Traffic=13, Other=7, Delayed by School=3}
+03/11/15, AM : 5:00-11:59,{Heavy Traffic=20, Other=14, Mechanical Problem=4},PM : 12:00-19:00,{Heavy Traffic=1}
+04/11/15, AM : 5:00-11:59,{Heavy Traffic=174, Other=45, Mechanical Problem=15},PM : 12:00-19:00,{Heavy Traffic=13, Other=11, Late return from Field Trip=5}
+05/11/15, AM : 5:00-11:59,{Heavy Traffic=205, Other=35, Mechanical Problem=15},PM : 12:00-19:00,{Heavy Traffic=14, Other=14, Mechanical Problem=4}
+06/11/15, AM : 5:00-11:59,{Heavy Traffic=154, Other=41, Flat Tire=8},PM : 12:00-19:00,{Other=12, Late return from Field Trip=10, Heavy Traffic=8}
+09/11/15, AM : 5:00-11:59,{Heavy Traffic=159, Other=44, Won`t Start=8},PM : 12:00-19:00,{Heavy Traffic=16, Other=15, Late return from Field Trip=9}
+10/11/15, AM : 5:00-11:59,{Heavy Traffic=198, Other=62, Weather Conditions=11},PM : 12:00-19:00,{Heavy Traffic=19, Other=11, Weather Conditions=5}
+12/11/15, AM : 5:00-11:59,{Heavy Traffic=197, Other=51, Mechanical Problem=18},PM : 12:00-19:00,{Other=13, Heavy Traffic=10, Late return from Field Trip=8}
+13/11/15, AM : 5:00-11:59,{Heavy Traffic=204, Other=51, Mechanical Problem=8},PM : 12:00-19:00,{Heavy Traffic=41, Other=15, Late return from Field Trip=12}
+16/11/15, AM : 5:00-11:59,{Heavy Traffic=176, Other=60, Mechanical Problem=17},PM : 12:00-19:00,{Other=18, Heavy Traffic=14, Delayed by School=3}
+17/11/15, AM : 5:00-11:59,{Heavy Traffic=221, Other=63, Mechanical Problem=7},PM : 12:00-19:00,{Heavy Traffic=12, Other=10, Flat Tire=1}
+18/11/15, AM : 5:00-11:59,{Heavy Traffic=133, Other=39, Won`t Start=4},PM : 12:00-19:00,{Heavy Traffic=21, Other=17, Late return from Field Trip=6}
+19/11/15, AM : 5:00-11:59,{Heavy Traffic=132, Other=42, Mechanical Problem=13},PM : 12:00-19:00,{Heavy Traffic=22, Other=22, Late return from Field Trip=8}
+20/11/15, AM : 5:00-11:59,{Heavy Traffic=121, Other=41, Won`t Start=4},PM : 12:00-19:00,{Heavy Traffic=19, Other=14, Flat Tire=1}
+23/11/15, AM : 5:00-11:59,{Heavy Traffic=179, Other=52, Mechanical Problem=25},PM : 12:00-19:00,{Heavy Traffic=27, Other=12, Late return from Field Trip=6}
+24/11/15, AM : 5:00-11:59,{Heavy Traffic=266, Other=34, Mechanical Problem=13},PM : 12:00-19:00,{Heavy Traffic=29, Other=16, Late return from Field Trip=12}
+25/11/15, AM : 5:00-11:59,{Heavy Traffic=141, Other=23, Mechanical Problem=5},PM : 12:00-19:00,{Heavy Traffic=24, Late return from Field Trip=6, Other=6}
+27/11/15, AM : 5:00-11:59,{Heavy Traffic=1}
+30/11/15, AM : 5:00-11:59,{Heavy Traffic=226, Other=61, Mechanical Problem=13},PM : 12:00-19:00,{Heavy Traffic=25, Other=21, Delayed by School=4}
+01/12/15, AM : 5:00-11:59,{Heavy Traffic=238, Weather Conditions=53, Other=32},PM : 12:00-19:00,{Heavy Traffic=20, Late return from Field Trip=12, Mechanical Problem=5}
+02/12/15, AM : 5:00-11:59,{Heavy Traffic=210, Other=52, Weather Conditions=27},PM : 12:00-19:00,{Heavy Traffic=37, Other=17, Late return from Field Trip=10}
+03/12/15, AM : 5:00-11:59,{Heavy Traffic=151, Other=29, Mechanical Problem=12},PM : 12:00-19:00,{Heavy Traffic=15, Late return from Field Trip=7, Other=5}
+04/12/15, AM : 5:00-11:59,{Heavy Traffic=158, Other=40, Mechanical Problem=5},PM : 12:00-19:00,{Heavy Traffic=20, Other=4, Accident=2}
+07/12/15, AM : 5:00-11:59,{Heavy Traffic=178, Other=57, Mechanical Problem=8},PM : 12:00-19:00,{Heavy Traffic=19, Other=10, Mechanical Problem=6}
+08/12/15, AM : 5:00-11:59,{Heavy Traffic=195, Other=44, Mechanical Problem=6},PM : 12:00-19:00,{Heavy Traffic=46, Other=8, Late return from Field Trip=5}
+09/12/15, AM : 5:00-11:59,{Heavy Traffic=157, Other=43, Mechanical Problem=12},PM : 12:00-19:00,{Heavy Traffic=20, Late return from Field Trip=13, Other=12}
+10/12/15, AM : 5:00-11:59,{Heavy Traffic=162, Other=28, Delayed by School=5},PM : 12:00-19:00,{Heavy Traffic=43, Late return from Field Trip=13, Accident=6}
+11/12/15, AM : 5:00-11:59,{Heavy Traffic=170, Other=36, Delayed by School=7},PM : 12:00-19:00,{Heavy Traffic=28, Other=10, Late return from Field Trip=7}
+14/12/15, AM : 5:00-11:59,{Heavy Traffic=165, Other=55, Mechanical Problem=8},PM : 12:00-19:00,{Heavy Traffic=16, Other=10, Late return from Field Trip=6}
+15/12/15, AM : 5:00-11:59,{Heavy Traffic=134, Other=37, Mechanical Problem=10},PM : 12:00-19:00,{Heavy Traffic=13, Late return from Field Trip=9, Other=4}
+16/12/15, AM : 5:00-11:59,{Heavy Traffic=156, Other=33, Flat Tire=7},PM : 12:00-19:00,{Heavy Traffic=13, Delayed by School=5, Mechanical Problem=4}
+17/12/15, AM : 5:00-11:59,{Heavy Traffic=159, Other=33, Problem Run=18},PM : 12:00-19:00,{Heavy Traffic=31, Late return from Field Trip=17, Other=14}
+18/12/15, AM : 5:00-11:59,{Heavy Traffic=121, Other=37, Mechanical Problem=12},PM : 12:00-19:00,{Late return from Field Trip=30, Heavy Traffic=20, Other=19}
+21/12/15, AM : 5:00-11:59,{Heavy Traffic=133, Other=43, Won`t Start=8},PM : 12:00-19:00,{Heavy Traffic=13, Other=9, Mechanical Problem=2}
+22/12/15, AM : 5:00-11:59,{Heavy Traffic=114, Other=32, Weather Conditions=13},PM : 12:00-19:00,{Heavy Traffic=35, Other=10, Late return from Field Trip=9}
+23/12/15, AM : 5:00-11:59,{Heavy Traffic=69, Other=24, Weather Conditions=20},PM : 12:00-19:00,{Heavy Traffic=18, Weather Conditions=6, Other=4}
+24/12/15, AM : 5:00-11:59,{Heavy Traffic=1}
+28/12/15, AM : 5:00-11:59,{Mechanical Problem=2, Heavy Traffic=2, Other=1}
+29/12/15, AM : 5:00-11:59,{Weather Conditions=1, Mechanical Problem=1},PM : 12:00-19:00,{Other=1}
+30/12/15, AM : 5:00-11:59,{Heavy Traffic=3},PM : 12:00-19:00,{Heavy Traffic=1}
+31/12/15, AM : 5:00-11:59,{Mechanical Problem=1},PM : 12:00-19:00,{Heavy Traffic=2}
+04/01/16, AM : 5:00-11:59,{Heavy Traffic=200, Other=79, Won`t Start=27},PM : 12:00-19:00,{Heavy Traffic=19, Other=10, Won`t Start=3}
+05/01/16, AM : 5:00-11:59,{Heavy Traffic=216, Other=74, Won`t Start=40},PM : 12:00-19:00,{Other=10, Heavy Traffic=8, Mechanical Problem=6}
+06/01/16, AM : 5:00-11:59,{Heavy Traffic=131, Other=48, Won`t Start=13},PM : 12:00-19:00,{Heavy Traffic=15, Late return from Field Trip=5, Other=5}
+07/01/16, AM : 5:00-11:59,{Heavy Traffic=137, Other=43, Mechanical Problem=11},PM : 12:00-19:00,{Heavy Traffic=33, Other=12, Delayed by School=4}
+08/01/16, AM : 5:00-11:59,{Heavy Traffic=167, Other=51, Problem Run=17},PM : 12:00-19:00,{Heavy Traffic=5, Delayed by School=2, Other=2}
+11/01/16, AM : 5:00-11:59,{Heavy Traffic=141, Other=47, Mechanical Problem=10},PM : 12:00-19:00,{Heavy Traffic=6, Other=2, Won`t Start=1}
+12/01/16, AM : 5:00-11:59,{Heavy Traffic=298, Other=68, Mechanical Problem=9},PM : 12:00-19:00,{Other=8, Heavy Traffic=7, Mechanical Problem=4}
+13/01/16, AM : 5:00-11:59,{Heavy Traffic=130, Other=42, Mechanical Problem=9},PM : 12:00-19:00,{Other=15, Heavy Traffic=14, Mechanical Problem=6}
+14/01/16, AM : 5:00-11:59,{Heavy Traffic=111, Other=46, Won`t Start=12},PM : 12:00-19:00,{Heavy Traffic=12, Other=7, Late return from Field Trip=5}
+15/01/16, AM : 5:00-11:59,{Heavy Traffic=119, Other=35, Mechanical Problem=7},PM : 12:00-19:00,{Heavy Traffic=17, Other=6, Mechanical Problem=4}
+19/01/16, AM : 5:00-11:59,{Heavy Traffic=152, Other=60, Weather Conditions=36},PM : 12:00-19:00,{Heavy Traffic=29, Mechanical Problem=5, Other=4}
+20/01/16, AM : 5:00-11:59,{Heavy Traffic=137, Other=38, Mechanical Problem=14},PM : 12:00-19:00,{Heavy Traffic=13, Late return from Field Trip=6, Other=4}
+21/01/16, AM : 5:00-11:59,{Heavy Traffic=142, Other=41, Mechanical Problem=13},PM : 12:00-19:00,{Heavy Traffic=19, Other=9, Late return from Field Trip=4}
+22/01/16, AM : 5:00-11:59,{Heavy Traffic=120, Other=39, Weather Conditions=12},PM : 12:00-19:00,{Heavy Traffic=21, Late return from Field Trip=6, Other=6}
+25/01/16, AM : 5:00-11:59,{Weather Conditions=741, Heavy Traffic=129, Other=83},PM : 12:00-19:00,{Weather Conditions=34, Heavy Traffic=14, Other=8}
+26/01/16, AM : 5:00-11:59,{Heavy Traffic=344, Weather Conditions=263, Other=55},PM : 12:00-19:00,{Heavy Traffic=30, Other=7, Weather Conditions=5}
+27/01/16, AM : 5:00-11:59,{Heavy Traffic=238, Other=50, Mechanical Problem=13},PM : 12:00-19:00,{Heavy Traffic=27, Delayed by School=5, Other=4}
+28/01/16, AM : 5:00-11:59,{Heavy Traffic=283, Other=30, Mechanical Problem=12},PM : 12:00-19:00,{Heavy Traffic=11, Other=3, Delayed by School=2}
+29/01/16, AM : 5:00-11:59,{Heavy Traffic=114, Other=36, Problem Run=7},PM : 12:00-19:00,{Heavy Traffic=20, Other=5, Delayed by School=2}
+01/02/16, AM : 5:00-11:59,{Heavy Traffic=174, Other=51, Won`t Start=12},PM : 12:00-19:00,{Heavy Traffic=15, Other=14, Mechanical Problem=3}
+02/02/16, AM : 5:00-11:59,{Heavy Traffic=130, Other=42, Mechanical Problem=13},PM : 12:00-19:00,{Heavy Traffic=8, Other=7, Mechanical Problem=3}
+03/02/16, AM : 5:00-11:59,{Heavy Traffic=135, Other=61, Mechanical Problem=9},PM : 12:00-19:00,{Heavy Traffic=13, Late return from Field Trip=9, Other=9}
+04/02/16, AM : 5:00-11:59,{Heavy Traffic=125, Other=35, Problem Run=11},PM : 12:00-19:00,{Heavy Traffic=13, Other=11, Late return from Field Trip=5}
+05/02/16, AM : 5:00-11:59,{Weather Conditions=396, Heavy Traffic=94, Other=18},PM : 12:00-19:00,{Heavy Traffic=7, Other=5, Delayed by School=3}
+08/02/16, AM : 5:00-11:59,{Heavy Traffic=23, Other=13, Won`t Start=3},PM : 12:00-19:00,{Heavy Traffic=1}
+09/02/16, AM : 5:00-11:59,{Heavy Traffic=210, Other=51, Mechanical Problem=17},PM : 12:00-19:00,{Heavy Traffic=11, Other=5, Late return from Field Trip=4}
+10/02/16, AM : 5:00-11:59,{Heavy Traffic=127, Other=40, Mechanical Problem=11},PM : 12:00-19:00,{Heavy Traffic=22, Late return from Field Trip=11, Delayed by School=3}
+11/02/16, AM : 5:00-11:59,{Heavy Traffic=120, Other=43, Mechanical Problem=11},PM : 12:00-19:00,{Heavy Traffic=15, Late return from Field Trip=12, Other=3}
+12/02/16, AM : 5:00-11:59,{Heavy Traffic=147, Other=39, Won`t Start=17},PM : 12:00-19:00,{Heavy Traffic=26, Late return from Field Trip=8, Other=4}
+16/02/16, AM : 5:00-11:59,{Weather Conditions=4, Other=4, Heavy Traffic=2},PM : 12:00-19:00,{Weather Conditions=1}
+17/02/16, AM : 5:00-11:59,{Heavy Traffic=4, Other=3, Won`t Start=2},PM : 12:00-19:00,{Heavy Traffic=1}
+18/02/16, AM : 5:00-11:59,{Heavy Traffic=4, Mechanical Problem=2, Other=2}
+19/02/16, AM : 5:00-11:59,{Heavy Traffic=4, Won`t Start=1},PM : 12:00-19:00,{Other=1}
+22/02/16, AM : 5:00-11:59,{Heavy Traffic=178, Other=74, Mechanical Problem=27},PM : 12:00-19:00,{Heavy Traffic=18, Other=11, Mechanical Problem=4}
+23/02/16, AM : 5:00-11:59,{Heavy Traffic=115, Other=41, Problem Run=12},PM : 12:00-19:00,{Heavy Traffic=20, Late return from Field Trip=4, Weather Conditions=4}
+24/02/16, AM : 5:00-11:59,{Heavy Traffic=166, Other=27, Weather Conditions=19},PM : 12:00-19:00,{Heavy Traffic=21, Late return from Field Trip=6, Other=3}
+25/02/16, AM : 5:00-11:59,{Heavy Traffic=119, Other=35, Problem Run=10},PM : 12:00-19:00,{Other=19, Heavy Traffic=17, Late return from Field Trip=4}
+26/02/16, AM : 5:00-11:59,{Heavy Traffic=114, Other=16, Problem Run=9},PM : 12:00-19:00,{Heavy Traffic=10, Other=9, Late return from Field Trip=3}
+29/02/16, AM : 5:00-11:59,{Heavy Traffic=136, Other=67, Mechanical Problem=15},PM : 12:00-19:00,{Heavy Traffic=21, Other=4, Delayed by School=3}
+01/03/16, AM : 5:00-11:59,{Heavy Traffic=105, Other=40, Problem Run=10},PM : 12:00-19:00,{Heavy Traffic=11, Late return from Field Trip=8, Accident=5}
+02/03/16, AM : 5:00-11:59,{Heavy Traffic=178, Other=44, Problem Run=15},PM : 12:00-19:00,{Heavy Traffic=15, Late return from Field Trip=5, Other=4}
+03/03/16, AM : 5:00-11:59,{Heavy Traffic=122, Other=35, Problem Run=9},PM : 12:00-19:00,{Heavy Traffic=10, Other=10, Accident=3}
+04/03/16, AM : 5:00-11:59,{Heavy Traffic=152, Other=43, Weather Conditions=26},PM : 12:00-19:00,{Late return from Field Trip=10, Other=7, Heavy Traffic=5}
+07/03/16, AM : 5:00-11:59,{Heavy Traffic=144, Other=99, Mechanical Problem=18},PM : 12:00-19:00,{Other=5, Heavy Traffic=4, Mechanical Problem=2}
+08/03/16, AM : 5:00-11:59,{Heavy Traffic=87, Other=23, Problem Run=11},PM : 12:00-19:00,{Heavy Traffic=10, Other=4, Accident=3}
+09/03/16, AM : 5:00-11:59,{Heavy Traffic=68, Other=26, Mechanical Problem=6},PM : 12:00-19:00,{Heavy Traffic=16, Other=13, Late return from Field Trip=6}
+10/03/16, AM : 5:00-11:59,{Heavy Traffic=205, Other=43, Flat Tire=9},PM : 12:00-19:00,{Heavy Traffic=63, Other=7, Late return from Field Trip=4}
+11/03/16, AM : 5:00-11:59,{Heavy Traffic=146, Other=33, Accident=7},PM : 12:00-19:00,{Heavy Traffic=12, Other=10, Flat Tire=2}
+14/03/16, AM : 5:00-11:59,{Heavy Traffic=189, Other=50, Weather Conditions=7},PM : 12:00-19:00,{Heavy Traffic=11, Other=8, Late return from Field Trip=7}
+15/03/16, AM : 5:00-11:59,{Heavy Traffic=142, Other=37, Won`t Start=6},PM : 12:00-19:00,{Heavy Traffic=15, Other=11, Late return from Field Trip=4}
+16/03/16, AM : 5:00-11:59,{Heavy Traffic=113, Other=49, Mechanical Problem=7},PM : 12:00-19:00,{Heavy Traffic=16, Other=5, Late return from Field Trip=4}
+17/03/16, AM : 5:00-11:59,{Heavy Traffic=139, Other=42, Won`t Start=6},PM : 12:00-19:00,{Heavy Traffic=9, Other=4, Delayed by School=2}
+18/03/16, AM : 5:00-11:59,{Heavy Traffic=106, Other=44, Mechanical Problem=6},PM : 12:00-19:00,{Heavy Traffic=18, Late return from Field Trip=4, Other=4}
+21/03/16, AM : 5:00-11:59,{Heavy Traffic=145, Other=73, Weather Conditions=23},PM : 12:00-19:00,{Heavy Traffic=7, Other=7, Mechanical Problem=3}
+22/03/16, AM : 5:00-11:59,{Heavy Traffic=152, Other=39, Mechanical Problem=8},PM : 12:00-19:00,{Heavy Traffic=17, Late return from Field Trip=14, Other=4}
+23/03/16, AM : 5:00-11:59,{Heavy Traffic=114, Other=48, Mechanical Problem=5},PM : 12:00-19:00,{Heavy Traffic=15, Late return from Field Trip=10, Other=4}
+24/03/16, AM : 5:00-11:59,{Heavy Traffic=85, Other=27, Mechanical Problem=8},PM : 12:00-19:00,{Heavy Traffic=19, Other=11, Mechanical Problem=3}
+28/03/16, AM : 5:00-11:59,{Heavy Traffic=141, Other=61, Weather Conditions=47},PM : 12:00-19:00,{Heavy Traffic=10, Other=5, Mechanical Problem=4}
+29/03/16, AM : 5:00-11:59,{Heavy Traffic=119, Other=53, Mechanical Problem=6},PM : 12:00-19:00,{Heavy Traffic=8, Other=3, Late return from Field Trip=2}
+30/03/16, AM : 5:00-11:59,{Heavy Traffic=110, Other=38, Mechanical Problem=5},PM : 12:00-19:00,{Heavy Traffic=18, Other=8, Accident=3}
+31/03/16, AM : 5:00-11:59,{Heavy Traffic=146, Other=42, Mechanical Problem=6},PM : 12:00-19:00,{Heavy Traffic=6, Late return from Field Trip=5, Mechanical Problem=3}
+01/04/16, AM : 5:00-11:59,{Heavy Traffic=96, Other=27, Mechanical Problem=13},PM : 12:00-19:00,{Heavy Traffic=16, Late return from Field Trip=3, Mechanical Problem=2}
+04/04/16, AM : 5:00-11:59,{Heavy Traffic=186, Other=58, Won`t Start=13},PM : 12:00-19:00,{Heavy Traffic=13, Mechanical Problem=6, Other=4}
+05/04/16, AM : 5:00-11:59,{Heavy Traffic=185, Other=52, Won`t Start=14},PM : 12:00-19:00,{Heavy Traffic=17, Late return from Field Trip=15, Other=4}
+06/04/16, AM : 5:00-11:59,{Heavy Traffic=139, Other=37, Won`t Start=5},PM : 12:00-19:00,{Heavy Traffic=21, Delayed by School=14, Late return from Field Trip=14}
+07/04/16, AM : 5:00-11:59,{Heavy Traffic=190, Other=46, Mechanical Problem=10},PM : 12:00-19:00,{Heavy Traffic=18, Late return from Field Trip=9, Other=5}
+08/04/16, AM : 5:00-11:59,{Heavy Traffic=114, Other=29, Mechanical Problem=13},PM : 12:00-19:00,{Heavy Traffic=16, Late return from Field Trip=6, Other=3}
+11/04/16, AM : 5:00-11:59,{Heavy Traffic=168, Other=33, Mechanical Problem=12},PM : 12:00-19:00,{Heavy Traffic=26, Other=6, Late return from Field Trip=5}
+12/04/16, AM : 5:00-11:59,{Heavy Traffic=188, Other=46, Won`t Start=6},PM : 12:00-19:00,{Heavy Traffic=20, Other=7, Late return from Field Trip=3}
+13/04/16, AM : 5:00-11:59,{Heavy Traffic=137, Other=31, Accident=7},PM : 12:00-19:00,{Late return from Field Trip=40, Heavy Traffic=24, Other=5}
+14/04/16, AM : 5:00-11:59,{Heavy Traffic=126, Other=41, Mechanical Problem=7},PM : 12:00-19:00,{Heavy Traffic=20, Late return from Field Trip=14, Other=8}
+15/04/16, AM : 5:00-11:59,{Heavy Traffic=140, Other=39, Won`t Start=4},PM : 12:00-19:00,{Heavy Traffic=28, Late return from Field Trip=22, Other=12}
+18/04/16, AM : 5:00-11:59,{Heavy Traffic=143, Other=53, Mechanical Problem=12},PM : 12:00-19:00,{Heavy Traffic=22, Other=9, Late return from Field Trip=8}
+19/04/16, AM : 5:00-11:59,{Heavy Traffic=109, Other=38, Mechanical Problem=12},PM : 12:00-19:00,{Heavy Traffic=26, Late return from Field Trip=12, Other=7}
+20/04/16, AM : 5:00-11:59,{Heavy Traffic=111, Other=71, Mechanical Problem=7},PM : 12:00-19:00,{Heavy Traffic=33, Late return from Field Trip=19, Other=9}
+21/04/16, AM : 5:00-11:59,{Heavy Traffic=110, Other=42, Won`t Start=8},PM : 12:00-19:00,{Late return from Field Trip=31, Heavy Traffic=30, Other=6}
+22/04/16, AM : 5:00-11:59,{Heavy Traffic=105, Other=35, Won`t Start=9},PM : 12:00-19:00,{Heavy Traffic=44, Late return from Field Trip=27, Mechanical Problem=7}
+25/04/16, AM : 5:00-11:59,{Heavy Traffic=2},PM : 12:00-19:00,{Heavy Traffic=2}
+26/04/16, AM : 5:00-11:59,{Won`t Start=1}
+27/04/16, AM : 5:00-11:59,{Heavy Traffic=1, Other=1},PM : 12:00-19:00,{Mechanical Problem=1}
+28/04/16, AM : 5:00-11:59,{Flat Tire=2, Mechanical Problem=1, Heavy Traffic=1}
+29/04/16, AM : 5:00-11:59,{Won`t Start=2, Mechanical Problem=1}
+02/05/16, AM : 5:00-11:59,{Heavy Traffic=172, Other=60, Won`t Start=20},PM : 12:00-19:00,{Heavy Traffic=24, Won`t Start=5, Late return from Field Trip=5}
+03/05/16, AM : 5:00-11:59,{Heavy Traffic=243, Weather Conditions=72, Other=40},PM : 12:00-19:00,{Heavy Traffic=24, Other=9, Late return from Field Trip=7}
+04/05/16, AM : 5:00-11:59,{Heavy Traffic=159, Weather Conditions=24, Other=17},PM : 12:00-19:00,{Heavy Traffic=24, Late return from Field Trip=21, Other=9}
+05/05/16, AM : 5:00-11:59,{Heavy Traffic=98, Other=32, Won`t Start=9},PM : 12:00-19:00,{Heavy Traffic=18, Late return from Field Trip=13, Other=4}
+06/05/16, AM : 5:00-11:59,{Heavy Traffic=172, Weather Conditions=74, Other=21},PM : 12:00-19:00,{Heavy Traffic=26, Late return from Field Trip=10, Other=6}
+09/05/16, AM : 5:00-11:59,{Heavy Traffic=142, Other=39, Mechanical Problem=11},PM : 12:00-19:00,{Heavy Traffic=76, Other=11, Late return from Field Trip=8}
+10/05/16, AM : 5:00-11:59,{Heavy Traffic=176, Other=49, Mechanical Problem=10},PM : 12:00-19:00,{Heavy Traffic=20, Late return from Field Trip=11, Other=6}
+11/05/16, AM : 5:00-11:59,{Heavy Traffic=110, Other=27, Mechanical Problem=6},PM : 12:00-19:00,{Late return from Field Trip=20, Heavy Traffic=14, Other=7}
+12/05/16, AM : 5:00-11:59,{Heavy Traffic=119, Other=34, Mechanical Problem=7},PM : 12:00-19:00,{Heavy Traffic=49, Late return from Field Trip=46, Other=9}
+13/05/16, AM : 5:00-11:59,{Heavy Traffic=100, Other=34, Mechanical Problem=10},PM : 12:00-19:00,{Heavy Traffic=63, Late return from Field Trip=23, Other=7}
+16/05/16, AM : 5:00-11:59,{Heavy Traffic=168, Other=51, Flat Tire=5},PM : 12:00-19:00,{Heavy Traffic=29, Late return from Field Trip=21, Other=9}
+17/05/16, AM : 5:00-11:59,{Heavy Traffic=99, Other=37, Mechanical Problem=8},PM : 12:00-19:00,{Heavy Traffic=26, Late return from Field Trip=17, Other=8}
+18/05/16, AM : 5:00-11:59,{Heavy Traffic=122, Other=33, Mechanical Problem=7},PM : 12:00-19:00,{Heavy Traffic=63, Late return from Field Trip=30, Other=6}
+19/05/16, AM : 5:00-11:59,{Heavy Traffic=109, Other=30, Mechanical Problem=8},PM : 12:00-19:00,{Late return from Field Trip=32, Heavy Traffic=23, Other=8}
+20/05/16, AM : 5:00-11:59,{Heavy Traffic=213, Other=20, Mechanical Problem=7},PM : 12:00-19:00,{Heavy Traffic=37, Late return from Field Trip=31, Other=9}
+23/05/16, AM : 5:00-11:59,{Heavy Traffic=167, Other=24, Mechanical Problem=18},PM : 12:00-19:00,{Late return from Field Trip=16, Heavy Traffic=14, Other=9}
+24/05/16, AM : 5:00-11:59,{Heavy Traffic=198, Weather Conditions=57, Other=36},PM : 12:00-19:00,{Late return from Field Trip=27, Heavy Traffic=17, Other=9}
+25/05/16, AM : 5:00-11:59,{Heavy Traffic=109, Other=34, Won`t Start=9},PM : 12:00-19:00,{Heavy Traffic=25, Late return from Field Trip=21, Other=7}
+26/05/16, AM : 5:00-11:59,{Heavy Traffic=168, Other=39, Mechanical Problem=10},PM : 12:00-19:00,{Heavy Traffic=63, Late return from Field Trip=30, Other=18}
+27/05/16, AM : 5:00-11:59,{Heavy Traffic=74, Other=14, Problem Run=4},PM : 12:00-19:00,{Late return from Field Trip=44, Heavy Traffic=19, Other=5}
+31/05/16, AM : 5:00-11:59,{Heavy Traffic=148, Other=34, Mechanical Problem=15},PM : 12:00-19:00,{Heavy Traffic=26, Late return from Field Trip=19, Other=4}
+01/06/16, AM : 5:00-11:59,{Heavy Traffic=132, Other=38, Mechanical Problem=20},PM : 12:00-19:00,{Late return from Field Trip=38, Heavy Traffic=38, Mechanical Problem=6}
+02/06/16, AM : 5:00-11:59,{Heavy Traffic=117, Other=47, Mechanical Problem=9},PM : 12:00-19:00,{Heavy Traffic=30, Late return from Field Trip=26, Other=6}
+03/06/16, AM : 5:00-11:59,{Heavy Traffic=124, Other=32, Mechanical Problem=10},PM : 12:00-19:00,{Heavy Traffic=32, Late return from Field Trip=29, Other=16}
+06/06/16, AM : 5:00-11:59,{Heavy Traffic=170, Other=47, Mechanical Problem=13},PM : 12:00-19:00,{Heavy Traffic=31, Late return from Field Trip=27, Other=14}
+07/06/16, AM : 5:00-11:59,{Heavy Traffic=130, Other=25, Mechanical Problem=6},PM : 12:00-19:00,{Late return from Field Trip=43, Heavy Traffic=18, Other=8}
+08/06/16, AM : 5:00-11:59,{Heavy Traffic=136, Other=28, Mechanical Problem=9},PM : 12:00-19:00,{Heavy Traffic=40, Late return from Field Trip=27, Other=10}
+09/06/16, AM : 5:00-11:59,{Heavy Traffic=23, Other=5, Won`t Start=2},PM : 12:00-19:00,{Accident=1, Mechanical Problem=1, Heavy Traffic=1}
+10/06/16, AM : 5:00-11:59,{Heavy Traffic=123, Other=32, Mechanical Problem=4},PM : 12:00-19:00,{Late return from Field Trip=38, Heavy Traffic=23, Other=3}
+13/06/16, AM : 5:00-11:59,{Heavy Traffic=94, Other=22, Mechanical Problem=13},PM : 12:00-19:00,{Heavy Traffic=14, Other=2, Flat Tire=1}
+14/06/16, AM : 5:00-11:59,{Heavy Traffic=34, Other=4, Flat Tire=1},PM : 12:00-19:00,{Heavy Traffic=4, Mechanical Problem=1, Other=1}
+15/06/16, AM : 5:00-11:59,{Heavy Traffic=119, Other=25, Mechanical Problem=10},PM : 12:00-19:00,{Heavy Traffic=12, Other=6, Won`t Start=3}
+16/06/16, AM : 5:00-11:59,{Heavy Traffic=154, Other=18, Mechanical Problem=11},PM : 12:00-19:00,{Heavy Traffic=24, Other=7, Mechanical Problem=4}
+17/06/16, AM : 5:00-11:59,{Heavy Traffic=67, Other=8, Mechanical Problem=6},PM : 12:00-19:00,{Heavy Traffic=15, Won`t Start=2, Mechanical Problem=2}
+20/06/16, AM : 5:00-11:59,{Heavy Traffic=78, Other=28, Mechanical Problem=7},PM : 12:00-19:00,{Heavy Traffic=15, Other=11, Delayed by School=2}
+21/06/16, AM : 5:00-11:59,{Heavy Traffic=73, Other=19, Mechanical Problem=9},PM : 12:00-19:00,{Heavy Traffic=8, Flat Tire=4, Delayed by School=3}
+22/06/16, AM : 5:00-11:59,{Heavy Traffic=71, Other=16, Mechanical Problem=6},PM : 12:00-19:00,{Heavy Traffic=26, Other=6, Flat Tire=1}
+23/06/16, AM : 5:00-11:59,{Heavy Traffic=61, Mechanical Problem=8, Other=7},PM : 12:00-19:00,{Heavy Traffic=18, Other=6, Accident=3}
+24/06/16, AM : 5:00-11:59,{Heavy Traffic=35, Other=19, Mechanical Problem=6},PM : 12:00-19:00,{Heavy Traffic=25, Other=6, Flat Tire=1}
+27/06/16, AM : 5:00-11:59,{Heavy Traffic=54, Other=13, Mechanical Problem=4},PM : 12:00-19:00,{Heavy Traffic=9, Accident=3, Flat Tire=2}
+28/06/16, AM : 5:00-11:59,{Heavy Traffic=21, Other=14, Won`t Start=5},PM : 12:00-19:00,{Heavy Traffic=4, Accident=1, Other=1}
+29/06/16, AM : 5:00-11:59,{Heavy Traffic=3},PM : 12:00-19:00,{Mechanical Problem=1, Heavy Traffic=1}
+30/06/16, AM : 5:00-11:59,{Heavy Traffic=3},PM : 12:00-19:00,{Other=1}
+01/07/16, AM : 5:00-11:59,{Heavy Traffic=2},PM : 12:00-19:00,{Heavy Traffic=1}
+05/07/16, AM : 5:00-11:59,{Heavy Traffic=57, Other=12, Weather Conditions=11},PM : 12:00-19:00,{Heavy Traffic=4, Other=2, Accident=1}
+06/07/16, AM : 5:00-11:59,{Heavy Traffic=43, Other=9, Mechanical Problem=4},PM : 12:00-19:00,{Flat Tire=1, Accident=1, Heavy Traffic=1}
+07/07/16, AM : 5:00-11:59,{Heavy Traffic=85, Other=22, Problem Run=4},PM : 12:00-19:00,{Heavy Traffic=5, Other=4, Flat Tire=2}
+08/07/16, AM : 5:00-11:59,{Heavy Traffic=53, Other=11, Mechanical Problem=3},PM : 12:00-19:00,{Heavy Traffic=6, Other=3, Accident=1}
+11/07/16, AM : 5:00-11:59,{Heavy Traffic=91, Other=26, Mechanical Problem=6},PM : 12:00-19:00,{Heavy Traffic=20, Delayed by School=1, Late return from Field Trip=1}
+12/07/16, AM : 5:00-11:59,{Heavy Traffic=91, Other=24, Won`t Start=9},PM : 12:00-19:00,{Heavy Traffic=12, Mechanical Problem=2, Other=2}
+13/07/16, AM : 5:00-11:59,{Heavy Traffic=94, Other=13, Problem Run=4},PM : 12:00-19:00,{Heavy Traffic=17, Delayed by School=1, Accident=1}
+14/07/16, AM : 5:00-11:59,{Heavy Traffic=83, Other=18, Won`t Start=5},PM : 12:00-19:00,{Heavy Traffic=14, Other=2}
+15/07/16, AM : 5:00-11:59,{Heavy Traffic=76, Other=16, Problem Run=6},PM : 12:00-19:00,{Heavy Traffic=10, Other=6, Accident=1}
+18/07/16, AM : 5:00-11:59,{Heavy Traffic=62, Other=16, Mechanical Problem=8},PM : 12:00-19:00,{Heavy Traffic=29, Other=6, Mechanical Problem=5}
+19/07/16, AM : 5:00-11:59,{Heavy Traffic=77, Other=20, Problem Run=6},PM : 12:00-19:00,{Heavy Traffic=22, Other=5, Flat Tire=1}
+20/07/16, AM : 5:00-11:59,{Heavy Traffic=92, Other=17, Mechanical Problem=11},PM : 12:00-19:00,{Heavy Traffic=8, Delayed by School=1, Won`t Start=1}
+21/07/16, AM : 5:00-11:59,{Heavy Traffic=103, Other=13, Mechanical Problem=6},PM : 12:00-19:00,{Heavy Traffic=14, Late return from Field Trip=4, Other=2}
+22/07/16, AM : 5:00-11:59,{Heavy Traffic=43, Other=12, Problem Run=4},PM : 12:00-19:00,{Heavy Traffic=9, Other=5, Accident=1}
+25/07/16, AM : 5:00-11:59,{Heavy Traffic=71, Other=24, Mechanical Problem=7},PM : 12:00-19:00,{Heavy Traffic=9, Other=3, Accident=1}
+26/07/16, AM : 5:00-11:59,{Heavy Traffic=84, Mechanical Problem=15, Other=12},PM : 12:00-19:00,{Heavy Traffic=12, Other=5, Late return from Field Trip=4}
+27/07/16, AM : 5:00-11:59,{Heavy Traffic=62, Other=17, Mechanical Problem=7},PM : 12:00-19:00,{Heavy Traffic=5, Flat Tire=1, Mechanical Problem=1}
+28/07/16, AM : 5:00-11:59,{Heavy Traffic=69, Other=16, Mechanical Problem=7},PM : 12:00-19:00,{Heavy Traffic=11, Other=4, Mechanical Problem=1}
+29/07/16, AM : 5:00-11:59,{Heavy Traffic=68, Weather Conditions=22, Other=10},PM : 12:00-19:00,{Heavy Traffic=9, Flat Tire=1, Delayed by School=1}
+01/08/16, AM : 5:00-11:59,{Heavy Traffic=74, Other=20, Flat Tire=2},PM : 12:00-19:00,{Other=6, Heavy Traffic=4, Delayed by School=1}
+02/08/16, AM : 5:00-11:59,{Heavy Traffic=66, Other=18, Mechanical Problem=4},PM : 12:00-19:00,{Other=9, Heavy Traffic=8, Flat Tire=1}
+03/08/16, AM : 5:00-11:59,{Heavy Traffic=41, Other=14, Mechanical Problem=4},PM : 12:00-19:00,{Heavy Traffic=12, Other=6, Accident=1}
+04/08/16, AM : 5:00-11:59,{Heavy Traffic=62, Other=15, Mechanical Problem=6},PM : 12:00-19:00,{Heavy Traffic=6, Other=2, Delayed by School=1}
+05/08/16, AM : 5:00-11:59,{Heavy Traffic=50, Other=10, Mechanical Problem=6},PM : 12:00-19:00,{Heavy Traffic=9, Other=4, Delayed by School=1}
+08/08/16, AM : 5:00-11:59,{Heavy Traffic=56, Other=16, Mechanical Problem=7},PM : 12:00-19:00,{Other=10, Heavy Traffic=6, Flat Tire=1}
+09/08/16, AM : 5:00-11:59,{Heavy Traffic=37, Other=14, Won`t Start=3},PM : 12:00-19:00,{Heavy Traffic=22, Other=3, Late return from Field Trip=2}
+10/08/16, AM : 5:00-11:59,{Heavy Traffic=38, Other=11, Won`t Start=4},PM : 12:00-19:00,{Heavy Traffic=14, Weather Conditions=4, Other=2}
+11/08/16, AM : 5:00-11:59,{Heavy Traffic=36, Other=15, Mechanical Problem=6},PM : 12:00-19:00,{Heavy Traffic=5, Other=3, Mechanical Problem=2}
+12/08/16, AM : 5:00-11:59,{Heavy Traffic=21, Other=12, Won`t Start=2},PM : 12:00-19:00,{Heavy Traffic=11, Other=9, Delayed by School=2}
+15/08/16, AM : 5:00-11:59,{Heavy Traffic=35, Other=22, Mechanical Problem=5},PM : 12:00-19:00,{Heavy Traffic=12, Flat Tire=1, Delayed by School=1}
+16/08/16, AM : 5:00-11:59,{Heavy Traffic=6, Other=3, Flat Tire=1},PM : 12:00-19:00,{Heavy Traffic=4}
+17/08/16, AM : 5:00-11:59,{Heavy Traffic=2, Other=1}
+18/08/16, AM : 5:00-11:59,{Heavy Traffic=3}
+19/08/16, AM : 5:00-11:59,{Mechanical Problem=1, Heavy Traffic=1}
+22/08/16, AM : 5:00-11:59,{Heavy Traffic=1}
+23/08/16, AM : 5:00-11:59,{Other=2, Heavy Traffic=1},PM : 12:00-19:00,{Accident=1}
+24/08/16, AM : 5:00-11:59,{Heavy Traffic=2},PM : 12:00-19:00,{Heavy Traffic=2}
+26/08/16, AM : 5:00-11:59,{Heavy Traffic=1}
+29/08/16, AM : 5:00-11:59,{Heavy Traffic=1},PM : 12:00-19:00,{Flat Tire=1}
+31/08/16, AM : 5:00-11:59,{Heavy Traffic=5}
+01/09/16, AM : 5:00-11:59,{Heavy Traffic=17, Other=1},PM : 12:00-19:00,{Heavy Traffic=1}
+02/09/16, AM : 5:00-11:59,{Heavy Traffic=4, Flat Tire=1, Problem Run=1},PM : 12:00-19:00,{Heavy Traffic=1}
+06/09/16, AM : 5:00-11:59,{Heavy Traffic=64, Other=15, Mechanical Problem=5},PM : 12:00-19:00,{Heavy Traffic=4, Mechanical Problem=3, Other=1}
+07/09/16, AM : 5:00-11:59,{Heavy Traffic=102, Other=14, Mechanical Problem=5},PM : 12:00-19:00,{Heavy Traffic=4, Delayed by School=2, Accident=1}
+08/09/16, AM : 5:00-11:59,{Heavy Traffic=387, Other=57, Won`t Start=11},PM : 12:00-19:00,{Heavy Traffic=25, Delayed by School=5, Other=5}
+09/09/16, AM : 5:00-11:59,{Heavy Traffic=288, Other=25, Problem Run=19},PM : 12:00-19:00,{Heavy Traffic=31, Other=7, Mechanical Problem=5}
+12/09/16, AM : 5:00-11:59,{Heavy Traffic=63, Other=10, Mechanical Problem=7},PM : 12:00-19:00,{Heavy Traffic=2, Accident=1, Mechanical Problem=1}
+13/09/16, AM : 5:00-11:59,{Heavy Traffic=327, Other=49, Mechanical Problem=17},PM : 12:00-19:00,{Heavy Traffic=23, Other=10, Delayed by School=4}
+14/09/16, AM : 5:00-11:59,{Heavy Traffic=269, Other=24, Problem Run=20},PM : 12:00-19:00,{Heavy Traffic=32, Delayed by School=4, Mechanical Problem=4}
+15/09/16, AM : 5:00-11:59,{Heavy Traffic=281, Other=51, Problem Run=19},PM : 12:00-19:00,{Heavy Traffic=15, Other=8, Flat Tire=5}
+16/09/16, AM : 5:00-11:59,{Heavy Traffic=242, Other=19, Mechanical Problem=13},PM : 12:00-19:00,{Heavy Traffic=24, Other=11, Flat Tire=3}
+19/09/16, AM : 5:00-11:59,{Heavy Traffic=341, Other=60, Weather Conditions=55},PM : 12:00-19:00,{Heavy Traffic=15, Other=4, Won`t Start=2}
+20/09/16, AM : 5:00-11:59,{Heavy Traffic=285, Other=40, Problem Run=25},PM : 12:00-19:00,{Heavy Traffic=23, Other=12, Accident=2}
+21/09/16, AM : 5:00-11:59,{Heavy Traffic=274, Other=29, Mechanical Problem=17},PM : 12:00-19:00,{Heavy Traffic=33, Mechanical Problem=4, Other=4}
+22/09/16, AM : 5:00-11:59,{Heavy Traffic=261, Other=28, Problem Run=17},PM : 12:00-19:00,{Heavy Traffic=21, Other=12, Flat Tire=1}
+23/09/16, AM : 5:00-11:59,{Heavy Traffic=258, Other=37, Problem Run=19},PM : 12:00-19:00,{Heavy Traffic=88, Other=10, Mechanical Problem=3}
+26/09/16, AM : 5:00-11:59,{Heavy Traffic=299, Other=42, Problem Run=36},PM : 12:00-19:00,{Heavy Traffic=42, Other=6, Flat Tire=2}
+27/09/16, AM : 5:00-11:59,{Heavy Traffic=446, Other=32, Problem Run=26},PM : 12:00-19:00,{Heavy Traffic=28, Accident=4, Other=4}
+28/09/16, AM : 5:00-11:59,{Heavy Traffic=184, Problem Run=32, Other=29},PM : 12:00-19:00,{Heavy Traffic=28, Other=15, Mechanical Problem=7}
+29/09/16, AM : 5:00-11:59,{Heavy Traffic=213, Other=37, Problem Run=26},PM : 12:00-19:00,{Heavy Traffic=33, Other=11, Mechanical Problem=7}
+30/09/16, AM : 5:00-11:59,{Heavy Traffic=187, Problem Run=24, Other=15},PM : 12:00-19:00,{Heavy Traffic=30, Other=5, Delayed by School=4}
+03/10/16, AM : 5:00-11:59,{Heavy Traffic=8, Other=4, Accident=1},PM : 12:00-19:00,{Heavy Traffic=1}
+04/10/16, AM : 5:00-11:59,{Other=7, Heavy Traffic=6, Flat Tire=2}
+05/10/16, AM : 5:00-11:59,{Heavy Traffic=268, Other=54, Mechanical Problem=26},PM : 12:00-19:00,{Heavy Traffic=25, Flat Tire=4, Won`t Start=4}
+06/10/16, AM : 5:00-11:59,{Heavy Traffic=240, Other=42, Problem Run=20},PM : 12:00-19:00,{Heavy Traffic=38, Other=9, Mechanical Problem=5}
+07/10/16, AM : 5:00-11:59,{Heavy Traffic=258, Other=30, Mechanical Problem=16},PM : 12:00-19:00,{Heavy Traffic=51, Other=23, Won`t Start=4}
+10/10/16, AM : 5:00-11:59,{Flat Tire=1}
+11/10/16, AM : 5:00-11:59,{Heavy Traffic=234, Other=31, Problem Run=22},PM : 12:00-19:00,{Heavy Traffic=19, Delayed by School=2, Problem Run=2}
+12/10/16, AM : 5:00-11:59,{Heavy Traffic=1, Problem Run=1, Other=1},PM : 12:00-19:00,{Mechanical Problem=1, Other=1}
+13/10/16, AM : 5:00-11:59,{Heavy Traffic=377, Other=28, Problem Run=25},PM : 12:00-19:00,{Heavy Traffic=26, Other=7, Late return from Field Trip=5}
+14/10/16, AM : 5:00-11:59,{Heavy Traffic=214, Other=27, Mechanical Problem=18},PM : 12:00-19:00,{Heavy Traffic=23, Other=7, Late return from Field Trip=6}
+17/10/16, AM : 5:00-11:59,{Heavy Traffic=181, Other=41, Problem Run=19},PM : 12:00-19:00,{Heavy Traffic=11, Mechanical Problem=7, Other=7}
+18/10/16, AM : 5:00-11:59,{Heavy Traffic=170, Other=34, Problem Run=14},PM : 12:00-19:00,{Heavy Traffic=13, Problem Run=3, Other=3}
+19/10/16, AM : 5:00-11:59,{Heavy Traffic=198, Other=34, Problem Run=15},PM : 12:00-19:00,{Heavy Traffic=20, Other=6, Late return from Field Trip=5}
+20/10/16, AM : 5:00-11:59,{Heavy Traffic=156, Other=23, Problem Run=9},PM : 12:00-19:00,{Heavy Traffic=19, Other=11, Mechanical Problem=4}
+21/10/16, AM : 5:00-11:59,{Heavy Traffic=176, Other=31, Problem Run=10},PM : 12:00-19:00,{Heavy Traffic=26, Weather Conditions=14, Late return from Field Trip=13}
+24/10/16, AM : 5:00-11:59,{Heavy Traffic=219, Other=37, Mechanical Problem=28},PM : 12:00-19:00,{Heavy Traffic=13, Other=9, Accident=3}
+25/10/16, AM : 5:00-11:59,{Heavy Traffic=196, Other=33, Problem Run=12},PM : 12:00-19:00,{Heavy Traffic=22, Other=12, Late return from Field Trip=6}
+26/10/16, AM : 5:00-11:59,{Heavy Traffic=265, Other=28, Mechanical Problem=17},PM : 12:00-19:00,{Heavy Traffic=16, Late return from Field Trip=9, Delayed by School=4}
+27/10/16, AM : 5:00-11:59,{Heavy Traffic=213, Other=47, Mechanical Problem=22},PM : 12:00-19:00,{Heavy Traffic=26, Mechanical Problem=5, Other=4}
+28/10/16, AM : 5:00-11:59,{Heavy Traffic=191, Other=29, Mechanical Problem=14},PM : 12:00-19:00,{Heavy Traffic=42, Late return from Field Trip=26, Other=12}
+31/10/16, AM : 5:00-11:59,{Heavy Traffic=199, Other=53, Mechanical Problem=20},PM : 12:00-19:00,{Heavy Traffic=25, Other=18, Mechanical Problem=5}
+01/11/16, AM : 5:00-11:59,{Heavy Traffic=229, Other=40, Problem Run=9},PM : 12:00-19:00,{Heavy Traffic=28, Other=28, Late return from Field Trip=7}
+02/11/16, AM : 5:00-11:59,{Heavy Traffic=247, Other=49, Mechanical Problem=13},PM : 12:00-19:00,{Heavy Traffic=18, Late return from Field Trip=10, Accident=3}
+03/11/16, AM : 5:00-11:59,{Heavy Traffic=148, Other=36, Problem Run=13},PM : 12:00-19:00,{Heavy Traffic=11, Other=5, Problem Run=2}
+04/11/16, AM : 5:00-11:59,{Heavy Traffic=176, Other=34, Mechanical Problem=13},PM : 12:00-19:00,{Heavy Traffic=22, Other=19, Late return from Field Trip=11}
+07/11/16, AM : 5:00-11:59,{Heavy Traffic=218, Other=46, Mechanical Problem=23},PM : 12:00-19:00,{Heavy Traffic=29, Other=17, Late return from Field Trip=5}
+08/11/16, AM : 5:00-11:59,{Heavy Traffic=27, Other=7, Flat Tire=4},PM : 12:00-19:00,{Mechanical Problem=1}
+09/11/16, AM : 5:00-11:59,{Heavy Traffic=180, Other=41, Mechanical Problem=12},PM : 12:00-19:00,{Heavy Traffic=18, Late return from Field Trip=6, Mechanical Problem=5}
+10/11/16, AM : 5:00-11:59,{Heavy Traffic=146, Other=25, Mechanical Problem=6},PM : 12:00-19:00,{Late return from Field Trip=14, Heavy Traffic=14, Won`t Start=3}
+11/11/16, AM : 5:00-11:59,{Heavy Traffic=1}
+14/11/16, AM : 5:00-11:59,{Heavy Traffic=165, Other=51, Mechanical Problem=14},PM : 12:00-19:00,{Heavy Traffic=13, Other=13, Flat Tire=3}
+15/11/16, AM : 5:00-11:59,{Heavy Traffic=333, Weather Conditions=78, Other=37},PM : 12:00-19:00,{Heavy Traffic=14, Mechanical Problem=7, Weather Conditions=3}
+16/11/16, AM : 5:00-11:59,{Heavy Traffic=145, Other=32, Mechanical Problem=8},PM : 12:00-19:00,{Heavy Traffic=27, Late return from Field Trip=4, Mechanical Problem=3}
+17/11/16, AM : 5:00-11:59,{Heavy Traffic=146, Other=29, Problem Run=8},PM : 12:00-19:00,{Heavy Traffic=41, Other=8, Late return from Field Trip=4}
+18/11/16, AM : 5:00-11:59,{Heavy Traffic=175, Other=24, Problem Run=7},PM : 12:00-19:00,{Heavy Traffic=18, Other=4, Flat Tire=2}
+21/11/16, AM : 5:00-11:59,{Heavy Traffic=190, Other=38, Mechanical Problem=22},PM : 12:00-19:00,{Heavy Traffic=17, Flat Tire=4, Late return from Field Trip=4}
+22/11/16, AM : 5:00-11:59,{Heavy Traffic=152, Other=29, Mechanical Problem=12},PM : 12:00-19:00,{Heavy Traffic=36, Late return from Field Trip=5, Mechanical Problem=5}
+23/11/16, AM : 5:00-11:59,{Heavy Traffic=146, Other=21, Mechanical Problem=17},PM : 12:00-19:00,{Heavy Traffic=17, Other=6, Delayed by School=1}
+28/11/16, AM : 5:00-11:59,{Heavy Traffic=153, Other=47, Mechanical Problem=12},PM : 12:00-19:00,{Heavy Traffic=15, Other=8, Mechanical Problem=6}
+29/11/16, AM : 5:00-11:59,{Heavy Traffic=294, Other=39, Mechanical Problem=8},PM : 12:00-19:00,{Heavy Traffic=24, Late return from Field Trip=17, Weather Conditions=10}
+30/11/16, AM : 5:00-11:59,{Heavy Traffic=211, Other=28, Mechanical Problem=13},PM : 12:00-19:00,{Late return from Field Trip=28, Heavy Traffic=23, Delayed by School=9}
+01/12/16, AM : 5:00-11:59,{Heavy Traffic=218, Other=33, Flat Tire=8},PM : 12:00-19:00,{Heavy Traffic=25, Other=7, Mechanical Problem=4}
+02/12/16, AM : 5:00-11:59,{Heavy Traffic=186, Other=33, Mechanical Problem=9},PM : 12:00-19:00,{Heavy Traffic=24, Other=6, Late return from Field Trip=4}
+05/12/16, AM : 5:00-11:59,{Heavy Traffic=325, Weather Conditions=44, Other=38},PM : 12:00-19:00,{Heavy Traffic=28, Flat Tire=6, Late return from Field Trip=5}
+06/12/16, AM : 5:00-11:59,{Heavy Traffic=197, Other=35, Mechanical Problem=16},PM : 12:00-19:00,{Heavy Traffic=21, Late return from Field Trip=10, Other=10}
+07/12/16, AM : 5:00-11:59,{Heavy Traffic=196, Other=34, Mechanical Problem=16},PM : 12:00-19:00,{Heavy Traffic=27, Mechanical Problem=5, Other=5}
+08/12/16, AM : 5:00-11:59,{Heavy Traffic=159, Other=20, Mechanical Problem=9},PM : 12:00-19:00,{Heavy Traffic=21, Late return from Field Trip=11, Other=10}
+09/12/16, AM : 5:00-11:59,{Heavy Traffic=159, Other=27, Mechanical Problem=16},PM : 12:00-19:00,{Heavy Traffic=46, Other=6, Mechanical Problem=5}
+12/12/16, AM : 5:00-11:59,{Heavy Traffic=268, Weather Conditions=103, Other=37},PM : 12:00-19:00,{Heavy Traffic=20, Other=10, Late return from Field Trip=4}
+13/12/16, AM : 5:00-11:59,{Heavy Traffic=193, Other=24, Mechanical Problem=16},PM : 12:00-19:00,{Heavy Traffic=36, Other=13, Late return from Field Trip=8}
+14/12/16, AM : 5:00-11:59,{Heavy Traffic=212, Other=22, Mechanical Problem=10},PM : 12:00-19:00,{Heavy Traffic=26, Late return from Field Trip=10, Delayed by School=5}
+15/12/16, AM : 5:00-11:59,{Heavy Traffic=204, Other=32, Mechanical Problem=10},PM : 12:00-19:00,{Heavy Traffic=30, Late return from Field Trip=12, Other=7}
+16/12/16, AM : 5:00-11:59,{Heavy Traffic=255, Other=32, Mechanical Problem=20},PM : 12:00-19:00,{Heavy Traffic=22, Mechanical Problem=8, Late return from Field Trip=7}
+19/12/16, AM : 5:00-11:59,{Heavy Traffic=198, Other=45, Mechanical Problem=27},PM : 12:00-19:00,{Heavy Traffic=38, Other=12, Mechanical Problem=7}
+20/12/16, AM : 5:00-11:59,{Heavy Traffic=199, Other=21, Flat Tire=7},PM : 12:00-19:00,{Heavy Traffic=30, Late return from Field Trip=11, Other=6}
+21/12/16, AM : 5:00-11:59,{Heavy Traffic=194, Other=23, Mechanical Problem=9},PM : 12:00-19:00,{Heavy Traffic=30, Late return from Field Trip=13, Mechanical Problem=6}
+22/12/16, AM : 5:00-11:59,{Heavy Traffic=112, Other=34, Mechanical Problem=6},PM : 12:00-19:00,{Heavy Traffic=19, Other=6, Late return from Field Trip=4}
+23/12/16, AM : 5:00-11:59,{Heavy Traffic=114, Other=28, Delayed by School=5},PM : 12:00-19:00,{Heavy Traffic=27, Other=4, Late return from Field Trip=3}
+27/12/16, AM : 5:00-11:59,{Heavy Traffic=5, Other=1}
+28/12/16, AM : 5:00-11:59,{Heavy Traffic=2},PM : 12:00-19:00,{Other=1}
+03/01/17, AM : 5:00-11:59,{Heavy Traffic=238, Other=47, Mechanical Problem=34},PM : 12:00-19:00,{Heavy Traffic=28, Other=14, Flat Tire=7}
+04/01/17, AM : 5:00-11:59,{Heavy Traffic=223, Other=50, Mechanical Problem=20},PM : 12:00-19:00,{Heavy Traffic=20, Other=6, Mechanical Problem=4}
+05/01/17, AM : 5:00-11:59,{Heavy Traffic=210, Other=41, Mechanical Problem=13},PM : 12:00-19:00,{Heavy Traffic=17, Other=10, Mechanical Problem=7}
+06/01/17, AM : 5:00-11:59,{Heavy Traffic=252, Other=31, Weather Conditions=20},PM : 12:00-19:00,{Heavy Traffic=13, Other=12, Flat Tire=4}
+09/01/17, AM : 5:00-11:59,{Heavy Traffic=412, Other=72, Weather Conditions=58},PM : 12:00-19:00,{Heavy Traffic=14, Won`t Start=10, Mechanical Problem=7}
+10/01/17, AM : 5:00-11:59,{Heavy Traffic=314, Other=59, Won`t Start=21},PM : 12:00-19:00,{Heavy Traffic=19, Other=18, Won`t Start=7}
+11/01/17, AM : 5:00-11:59,{Heavy Traffic=225, Other=34, Mechanical Problem=9},PM : 12:00-19:00,{Heavy Traffic=28, Other=11, Mechanical Problem=5}
+12/01/17, AM : 5:00-11:59,{Heavy Traffic=284, Other=44, Mechanical Problem=9},PM : 12:00-19:00,{Heavy Traffic=37, Other=13, Mechanical Problem=5}
+13/01/17, AM : 5:00-11:59,{Heavy Traffic=222, Other=29, Accident=6},PM : 12:00-19:00,{Heavy Traffic=23, Other=12, Late return from Field Trip=7}
+17/01/17, AM : 5:00-11:59,{Heavy Traffic=275, Other=54, Mechanical Problem=20},PM : 12:00-19:00,{Heavy Traffic=18, Other=6, Won`t Start=4}
+18/01/17, AM : 5:00-11:59,{Heavy Traffic=299, Other=43, Mechanical Problem=11},PM : 12:00-19:00,{Heavy Traffic=36, Other=8, Won`t Start=6}
+19/01/17, AM : 5:00-11:59,{Heavy Traffic=233, Other=26, Problem Run=11},PM : 12:00-19:00,{Heavy Traffic=14, Late return from Field Trip=11, Other=7}
+20/01/17, AM : 5:00-11:59,{Heavy Traffic=273, Other=25, Flat Tire=11},PM : 12:00-19:00,{Heavy Traffic=21, Mechanical Problem=11, Other=8}
+23/01/17, AM : 5:00-11:59,{Heavy Traffic=197, Other=61, Mechanical Problem=16},PM : 12:00-19:00,{Other=21, Heavy Traffic=17, Late return from Field Trip=5}
+24/01/17, AM : 5:00-11:59,{Heavy Traffic=223, Other=51, Weather Conditions=19},PM : 12:00-19:00,{Heavy Traffic=33, Weather Conditions=6, Other=3}
+25/01/17, AM : 5:00-11:59,{Heavy Traffic=163, Other=32, Mechanical Problem=17},PM : 12:00-19:00,{Heavy Traffic=36, Late return from Field Trip=9, Other=6}
+26/01/17, AM : 5:00-11:59,{Heavy Traffic=161, Other=30, Mechanical Problem=7},PM : 12:00-19:00,{Heavy Traffic=28, Other=7, Late return from Field Trip=5}
+27/01/17, AM : 5:00-11:59,{Heavy Traffic=305, Other=14, Flat Tire=3},PM : 12:00-19:00,{Heavy Traffic=17, Late return from Field Trip=4, Other=4}
+30/01/17, AM : 5:00-11:59,{Heavy Traffic=210, Other=66, Flat Tire=12},PM : 12:00-19:00,{Heavy Traffic=20, Mechanical Problem=8, Late return from Field Trip=3}
+31/01/17, AM : 5:00-11:59,{Heavy Traffic=172, Other=38, Mechanical Problem=14},PM : 12:00-19:00,{Heavy Traffic=27, Mechanical Problem=10, Weather Conditions=9}
+01/02/17, AM : 5:00-11:59,{Heavy Traffic=158, Other=33, Mechanical Problem=9},PM : 12:00-19:00,{Heavy Traffic=20, Late return from Field Trip=6, Other=6}
+02/02/17, AM : 5:00-11:59,{Heavy Traffic=199, Other=30, Mechanical Problem=11},PM : 12:00-19:00,{Heavy Traffic=20, Delayed by School=4, Other=4}
+03/02/17, AM : 5:00-11:59,{Heavy Traffic=174, Other=26, Mechanical Problem=13},PM : 12:00-19:00,{Heavy Traffic=27, Other=9, Mechanical Problem=8}
+06/02/17, AM : 5:00-11:59,{Heavy Traffic=204, Other=43, Mechanical Problem=23},PM : 12:00-19:00,{Heavy Traffic=36, Other=15, Mechanical Problem=9}
+07/02/17, AM : 5:00-11:59,{Heavy Traffic=308, Other=57, Mechanical Problem=22},PM : 12:00-19:00,{Heavy Traffic=34, Mechanical Problem=10, Late return from Field Trip=4}
+08/02/17, AM : 5:00-11:59,{Heavy Traffic=197, Other=37, Flat Tire=11},PM : 12:00-19:00,{Heavy Traffic=26, Other=9, Mechanical Problem=6}
+10/02/17, AM : 5:00-11:59,{Weather Conditions=391, Heavy Traffic=231, Other=56},PM : 12:00-19:00,{Heavy Traffic=29, Weather Conditions=11, Other=9}
+13/02/17, AM : 5:00-11:59,{Heavy Traffic=258, Other=34, Mechanical Problem=19},PM : 12:00-19:00,{Heavy Traffic=29, Mechanical Problem=10, Other=7}
+14/02/17, AM : 5:00-11:59,{Heavy Traffic=172, Other=30, Mechanical Problem=14},PM : 12:00-19:00,{Heavy Traffic=34, Other=14, Late return from Field Trip=4}
+15/02/17, AM : 5:00-11:59,{Heavy Traffic=188, Other=35, Mechanical Problem=14},PM : 12:00-19:00,{Heavy Traffic=26, Other=8, Late return from Field Trip=7}
+16/02/17, AM : 5:00-11:59,{Heavy Traffic=134, Other=36, Mechanical Problem=16},PM : 12:00-19:00,{Heavy Traffic=37, Other=12, Late return from Field Trip=11}
+17/02/17, AM : 5:00-11:59,{Heavy Traffic=149, Other=24, Mechanical Problem=15},PM : 12:00-19:00,{Heavy Traffic=40, Other=11, Mechanical Problem=8}
+21/02/17, AM : 5:00-11:59,{Heavy Traffic=6, Other=1}
+22/02/17, AM : 5:00-11:59,{Heavy Traffic=4, Flat Tire=1, Won`t Start=1},PM : 12:00-19:00,{Flat Tire=1, Heavy Traffic=1, Other=1}
+23/02/17, AM : 5:00-11:59,{Other=2, Won`t Start=1, Mechanical Problem=1},PM : 12:00-19:00,{Other=2}
+24/02/17, AM : 5:00-11:59,{Other=5, Heavy Traffic=2, Won`t Start=1},PM : 12:00-19:00,{Heavy Traffic=3, Mechanical Problem=1}
+27/02/17, AM : 5:00-11:59,{Heavy Traffic=249, Other=73, Mechanical Problem=26},PM : 12:00-19:00,{Heavy Traffic=28, Mechanical Problem=14, Other=12}
+28/02/17, AM : 5:00-11:59,{Heavy Traffic=142, Other=42, Mechanical Problem=13},PM : 12:00-19:00,{Heavy Traffic=24, Other=10, Mechanical Problem=9}
+01/03/17, AM : 5:00-11:59,{Heavy Traffic=134, Other=44, Mechanical Problem=9},PM : 12:00-19:00,{Heavy Traffic=35, Late return from Field Trip=7, Won`t Start=6}
+02/03/17, AM : 5:00-11:59,{Heavy Traffic=132, Other=28, Mechanical Problem=15},PM : 12:00-19:00,{Heavy Traffic=26, Late return from Field Trip=9, Other=8}
+03/03/17, AM : 5:00-11:59,{Heavy Traffic=142, Other=29, Mechanical Problem=17},PM : 12:00-19:00,{Heavy Traffic=19, Other=8, Late return from Field Trip=5}
+06/03/17, AM : 5:00-11:59,{Heavy Traffic=189, Other=46, Mechanical Problem=25},PM : 12:00-19:00,{Heavy Traffic=34, Other=5, Mechanical Problem=3}
+07/03/17, AM : 5:00-11:59,{Heavy Traffic=156, Other=32, Delayed by School=8},PM : 12:00-19:00,{Heavy Traffic=31, Other=6, Delayed by School=4}
+08/03/17, AM : 5:00-11:59,{Heavy Traffic=172, Other=24, Mechanical Problem=12},PM : 12:00-19:00,{Heavy Traffic=23, Late return from Field Trip=7, Mechanical Problem=5}
+09/03/17, AM : 5:00-11:59,{Heavy Traffic=118, Other=32, Delayed by School=7},PM : 12:00-19:00,{Heavy Traffic=13, Mechanical Problem=2, Other=2}
+10/03/17, AM : 5:00-11:59,{Heavy Traffic=90, Weather Conditions=13, Other=12},PM : 12:00-19:00,{Heavy Traffic=13, Other=11, Delayed by School=3}
+13/03/17, AM : 5:00-11:59,{Heavy Traffic=190, Mechanical Problem=28, Other=23},PM : 12:00-19:00,{Heavy Traffic=30, Mechanical Problem=5, Late return from Field Trip=4}
+15/03/17, AM : 5:00-11:59,{Weather Conditions=448, Heavy Traffic=109, Other=29},PM : 12:00-19:00,{Heavy Traffic=12, Other=7, Weather Conditions=6}
+16/03/17, AM : 5:00-11:59,{Heavy Traffic=375, Other=61, Mechanical Problem=21},PM : 12:00-19:00,{Heavy Traffic=62, Other=9, Weather Conditions=4}
+17/03/17, AM : 5:00-11:59,{Heavy Traffic=229, Other=36, Mechanical Problem=13},PM : 12:00-19:00,{Heavy Traffic=50, Late return from Field Trip=20, Other=8}
+20/03/17, AM : 5:00-11:59,{Heavy Traffic=251, Other=39, Mechanical Problem=21},PM : 12:00-19:00,{Heavy Traffic=44, Mechanical Problem=8, Flat Tire=6}
+21/03/17, AM : 5:00-11:59,{Heavy Traffic=181, Other=32, Mechanical Problem=14},PM : 12:00-19:00,{Heavy Traffic=68, Other=11, Mechanical Problem=5}
+22/03/17, AM : 5:00-11:59,{Heavy Traffic=176, Other=29, Mechanical Problem=7},PM : 12:00-19:00,{Heavy Traffic=27, Mechanical Problem=7, Other=5}
+23/03/17, AM : 5:00-11:59,{Heavy Traffic=168, Other=24, Mechanical Problem=11},PM : 12:00-19:00,{Heavy Traffic=37, Other=10, Mechanical Problem=6}
+24/03/17, AM : 5:00-11:59,{Heavy Traffic=106, Other=22, Mechanical Problem=14},PM : 12:00-19:00,{Heavy Traffic=20, Mechanical Problem=5, Delayed by School=3}
+27/03/17, AM : 5:00-11:59,{Heavy Traffic=322, Other=40, Mechanical Problem=20},PM : 12:00-19:00,{Heavy Traffic=40, Late return from Field Trip=9, Other=9}
+28/03/17, AM : 5:00-11:59,{Heavy Traffic=209, Other=32, Mechanical Problem=8},PM : 12:00-19:00,{Late return from Field Trip=19, Heavy Traffic=19, Mechanical Problem=5}
+29/03/17, AM : 5:00-11:59,{Heavy Traffic=288, Other=26, Mechanical Problem=10},PM : 12:00-19:00,{Heavy Traffic=40, Late return from Field Trip=17, Mechanical Problem=7}
+30/03/17, AM : 5:00-11:59,{Heavy Traffic=210, Other=33, Mechanical Problem=16},PM : 12:00-19:00,{Heavy Traffic=37, Late return from Field Trip=20, Other=10}
+31/03/17, AM : 5:00-11:59,{Heavy Traffic=244, Other=22, Weather Conditions=21},PM : 12:00-19:00,{Heavy Traffic=57, Late return from Field Trip=18, Other=10}
+03/04/17, AM : 5:00-11:59,{Heavy Traffic=272, Other=44, Mechanical Problem=25},PM : 12:00-19:00,{Heavy Traffic=31, Other=8, Flat Tire=2}
+04/04/17, AM : 5:00-11:59,{Heavy Traffic=368, Other=38, Weather Conditions=17},PM : 12:00-19:00,{Heavy Traffic=30, Late return from Field Trip=6, Flat Tire=5}
+05/04/17, AM : 5:00-11:59,{Heavy Traffic=314, Other=27, Mechanical Problem=15},PM : 12:00-19:00,{Heavy Traffic=50, Late return from Field Trip=24, Mechanical Problem=5}
+06/04/17, AM : 5:00-11:59,{Heavy Traffic=282, Other=22, Weather Conditions=13},PM : 12:00-19:00,{Heavy Traffic=62, Late return from Field Trip=22, Other=11}
+07/04/17, AM : 5:00-11:59,{Heavy Traffic=172, Other=17, Flat Tire=10},PM : 12:00-19:00,{Heavy Traffic=36, Late return from Field Trip=15, Mechanical Problem=4}
+10/04/17, AM : 5:00-11:59,{Won`t Start=1, Heavy Traffic=1}
+11/04/17, AM : 5:00-11:59,{Mechanical Problem=1, Heavy Traffic=1},PM : 12:00-19:00,{Heavy Traffic=1}
+12/04/17, AM : 5:00-11:59,{Heavy Traffic=1, Other=1},PM : 12:00-19:00,{Heavy Traffic=1}
+13/04/17, PM : 12:00-19:00,{Heavy Traffic=4}
+17/04/17, AM : 5:00-11:59,{Heavy Traffic=16, Flat Tire=4, Won`t Start=4}
+18/04/17, AM : 5:00-11:59,{Heavy Traffic=22, Other=2, Flat Tire=1},PM : 12:00-19:00,{Flat Tire=2, Mechanical Problem=2}
+19/04/17, AM : 5:00-11:59,{Heavy Traffic=266, Other=36, Mechanical Problem=24},PM : 12:00-19:00,{Heavy Traffic=55, Other=6, Delayed by School=4}
+20/04/17, AM : 5:00-11:59,{Heavy Traffic=265, Other=36, Flat Tire=12},PM : 12:00-19:00,{Heavy Traffic=30, Mechanical Problem=8, Other=6}
+21/04/17, AM : 5:00-11:59,{Heavy Traffic=210, Other=27, Flat Tire=9},PM : 12:00-19:00,{Heavy Traffic=73, Late return from Field Trip=18, Other=8}
+24/04/17, AM : 5:00-11:59,{Heavy Traffic=217, Other=39, Mechanical Problem=19},PM : 12:00-19:00,{Heavy Traffic=42, Other=6, Mechanical Problem=4}
+25/04/17, AM : 5:00-11:59,{Heavy Traffic=185, Other=35, Weather Conditions=14},PM : 12:00-19:00,{Heavy Traffic=40, Late return from Field Trip=9, Other=5}
+26/04/17, AM : 5:00-11:59,{Heavy Traffic=357, Weather Conditions=39, Other=39},PM : 12:00-19:00,{Heavy Traffic=33, Mechanical Problem=9, Late return from Field Trip=6}
+27/04/17, AM : 5:00-11:59,{Heavy Traffic=232, Other=34, Mechanical Problem=11},PM : 12:00-19:00,{Heavy Traffic=49, Late return from Field Trip=10, Other=8}
+28/04/17, AM : 5:00-11:59,{Heavy Traffic=215, Other=20, Mechanical Problem=12},PM : 12:00-19:00,{Heavy Traffic=62, Late return from Field Trip=37, Other=8}
+01/05/17, AM : 5:00-11:59,{Heavy Traffic=217, Other=32, Mechanical Problem=16},PM : 12:00-19:00,{Heavy Traffic=24, Mechanical Problem=10, Flat Tire=9}
+02/05/17, AM : 5:00-11:59,{Heavy Traffic=237, Other=25, Mechanical Problem=10},PM : 12:00-19:00,{Heavy Traffic=41, Late return from Field Trip=22, Other=10}
+03/05/17, AM : 5:00-11:59,{Heavy Traffic=224, Other=28, Mechanical Problem=14},PM : 12:00-19:00,{Heavy Traffic=50, Late return from Field Trip=22, Mechanical Problem=6}
+04/05/17, AM : 5:00-11:59,{Heavy Traffic=202, Other=30, Flat Tire=10},PM : 12:00-19:00,{Heavy Traffic=47, Late return from Field Trip=26, Mechanical Problem=8}
+05/05/17, AM : 5:00-11:59,{Heavy Traffic=231, Other=22, Mechanical Problem=15},PM : 12:00-19:00,{Heavy Traffic=80, Weather Conditions=28, Late return from Field Trip=26}
+08/05/17, AM : 5:00-11:59,{Heavy Traffic=240, Other=46, Mechanical Problem=16},PM : 12:00-19:00,{Heavy Traffic=34, Mechanical Problem=9, Late return from Field Trip=6}
+09/05/17, AM : 5:00-11:59,{Heavy Traffic=214, Other=37, Flat Tire=15},PM : 12:00-19:00,{Heavy Traffic=27, Late return from Field Trip=15, Mechanical Problem=11}
+10/05/17, AM : 5:00-11:59,{Heavy Traffic=190, Other=23, Mechanical Problem=9},PM : 12:00-19:00,{Heavy Traffic=47, Late return from Field Trip=15, Other=5}
+11/05/17, AM : 5:00-11:59,{Heavy Traffic=249, Other=37, Mechanical Problem=9},PM : 12:00-19:00,{Heavy Traffic=55, Late return from Field Trip=29, Other=14}
+12/05/17, AM : 5:00-11:59,{Heavy Traffic=231, Other=28, Mechanical Problem=11},PM : 12:00-19:00,{Heavy Traffic=79, Late return from Field Trip=42, Flat Tire=6}
+15/05/17, AM : 5:00-11:59,{Heavy Traffic=280, Other=37, Mechanical Problem=20},PM : 12:00-19:00,{Heavy Traffic=59, Late return from Field Trip=18, Other=10}
+16/05/17, AM : 5:00-11:59,{Heavy Traffic=251, Other=31, Won`t Start=7},PM : 12:00-19:00,{Heavy Traffic=74, Late return from Field Trip=18, Other=4}
+17/05/17, AM : 5:00-11:59,{Heavy Traffic=243, Other=51, Mechanical Problem=14},PM : 12:00-19:00,{Heavy Traffic=93, Late return from Field Trip=33, Mechanical Problem=8}
+18/05/17, AM : 5:00-11:59,{Heavy Traffic=236, Other=23, Mechanical Problem=11},PM : 12:00-19:00,{Heavy Traffic=169, Late return from Field Trip=39, Other=19}
+19/05/17, AM : 5:00-11:59,{Heavy Traffic=275, Other=24, Mechanical Problem=12},PM : 12:00-19:00,{Heavy Traffic=127, Late return from Field Trip=75, Mechanical Problem=17}
+22/05/17, AM : 5:00-11:59,{Heavy Traffic=258, Other=35, Mechanical Problem=30},PM : 12:00-19:00,{Heavy Traffic=61, Late return from Field Trip=9, Other=9}
+23/05/17, AM : 5:00-11:59,{Heavy Traffic=237, Other=39, Mechanical Problem=14},PM : 12:00-19:00,{Heavy Traffic=54, Late return from Field Trip=30, Mechanical Problem=5}
+24/05/17, AM : 5:00-11:59,{Heavy Traffic=289, Other=39, Weather Conditions=14},PM : 12:00-19:00,{Heavy Traffic=50, Late return from Field Trip=35, Mechanical Problem=7}
+25/05/17, AM : 5:00-11:59,{Heavy Traffic=242, Other=32, Weather Conditions=28},PM : 12:00-19:00,{Heavy Traffic=76, Late return from Field Trip=41, Other=12}
+26/05/17, AM : 5:00-11:59,{Heavy Traffic=202, Other=17, Mechanical Problem=12},PM : 12:00-19:00,{Heavy Traffic=59, Late return from Field Trip=36, Mechanical Problem=4}
+30/05/17, AM : 5:00-11:59,{Heavy Traffic=216, Other=27, Mechanical Problem=18},PM : 12:00-19:00,{Heavy Traffic=55, Late return from Field Trip=26, Accident=4}
+31/05/17, AM : 5:00-11:59,{Heavy Traffic=179, Other=33, Weather Conditions=28},PM : 12:00-19:00,{Heavy Traffic=61, Late return from Field Trip=35, Mechanical Problem=6}
+01/06/17, AM : 5:00-11:59,{Heavy Traffic=133, Other=14, Won`t Start=7},PM : 12:00-19:00,{Heavy Traffic=72, Late return from Field Trip=41, Other=5}
+02/06/17, AM : 5:00-11:59,{Heavy Traffic=196, Other=16, Mechanical Problem=14},PM : 12:00-19:00,{Heavy Traffic=73, Late return from Field Trip=44, Other=9}
+05/06/17, AM : 5:00-11:59,{Heavy Traffic=245, Other=20, Won`t Start=17},PM : 12:00-19:00,{Heavy Traffic=51, Late return from Field Trip=21, Other=15}
+06/06/17, AM : 5:00-11:59,{Heavy Traffic=204, Other=30, Mechanical Problem=13},PM : 12:00-19:00,{Heavy Traffic=36, Late return from Field Trip=15, Other=6}
+07/06/17, AM : 5:00-11:59,{Heavy Traffic=152, Other=29, Won`t Start=10},PM : 12:00-19:00,{Heavy Traffic=59, Late return from Field Trip=26, Mechanical Problem=3}
+08/06/17, AM : 5:00-11:59,{Heavy Traffic=51, Flat Tire=7, Other=7},PM : 12:00-19:00,{Heavy Traffic=15, Flat Tire=2, Late return from Field Trip=2}
+09/06/17, AM : 5:00-11:59,{Heavy Traffic=155, Other=22, Mechanical Problem=8},PM : 12:00-19:00,{Heavy Traffic=75, Late return from Field Trip=28, Other=14}
+12/06/17, AM : 5:00-11:59,{Heavy Traffic=111, Other=15, Mechanical Problem=5},PM : 12:00-19:00,{Heavy Traffic=21, Mechanical Problem=2, Flat Tire=1}
+13/06/17, AM : 5:00-11:59,{Heavy Traffic=208, Other=37, Mechanical Problem=25},PM : 12:00-19:00,{Heavy Traffic=77, Other=14, Mechanical Problem=9}
+14/06/17, AM : 5:00-11:59,{Heavy Traffic=209, Other=36, Mechanical Problem=13},PM : 12:00-19:00,{Heavy Traffic=73, Late return from Field Trip=8, Mechanical Problem=7}
+15/06/17, AM : 5:00-11:59,{Heavy Traffic=133, Other=20, Won`t Start=3},PM : 12:00-19:00,{Heavy Traffic=47, Mechanical Problem=7, Delayed by School=5}
+16/06/17, AM : 5:00-11:59,{Heavy Traffic=151, Other=20, Flat Tire=5},PM : 12:00-19:00,{Heavy Traffic=59, Other=5, Flat Tire=2}
+19/06/17, AM : 5:00-11:59,{Heavy Traffic=193, Other=44, Won`t Start=11},PM : 12:00-19:00,{Heavy Traffic=102, Other=9, Mechanical Problem=5}
+20/06/17, AM : 5:00-11:59,{Heavy Traffic=172, Other=37, Mechanical Problem=12},PM : 12:00-19:00,{Heavy Traffic=60, Other=5, Delayed by School=2}
+21/06/17, AM : 5:00-11:59,{Heavy Traffic=132, Other=15, Mechanical Problem=7},PM : 12:00-19:00,{Heavy Traffic=47, Late return from Field Trip=6, Mechanical Problem=3}
+22/06/17, AM : 5:00-11:59,{Heavy Traffic=181, Other=25, Won`t Start=6},PM : 12:00-19:00,{Heavy Traffic=48, Other=7, Mechanical Problem=4}
+23/06/17, AM : 5:00-11:59,{Heavy Traffic=136, Other=19, Mechanical Problem=9},PM : 12:00-19:00,{Heavy Traffic=55, Other=9, Mechanical Problem=7}
+26/06/17, AM : 5:00-11:59,{Heavy Traffic=16, Flat Tire=1, Other=1},PM : 12:00-19:00,{Heavy Traffic=4}
+27/06/17, AM : 5:00-11:59,{Heavy Traffic=119, Other=20, Weather Conditions=7},PM : 12:00-19:00,{Heavy Traffic=31, Mechanical Problem=4, Accident=2}
+28/06/17, AM : 5:00-11:59,{Heavy Traffic=49, Other=8, Delayed by School=3},PM : 12:00-19:00,{Heavy Traffic=1}
+29/06/17, AM : 5:00-11:59,{Heavy Traffic=2, Other=2}
+30/06/17, PM : 12:00-19:00,{Heavy Traffic=1, Other=1}
+03/07/17, AM : 5:00-11:59,{Heavy Traffic=23, Other=17, Flat Tire=1},PM : 12:00-19:00,{Other=1}
+05/07/17, AM : 5:00-11:59,{Heavy Traffic=92, Other=39, Flat Tire=4},PM : 12:00-19:00,{Heavy Traffic=9, Mechanical Problem=2, Won`t Start=1}
+06/07/17, AM : 5:00-11:59,{Heavy Traffic=49, Other=24, Mechanical Problem=4},PM : 12:00-19:00,{Heavy Traffic=9, Mechanical Problem=2, Other=1}
+07/07/17, AM : 5:00-11:59,{Heavy Traffic=31, Other=24, Flat Tire=1},PM : 12:00-19:00,{Heavy Traffic=7, Accident=1}
+10/07/17, AM : 5:00-11:59,{Heavy Traffic=66, Other=18, Mechanical Problem=7},PM : 12:00-19:00,{Heavy Traffic=19, Other=3, Flat Tire=2}
+11/07/17, AM : 5:00-11:59,{Heavy Traffic=85, Other=33, Mechanical Problem=11},PM : 12:00-19:00,{Heavy Traffic=33, Other=2, Accident=1}
+12/07/17, AM : 5:00-11:59,{Heavy Traffic=41, Other=29, Accident=2},PM : 12:00-19:00,{Heavy Traffic=9, Other=3, Delayed by School=2}
+13/07/17, AM : 5:00-11:59,{Heavy Traffic=48, Other=15, Mechanical Problem=3},PM : 12:00-19:00,{Heavy Traffic=7, Late return from Field Trip=3, Other=3}
+14/07/17, AM : 5:00-11:59,{Heavy Traffic=44, Other=16, Flat Tire=4},PM : 12:00-19:00,{Heavy Traffic=10, Other=3, Late return from Field Trip=1}
+17/07/17, AM : 5:00-11:59,{Heavy Traffic=48, Other=30, Flat Tire=4},PM : 12:00-19:00,{Heavy Traffic=9, Other=7, Won`t Start=2}
+18/07/17, AM : 5:00-11:59,{Heavy Traffic=62, Other=30, Mechanical Problem=8},PM : 12:00-19:00,{Heavy Traffic=7, Other=2, Delayed by School=1}
+19/07/17, AM : 5:00-11:59,{Heavy Traffic=51, Other=43, Mechanical Problem=7},PM : 12:00-19:00,{Heavy Traffic=8, Other=6, Late return from Field Trip=4}
+20/07/17, AM : 5:00-11:59,{Heavy Traffic=66, Other=30, Mechanical Problem=7},PM : 12:00-19:00,{Heavy Traffic=7, Other=7, Flat Tire=1}
+21/07/17, AM : 5:00-11:59,{Heavy Traffic=51, Other=20, Mechanical Problem=3},PM : 12:00-19:00,{Mechanical Problem=6, Other=6, Heavy Traffic=3}
+24/07/17, AM : 5:00-11:59,{Heavy Traffic=91, Other=30, Weather Conditions=22},PM : 12:00-19:00,{Heavy Traffic=5, Other=3, Late return from Field Trip=1}
+25/07/17, AM : 5:00-11:59,{Heavy Traffic=78, Other=10, Flat Tire=2},PM : 12:00-19:00,{Heavy Traffic=5, Mechanical Problem=3, Late return from Field Trip=1}
+26/07/17, AM : 5:00-11:59,{Heavy Traffic=57, Other=14, Mechanical Problem=2},PM : 12:00-19:00,{Heavy Traffic=8, Other=8, Delayed by School=1}
+27/07/17, AM : 5:00-11:59,{Heavy Traffic=91, Other=13, Mechanical Problem=3},PM : 12:00-19:00,{Other=3, Late return from Field Trip=2, Heavy Traffic=2}
+28/07/17, AM : 5:00-11:59,{Heavy Traffic=32, Other=17, Won`t Start=3},PM : 12:00-19:00,{Heavy Traffic=14, Other=3, Flat Tire=1}
+31/07/17, AM : 5:00-11:59,{Heavy Traffic=71, Other=24, Mechanical Problem=8},PM : 12:00-19:00,{Heavy Traffic=8, Other=5, Flat Tire=1}
+01/08/17, AM : 5:00-11:59,{Heavy Traffic=84, Other=14, Flat Tire=6},PM : 12:00-19:00,{Heavy Traffic=2, Late return from Field Trip=1}
+02/08/17, AM : 5:00-11:59,{Heavy Traffic=43, Other=15, Flat Tire=6},PM : 12:00-19:00,{Heavy Traffic=21, Late return from Field Trip=5, Mechanical Problem=3}
+03/08/17, AM : 5:00-11:59,{Heavy Traffic=47, Other=25, Mechanical Problem=9},PM : 12:00-19:00,{Heavy Traffic=9, Other=3, Mechanical Problem=2}
+04/08/17, AM : 5:00-11:59,{Heavy Traffic=39, Other=15, Flat Tire=1},PM : 12:00-19:00,{Heavy Traffic=13, Accident=1, Mechanical Problem=1}
+07/08/17, AM : 5:00-11:59,{Heavy Traffic=46, Other=23, Mechanical Problem=5},PM : 12:00-19:00,{Heavy Traffic=6, Mechanical Problem=1, Other=1}
+01/09/17, AM : 5:00-11:59,{Heavy Traffic=8, Other=3, Won`t Start=1},PM : 12:00-19:00,{Heavy Traffic=1}
+05/09/17, AM : 5:00-11:59,{Heavy Traffic=42, Other=8, Flat Tire=2},PM : 12:00-19:00,{Heavy Traffic=2, Mechanical Problem=1}
+06/09/17, AM : 5:00-11:59,{Heavy Traffic=56, Other=13, Mechanical Problem=3},PM : 12:00-19:00,{Heavy Traffic=2, Other=2}
+07/09/17, AM : 5:00-11:59,{Heavy Traffic=312, Other=29, Mechanical Problem=17},PM : 12:00-19:00,{Other=6, Mechanical Problem=4, Heavy Traffic=4}
+08/09/17, AM : 5:00-11:59,{Heavy Traffic=218, Other=23, Mechanical Problem=6},PM : 12:00-19:00,{Heavy Traffic=12, Won`t Start=1}
+11/09/17, AM : 5:00-11:59,{Heavy Traffic=297, Other=32, Mechanical Problem=20},PM : 12:00-19:00,{Heavy Traffic=44, Mechanical Problem=6, Other=6}
+12/09/17, AM : 5:00-11:59,{Heavy Traffic=228, Other=29, Mechanical Problem=11},PM : 12:00-19:00,{Heavy Traffic=33, Other=9, Delayed by School=7}
+13/09/17, AM : 5:00-11:59,{Heavy Traffic=229, Other=23, Mechanical Problem=11},PM : 12:00-19:00,{Heavy Traffic=35, Other=6, Delayed by School=5}
+14/09/17, AM : 5:00-11:59,{Heavy Traffic=257, Other=20, Mechanical Problem=12},PM : 12:00-19:00,{Heavy Traffic=39, Other=10, Delayed by School=5}
+15/09/17, AM : 5:00-11:59,{Heavy Traffic=223, Other=34, Mechanical Problem=11},PM : 12:00-19:00,{Heavy Traffic=69, Mechanical Problem=4, Other=4}
+18/09/17, AM : 5:00-11:59,{Heavy Traffic=365, Other=44, Mechanical Problem=19},PM : 12:00-19:00,{Heavy Traffic=44, Delayed by School=8, Other=6}
+19/09/17, AM : 5:00-11:59,{Heavy Traffic=321, Other=35, Mechanical Problem=16},PM : 12:00-19:00,{Heavy Traffic=56, Delayed by School=4, Other=4}
+20/09/17, AM : 5:00-11:59,{Heavy Traffic=235, Other=42, Mechanical Problem=16},PM : 12:00-19:00,{Heavy Traffic=58, Delayed by School=3, Mechanical Problem=3}
+21/09/17, AM : 5:00-11:59,{Heavy Traffic=16, Other=5, Flat Tire=2},PM : 12:00-19:00,{Delayed by School=1, Heavy Traffic=1, Other=1}
+22/09/17, AM : 5:00-11:59,{Other=1},PM : 12:00-19:00,{Heavy Traffic=1, Other=1}
+25/09/17, AM : 5:00-11:59,{Heavy Traffic=296, Other=52, Mechanical Problem=24},PM : 12:00-19:00,{Heavy Traffic=88, Other=11, Mechanical Problem=7}
+26/09/17, AM : 5:00-11:59,{Heavy Traffic=304, Other=43, Mechanical Problem=23},PM : 12:00-19:00,{Heavy Traffic=74, Other=5, Mechanical Problem=4}
+27/09/17, AM : 5:00-11:59,{Heavy Traffic=316, Other=55, Mechanical Problem=10},PM : 12:00-19:00,{Heavy Traffic=57, Other=9, Delayed by School=5}
+28/09/17, AM : 5:00-11:59,{Heavy Traffic=300, Other=33, Mechanical Problem=11},PM : 12:00-19:00,{Heavy Traffic=84, Other=20, Delayed by School=4}
+29/09/17, AM : 5:00-11:59,{Heavy Traffic=249, Other=27, Mechanical Problem=10},PM : 12:00-19:00,{Heavy Traffic=64, Other=6, Delayed by School=4}
+02/10/17, AM : 5:00-11:59,{Heavy Traffic=365, Other=62, Mechanical Problem=26},PM : 12:00-19:00,{Heavy Traffic=62, Other=7, Flat Tire=5}
+03/10/17, AM : 5:00-11:59,{Heavy Traffic=354, Other=44, Mechanical Problem=12},PM : 12:00-19:00,{Heavy Traffic=57, Other=5, Delayed by School=4}
+04/10/17, AM : 5:00-11:59,{Heavy Traffic=311, Other=32, Mechanical Problem=13},PM : 12:00-19:00,{Heavy Traffic=82, Delayed by School=3, Other=2}
+05/10/17, AM : 5:00-11:59,{Heavy Traffic=231, Other=18, Mechanical Problem=14},PM : 12:00-19:00,{Heavy Traffic=61, Accident=2, Other=2}
+06/10/17, AM : 5:00-11:59,{Heavy Traffic=175, Other=24, Mechanical Problem=7},PM : 12:00-19:00,{Heavy Traffic=83, Other=6, Flat Tire=2}
+09/10/17, PM : 12:00-19:00,{Mechanical Problem=1}
+10/10/17, AM : 5:00-11:59,{Heavy Traffic=337, Other=56, Mechanical Problem=23},PM : 12:00-19:00,{Heavy Traffic=63, Delayed by School=7, Other=7}
+11/10/17, AM : 5:00-11:59,{Heavy Traffic=296, Other=35, Mechanical Problem=22},PM : 12:00-19:00,{Heavy Traffic=53, Mechanical Problem=5, Accident=3}
+12/10/17, AM : 5:00-11:59,{Heavy Traffic=342, Other=32, Weather Conditions=14},PM : 12:00-19:00,{Heavy Traffic=40, Delayed by School=2, Accident=2}
+13/10/17, AM : 5:00-11:59,{Heavy Traffic=180, Other=21, Problem Run=13},PM : 12:00-19:00,{Heavy Traffic=30, Late return from Field Trip=6, Mechanical Problem=5}
+16/10/17, AM : 5:00-11:59,{Heavy Traffic=332, Other=47, Mechanical Problem=25},PM : 12:00-19:00,{Heavy Traffic=50, Mechanical Problem=7, Other=6}
+17/10/17, AM : 5:00-11:59,{Heavy Traffic=283, Other=47, Mechanical Problem=16},PM : 12:00-19:00,{Heavy Traffic=55, Flat Tire=4, Won`t Start=3}
+18/10/17, AM : 5:00-11:59,{Heavy Traffic=255, Other=54, Mechanical Problem=17},PM : 12:00-19:00,{Heavy Traffic=51, Mechanical Problem=7, Other=6}
+19/10/17, AM : 5:00-11:59,{Heavy Traffic=317, Other=52, Mechanical Problem=19},PM : 12:00-19:00,{Heavy Traffic=71, Other=12, Late return from Field Trip=7}
+20/10/17, AM : 5:00-11:59,{Heavy Traffic=265, Other=27, Mechanical Problem=15},PM : 12:00-19:00,{Heavy Traffic=69, Other=15, Late return from Field Trip=7}
+23/10/17, AM : 5:00-11:59,{Heavy Traffic=310, Other=41, Mechanical Problem=25},PM : 12:00-19:00,{Heavy Traffic=50, Mechanical Problem=7, Other=6}
+24/10/17, AM : 5:00-11:59,{Heavy Traffic=296, Other=38, Problem Run=12},PM : 12:00-19:00,{Heavy Traffic=43, Other=5, Accident=4}
+25/10/17, AM : 5:00-11:59,{Heavy Traffic=321, Other=34, Mechanical Problem=16},PM : 12:00-19:00,{Heavy Traffic=35, Late return from Field Trip=8, Delayed by School=5}
+26/10/17, AM : 5:00-11:59,{Heavy Traffic=314, Other=46, Mechanical Problem=15},PM : 12:00-19:00,{Heavy Traffic=62, Other=11, Late return from Field Trip=3}
+27/10/17, AM : 5:00-11:59,{Heavy Traffic=263, Other=48, Mechanical Problem=17},PM : 12:00-19:00,{Heavy Traffic=73, Late return from Field Trip=18, Mechanical Problem=10}
+30/10/17, AM : 5:00-11:59,{Heavy Traffic=547, Weather Conditions=60, Other=45},PM : 12:00-19:00,{Heavy Traffic=65, Other=9, Mechanical Problem=5}
+31/10/17, AM : 5:00-11:59,{Heavy Traffic=275, Other=101, Mechanical Problem=17},PM : 12:00-19:00,{Heavy Traffic=39, Other=7, Flat Tire=4}
+01/11/17, AM : 5:00-11:59,{Heavy Traffic=166, Other=21, Mechanical Problem=11},PM : 12:00-19:00,{Heavy Traffic=45, Mechanical Problem=7, Delayed by School=4}
+02/11/17, AM : 5:00-11:59,{Heavy Traffic=45, Other=13, Flat Tire=1},PM : 12:00-19:00,{Heavy Traffic=39, Other=10, Late return from Field Trip=7}
+03/11/17, AM : 5:00-11:59,{Heavy Traffic=253, Other=23, Mechanical Problem=8},PM : 12:00-19:00,{Heavy Traffic=55, Other=8, Late return from Field Trip=6}
+06/11/17, AM : 5:00-11:59,{Heavy Traffic=27, Other=8},PM : 12:00-19:00,{Heavy Traffic=7, Late return from Field Trip=4, Mechanical Problem=3}
+07/11/17, AM : 5:00-11:59,{Heavy Traffic=15, Mechanical Problem=3, Flat Tire=2},PM : 12:00-19:00,{Heavy Traffic=4, Problem Run=1}
+08/11/17, AM : 5:00-11:59,{Heavy Traffic=319, Other=56, Mechanical Problem=27},PM : 12:00-19:00,{Heavy Traffic=33, Other=16, Mechanical Problem=15}
+09/11/17, AM : 5:00-11:59,{Heavy Traffic=351, Other=42, Mechanical Problem=27},PM : 12:00-19:00,{Heavy Traffic=56, Other=10, Late return from Field Trip=6}
+10/11/17, AM : 5:00-11:59,{Heavy Traffic=174, Other=21, Mechanical Problem=20},PM : 12:00-19:00,{Heavy Traffic=32, Mechanical Problem=5, Delayed by School=4}
+13/11/17, AM : 5:00-11:59,{Heavy Traffic=407, Other=90, Mechanical Problem=33},PM : 12:00-19:00,{Heavy Traffic=35, Other=28, Mechanical Problem=7}
+14/11/17, AM : 5:00-11:59,{Heavy Traffic=191, Other=39, Mechanical Problem=21},PM : 12:00-19:00,{Heavy Traffic=11, Other=5, Mechanical Problem=2}
+15/11/17, AM : 5:00-11:59,{Heavy Traffic=247, Other=32, Mechanical Problem=12},PM : 12:00-19:00,{Heavy Traffic=21, Late return from Field Trip=8, Mechanical Problem=6}
+16/11/17, AM : 5:00-11:59,{Heavy Traffic=435, Other=43, Weather Conditions=38},PM : 12:00-19:00,{Heavy Traffic=32, Other=9, Flat Tire=2}
+17/11/17, AM : 5:00-11:59,{Heavy Traffic=186, Other=37, Mechanical Problem=9},PM : 12:00-19:00,{Heavy Traffic=40, Late return from Field Trip=25, Mechanical Problem=7}
+20/11/17, AM : 5:00-11:59,{Heavy Traffic=176, Other=40, Mechanical Problem=21},PM : 12:00-19:00,{Heavy Traffic=20, Other=6, Late return from Field Trip=4}
+21/11/17, AM : 5:00-11:59,{Heavy Traffic=209, Other=36, Mechanical Problem=16},PM : 12:00-19:00,{Heavy Traffic=33, Late return from Field Trip=18, Mechanical Problem=8}
+22/11/17, AM : 5:00-11:59,{Heavy Traffic=230, Other=18, Mechanical Problem=9},PM : 12:00-19:00,{Heavy Traffic=23, Late return from Field Trip=5, Mechanical Problem=4}
+27/11/17, AM : 5:00-11:59,{Heavy Traffic=248, Other=43, Mechanical Problem=32},PM : 12:00-19:00,{Heavy Traffic=17, Mechanical Problem=9, Late return from Field Trip=3}
+28/11/17, AM : 5:00-11:59,{Heavy Traffic=214, Other=39, Mechanical Problem=17},PM : 12:00-19:00,{Heavy Traffic=36, Late return from Field Trip=24, Other=9}
+29/11/17, AM : 5:00-11:59,{Heavy Traffic=210, Other=36, Mechanical Problem=21},PM : 12:00-19:00,{Heavy Traffic=25, Late return from Field Trip=11, Mechanical Problem=8}
+30/11/17, AM : 5:00-11:59,{Heavy Traffic=176, Other=32, Mechanical Problem=17},PM : 12:00-19:00,{Heavy Traffic=21, Other=7, Won`t Start=5}
+01/12/17, AM : 5:00-11:59,{Heavy Traffic=289, Other=29, Mechanical Problem=14},PM : 12:00-19:00,{Heavy Traffic=36, Late return from Field Trip=9, Other=5}
+04/12/17, AM : 5:00-11:59,{Heavy Traffic=264, Other=44, Mechanical Problem=30},PM : 12:00-19:00,{Heavy Traffic=23, Mechanical Problem=6, Delayed by School=5}
+05/12/17, AM : 5:00-11:59,{Heavy Traffic=205, Other=44, Mechanical Problem=26},PM : 12:00-19:00,{Heavy Traffic=27, Other=11, Accident=6}
+06/12/17, AM : 5:00-11:59,{Heavy Traffic=205, Other=29, Mechanical Problem=19},PM : 12:00-19:00,{Heavy Traffic=16, Other=13, Late return from Field Trip=10}
+07/12/17, AM : 5:00-11:59,{Heavy Traffic=212, Other=35, Mechanical Problem=18},PM : 12:00-19:00,{Heavy Traffic=46, Late return from Field Trip=8, Other=7}
+08/12/17, AM : 5:00-11:59,{Heavy Traffic=189, Other=42, Mechanical Problem=19},PM : 12:00-19:00,{Heavy Traffic=32, Other=14, Mechanical Problem=4}
+11/12/17, AM : 5:00-11:59,{Heavy Traffic=266, Other=51, Mechanical Problem=30},PM : 12:00-19:00,{Heavy Traffic=66, Other=13, Mechanical Problem=7}
+12/12/17, AM : 5:00-11:59,{Heavy Traffic=360, Other=38, Mechanical Problem=21},PM : 12:00-19:00,{Heavy Traffic=52, Other=18, Late return from Field Trip=13}
+13/12/17, AM : 5:00-11:59,{Heavy Traffic=340, Mechanical Problem=57, Other=39},PM : 12:00-19:00,{Heavy Traffic=65, Other=30, Late return from Field Trip=16}
+14/12/17, AM : 5:00-11:59,{Heavy Traffic=609, Weather Conditions=204, Other=40},PM : 12:00-19:00,{Heavy Traffic=65, Other=19, Delayed by School=11}
+15/12/17, AM : 5:00-11:59,{Heavy Traffic=472, Other=68, Mechanical Problem=52},PM : 12:00-19:00,{Heavy Traffic=65, Late return from Field Trip=25, Other=16}
+18/12/17, AM : 5:00-11:59,{Heavy Traffic=480, Other=76, Mechanical Problem=55},PM : 12:00-19:00,{Heavy Traffic=48, Other=28, Late return from Field Trip=7}
+19/12/17, AM : 5:00-11:59,{Heavy Traffic=253, Other=52, Mechanical Problem=34},PM : 12:00-19:00,{Heavy Traffic=45, Other=21, Late return from Field Trip=16}
+20/12/17, AM : 5:00-11:59,{Heavy Traffic=287, Other=50, Mechanical Problem=19},PM : 12:00-19:00,{Heavy Traffic=50, Late return from Field Trip=20, Other=12}
+21/12/17, AM : 5:00-11:59,{Heavy Traffic=256, Other=44, Mechanical Problem=21},PM : 12:00-19:00,{Heavy Traffic=72, Mechanical Problem=11, Late return from Field Trip=8}
+22/12/17, AM : 5:00-11:59,{Heavy Traffic=174, Other=30, Mechanical Problem=26},PM : 12:00-19:00,{Heavy Traffic=80, Other=22, Accident=5}
+26/12/17, AM : 5:00-11:59,{Other=8, Won`t Start=4, Heavy Traffic=4},PM : 12:00-19:00,{Mechanical Problem=2}
+27/12/17, AM : 5:00-11:59,{Mechanical Problem=2, Heavy Traffic=2, Other=2},PM : 12:00-19:00,{Mechanical Problem=1}
+28/12/17, AM : 5:00-11:59,{Mechanical Problem=3, Other=2},PM : 12:00-19:00,{Accident=3, Heavy Traffic=2}
+29/12/17, AM : 5:00-11:59,{Heavy Traffic=2}
+02/01/18, AM : 5:00-11:59,{Heavy Traffic=204, Won`t Start=61, Mechanical Problem=54},PM : 12:00-19:00,{Heavy Traffic=35, Mechanical Problem=15, Other=13}
+03/01/18, AM : 5:00-11:59,{Heavy Traffic=181, Other=48, Mechanical Problem=34},PM : 12:00-19:00,{Heavy Traffic=32, Other=13, Won`t Start=4}
+05/01/18, AM : 5:00-11:59,{Weather Conditions=371, Heavy Traffic=225, Mechanical Problem=42},PM : 12:00-19:00,{Heavy Traffic=35, Other=13, Weather Conditions=4}
+07/01/18, AM : 5:00-11:59,{Other=1}
+08/01/18, AM : 5:00-11:59,{Heavy Traffic=272, Mechanical Problem=105, Other=55},PM : 12:00-19:00,{Heavy Traffic=27, Other=19, Late return from Field Trip=10}
+09/01/18, AM : 5:00-11:59,{Heavy Traffic=346, Other=82, Mechanical Problem=46},PM : 12:00-19:00,{Heavy Traffic=49, Other=11, Late return from Field Trip=9}
+10/01/18, AM : 5:00-11:59,{Heavy Traffic=240, Other=56, Mechanical Problem=25},PM : 12:00-19:00,{Heavy Traffic=50, Late return from Field Trip=11, Other=6}
+11/01/18, AM : 5:00-11:59,{Heavy Traffic=173, Other=47, Mechanical Problem=25},PM : 12:00-19:00,{Heavy Traffic=48, Other=9, Flat Tire=4}
+12/01/18, AM : 5:00-11:59,{Heavy Traffic=241, Other=27, Weather Conditions=25},PM : 12:00-19:00,{Heavy Traffic=28, Other=20, Flat Tire=4}
+16/01/18, AM : 5:00-11:59,{Heavy Traffic=249, Other=69, Mechanical Problem=31},PM : 12:00-19:00,{Heavy Traffic=29, Other=13, Mechanical Problem=7}
+17/01/18, AM : 5:00-11:59,{Heavy Traffic=270, Other=51, Mechanical Problem=23},PM : 12:00-19:00,{Heavy Traffic=30, Late return from Field Trip=4, Other=4}
+18/01/18, AM : 5:00-11:59,{Heavy Traffic=290, Other=49, Mechanical Problem=20},PM : 12:00-19:00,{Heavy Traffic=82, Other=16, Mechanical Problem=10}
+19/01/18, AM : 5:00-11:59,{Heavy Traffic=200, Other=46, Mechanical Problem=24},PM : 12:00-19:00,{Heavy Traffic=80, Other=15, Late return from Field Trip=7}
+22/01/18, AM : 5:00-11:59,{Heavy Traffic=280, Other=80, Mechanical Problem=17},PM : 12:00-19:00,{Heavy Traffic=58, Other=9, Mechanical Problem=7}
+23/01/18, AM : 5:00-11:59,{Heavy Traffic=338, Other=54, Mechanical Problem=32},PM : 12:00-19:00,{Heavy Traffic=29, Other=4, Delayed by School=3}
+24/01/18, AM : 5:00-11:59,{Heavy Traffic=205, Other=87, Mechanical Problem=18},PM : 12:00-19:00,{Heavy Traffic=37, Other=9, Late return from Field Trip=6}
+25/01/18, AM : 5:00-11:59,{Heavy Traffic=206, Other=67, Mechanical Problem=23},PM : 12:00-19:00,{Heavy Traffic=59, Other=13, Late return from Field Trip=5}
+26/01/18, AM : 5:00-11:59,{Heavy Traffic=226, Other=53, Mechanical Problem=11},PM : 12:00-19:00,{Heavy Traffic=48, Other=14, Accident=4}
+29/01/18, AM : 5:00-11:59,{Heavy Traffic=280, Other=63, Mechanical Problem=23},PM : 12:00-19:00,{Heavy Traffic=45, Delayed by School=9, Other=7}
+30/01/18, AM : 5:00-11:59,{Heavy Traffic=352, Other=62, Weather Conditions=41},PM : 12:00-19:00,{Heavy Traffic=30, Other=6, Late return from Field Trip=5}
+31/01/18, AM : 5:00-11:59,{Heavy Traffic=167, Other=42, Mechanical Problem=19},PM : 12:00-19:00,{Heavy Traffic=25, Other=12, Late return from Field Trip=4}
+01/02/18, AM : 5:00-11:59,{Heavy Traffic=169, Other=35, Mechanical Problem=17},PM : 12:00-19:00,{Heavy Traffic=18, Other=6, Late return from Field Trip=5}
+02/02/18, AM : 5:00-11:59,{Heavy Traffic=142, Other=25, Mechanical Problem=13},PM : 12:00-19:00,{Heavy Traffic=21, Other=10, Late return from Field Trip=6}
+05/02/18, AM : 5:00-11:59,{Heavy Traffic=208, Other=41, Mechanical Problem=19},PM : 12:00-19:00,{Other=31, Heavy Traffic=24, Late return from Field Trip=4}
+06/02/18, AM : 5:00-11:59,{Heavy Traffic=211, Other=49, Mechanical Problem=13},PM : 12:00-19:00,{Heavy Traffic=23, Other=9, Mechanical Problem=7}
+07/02/18, AM : 5:00-11:59,{Heavy Traffic=129, Other=27, Mechanical Problem=22},PM : 12:00-19:00,{Heavy Traffic=40, Other=10, Won`t Start=2}
+08/02/18, AM : 5:00-11:59,{Heavy Traffic=115, Other=26, Mechanical Problem=19},PM : 12:00-19:00,{Heavy Traffic=28, Other=15, Mechanical Problem=4}
+09/02/18, AM : 5:00-11:59,{Heavy Traffic=150, Other=42, Mechanical Problem=10},PM : 12:00-19:00,{Heavy Traffic=25, Other=12, Late return from Field Trip=5}
+12/02/18, AM : 5:00-11:59,{Heavy Traffic=196, Other=65, Mechanical Problem=18},PM : 12:00-19:00,{Heavy Traffic=31, Other=7, Mechanical Problem=5}
+13/02/18, AM : 5:00-11:59,{Heavy Traffic=288, Other=55, Mechanical Problem=35},PM : 12:00-19:00,{Heavy Traffic=56, Other=19, Late return from Field Trip=16}
+14/02/18, AM : 5:00-11:59,{Heavy Traffic=312, Other=39, Mechanical Problem=14},PM : 12:00-19:00,{Heavy Traffic=8, Other=8, Late return from Field Trip=2}
+15/02/18, AM : 5:00-11:59,{Heavy Traffic=231, Other=49, Mechanical Problem=38},PM : 12:00-19:00,{Heavy Traffic=61, Other=36, Late return from Field Trip=20}
+16/02/18, AM : 5:00-11:59,{Heavy Traffic=17, Won`t Start=2, Mechanical Problem=2},PM : 12:00-19:00,{Heavy Traffic=3, Weather Conditions=2, Other=1}
+20/02/18, AM : 5:00-11:59,{Other=1},PM : 12:00-19:00,{Other=1}
+21/02/18, AM : 5:00-11:59,{Heavy Traffic=9, Other=6, Won`t Start=2}
+22/02/18, AM : 5:00-11:59,{Mechanical Problem=3},PM : 12:00-19:00,{Late return from Field Trip=1}
+23/02/18, AM : 5:00-11:59,{Heavy Traffic=3},PM : 12:00-19:00,{Accident=1, Mechanical Problem=1, Other=1}
+26/02/18, AM : 5:00-11:59,{Heavy Traffic=306, Mechanical Problem=90, Other=75},PM : 12:00-19:00,{Heavy Traffic=50, Other=14, Mechanical Problem=10}
+27/02/18, AM : 5:00-11:59,{Heavy Traffic=263, Other=66, Mechanical Problem=42},PM : 12:00-19:00,{Heavy Traffic=48, Late return from Field Trip=10, Other=9}
+28/02/18, AM : 5:00-11:59,{Heavy Traffic=317, Other=67, Flat Tire=11},PM : 12:00-19:00,{Heavy Traffic=36, Other=23, Late return from Field Trip=6}
+01/03/18, AM : 5:00-11:59,{Heavy Traffic=172, Other=29, Mechanical Problem=15},PM : 12:00-19:00,{Heavy Traffic=29, Other=4, Delayed by School=2}
+02/03/18, AM : 5:00-11:59,{Heavy Traffic=261, Weather Conditions=92, Other=39},PM : 12:00-19:00,{Heavy Traffic=132, Weather Conditions=61, Other=28}
+05/03/18, AM : 5:00-11:59,{Heavy Traffic=421, Mechanical Problem=75, Other=63},PM : 12:00-19:00,{Heavy Traffic=89, Mechanical Problem=10, Late return from Field Trip=8}
+06/03/18, AM : 5:00-11:59,{Heavy Traffic=439, Other=73, Mechanical Problem=33},PM : 12:00-19:00,{Heavy Traffic=37, Other=7, Mechanical Problem=5}
+07/03/18, AM : 5:00-11:59,{Heavy Traffic=171, Weather Conditions=49, Other=19},PM : 12:00-19:00,{Heavy Traffic=52, Weather Conditions=10, Accident=5}
+08/03/18, AM : 5:00-11:59,{Heavy Traffic=313, Other=51, Mechanical Problem=21},PM : 12:00-19:00,{Heavy Traffic=50, Other=10, Flat Tire=5}
+09/03/18, AM : 5:00-11:59,{Heavy Traffic=287, Other=41, Mechanical Problem=14},PM : 12:00-19:00,{Heavy Traffic=73, Other=17, Accident=6}
+12/03/18, AM : 5:00-11:59,{Heavy Traffic=385, Other=66, Mechanical Problem=36},PM : 12:00-19:00,{Heavy Traffic=74, Other=20, Mechanical Problem=6}
+13/03/18, AM : 5:00-11:59,{Heavy Traffic=356, Weather Conditions=113, Other=49},PM : 12:00-19:00,{Heavy Traffic=57, Mechanical Problem=8, Accident=5}
+14/03/18, AM : 5:00-11:59,{Heavy Traffic=460, Other=89, Mechanical Problem=26},PM : 12:00-19:00,{Heavy Traffic=64, Late return from Field Trip=17, Other=15}
+15/03/18, AM : 5:00-11:59,{Heavy Traffic=323, Other=61, Mechanical Problem=27},PM : 12:00-19:00,{Heavy Traffic=46, Other=7, Accident=5}
+16/03/18, AM : 5:00-11:59,{Heavy Traffic=250, Other=59, Mechanical Problem=24},PM : 12:00-19:00,{Heavy Traffic=65, Late return from Field Trip=19, Other=11}
+19/03/18, AM : 5:00-11:59,{Heavy Traffic=386, Other=69, Mechanical Problem=39},PM : 12:00-19:00,{Heavy Traffic=60, Other=12, Late return from Field Trip=8}
+20/03/18, AM : 5:00-11:59,{Heavy Traffic=375, Other=70, Mechanical Problem=22},PM : 12:00-19:00,{Heavy Traffic=85, Late return from Field Trip=15, Other=13}
+22/03/18, AM : 5:00-11:59,{Heavy Traffic=276, Weather Conditions=261, Other=67},PM : 12:00-19:00,{Heavy Traffic=41, Other=11, Late return from Field Trip=6}
+23/03/18, AM : 5:00-11:59,{Heavy Traffic=236, Other=65, Mechanical Problem=13},PM : 12:00-19:00,{Heavy Traffic=99, Late return from Field Trip=13, Other=12}
+26/03/18, AM : 5:00-11:59,{Heavy Traffic=362, Other=75, Mechanical Problem=33},PM : 12:00-19:00,{Heavy Traffic=50, Mechanical Problem=7, Other=6}
+27/03/18, AM : 5:00-11:59,{Heavy Traffic=194, Other=64, Mechanical Problem=12},PM : 12:00-19:00,{Heavy Traffic=88, Late return from Field Trip=30, Other=17}
+28/03/18, AM : 5:00-11:59,{Heavy Traffic=296, Other=41, Mechanical Problem=24},PM : 12:00-19:00,{Heavy Traffic=54, Other=13, Late return from Field Trip=7}
+29/03/18, AM : 5:00-11:59,{Heavy Traffic=207, Other=36, Accident=3},PM : 12:00-19:00,{Heavy Traffic=40, Late return from Field Trip=6, Other=5}
+30/03/18, AM : 5:00-11:59,{Other=1}
+02/04/18, AM : 5:00-11:59,{Weather Conditions=11, Mechanical Problem=4, Heavy Traffic=4},PM : 12:00-19:00,{Heavy Traffic=1}
+03/04/18, AM : 5:00-11:59,{Heavy Traffic=6, Other=3, Mechanical Problem=2}
+04/04/18, AM : 5:00-11:59,{Heavy Traffic=3, Mechanical Problem=1},PM : 12:00-19:00,{Heavy Traffic=2, Other=2}
+05/04/18, AM : 5:00-11:59,{Heavy Traffic=7, Other=4, Mechanical Problem=2},PM : 12:00-19:00,{Heavy Traffic=1}
+06/04/18, AM : 5:00-11:59,{Heavy Traffic=2},PM : 12:00-19:00,{Heavy Traffic=2, Other=1}
+09/04/18, AM : 5:00-11:59,{Heavy Traffic=289, Other=94, Mechanical Problem=48},PM : 12:00-19:00,{Heavy Traffic=31, Other=20, Late return from Field Trip=8}
+10/04/18, AM : 5:00-11:59,{Heavy Traffic=247, Other=50, Mechanical Problem=23},PM : 12:00-19:00,{Heavy Traffic=50, Mechanical Problem=11, Other=8}
+11/04/18, AM : 5:00-11:59,{Heavy Traffic=214, Other=35, Mechanical Problem=22},PM : 12:00-19:00,{Heavy Traffic=63, Late return from Field Trip=24, Delayed by School=11}
+12/04/18, AM : 5:00-11:59,{Heavy Traffic=194, Other=35, Flat Tire=9},PM : 12:00-19:00,{Heavy Traffic=53, Late return from Field Trip=19, Delayed by School=11}
+13/04/18, AM : 5:00-11:59,{Heavy Traffic=179, Other=37, Mechanical Problem=17},PM : 12:00-19:00,{Heavy Traffic=75, Other=15, Late return from Field Trip=7}
+16/04/18, AM : 5:00-11:59,{Heavy Traffic=284, Weather Conditions=112, Other=42},PM : 12:00-19:00,{Heavy Traffic=55, Other=12, Mechanical Problem=9}
+17/04/18, AM : 5:00-11:59,{Heavy Traffic=197, Other=38, Mechanical Problem=16},PM : 12:00-19:00,{Heavy Traffic=63, Late return from Field Trip=6, Mechanical Problem=6}
+18/04/18, AM : 5:00-11:59,{Heavy Traffic=171, Other=38, Mechanical Problem=15},PM : 12:00-19:00,{Heavy Traffic=59, Other=8, Accident=4}
+19/04/18, AM : 5:00-11:59,{Heavy Traffic=317, Other=42, Mechanical Problem=19},PM : 12:00-19:00,{Heavy Traffic=53, Late return from Field Trip=7, Mechanical Problem=5}
+20/04/18, AM : 5:00-11:59,{Heavy Traffic=178, Other=39, Mechanical Problem=14},PM : 12:00-19:00,{Heavy Traffic=58, Late return from Field Trip=19, Mechanical Problem=5}
+23/04/18, AM : 5:00-11:59,{Heavy Traffic=215, Other=42, Mechanical Problem=22},PM : 12:00-19:00,{Heavy Traffic=65, Late return from Field Trip=8, Other=8}
+24/04/18, AM : 5:00-11:59,{Heavy Traffic=235, Other=51, Mechanical Problem=19},PM : 12:00-19:00,{Heavy Traffic=28, Late return from Field Trip=12, Delayed by School=8}
+25/04/18, AM : 5:00-11:59,{Heavy Traffic=419, Weather Conditions=58, Other=46},PM : 12:00-19:00,{Heavy Traffic=77, Late return from Field Trip=13, Other=10}
+26/04/18, AM : 5:00-11:59,{Heavy Traffic=390, Other=26, Mechanical Problem=16},PM : 12:00-19:00,{Heavy Traffic=66, Late return from Field Trip=14, Other=4}
+27/04/18, AM : 5:00-11:59,{Heavy Traffic=239, Other=43, Mechanical Problem=18},PM : 12:00-19:00,{Heavy Traffic=69, Late return from Field Trip=24, Other=19}
+30/04/18, AM : 5:00-11:59,{Heavy Traffic=257, Other=48, Mechanical Problem=20},PM : 12:00-19:00,{Heavy Traffic=100, Other=23, Mechanical Problem=11}
+01/05/18, AM : 5:00-11:59,{Heavy Traffic=349, Other=56, Mechanical Problem=39},PM : 12:00-19:00,{Heavy Traffic=120, Late return from Field Trip=67, Other=26}
+02/05/18, AM : 5:00-11:59,{Heavy Traffic=277, Other=60, Mechanical Problem=21},PM : 12:00-19:00,{Heavy Traffic=66, Late return from Field Trip=29, Mechanical Problem=9}
+03/05/18, AM : 5:00-11:59,{Heavy Traffic=209, Other=51, Mechanical Problem=17},PM : 12:00-19:00,{Heavy Traffic=62, Late return from Field Trip=27, Other=18}
+04/05/18, AM : 5:00-11:59,{Heavy Traffic=211, Other=47, Mechanical Problem=24},PM : 12:00-19:00,{Heavy Traffic=92, Mechanical Problem=11, Late return from Field Trip=8}
+07/05/18, AM : 5:00-11:59,{Heavy Traffic=240, Other=62, Mechanical Problem=29},PM : 12:00-19:00,{Heavy Traffic=57, Mechanical Problem=8, Other=8}
+08/05/18, AM : 5:00-11:59,{Heavy Traffic=217, Other=29, Mechanical Problem=14},PM : 12:00-19:00,{Heavy Traffic=41, Late return from Field Trip=8, Other=8}
+09/05/18, AM : 5:00-11:59,{Heavy Traffic=231, Other=41, Mechanical Problem=14},PM : 12:00-19:00,{Heavy Traffic=66, Other=13, Late return from Field Trip=11}
+10/05/18, AM : 5:00-11:59,{Heavy Traffic=183, Other=56, Mechanical Problem=12},PM : 12:00-19:00,{Heavy Traffic=44, Late return from Field Trip=28, Other=16}
+11/05/18, AM : 5:00-11:59,{Heavy Traffic=225, Other=57, Mechanical Problem=18},PM : 12:00-19:00,{Heavy Traffic=83, Late return from Field Trip=40, Other=18}
+14/05/18, AM : 5:00-11:59,{Heavy Traffic=244, Other=62, Mechanical Problem=17},PM : 12:00-19:00,{Heavy Traffic=76, Mechanical Problem=14, Late return from Field Trip=9}
+15/05/18, AM : 5:00-11:59,{Heavy Traffic=133, Other=27, Mechanical Problem=10},PM : 12:00-19:00,{Heavy Traffic=67, Late return from Field Trip=20, Other=9}
+16/05/18, AM : 5:00-11:59,{Heavy Traffic=175, Other=54, Mechanical Problem=12},PM : 12:00-19:00,{Heavy Traffic=81, Other=14, Late return from Field Trip=6}
+17/05/18, AM : 5:00-11:59,{Heavy Traffic=327, Weather Conditions=60, Other=46},PM : 12:00-19:00,{Heavy Traffic=61, Late return from Field Trip=13, Mechanical Problem=11}
+18/05/18, AM : 5:00-11:59,{Heavy Traffic=208, Other=44, Mechanical Problem=11},PM : 12:00-19:00,{Heavy Traffic=66, Late return from Field Trip=15, Other=6}
+21/05/18, AM : 5:00-11:59,{Heavy Traffic=225, Other=42, Mechanical Problem=17},PM : 12:00-19:00,{Heavy Traffic=52, Late return from Field Trip=7, Mechanical Problem=6}
+22/05/18, AM : 5:00-11:59,{Heavy Traffic=227, Other=43, Mechanical Problem=20},PM : 12:00-19:00,{Heavy Traffic=51, Late return from Field Trip=15, Other=6}
+23/05/18, AM : 5:00-11:59,{Heavy Traffic=238, Other=31, Mechanical Problem=28},PM : 12:00-19:00,{Heavy Traffic=64, Late return from Field Trip=19, Mechanical Problem=7}
+24/05/18, AM : 5:00-11:59,{Heavy Traffic=260, Other=46, Mechanical Problem=11},PM : 12:00-19:00,{Heavy Traffic=56, Late return from Field Trip=39, Other=13}
+25/05/18, AM : 5:00-11:59,{Heavy Traffic=183, Other=39, Mechanical Problem=9},PM : 12:00-19:00,{Heavy Traffic=66, Late return from Field Trip=42, Flat Tire=4}
+29/05/18, AM : 5:00-11:59,{Heavy Traffic=259, Other=40, Mechanical Problem=27},PM : 12:00-19:00,{Heavy Traffic=43, Late return from Field Trip=14, Other=14}
+30/05/18, AM : 5:00-11:59,{Heavy Traffic=205, Other=50, Mechanical Problem=26},PM : 12:00-19:00,{Heavy Traffic=61, Late return from Field Trip=21, Other=13}
+31/05/18, AM : 5:00-11:59,{Heavy Traffic=223, Other=61, Mechanical Problem=22},PM : 12:00-19:00,{Heavy Traffic=64, Late return from Field Trip=18, Mechanical Problem=12}
+01/06/18, AM : 5:00-11:59,{Heavy Traffic=236, Other=48, Mechanical Problem=17},PM : 12:00-19:00,{Heavy Traffic=61, Other=22, Late return from Field Trip=21}
+04/06/18, AM : 5:00-11:59,{Heavy Traffic=280, Other=54, Mechanical Problem=30},PM : 12:00-19:00,{Heavy Traffic=44, Other=18, Late return from Field Trip=12}
+05/06/18, AM : 5:00-11:59,{Heavy Traffic=291, Other=39, Mechanical Problem=19},PM : 12:00-19:00,{Heavy Traffic=51, Late return from Field Trip=27, Other=6}
+06/06/18, AM : 5:00-11:59,{Heavy Traffic=188, Other=38, Mechanical Problem=16},PM : 12:00-19:00,{Late return from Field Trip=53, Heavy Traffic=44, Other=6}
+07/06/18, AM : 5:00-11:59,{Heavy Traffic=39, Other=4, Mechanical Problem=3},PM : 12:00-19:00,{Heavy Traffic=9, Late return from Field Trip=4, Other=2}
+08/06/18, AM : 5:00-11:59,{Heavy Traffic=210, Other=44, Mechanical Problem=19},PM : 12:00-19:00,{Heavy Traffic=72, Late return from Field Trip=38, Other=18}
+11/06/18, AM : 5:00-11:59,{Heavy Traffic=36, Other=15, Mechanical Problem=7},PM : 12:00-19:00,{Heavy Traffic=11, Mechanical Problem=2, Other=2}
+12/06/18, AM : 5:00-11:59,{Heavy Traffic=299, Other=64, Mechanical Problem=19},PM : 12:00-19:00,{Heavy Traffic=84, Late return from Field Trip=40, Other=22}
+13/06/18, AM : 5:00-11:59,{Heavy Traffic=322, Other=52, Mechanical Problem=20},PM : 12:00-19:00,{Heavy Traffic=112, Late return from Field Trip=40, Other=28}
+14/06/18, AM : 5:00-11:59,{Heavy Traffic=311, Other=48, Mechanical Problem=22},PM : 12:00-19:00,{Late return from Field Trip=64, Heavy Traffic=60, Mechanical Problem=16}
+15/06/18, AM : 5:00-11:59,{Heavy Traffic=52, Flat Tire=4, Other=4},PM : 12:00-19:00,{Heavy Traffic=16, Flat Tire=2, Mechanical Problem=2}
+18/06/18, AM : 5:00-11:59,{Heavy Traffic=381, Other=81, Mechanical Problem=20},PM : 12:00-19:00,{Heavy Traffic=36, Mechanical Problem=16, Other=16}
+19/06/18, AM : 5:00-11:59,{Heavy Traffic=8, Accident=3, Other=1}
+25/06/18, AM : 5:00-11:59,{Heavy Traffic=124, Other=34, Mechanical Problem=9}
+04/09/18, AM : 5:00-11:59,{Heavy Traffic=68, Other=20, Mechanical Problem=8},PM : 12:00-19:00,{Heavy Traffic=1}
+05/09/18, AM : 5:00-11:59,{Heavy Traffic=291, Other=61, Mechanical Problem=41},PM : 12:00-19:00,{Heavy Traffic=30, Mechanical Problem=7, Other=6}
+06/09/18, AM : 5:00-11:59,{Heavy Traffic=297, Mechanical Problem=31, Other=29},PM : 12:00-19:00,{Other=43, Heavy Traffic=34, Mechanical Problem=5}
+07/09/18, AM : 5:00-11:59,{Heavy Traffic=219, Other=35, Mechanical Problem=20},PM : 12:00-19:00,{Heavy Traffic=35, Other=11, Flat Tire=3}
+10/09/18, AM : 5:00-11:59,{Heavy Traffic=11, Other=7, Mechanical Problem=5},PM : 12:00-19:00,{Weather Conditions=1, Mechanical Problem=1, Other=1}
+11/09/18, AM : 5:00-11:59,{Heavy Traffic=17, Other=7, Mechanical Problem=5}
+12/09/18, AM : 5:00-11:59,{Heavy Traffic=581, Other=84, Mechanical Problem=50},PM : 12:00-19:00,{Heavy Traffic=40, Other=33, Mechanical Problem=8}
+13/09/18, AM : 5:00-11:59,{Heavy Traffic=583, Other=62, Mechanical Problem=24},PM : 12:00-19:00,{Heavy Traffic=101, Other=18, Delayed by School=8}
+14/09/18, AM : 5:00-11:59,{Heavy Traffic=409, Other=50, Mechanical Problem=47},PM : 12:00-19:00,{Heavy Traffic=108, Other=27, Mechanical Problem=13}
+17/09/18, AM : 5:00-11:59,{Heavy Traffic=513, Other=59, Mechanical Problem=39},PM : 12:00-19:00,{Heavy Traffic=106, Other=7, Accident=5}
+18/09/18, AM : 5:00-11:59,{Heavy Traffic=191, Other=19, Problem Run=10},PM : 12:00-19:00,{Heavy Traffic=83, Other=11, Delayed by School=5}
+19/09/18, AM : 5:00-11:59,{Heavy Traffic=3, Flat Tire=1, Other=1},PM : 12:00-19:00,{Other=2, Heavy Traffic=1}
+20/09/18, AM : 5:00-11:59,{Heavy Traffic=449, Other=93, Mechanical Problem=36},PM : 12:00-19:00,{Heavy Traffic=164, Other=16, Mechanical Problem=6}
+21/09/18, AM : 5:00-11:59,{Heavy Traffic=151, Other=16, Mechanical Problem=9},PM : 12:00-19:00,{Heavy Traffic=42, Other=3, Mechanical Problem=1}
+24/09/18, AM : 5:00-11:59,{Heavy Traffic=337, Other=36, Mechanical Problem=9},PM : 12:00-19:00,{Heavy Traffic=128, Other=14, Mechanical Problem=9}
+25/09/18, AM : 5:00-11:59,{Heavy Traffic=520, Weather Conditions=56, Other=49},PM : 12:00-19:00,{Heavy Traffic=34, Other=3, Weather Conditions=2}
+26/09/18, AM : 5:00-11:59,{Heavy Traffic=176, Other=13, Mechanical Problem=6},PM : 12:00-19:00,{Heavy Traffic=49, Other=3, Flat Tire=1}
+27/09/18, AM : 5:00-11:59,{Heavy Traffic=157, Other=15, Problem Run=15},PM : 12:00-19:00,{Heavy Traffic=24, Other=4, Delayed by School=2}
+28/09/18, AM : 5:00-11:59,{Heavy Traffic=173, Weather Conditions=57, Other=13},PM : 12:00-19:00,{Heavy Traffic=42, Other=5, Flat Tire=2}
+01/10/18, AM : 5:00-11:59,{Heavy Traffic=118, Other=12, Problem Run=10},PM : 12:00-19:00,{Heavy Traffic=41, Other=10, Flat Tire=2}
+02/10/18, AM : 5:00-11:59,{Heavy Traffic=80, Other=12, Problem Run=12},PM : 12:00-19:00,{Heavy Traffic=37, Mechanical Problem=2, Flat Tire=1}
+03/10/18, AM : 5:00-11:59,{Heavy Traffic=154, Mechanical Problem=14, Other=12},PM : 12:00-19:00,{Heavy Traffic=58, Other=18, Mechanical Problem=5}
+04/10/18, AM : 5:00-11:59,{Heavy Traffic=105, Other=25, Mechanical Problem=7},PM : 12:00-19:00,{Heavy Traffic=63, Other=7, Mechanical Problem=6}
+05/10/18, AM : 5:00-11:59,{Heavy Traffic=108, Mechanical Problem=8, Other=7},PM : 12:00-19:00,{Heavy Traffic=49, Other=6, Mechanical Problem=2}
+09/10/18, AM : 5:00-11:59,{Heavy Traffic=152, Problem Run=21, Other=18},PM : 12:00-19:00,{Heavy Traffic=46, Mechanical Problem=5, Other=4}
+10/10/18, AM : 5:00-11:59,{Heavy Traffic=98, Other=16, Problem Run=9},PM : 12:00-19:00,{Heavy Traffic=39, Other=5, Late return from Field Trip=3}
+11/10/18, AM : 5:00-11:59,{Heavy Traffic=127, Other=26, Mechanical Problem=10},PM : 12:00-19:00,{Heavy Traffic=33, Other=5, Weather Conditions=4}
+12/10/18, AM : 5:00-11:59,{Heavy Traffic=142, Mechanical Problem=13, Other=12},PM : 12:00-19:00,{Heavy Traffic=59, Mechanical Problem=12, Other=6}
+15/10/18, AM : 5:00-11:59,{Heavy Traffic=158, Mechanical Problem=21, Other=19},PM : 12:00-19:00,{Heavy Traffic=93, Other=21, Flat Tire=5}
+16/10/18, AM : 5:00-11:59,{Heavy Traffic=559, Other=58, Mechanical Problem=44},PM : 12:00-19:00,{Heavy Traffic=151, Mechanical Problem=27, Late return from Field Trip=22}
+17/10/18, AM : 5:00-11:59,{Heavy Traffic=401, Other=65, Mechanical Problem=22},PM : 12:00-19:00,{Heavy Traffic=155, Late return from Field Trip=9, Other=9}
+18/10/18, AM : 5:00-11:59,{Heavy Traffic=582, Other=88, Mechanical Problem=40},PM : 12:00-19:00,{Heavy Traffic=209, Other=23, Mechanical Problem=13}
+19/10/18, AM : 5:00-11:59,{Heavy Traffic=601, Other=62, Mechanical Problem=27},PM : 12:00-19:00,{Heavy Traffic=241, Other=27, Mechanical Problem=23}
+22/10/18, AM : 5:00-11:59,{Heavy Traffic=350, Other=50, Mechanical Problem=47},PM : 12:00-19:00,{Heavy Traffic=90, Late return from Field Trip=34, Other=21}
+23/10/18, AM : 5:00-11:59,{Heavy Traffic=359, Other=44, Mechanical Problem=20},PM : 12:00-19:00,{Heavy Traffic=106, Other=11, Mechanical Problem=10}
+24/10/18, AM : 5:00-11:59,{Heavy Traffic=353, Other=48, Mechanical Problem=22},PM : 12:00-19:00,{Heavy Traffic=108, Late return from Field Trip=16, Mechanical Problem=15}
+25/10/18, AM : 5:00-11:59,{Heavy Traffic=337, Other=54, Mechanical Problem=30},PM : 12:00-19:00,{Heavy Traffic=111, Other=26, Won`t Start=6}
+26/10/18, AM : 5:00-11:59,{Heavy Traffic=291, Other=50, Problem Run=22},PM : 12:00-19:00,{Heavy Traffic=131, Late return from Field Trip=63, Other=13}
+29/10/18, AM : 5:00-11:59,{Heavy Traffic=404, Other=89, Mechanical Problem=34},PM : 12:00-19:00,{Heavy Traffic=121, Other=22, Mechanical Problem=20}
+30/10/18, AM : 5:00-11:59,{Heavy Traffic=355, Other=56, Problem Run=28},PM : 12:00-19:00,{Heavy Traffic=108, Other=16, Mechanical Problem=9}
+31/10/18, AM : 5:00-11:59,{Heavy Traffic=363, Other=68, Problem Run=32},PM : 12:00-19:00,{Heavy Traffic=128, Mechanical Problem=8, Late return from Field Trip=5}
+01/11/18, AM : 5:00-11:59,{Heavy Traffic=347, Other=63, Problem Run=24},PM : 12:00-19:00,{Heavy Traffic=122, Other=9, Late return from Field Trip=7}
+02/11/18, AM : 5:00-11:59,{Heavy Traffic=334, Other=64, Problem Run=27},PM : 12:00-19:00,{Heavy Traffic=139, Other=23, Late return from Field Trip=15}
+04/11/18, AM : 5:00-11:59,{Heavy Traffic=1}
+05/11/18, AM : 5:00-11:59,{Heavy Traffic=680, Other=126, Mechanical Problem=60},PM : 12:00-19:00,{Heavy Traffic=211, Other=40, Flat Tire=12}
+06/11/18, AM : 5:00-11:59,{Heavy Traffic=189, Mechanical Problem=8, Other=8},PM : 12:00-19:00,{Heavy Traffic=123, Delayed by School=2, Weather Conditions=2}
+07/11/18, AM : 5:00-11:59,{Heavy Traffic=474, Other=60, Mechanical Problem=44},PM : 12:00-19:00,{Heavy Traffic=124, Mechanical Problem=5, Accident=3}
+08/11/18, AM : 5:00-11:59,{Heavy Traffic=417, Other=44, Mechanical Problem=22},PM : 12:00-19:00,{Heavy Traffic=114, Late return from Field Trip=8, Other=8}
+09/11/18, AM : 5:00-11:59,{Heavy Traffic=360, Other=46, Problem Run=31},PM : 12:00-19:00,{Heavy Traffic=243, Other=20, Late return from Field Trip=16}
+12/11/18, AM : 5:00-11:59,{Heavy Traffic=4}
+13/11/18, AM : 5:00-11:59,{Heavy Traffic=1115, Weather Conditions=142, Other=127},PM : 12:00-19:00,{Heavy Traffic=215, Mechanical Problem=27, Late return from Field Trip=24}
+14/11/18, AM : 5:00-11:59,{Heavy Traffic=463, Other=67, Mechanical Problem=26},PM : 12:00-19:00,{Heavy Traffic=125, Other=14, Late return from Field Trip=13}
+15/11/18, AM : 5:00-11:59,{Heavy Traffic=351, Other=115, Mechanical Problem=34},PM : 12:00-19:00,{Heavy Traffic=161, Weather Conditions=139, Other=13}
+16/11/18, AM : 5:00-11:59,{Heavy Traffic=488, Weather Conditions=423, Other=51},PM : 12:00-19:00,{Heavy Traffic=175, Other=38, Mechanical Problem=8}
+19/11/18, AM : 5:00-11:59,{Heavy Traffic=813, Other=135, Mechanical Problem=56},PM : 12:00-19:00,{Heavy Traffic=220, Late return from Field Trip=20, Other=20}
+20/11/18, AM : 5:00-11:59,{Heavy Traffic=666, Other=80, Problem Run=38},PM : 12:00-19:00,{Heavy Traffic=239, Other=21, Mechanical Problem=10}
+21/11/18, AM : 5:00-11:59,{Heavy Traffic=535, Other=65, Problem Run=50},PM : 12:00-19:00,{Heavy Traffic=126, Late return from Field Trip=16, Mechanical Problem=14}
+23/11/18, AM : 5:00-11:59,{Heavy Traffic=2}
+26/11/18, AM : 5:00-11:59,{Heavy Traffic=666, Other=89, Problem Run=46},PM : 12:00-19:00,{Heavy Traffic=248, Other=18, Late return from Field Trip=14}
+27/11/18, AM : 5:00-11:59,{Heavy Traffic=652, Other=108, Mechanical Problem=46},PM : 12:00-19:00,{Heavy Traffic=227, Other=24, Accident=6}
+28/11/18, AM : 5:00-11:59,{Heavy Traffic=594, Other=69, Problem Run=36},PM : 12:00-19:00,{Heavy Traffic=229, Late return from Field Trip=55, Mechanical Problem=11}
+29/11/18, AM : 5:00-11:59,{Heavy Traffic=624, Other=91, Mechanical Problem=30},PM : 12:00-19:00,{Heavy Traffic=289, Late return from Field Trip=44, Other=40}
+30/11/18, AM : 5:00-11:59,{Heavy Traffic=539, Other=72, Mechanical Problem=44},PM : 12:00-19:00,{Heavy Traffic=221, Other=26, Mechanical Problem=13}
+03/12/18, AM : 5:00-11:59,{Heavy Traffic=269, Other=46, Mechanical Problem=25},PM : 12:00-19:00,{Heavy Traffic=2, Other=2, Late return from Field Trip=1}
+04/12/18, AM : 5:00-11:59,{Heavy Traffic=12, Other=4},PM : 12:00-19:00,{Heavy Traffic=2}
+05/12/18, AM : 5:00-11:59,{Heavy Traffic=4, Other=4},PM : 12:00-19:00,{Heavy Traffic=2, Other=1}
+06/12/18, AM : 5:00-11:59,{Heavy Traffic=3, Other=1},PM : 12:00-19:00,{Heavy Traffic=2}
+07/12/18, AM : 5:00-11:59,{Heavy Traffic=3, Other=3},PM : 12:00-19:00,{Heavy Traffic=3, Other=1}
+10/12/18, AM : 5:00-11:59,{Heavy Traffic=3, Other=3, Problem Run=1},PM : 12:00-19:00,{Other=1}
+11/12/18, AM : 5:00-11:59,{Heavy Traffic=6, Accident=1}
+12/12/18, AM : 5:00-11:59,{Heavy Traffic=1, Other=1}
+13/12/18, AM : 5:00-11:59,{Other=2, Heavy Traffic=1}
+14/12/18, AM : 5:00-11:59,{Heavy Traffic=5, Other=3},PM : 12:00-19:00,{Heavy Traffic=2}
+17/12/18, AM : 5:00-11:59,{Other=3, Heavy Traffic=1}
+18/12/18, AM : 5:00-11:59,{Heavy Traffic=1, Other=1},PM : 12:00-19:00,{Mechanical Problem=1}
+19/12/18, AM : 5:00-11:59,{Other=3, Heavy Traffic=2, Accident=1},PM : 12:00-19:00,{Flat Tire=1, Accident=1}
+20/12/18, AM : 5:00-11:59,{Heavy Traffic=4, Flat Tire=1, Mechanical Problem=1},PM : 12:00-19:00,{Mechanical Problem=1}
+21/12/18, AM : 5:00-11:59,{Heavy Traffic=7, Other=1}
+26/12/18, AM : 5:00-11:59,{Won`t Start=1}
+02/01/19, AM : 5:00-11:59,{Heavy Traffic=5, Other=3}
+03/01/19, AM : 5:00-11:59,{Heavy Traffic=3, Other=1},PM : 12:00-19:00,{Heavy Traffic=36, Other=7, Mechanical Problem=3}
+04/01/19, AM : 5:00-11:59,{Heavy Traffic=232, Other=45, Mechanical Problem=25},PM : 12:00-19:00,{Heavy Traffic=93, Other=11, Mechanical Problem=5}
+07/01/19, AM : 5:00-11:59,{Heavy Traffic=255, Other=50, Mechanical Problem=37},PM : 12:00-19:00,{Heavy Traffic=88, Other=20, Mechanical Problem=10}
+08/01/19, AM : 5:00-11:59,{Heavy Traffic=315, Other=42, Weather Conditions=33},PM : 12:00-19:00,{Heavy Traffic=100, Other=15, Late return from Field Trip=4}
+09/01/19, AM : 5:00-11:59,{Heavy Traffic=255, Other=43, Mechanical Problem=15},PM : 12:00-19:00,{Heavy Traffic=102, Other=18, Mechanical Problem=6}
+10/01/19, AM : 5:00-11:59,{Heavy Traffic=262, Other=48, Mechanical Problem=19},PM : 12:00-19:00,{Heavy Traffic=100, Other=16, Late return from Field Trip=7}
+11/01/19, AM : 5:00-11:59,{Heavy Traffic=217, Other=35, Mechanical Problem=23},PM : 12:00-19:00,{Heavy Traffic=137, Other=15, Flat Tire=4}
+14/01/19, AM : 5:00-11:59,{Heavy Traffic=282, Other=50, Mechanical Problem=33},PM : 12:00-19:00,{Heavy Traffic=107, Other=21, Mechanical Problem=4}
+15/01/19, AM : 5:00-11:59,{Heavy Traffic=244, Other=51, Mechanical Problem=17},PM : 12:00-19:00,{Heavy Traffic=99, Other=10, Delayed by School=1}
+16/01/19, AM : 5:00-11:59,{Heavy Traffic=279, Other=38, Mechanical Problem=24},PM : 12:00-19:00,{Other=20, Heavy Traffic=16, Mechanical Problem=8}
+17/01/19, AM : 5:00-11:59,{Heavy Traffic=209, Other=44, Mechanical Problem=10},PM : 12:00-19:00,{Heavy Traffic=107, Other=24, Mechanical Problem=6}
+18/01/19, AM : 5:00-11:59,{Heavy Traffic=267, Weather Conditions=38, Other=38},PM : 12:00-19:00,{Heavy Traffic=88, Other=19, Late return from Field Trip=8}
+22/01/19, AM : 5:00-11:59,{Heavy Traffic=347, Mechanical Problem=72, Won`t Start=51},PM : 12:00-19:00,{Heavy Traffic=106, Other=19, Late return from Field Trip=5}
+23/01/19, AM : 5:00-11:59,{Heavy Traffic=265, Other=32, Mechanical Problem=15},PM : 12:00-19:00,{Heavy Traffic=98, Other=6, Accident=2}
+24/01/19, AM : 5:00-11:59,{Heavy Traffic=263, Weather Conditions=34, Other=29},PM : 12:00-19:00,{Heavy Traffic=102, Other=6, Weather Conditions=5}
+25/01/19, AM : 5:00-11:59,{Heavy Traffic=325, Other=27, Problem Run=18},PM : 12:00-19:00,{Heavy Traffic=218, Other=17, Late return from Field Trip=6}
+28/01/19, AM : 5:00-11:59,{Heavy Traffic=503, Other=107, Mechanical Problem=67},PM : 12:00-19:00,{Heavy Traffic=205, Other=11, Mechanical Problem=10}
+29/01/19, AM : 5:00-11:59,{Heavy Traffic=578, Other=71, Mechanical Problem=48},PM : 12:00-19:00,{Heavy Traffic=241, Other=28, Late return from Field Trip=12}
+30/01/19, AM : 5:00-11:59,{Heavy Traffic=593, Mechanical Problem=53, Other=52},PM : 12:00-19:00,{Heavy Traffic=219, Late return from Field Trip=14, Mechanical Problem=8}
+31/01/19, AM : 5:00-11:59,{Heavy Traffic=645, Weather Conditions=183, Won`t Start=151},PM : 12:00-19:00,{Heavy Traffic=246, Mechanical Problem=22, Other=14}
+01/02/19, AM : 5:00-11:59,{Heavy Traffic=591, Mechanical Problem=68, Other=62},PM : 12:00-19:00,{Heavy Traffic=222, Other=18, Late return from Field Trip=16}
+04/02/19, AM : 5:00-11:59,{Heavy Traffic=716, Mechanical Problem=87, Other=84},PM : 12:00-19:00,{Heavy Traffic=287, Late return from Field Trip=18, Mechanical Problem=13}
+05/02/19, AM : 5:00-11:59,{Heavy Traffic=122, Mechanical Problem=16, Other=11},PM : 12:00-19:00,{Mechanical Problem=2, Heavy Traffic=2}
+06/02/19, AM : 5:00-11:59,{Heavy Traffic=534, Other=107, Mechanical Problem=69},PM : 12:00-19:00,{Heavy Traffic=206, Late return from Field Trip=10, Accident=8}
+07/02/19, AM : 5:00-11:59,{Heavy Traffic=511, Other=50, Mechanical Problem=28},PM : 12:00-19:00,{Heavy Traffic=122, Other=15, Late return from Field Trip=9}
+08/02/19, AM : 5:00-11:59,{Heavy Traffic=341, Other=60, Mechanical Problem=24},PM : 12:00-19:00,{Heavy Traffic=120, Other=12, Mechanical Problem=9}
+11/02/19, AM : 5:00-11:59,{Heavy Traffic=493, Other=62, Mechanical Problem=32},PM : 12:00-19:00,{Heavy Traffic=107, Other=13, Mechanical Problem=9}
+12/02/19, AM : 5:00-11:59,{Heavy Traffic=269, Other=28, Mechanical Problem=18},PM : 12:00-19:00,{Heavy Traffic=101, Weather Conditions=15, Mechanical Problem=7}
+13/02/19, AM : 5:00-11:59,{Heavy Traffic=391, Other=53, Mechanical Problem=36},PM : 12:00-19:00,{Heavy Traffic=122, Other=16, Late return from Field Trip=9}
+14/02/19, AM : 5:00-11:59,{Heavy Traffic=316, Other=57, Mechanical Problem=33},PM : 12:00-19:00,{Heavy Traffic=132, Late return from Field Trip=14, Mechanical Problem=12}
+15/02/19, AM : 5:00-11:59,{Heavy Traffic=275, Other=33, Mechanical Problem=27},PM : 12:00-19:00,{Heavy Traffic=136, Other=29, Late return from Field Trip=11}
+19/02/19, AM : 5:00-11:59,{Heavy Traffic=5, Other=2},PM : 12:00-19:00,{Flat Tire=1}
+20/02/19, AM : 5:00-11:59,{Flat Tire=6, Heavy Traffic=4, Other=2},PM : 12:00-19:00,{Heavy Traffic=5, Accident=1, Other=1}
+21/02/19, AM : 5:00-11:59,{Heavy Traffic=5, Won`t Start=1},PM : 12:00-19:00,{Mechanical Problem=2, Heavy Traffic=1, Other=1}
+22/02/19, AM : 5:00-11:59,{Other=4, Heavy Traffic=3, Mechanical Problem=1},PM : 12:00-19:00,{Heavy Traffic=1, Other=1}
+25/02/19, AM : 5:00-11:59,{Heavy Traffic=441, Other=93, Mechanical Problem=59},PM : 12:00-19:00,{Heavy Traffic=118, Other=31, Mechanical Problem=10}
+26/02/19, AM : 5:00-11:59,{Heavy Traffic=369, Other=57, Mechanical Problem=39},PM : 12:00-19:00,{Heavy Traffic=85, Other=26, Late return from Field Trip=7}
+27/02/19, AM : 5:00-11:59,{Heavy Traffic=325, Other=55, Mechanical Problem=26},PM : 12:00-19:00,{Heavy Traffic=119, Other=20, Late return from Field Trip=7}
+28/02/19, AM : 5:00-11:59,{Heavy Traffic=386, Other=62, Mechanical Problem=20},PM : 12:00-19:00,{Heavy Traffic=127, Other=22, Late return from Field Trip=13}
+01/03/19, AM : 5:00-11:59,{Heavy Traffic=440, Weather Conditions=78, Other=51},PM : 12:00-19:00,{Heavy Traffic=118, Other=22, Mechanical Problem=10}
+05/03/19, AM : 5:00-11:59,{Heavy Traffic=414, Other=84, Mechanical Problem=34},PM : 12:00-19:00,{Heavy Traffic=127, Other=10, Mechanical Problem=6}
+06/03/19, AM : 5:00-11:59,{Heavy Traffic=324, Other=52, Mechanical Problem=40},PM : 12:00-19:00,{Heavy Traffic=128, Other=16, Mechanical Problem=9}
+07/03/19, AM : 5:00-11:59,{Heavy Traffic=356, Other=39, Mechanical Problem=30},PM : 12:00-19:00,{Heavy Traffic=83, Other=14, Mechanical Problem=8}
+08/03/19, AM : 5:00-11:59,{Heavy Traffic=322, Other=42, Mechanical Problem=19},PM : 12:00-19:00,{Heavy Traffic=109, Other=10, Mechanical Problem=6}
+11/03/19, AM : 5:00-11:59,{Heavy Traffic=332, Mechanical Problem=59, Other=58},PM : 12:00-19:00,{Heavy Traffic=117, Other=25, Mechanical Problem=11}
+12/03/19, AM : 5:00-11:59,{Heavy Traffic=393, Other=63, Mechanical Problem=34},PM : 12:00-19:00,{Heavy Traffic=116, Other=13, Mechanical Problem=8}
+13/03/19, AM : 5:00-11:59,{Heavy Traffic=290, Other=65, Mechanical Problem=19},PM : 12:00-19:00,{Heavy Traffic=124, Other=9, Mechanical Problem=8}
+14/03/19, AM : 5:00-11:59,{Heavy Traffic=139, Other=7, Mechanical Problem=5},PM : 12:00-19:00,{Other=1}
+15/03/19, AM : 5:00-11:59,{Heavy Traffic=307, Other=50, Mechanical Problem=30},PM : 12:00-19:00,{Heavy Traffic=108, Other=9, Mechanical Problem=6}
+18/03/19, AM : 5:00-11:59,{Heavy Traffic=346, Other=64, Mechanical Problem=30},PM : 12:00-19:00,{Heavy Traffic=98, Other=22, Mechanical Problem=16}
+19/03/19, AM : 5:00-11:59,{Heavy Traffic=339, Other=82, Mechanical Problem=31},PM : 12:00-19:00,{Heavy Traffic=113, Other=19, Mechanical Problem=6}
+20/03/19, AM : 5:00-11:59,{Heavy Traffic=301, Other=49, Mechanical Problem=26},PM : 12:00-19:00,{Heavy Traffic=93, Late return from Field Trip=6, Other=3}
+21/03/19, AM : 5:00-11:59,{Heavy Traffic=309, Other=36, Mechanical Problem=13},PM : 12:00-19:00,{Heavy Traffic=98, Late return from Field Trip=13, Mechanical Problem=8}
+22/03/19, AM : 5:00-11:59,{Heavy Traffic=409, Other=40, Weather Conditions=37},PM : 12:00-19:00,{Heavy Traffic=101, Other=10, Late return from Field Trip=7}
+25/03/19, AM : 5:00-11:59,{Heavy Traffic=350, Other=87, Mechanical Problem=30},PM : 12:00-19:00,{Heavy Traffic=88, Mechanical Problem=12, Other=9}
+26/03/19, AM : 5:00-11:59,{Heavy Traffic=336, Other=50, Mechanical Problem=28},PM : 12:00-19:00,{Heavy Traffic=90, Other=11, Flat Tire=4}
+27/03/19, AM : 5:00-11:59,{Heavy Traffic=283, Other=67, Mechanical Problem=13},PM : 12:00-19:00,{Heavy Traffic=57, Other=20, Late return from Field Trip=9}
+28/03/19, AM : 5:00-11:59,{Heavy Traffic=234, Other=51, Mechanical Problem=20},PM : 12:00-19:00,{Heavy Traffic=71, Other=26, Late return from Field Trip=6}
+29/03/19, AM : 5:00-11:59,{Heavy Traffic=230, Other=78, Mechanical Problem=20},PM : 12:00-19:00,{Heavy Traffic=67, Other=22, Late return from Field Trip=13}
+01/04/19, AM : 5:00-11:59,{Heavy Traffic=321, Other=93, Mechanical Problem=35},PM : 12:00-19:00,{Heavy Traffic=72, Other=26, Mechanical Problem=14}
+02/04/19, AM : 5:00-11:59,{Heavy Traffic=270, Other=76, Mechanical Problem=34},PM : 12:00-19:00,{Heavy Traffic=62, Late return from Field Trip=26, Other=25}
+03/04/19, AM : 5:00-11:59,{Heavy Traffic=279, Other=57, Mechanical Problem=22},PM : 12:00-19:00,{Heavy Traffic=77, Late return from Field Trip=19, Other=14}
+04/04/19, AM : 5:00-11:59,{Heavy Traffic=300, Other=62, Mechanical Problem=20},PM : 12:00-19:00,{Heavy Traffic=75, Other=18, Late return from Field Trip=6}
+05/04/19, AM : 5:00-11:59,{Heavy Traffic=207, Other=61, Mechanical Problem=19},PM : 12:00-19:00,{Heavy Traffic=94, Other=16, Late return from Field Trip=13}
+08/04/19, AM : 5:00-11:59,{Heavy Traffic=262, Other=81, Mechanical Problem=40},PM : 12:00-19:00,{Heavy Traffic=59, Other=23, Mechanical Problem=5}
+09/04/19, AM : 5:00-11:59,{Heavy Traffic=320, Other=42, Mechanical Problem=27},PM : 12:00-19:00,{Heavy Traffic=64, Other=26, Late return from Field Trip=12}
+10/04/19, AM : 5:00-11:59,{Heavy Traffic=262, Other=66, Mechanical Problem=17},PM : 12:00-19:00,{Heavy Traffic=77, Other=21, Late return from Field Trip=11}
+11/04/19, AM : 5:00-11:59,{Heavy Traffic=246, Other=43, Mechanical Problem=15},PM : 12:00-19:00,{Heavy Traffic=70, Other=11, Late return from Field Trip=10}
+12/04/19, AM : 5:00-11:59,{Heavy Traffic=62, Other=20, Mechanical Problem=6},PM : 12:00-19:00,{Heavy Traffic=1, Other=1}
+15/04/19, AM : 5:00-11:59,{Heavy Traffic=7, Other=3, Weather Conditions=1},PM : 12:00-19:00,{Other=1}
+16/04/19, AM : 5:00-11:59,{Heavy Traffic=3, Other=2},PM : 12:00-19:00,{Heavy Traffic=1, Other=1}
+17/04/19, AM : 5:00-11:59,{Other=3, Heavy Traffic=2},PM : 12:00-19:00,{Other=1}
+18/04/19, AM : 5:00-11:59,{Heavy Traffic=3},PM : 12:00-19:00,{Heavy Traffic=1}
+22/04/19, AM : 5:00-11:59,{Heavy Traffic=1}
+24/04/19, AM : 5:00-11:59,{Other=2}
+29/04/19, AM : 5:00-11:59,{Heavy Traffic=1}
+30/04/19, AM : 5:00-11:59,{Heavy Traffic=3, Other=2},PM : 12:00-19:00,{Heavy Traffic=1}
+01/05/19, AM : 5:00-11:59,{Heavy Traffic=3, Other=2},PM : 12:00-19:00,{Heavy Traffic=2, Late return from Field Trip=1}
+02/05/19, AM : 5:00-11:59,{Heavy Traffic=4, Other=1}
+03/05/19, AM : 5:00-11:59,{Heavy Traffic=4, Flat Tire=1, Other=1},PM : 12:00-19:00,{Mechanical Problem=1}
+06/05/19, AM : 5:00-11:59,{Heavy Traffic=3, Other=2},PM : 12:00-19:00,{Heavy Traffic=2, Other=1}
+07/05/19, AM : 5:00-11:59,{Heavy Traffic=4}
+08/05/19, AM : 5:00-11:59,{Heavy Traffic=3, Other=2, Mechanical Problem=1},PM : 12:00-19:00,{Other=1}
+09/05/19, AM : 5:00-11:59,{Heavy Traffic=2, Problem Run=1},PM : 12:00-19:00,{Flat Tire=1, Heavy Traffic=1}
+10/05/19, AM : 5:00-11:59,{Heavy Traffic=3, Other=2, Flat Tire=1}
+13/05/19, AM : 5:00-11:59,{Heavy Traffic=6, Other=3},PM : 12:00-19:00,{Heavy Traffic=3}
+14/05/19, AM : 5:00-11:59,{Other=5, Heavy Traffic=3},PM : 12:00-19:00,{Other=1}
+15/05/19, AM : 5:00-11:59,{Heavy Traffic=3, Flat Tire=2, Other=2},PM : 12:00-19:00,{Other=1}
+16/05/19, AM : 5:00-11:59,{Heavy Traffic=53, Other=5, Accident=3},PM : 12:00-19:00,{Heavy Traffic=78, Late return from Field Trip=27, Other=11}
+17/05/19, AM : 5:00-11:59,{Heavy Traffic=264, Other=62, Mechanical Problem=11},PM : 12:00-19:00,{Heavy Traffic=107, Late return from Field Trip=54, Other=40}
+20/05/19, AM : 5:00-11:59,{Heavy Traffic=263, Other=86, Mechanical Problem=25},PM : 12:00-19:00,{Heavy Traffic=84, Late return from Field Trip=17, Other=16}
+21/05/19, AM : 5:00-11:59,{Heavy Traffic=258, Other=45, Mechanical Problem=18},PM : 12:00-19:00,{Heavy Traffic=74, Late return from Field Trip=20, Other=9}
+22/05/19, AM : 5:00-11:59,{Heavy Traffic=263, Other=36, Mechanical Problem=20},PM : 12:00-19:00,{Heavy Traffic=82, Late return from Field Trip=29, Other=9}
+23/05/19, AM : 5:00-11:59,{Heavy Traffic=369, Other=55, Mechanical Problem=24},PM : 12:00-19:00,{Heavy Traffic=79, Late return from Field Trip=28, Other=6}
+24/05/19, AM : 5:00-11:59,{Heavy Traffic=235, Other=24, Problem Run=12},PM : 12:00-19:00,{Heavy Traffic=99, Late return from Field Trip=46, Delayed by School=14}
+28/05/19, AM : 5:00-11:59,{Heavy Traffic=271, Other=63, Mechanical Problem=22},PM : 12:00-19:00,{Heavy Traffic=57, Other=9, Late return from Field Trip=7}
+29/05/19, AM : 5:00-11:59,{Heavy Traffic=320, Other=63, Mechanical Problem=17},PM : 12:00-19:00,{Heavy Traffic=61, Late return from Field Trip=30, Other=13}
+30/05/19, AM : 5:00-11:59,{Heavy Traffic=272, Other=57, Mechanical Problem=16},PM : 12:00-19:00,{Heavy Traffic=42, Other=27, Late return from Field Trip=14}
+31/05/19, AM : 5:00-11:59,{Heavy Traffic=325, Other=87, Mechanical Problem=18},PM : 12:00-19:00,{Heavy Traffic=94, Late return from Field Trip=28, Other=15}
+03/06/19, AM : 5:00-11:59,{Heavy Traffic=254, Other=53, Mechanical Problem=26},PM : 12:00-19:00,{Heavy Traffic=58, Late return from Field Trip=27, Other=18}
+04/06/19, AM : 5:00-11:59,{Heavy Traffic=24, Other=9, Mechanical Problem=4},PM : 12:00-19:00,{Heavy Traffic=14, Other=2, Flat Tire=1}
+05/06/19, AM : 5:00-11:59,{Heavy Traffic=244, Other=70, Mechanical Problem=22},PM : 12:00-19:00,{Heavy Traffic=47, Late return from Field Trip=35, Other=13}
+06/06/19, AM : 5:00-11:59,{Heavy Traffic=61, Other=11, Accident=1},PM : 12:00-19:00,{Heavy Traffic=33, Other=7, Late return from Field Trip=6}
+07/06/19, AM : 5:00-11:59,{Heavy Traffic=217, Other=75, Mechanical Problem=31},PM : 12:00-19:00,{Heavy Traffic=94, Late return from Field Trip=31, Other=15}
+10/06/19, AM : 5:00-11:59,{Heavy Traffic=273, Other=61, Mechanical Problem=36},PM : 12:00-19:00,{Heavy Traffic=78, Late return from Field Trip=17, Other=5}
+11/06/19, AM : 5:00-11:59,{Heavy Traffic=109, Other=31, Mechanical Problem=6},PM : 12:00-19:00,{Heavy Traffic=39, Other=8, Mechanical Problem=2}
+12/06/19, AM : 5:00-11:59,{Heavy Traffic=246, Other=94, Mechanical Problem=22},PM : 12:00-19:00,{Heavy Traffic=74, Late return from Field Trip=23, Other=23}
+13/06/19, AM : 5:00-11:59,{Heavy Traffic=216, Other=64, Mechanical Problem=19},PM : 12:00-19:00,{Heavy Traffic=83, Late return from Field Trip=19, Other=19}
+14/06/19, AM : 5:00-11:59,{Heavy Traffic=250, Other=84, Mechanical Problem=20},PM : 12:00-19:00,{Heavy Traffic=70, Other=45, Late return from Field Trip=31}
+17/06/19, AM : 5:00-11:59,{Heavy Traffic=232, Other=90, Mechanical Problem=22},PM : 12:00-19:00,{Heavy Traffic=52, Other=21, Mechanical Problem=5}
+18/06/19, AM : 5:00-11:59,{Heavy Traffic=217, Other=47, Problem Run=10},PM : 12:00-19:00,{Heavy Traffic=59, Other=12, Late return from Field Trip=7}
+19/06/19, AM : 5:00-11:59,{Heavy Traffic=214, Other=58, Mechanical Problem=7},PM : 12:00-19:00,{Heavy Traffic=48, Other=20, Late return from Field Trip=7}
+20/06/19, AM : 5:00-11:59,{Heavy Traffic=224, Other=71, Problem Run=10},PM : 12:00-19:00,{Heavy Traffic=64, Other=17, Accident=4}
+21/06/19, AM : 5:00-11:59,{Heavy Traffic=213, Other=74, Weather Conditions=20},PM : 12:00-19:00,{Heavy Traffic=65, Other=21, Mechanical Problem=3}
+24/06/19, AM : 5:00-11:59,{Heavy Traffic=167, Other=64, Mechanical Problem=14},PM : 12:00-19:00,{Heavy Traffic=68, Other=18, Mechanical Problem=8}
+25/06/19, AM : 5:00-11:59,{Heavy Traffic=157, Other=38, Weather Conditions=16},PM : 12:00-19:00,{Heavy Traffic=20, Other=7, Mechanical Problem=2}
+26/06/19, AM : 5:00-11:59,{Heavy Traffic=87, Other=31, Accident=3},PM : 12:00-19:00,{Heavy Traffic=9, Delayed by School=1, Mechanical Problem=1}
+27/06/19, AM : 5:00-11:59,{Heavy Traffic=6, Mechanical Problem=1, Other=1},PM : 12:00-19:00,{Heavy Traffic=1, Other=1}
+03/09/19, AM : 5:00-11:59,{Heavy Traffic=95, Other=21, Mechanical Problem=8},PM : 12:00-19:00,{Heavy Traffic=12, Other=1}
+04/09/19, AM : 5:00-11:59,{Heavy Traffic=141, Other=23, Mechanical Problem=20},PM : 12:00-19:00,{Heavy Traffic=11, Other=3, Flat Tire=2}
+05/09/19, AM : 5:00-11:59,{Heavy Traffic=530, Other=108, Mechanical Problem=46},PM : 12:00-19:00,{Heavy Traffic=80, Mechanical Problem=25, Delayed by School=22}
+06/09/19, AM : 5:00-11:59,{Heavy Traffic=499, Other=97, Mechanical Problem=38},PM : 12:00-19:00,{Heavy Traffic=102, Other=22, Delayed by School=9}
+09/09/19, AM : 5:00-11:59,{Heavy Traffic=621, Other=123, Problem Run=52},PM : 12:00-19:00,{Heavy Traffic=58, Mechanical Problem=24, Other=19}
+10/09/19, AM : 5:00-11:59,{Heavy Traffic=680, Other=91, Problem Run=59},PM : 12:00-19:00,{Heavy Traffic=73, Other=33, Mechanical Problem=17}
+11/09/19, AM : 5:00-11:59,{Heavy Traffic=537, Other=75, Problem Run=61},PM : 12:00-19:00,{Heavy Traffic=89, Mechanical Problem=27, Other=23}
+12/09/19, AM : 5:00-11:59,{Heavy Traffic=491, Other=90, Problem Run=48},PM : 12:00-19:00,{Heavy Traffic=109, Other=25, Mechanical Problem=22}
+13/09/19, AM : 5:00-11:59,{Heavy Traffic=483, Other=60, Problem Run=51},PM : 12:00-19:00,{Heavy Traffic=124, Other=18, Accident=6}
+16/09/19, AM : 5:00-11:59,{Heavy Traffic=555, Other=58, Problem Run=52}
+17/09/19, AM : 5:00-11:59,{Heavy Traffic=51, Other=12, Mechanical Problem=2},PM : 12:00-19:00,{Heavy Traffic=66, Other=15, Accident=8}
+18/09/19, AM : 5:00-11:59,{Heavy Traffic=415, Other=52, Problem Run=45},PM : 12:00-19:00,{Heavy Traffic=100, Mechanical Problem=16, Delayed by School=8}
+19/09/19, AM : 5:00-11:59,{Heavy Traffic=435, Other=64, Problem Run=51},PM : 12:00-19:00,{Heavy Traffic=114, Other=19, Mechanical Problem=9}
+20/09/19, AM : 5:00-11:59,{Heavy Traffic=409, Other=65, Problem Run=56},PM : 12:00-19:00,{Heavy Traffic=109, Other=21, Mechanical Problem=10}
+23/09/19, AM : 5:00-11:59,{Heavy Traffic=457, Other=90, Problem Run=47},PM : 12:00-19:00,{Heavy Traffic=158, Other=16, Mechanical Problem=10}
+24/09/19, AM : 5:00-11:59,{Heavy Traffic=603, Problem Run=67, Other=65},PM : 12:00-19:00,{Heavy Traffic=117, Mechanical Problem=10, Other=10}
+25/09/19, AM : 5:00-11:59,{Heavy Traffic=469, Other=57, Problem Run=40},PM : 12:00-19:00,{Heavy Traffic=142, Other=17, Mechanical Problem=8}
+26/09/19, AM : 5:00-11:59,{Heavy Traffic=452, Problem Run=43, Other=42},PM : 12:00-19:00,{Heavy Traffic=111, Other=22, Delayed by School=8}
+27/09/19, AM : 5:00-11:59,{Heavy Traffic=493, Other=63, Problem Run=42},PM : 12:00-19:00,{Heavy Traffic=101, Mechanical Problem=12, Other=10}
+30/09/19, AM : 5:00-11:59,{Heavy Traffic=7, Other=4, Mechanical Problem=3},PM : 12:00-19:00,{Heavy Traffic=3}
+01/10/19, AM : 5:00-11:59,{Heavy Traffic=11, Other=2}
+02/10/19, AM : 5:00-11:59,{Heavy Traffic=480, Other=72, Mechanical Problem=29},PM : 12:00-19:00,{Heavy Traffic=116, Other=19, Mechanical Problem=7}
+03/10/19, AM : 5:00-11:59,{Heavy Traffic=429, Other=55, Weather Conditions=31},PM : 12:00-19:00,{Heavy Traffic=139, Other=20, Mechanical Problem=13}
+04/10/19, AM : 5:00-11:59,{Heavy Traffic=480, Other=70, Mechanical Problem=19},PM : 12:00-19:00,{Heavy Traffic=180, Other=28, Mechanical Problem=9}
+07/10/19, AM : 5:00-11:59,{Heavy Traffic=550, Other=76, Mechanical Problem=44},PM : 12:00-19:00,{Heavy Traffic=103, Other=12, Mechanical Problem=9}
+08/10/19, AM : 5:00-11:59,{Heavy Traffic=403, Other=77, Problem Run=38},PM : 12:00-19:00,{Heavy Traffic=111, Other=8, Late return from Field Trip=6}
+09/10/19, AM : 5:00-11:59,{Heavy Traffic=8, Mechanical Problem=5, Other=2},PM : 12:00-19:00,{Mechanical Problem=1, Heavy Traffic=1}
+10/10/19, AM : 5:00-11:59,{Heavy Traffic=438, Other=71, Mechanical Problem=36},PM : 12:00-19:00,{Heavy Traffic=118, Other=21, Delayed by School=4}
+11/10/19, AM : 5:00-11:59,{Heavy Traffic=400, Other=78, Problem Run=35},PM : 12:00-19:00,{Heavy Traffic=142, Late return from Field Trip=22, Other=16}
+15/10/19, AM : 5:00-11:59,{Heavy Traffic=386, Other=76, Problem Run=29},PM : 12:00-19:00,{Heavy Traffic=113, Other=7, Mechanical Problem=6}
+16/10/19, AM : 5:00-11:59,{Heavy Traffic=398, Other=64, Problem Run=32},PM : 12:00-19:00,{Heavy Traffic=102, Other=19, Late return from Field Trip=5}
+17/10/19, AM : 5:00-11:59,{Heavy Traffic=332, Other=69, Problem Run=37},PM : 12:00-19:00,{Heavy Traffic=132, Other=15, Mechanical Problem=6}
+18/10/19, AM : 5:00-11:59,{Heavy Traffic=430, Other=62, Problem Run=39},PM : 12:00-19:00,{Heavy Traffic=184, Late return from Field Trip=21, Delayed by School=6}
+21/10/19, AM : 5:00-11:59,{Heavy Traffic=414, Other=73, Mechanical Problem=31},PM : 12:00-19:00,{Heavy Traffic=124, Other=12, Delayed by School=7}
+22/10/19, AM : 5:00-11:59,{Heavy Traffic=458, Other=77, Mechanical Problem=34},PM : 12:00-19:00,{Heavy Traffic=205, Late return from Field Trip=6, Other=6}
+23/10/19, AM : 5:00-11:59,{Heavy Traffic=397, Other=52, Problem Run=30},PM : 12:00-19:00,{Heavy Traffic=128, Mechanical Problem=10, Other=10}
+24/10/19, AM : 5:00-11:59,{Heavy Traffic=645, Other=122, Mechanical Problem=34},PM : 12:00-19:00,{Heavy Traffic=210, Late return from Field Trip=45, Other=30}
+25/10/19, AM : 5:00-11:59,{Heavy Traffic=612, Other=98, Mechanical Problem=36},PM : 12:00-19:00,{Heavy Traffic=199, Other=33, Late return from Field Trip=31}
+28/10/19, AM : 5:00-11:59,{Heavy Traffic=696, Other=100, Mechanical Problem=58},PM : 12:00-19:00,{Heavy Traffic=153, Other=38, Late return from Field Trip=10}
+29/10/19, AM : 5:00-11:59,{Heavy Traffic=371, Other=46, Mechanical Problem=23},PM : 12:00-19:00,{Heavy Traffic=85, Other=15, Late return from Field Trip=7}
+30/10/19, AM : 5:00-11:59,{Heavy Traffic=358, Other=42, Mechanical Problem=23},PM : 12:00-19:00,{Heavy Traffic=82, Late return from Field Trip=15, Mechanical Problem=5}
+31/10/19, AM : 5:00-11:59,{Heavy Traffic=474, Other=78, Weather Conditions=68},PM : 12:00-19:00,{Heavy Traffic=145, Other=40, Delayed by School=4}
+01/11/19, AM : 5:00-11:59,{Heavy Traffic=623, Other=80, Mechanical Problem=47},PM : 12:00-19:00,{Heavy Traffic=193, Other=54, Mechanical Problem=10}
+04/11/19, AM : 5:00-11:59,{Heavy Traffic=755, Other=131, Mechanical Problem=52},PM : 12:00-19:00,{Heavy Traffic=129, Other=60, Mechanical Problem=16}
+05/11/19, AM : 5:00-11:59,{Heavy Traffic=58, Other=14, Mechanical Problem=7},PM : 12:00-19:00,{Heavy Traffic=6, Mechanical Problem=1}
+06/11/19, AM : 5:00-11:59,{Heavy Traffic=545, Other=88, Mechanical Problem=26},PM : 12:00-19:00,{Heavy Traffic=74, Other=11, Flat Tire=4}
+07/11/19, AM : 5:00-11:59,{Heavy Traffic=343, Other=55, Mechanical Problem=25},PM : 12:00-19:00,{Heavy Traffic=67, Other=16, Flat Tire=2}
+08/11/19, AM : 5:00-11:59,{Heavy Traffic=280, Other=49, Mechanical Problem=21},PM : 12:00-19:00,{Heavy Traffic=79, Late return from Field Trip=13, Other=12}
+11/11/19, AM : 5:00-11:59,{Other=1}
+12/11/19, AM : 5:00-11:59,{Heavy Traffic=401, Other=74, Mechanical Problem=58},PM : 12:00-19:00,{Heavy Traffic=95, Other=25, Late return from Field Trip=9}
+13/11/19, AM : 5:00-11:59,{Heavy Traffic=300, Other=75, Mechanical Problem=46},PM : 12:00-19:00,{Heavy Traffic=93, Other=24, Mechanical Problem=8}
+14/11/19, AM : 5:00-11:59,{Heavy Traffic=294, Other=88, Mechanical Problem=34},PM : 12:00-19:00,{Heavy Traffic=70, Other=6, Accident=2}
+15/11/19, AM : 5:00-11:59,{Heavy Traffic=332, Other=57, Mechanical Problem=27},PM : 12:00-19:00,{Heavy Traffic=120, Other=28, Late return from Field Trip=17}
+18/11/19, AM : 5:00-11:59,{Heavy Traffic=446, Other=71, Mechanical Problem=46},PM : 12:00-19:00,{Heavy Traffic=161, Other=45, Mechanical Problem=20}
+19/11/19, AM : 5:00-11:59,{Heavy Traffic=649, Other=118, Mechanical Problem=44},PM : 12:00-19:00,{Heavy Traffic=179, Other=61, Late return from Field Trip=26}
+20/11/19, AM : 5:00-11:59,{Heavy Traffic=630, Other=146, Mechanical Problem=41},PM : 12:00-19:00,{Heavy Traffic=174, Other=41, Late return from Field Trip=30}
+21/11/19, AM : 5:00-11:59,{Heavy Traffic=557, Other=123, Mechanical Problem=38},PM : 12:00-19:00,{Heavy Traffic=235, Other=38, Late return from Field Trip=16}
+22/11/19, AM : 5:00-11:59,{Heavy Traffic=564, Other=110, Mechanical Problem=42},PM : 12:00-19:00,{Heavy Traffic=198, Other=34, Weather Conditions=14}
+25/11/19, AM : 5:00-11:59,{Heavy Traffic=805, Other=109, Mechanical Problem=59},PM : 12:00-19:00,{Heavy Traffic=174, Other=34, Late return from Field Trip=18}
+26/11/19, AM : 5:00-11:59,{Heavy Traffic=566, Other=110, Mechanical Problem=28},PM : 12:00-19:00,{Heavy Traffic=141, Late return from Field Trip=20, Other=16}
+27/11/19, AM : 5:00-11:59,{Heavy Traffic=210, Other=30, Mechanical Problem=15},PM : 12:00-19:00,{Heavy Traffic=92, Other=7, Delayed by School=4}

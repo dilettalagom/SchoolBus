@@ -19,7 +19,7 @@ import util.Consumer;
 
 public class ThirdQuery {
 
-    private static final String topic = "non-persistent://public/default/dataQuery3";
+    private static final String topic = "dataQuery3";
 
     public static void main(String[] args) {
 
@@ -64,7 +64,7 @@ public class ThirdQuery {
         resultDay.writeAsText(outputPath + "resultDay.txt", FileSystem.WriteMode.OVERWRITE).setParallelism(1);
         resultWeek.writeAsText(outputPath + "resultWeek.txt", FileSystem.WriteMode.OVERWRITE).setParallelism(1);
 
-
+        /* for throughput only */
         //resultDay.union(resultWeek).writeAsText(outputPath + "forthroughput.txt", FileSystem.WriteMode.OVERWRITE).setParallelism(1).name("For Throughput");
 
         try {

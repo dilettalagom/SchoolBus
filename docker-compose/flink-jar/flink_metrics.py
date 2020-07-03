@@ -10,13 +10,11 @@ while True:
     QUERY_ID = raw_input("Enter query: ")
     CONNECTOR = raw_input("Enter connector: ")
     JOB_ID = raw_input("Enter the JOB_ID: ")
-    #SOURCE_ID = raw_input("Enter the SOURCE_ID: ")
-    #SINK_ID = raw_input("Enter the SINK_ID: ")
+    SOURCE_ID = raw_input("Enter the SOURCE_ID: ")
+    SINK_ID = raw_input("Enter the SINK_ID: ")
     break
 
 outputPath = "/opt/flink/flink-jar/throughput/"
-SOURCE_ID = "cbc357ccb763df2852fee8c4fc7d55f2"
-SINK_ID = "c442e7393058ea674ea088267c325315"
 f = open(outputPath+CONNECTOR+'_'+QUERY_ID+'.csv', 'w+', 0)
 f.write("time; num_records_out_per_second; num_records_in_per_second\n")
 

@@ -17,17 +17,11 @@ SchoolBus.iml
 ./FlinkAnalyzer/target
 ./FlinkAnalyzer/FlinkAnalyzer.iml
 
-./SparkStreaming/dependency-reduced-pom.xml
-./SparkStreaming/target
-./SparkStreaming/SparkStreaming.iml
-
 ./KafkaStreams/dependency-reduced-pom.xml
 ./KafkaStreams/target
 ./KafkaStreams/KafkaStreams.iml
 
 /docker-compose/pulsar-jar/bookkeeper
 /docker-compose/pulsar-jar/standalone
-*.txt
-*.jar
 *.xml
 *.iml

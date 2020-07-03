@@ -4,6 +4,7 @@ import lombok.Data;
 import org.apache.flink.streaming.api.functions.source.SourceFunction;
 import org.apache.pulsar.client.api.*;
 import org.apache.pulsar.client.api.Consumer;
+import java.io.IOException;
 import java.io.Serializable;
 
 
@@ -28,10 +29,10 @@ public class PulsarSource implements SourceFunction<String>,Serializable{
     @Override
     public void run(SourceContext<String> sourceContext) throws Exception {
         while(isRunning){
-            Message<Serializable> msg = consumer.receive();
-            //synchronized (sourceContext.getCheckpointLock()){
+            Message msg = consumer.receive();
+            synchronized (sourceContext.getCheckpointLock()){
                 sourceContext.collect(new String(msg.getData()));
-           // }
+           }
             consumer.acknowledge(msg);
         }
     }
@@ -39,12 +40,14 @@ public class PulsarSource implements SourceFunction<String>,Serializable{
     @Override
     public void cancel() {
         isRunning = false;
-        /*try {
+        try {
             consumer.close();
             client.close();
         } catch (PulsarClientException e) {
             e.printStackTrace();
-        }*/
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     public static PulsarClient initPulsarClient() {

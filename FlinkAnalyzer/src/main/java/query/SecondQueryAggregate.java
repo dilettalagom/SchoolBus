@@ -18,7 +18,7 @@ import util.Consumer;
 
 public class SecondQueryAggregate {
 
-    private static final String topic = "non-persistent://public/default/dataQuery2";
+    private static final String topic = "dataQuery2";
 
 
     public static void main(String[] args) {
@@ -44,11 +44,11 @@ public class SecondQueryAggregate {
         String outputPath = "/opt/flink/flink-jar/results-"+connector+"/query2-aggregate/";
 
         SingleOutputStreamOperator<String> dayStream = computeStreamByWindow(inputStream, 1);
-        dayStream.writeAsText(outputPath + "dayStreamAggregate.txt", FileSystem.WriteMode.OVERWRITE).setParallelism(1);
+        dayStream.writeAsText(outputPath + "dayResult.txt", FileSystem.WriteMode.OVERWRITE).setParallelism(1);
 
         /* week */
         SingleOutputStreamOperator<String> weekStream = computeStreamByWindow(inputStream, 7);
-        weekStream.writeAsText(outputPath + "weekStreamAggregate.txt", FileSystem.WriteMode.OVERWRITE).setParallelism(1);
+        weekStream.writeAsText(outputPath + "weekResult.txt", FileSystem.WriteMode.OVERWRITE).setParallelism(1);
 
         try {
             see.execute("FlinkQuery2Aggr");

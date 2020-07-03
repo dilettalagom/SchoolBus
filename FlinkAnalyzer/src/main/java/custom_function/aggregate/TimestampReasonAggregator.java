@@ -16,6 +16,7 @@ public class TimestampReasonAggregator implements AggregateFunction<Tuple4<Long,
         return new Tuple3<>("",new HashMap<>(),0L);
     }
 
+
     @Override
     public Tuple3<String,Map<String, Long>, Long> add(Tuple4<Long,String, Tuple2<String, Long>,Long> pojo, Tuple3<String,Map<String, Long>, Long> acc) {
 
@@ -29,10 +30,12 @@ public class TimestampReasonAggregator implements AggregateFunction<Tuple4<Long,
         return new Tuple3<>(pojo._2(),acc._2(),eventTime);
     }
 
+
     @Override
     public Tuple3<String,Map<String, Long>, Long> getResult(Tuple3<String,Map<String, Long>, Long> acc) {
         return acc;
     }
+
 
     @Override
     public Tuple3<String,Map<String, Long>, Long> merge(Tuple3<String,Map<String, Long>, Long> acc1, Tuple3<String,Map<String, Long>, Long> acc2) {

@@ -59,6 +59,7 @@ public class DatasetSenderPulsar {
             e.printStackTrace();
         }
     }
+
     public void startSendingData(){
 
         String header = readLineFromCSV();
@@ -67,8 +68,9 @@ public class DatasetSenderPulsar {
 
         //Validating first line
         String[] firstLine = splitter(readLineFromCSV());
-        firstLine[11] = delayFormatter.formatDelay(firstLine[11].toLowerCase());
-        if(!firstLine[11].equals("")) {
+        String firstdelay  = delayFormatter.formatDelay(firstLine[11].toLowerCase());
+        if(!firstdelay.equals("") && Long.parseLong(firstdelay) <= 300L ) {
+            firstLine[11] = firstdelay;
             firstTimestamp = extractTimeStamp(firstLine[7]);
             sendToTopic(firstLine);
             i++;
@@ -78,22 +80,27 @@ public class DatasetSenderPulsar {
         while ((line = readLineFromCSV())!=null) {
 
             String[] tokens = splitter(line);
-            //ckeck if is a valid line  --> total row: 379412, validated row: 334249
-            String validatedDelay = delayFormatter.formatDelay(tokens[11].toLowerCase());
+
+            //ckeck if is a valid line  --> total row: 379412, validated row: 334418
+            String delay = delayFormatter.formatDelay(tokens[11].toLowerCase());
 
             //publishing on topic only if is a valid line
-            if(!validatedDelay.equals("") && Long.parseLong(validatedDelay) <= 300) {
+            if(!delay.equals("") && Long.parseLong(delay) <= 300L) {
                 i++;
-                tokens[11] = validatedDelay;
+                tokens[11] = delay;
                 long curTimestamp = extractTimeStamp(tokens[7]);
                 long deltaTimeStamp = computeDelta(firstTimestamp, curTimestamp);
+
                 if (deltaTimeStamp > 0) {
+
                     addDelay(deltaTimeStamp);
                     firstTimestamp = curTimestamp;
                 }
-                sendToTopic( tokens );
+
+                sendToTopic(tokens);
             }
         }
+
 
         System.out.println("poisonedTuple" + "total: " + i);
         String poisonedTuple = "2015-2016;1212751;Special Ed AM Run;201;W685;Poison;75420;3020-09-30T07:42:00.000;2015-09-03T08:06:00.000;Unknown;Unknown;30;2;Yes;Yes;No;2015-09-03T08:06:00.000;;2015-09-03T08:06:11.000;Running Late;School-Age\n";

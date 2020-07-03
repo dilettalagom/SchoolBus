@@ -6,7 +6,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import scala.Tuple2;
 import scala.Tuple3;
-import time.TimeConverter;
 
 //Tuple3<sum, count, eventTime>
 public class AverageDelayAggregator implements AggregateFunction<BoroDelayPojo, Tuple3<Long, Long, Long>, Tuple2<Long,Double>> {

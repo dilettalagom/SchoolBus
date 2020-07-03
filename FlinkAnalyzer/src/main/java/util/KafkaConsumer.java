@@ -18,4 +18,4 @@ public class KafkaConsumer extends FlinkKafkaConsumer<String> {
         properties.setProperty("group.id", "SchoolBus");
         return properties;
     }
-}
+            }
