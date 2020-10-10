@@ -19,6 +19,7 @@ per effettuare la pull e la build delle immagini.
 Per avviare la simulazione del sistema è necessario avviare uno dei producer a scelta:
 
 - Avvio di Apache Pulsar
+
 Per avviare la simulazione dell'invio del dataset è necessario:
 1. spostarsi sul nodo del producer di Pulsar eseguendo: 
        ``` $docker exec -it pulsar-node bash```
@@ -32,6 +33,7 @@ dove:
  ``` <topic_name>``` è il nome del topic corrispondente ai dati della query che si vuole processare (dataQuery1, dataQuery2, dataQuery3);
  
  - Avvio di Apache Kafka
+ 
  Per avviare la simulazione dell'invio del dataset è necessario:
  1. spostarsi sul nodo del producer di Kafka eseguendo: 
         ``` $docker exec -it kafka-producer bash```
@@ -48,6 +50,7 @@ dove:
 Per invocare l’esecuzione delle varie query è necessario avviare uno dei consumatori a scelta:
 
  - Avvio dei Apache Flink
+ 
  Per avviare la computazione delle query è necessario:
  1. spostarsi sul nodo del consumer (master) di Flink eseguendo: 
         ``` $docker exec -it flink-jobmanager bash```
@@ -63,6 +66,7 @@ Per invocare l’esecuzione delle varie query è necessario avviare uno dei cons
   ``` <topic_name>``` è il nome del topic corrispondente ai dati della query che si vuole processare (dataQuery1, dataQuery2, dataQuery3);
   
   - Avvio di Apache Kafka+KafkaStreams
+  
   Per avviare la computazione delle query è necessario:
   1. spostarsi sul nodo del consumer di Kafka eseguendo: 
          ``` $docker exec -it kafka-consumer bash``` 
