@@ -1,4 +1,4 @@
-##SABD:SchoolBusAnalyzer
+## SABD:SchoolBusAnalyzer
 
 SchoolBusAnalyzer è un sistema per l’analisi dei dati relativi ai ritardi degli autobus scolastici della città di New York.
 L’architettura è costituita da:
@@ -9,13 +9,13 @@ L’architettura è costituita da:
 - un nodo broker per la comunicazione publish-subscribe, ospitante Apache Kafka;
 - un nodo per l'accesso alla dashboard di Pulsar.
 
-###Build dell’architettura
+### Build dell’architettura
 Per istanziare il sistema è necessario:
 - aver istallato il supporto docker in locale
 - eseguire il comando ```$docker-compose up -- build ``` 
 per effettuare la pull e la build delle immagini.
 
-###Producers
+### Producers
 Per avviare la simulazione del sistema è necessario avviare uno dei producer a scelta:
 
 - Avvio di Apache Pulsar
@@ -44,7 +44,7 @@ dove:
   ```<topic_name>``` è il nome del topic corrispondente ai dati della query che si vuole processare (dataQuery1, dataQuery2, dataQuery3);
 
   
-###Consumers
+### Consumers
 Per invocare l’esecuzione delle varie query è necessario avviare uno dei consumatori a scelta:
 
  - Avvio dei Apache Flink
